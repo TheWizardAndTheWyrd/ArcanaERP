@@ -136,6 +136,10 @@
     <Compile Include="Interfaces\Models\Commerce\IPricingPlanAssignment.cs" />
     <Compile Include="Interfaces\Models\Commerce\IPricingPlanComponent.cs" />
     <Compile Include="Interfaces\Models\Commerce\IValidPricePlanComponent.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\Extensions\IEmailAddress.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\Extensions\IPhoneNumber.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\Extensions\IPostalAddress.cs" />
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEvent.cs" />
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurpose.cs" />
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurposeType.cs" />
