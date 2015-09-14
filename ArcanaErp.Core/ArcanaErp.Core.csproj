@@ -144,6 +144,9 @@
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurpose.cs" />
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurposeType.cs" />
     <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventStatus.cs" />
+    <Compile Include="Interfaces\Models\FinancialAccounting\Extensions\IPricingPlanComponent.cs" />
+    <Compile Include="Interfaces\Models\FinancialAccounting\IGeneralLedgerAccount.cs" />
+    <Compile Include="Interfaces\Models\FinancialAccounting\IPricePlanCompGeneralLedgerAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
