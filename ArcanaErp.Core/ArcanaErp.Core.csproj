@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Models\Agreements\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreement.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreementItem.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreementItemType.cs" />
