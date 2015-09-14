@@ -50,6 +50,25 @@
     <Compile Include="Interfaces\Models\Agreements\IAgreementRoleType.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreementType.cs" />
     <Compile Include="Interfaces\Models\Agreements\ILoyaltyProgramCode.cs" />
+    <Compile Include="Interfaces\Models\Application\Extensions\INoteType.cs" />
+    <Compile Include="Interfaces\Models\Application\Extensions\IUser.cs" />
+    <Compile Include="Interfaces\Models\Application\IApplication.cs" />
+    <Compile Include="Interfaces\Models\Application\IConfiguration.cs" />
+    <Compile Include="Interfaces\Models\Application\IConfigurationItem.cs" />
+    <Compile Include="Interfaces\Models\Application\IConfigurationItemType.cs" />
+    <Compile Include="Interfaces\Models\Application\IConfigurationItemTypeConfigurationOption.cs" />
+    <Compile Include="Interfaces\Models\Application\IConfigurationOption.cs" />
+    <Compile Include="Interfaces\Models\Application\IDesktopApplication.cs" />
+    <Compile Include="Interfaces\Models\Application\IJobTracker.cs" />
+    <Compile Include="Interfaces\Models\Application\IPreference.cs" />
+    <Compile Include="Interfaces\Models\Application\IPreferenceOption.cs" />
+    <Compile Include="Interfaces\Models\Application\IPreferenceType.cs" />
+    <Compile Include="Interfaces\Models\Application\ITreeMenuNodeDefinition.cs" />
+    <Compile Include="Interfaces\Models\Application\ITreeMenuNodeView.cs" />
+    <Compile Include="Interfaces\Models\Application\IUserPreference.cs" />
+    <Compile Include="Interfaces\Models\Application\IValidConfiguration.cs" />
+    <Compile Include="Interfaces\Models\Application\IValidPreferenceType.cs" />
+    <Compile Include="Interfaces\Models\Application\IWidget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
