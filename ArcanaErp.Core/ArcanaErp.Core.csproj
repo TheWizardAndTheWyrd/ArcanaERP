@@ -136,6 +136,10 @@
     <Compile Include="Interfaces\Models\Commerce\IPricingPlanAssignment.cs" />
     <Compile Include="Interfaces\Models\Commerce\IPricingPlanComponent.cs" />
     <Compile Include="Interfaces\Models\Commerce\IValidPricePlanComponent.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEvent.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurpose.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventPurposeType.cs" />
+    <Compile Include="Interfaces\Models\CommunicationEvents\ICommunicationEventStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
