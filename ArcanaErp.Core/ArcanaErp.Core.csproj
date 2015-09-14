@@ -107,6 +107,35 @@
     <Compile Include="Interfaces\Models\BaseErpServices\IUnitOfMeasurement.cs" />
     <Compile Include="Interfaces\Models\BaseErpServices\IValidNoteType.cs" />
     <Compile Include="Interfaces\Models\BaseErpServices\IViewType.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IChargeLine.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\ICurrency.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IFinancialTaxation.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IOrderTaxation.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IOrganization.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IProductInstance.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\IProductType.cs" />
+    <Compile Include="Interfaces\Models\Commerce\Extensions\ISimpleProductOffer.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IAcceptedCreditCard.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IBankAccount.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IBankAccountType.cs" />
+    <Compile Include="Interfaces\Models\Commerce\ICreditCard.cs" />
+    <Compile Include="Interfaces\Models\Commerce\ICreditCardAccount.cs" />
+    <Compile Include="Interfaces\Models\Commerce\ICreditCardAccountPartyRole.cs" />
+    <Compile Include="Interfaces\Models\Commerce\ICreditCardAccountPurpose.cs" />
+    <Compile Include="Interfaces\Models\Commerce\ICreditCardToken.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IFee.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IFeeType.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPayment.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPaymentGateway.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPaymentGatewayAction.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPrice.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPriceComponent.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPriceComponentType.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPricingPlan.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPricingPlanAssignment.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IPricingPlanComponent.cs" />
+    <Compile Include="Interfaces\Models\Commerce\IValidPricePlanComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
