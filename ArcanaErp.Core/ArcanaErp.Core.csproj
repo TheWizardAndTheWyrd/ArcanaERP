@@ -188,6 +188,19 @@
     <Compile Include="Interfaces\Models\Orders\IOrderLineItemType.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderTaxation.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderTaxationType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductAvailabilityStatusType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductInstance.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductInstanceRelationship.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductInstanceRelationshipType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductInstanceRoleType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductOffer.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductPackage.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductTypePartyRole.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductTypeRelationship.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductTypeRelationshipType.cs" />
+    <Compile Include="Interfaces\Models\Products\IProductTypeRoleType.cs" />
+    <Compile Include="Interfaces\Models\Products\ISimpleProductOffer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
