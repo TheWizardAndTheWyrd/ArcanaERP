@@ -176,6 +176,18 @@
     <Compile Include="Interfaces\Models\Invoicing\IInvoiceType.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IPaymentApplication.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IRecurringPayment.cs" />
+    <Compile Include="Interfaces\Models\Orders\Extensions\IAgreement.cs" />
+    <Compile Include="Interfaces\Models\Orders\Extensions\IMoney.cs" />
+    <Compile Include="Interfaces\Models\Orders\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\Orders\Extensions\IProductInstance.cs" />
+    <Compile Include="Interfaces\Models\Orders\Extensions\IProductType.cs" />
+    <Compile Include="Interfaces\Models\Orders\IChargeLine.cs" />
+    <Compile Include="Interfaces\Models\Orders\IChargeLinePaymentTaxation.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderLineItem.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderLineItemPartyRole.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderLineItemType.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderTaxation.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderTaxationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
