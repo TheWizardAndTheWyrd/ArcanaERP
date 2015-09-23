@@ -204,6 +204,12 @@
     <Compile Include="Interfaces\Models\Rules\ICustomerTaxationContext.cs" />
     <Compile Include="Interfaces\Models\Rules\IEnvironmentTaxationContext.cs" />
     <Compile Include="Interfaces\Models\Rules\ISearchTaxationContext.cs" />
+    <Compile Include="Interfaces\Models\Search\Extensions\IContent.cs" />
+    <Compile Include="Interfaces\Models\Search\Extensions\IDynamicFormDocument.cs" />
+    <Compile Include="Interfaces\Models\Search\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\Search\Extensions\ITicket.cs" />
+    <Compile Include="Interfaces\Models\Search\Extensions\IWebsiteInquiry.cs" />
+    <Compile Include="Interfaces\Models\Search\IPartySearchFact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
