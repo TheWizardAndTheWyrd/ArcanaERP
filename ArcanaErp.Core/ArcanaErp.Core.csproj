@@ -147,6 +147,8 @@
     <Compile Include="Interfaces\Models\FinancialAccounting\Extensions\IPricingPlanComponent.cs" />
     <Compile Include="Interfaces\Models\FinancialAccounting\IGeneralLedgerAccount.cs" />
     <Compile Include="Interfaces\Models\FinancialAccounting\IPricePlanCompGeneralLedgerAccount.cs" />
+    <Compile Include="Interfaces\Models\Inventory\Extensions\IProductInstance.cs" />
+    <Compile Include="Interfaces\Models\Inventory\Extensions\IProductType.cs" />
     <Compile Include="Interfaces\Models\Inventory\IFacility.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntry.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryLocation.cs" />
@@ -154,6 +156,26 @@
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryRelationshipType.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryRoleType.cs" />
     <Compile Include="Interfaces\Models\Inventory\IProductInstanceInventoryEntry.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IDocument.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IFinancialTaxation.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IFinancialTaxationAccount.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IProductInstance.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IProductType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\Extensions\IWorkEffort.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IBillingAccount.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\ICalculateBalanceStrategyType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoice.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoiceItem.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoiceItemType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicePartyRole.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicePaymentStrategyType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicePaymentTerm.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicePaymentTermSet.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicePaymentTermType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoiceType.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IPaymentApplication.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IRecurringPayment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
