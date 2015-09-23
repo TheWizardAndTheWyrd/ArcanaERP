@@ -329,6 +329,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Interfaces\Controllers\Agreements\" />
+    <Folder Include="Interfaces\Controllers\Application\" />
+    <Folder Include="Interfaces\Controllers\BaseErpServices\" />
+    <Folder Include="Interfaces\Controllers\Commerce\" />
+    <Folder Include="Interfaces\Controllers\CommunicationEvents\" />
+    <Folder Include="Interfaces\Controllers\ContentManagementSystem\" />
+    <Folder Include="Interfaces\Controllers\DatabaseAdmin\" />
+    <Folder Include="Interfaces\Controllers\FinancialAccounting\" />
+    <Folder Include="Interfaces\Controllers\Inventory\" />
+    <Folder Include="Interfaces\Controllers\Invoicing\" />
+    <Folder Include="Interfaces\Controllers\OperationsResearch\" />
+    <Folder Include="Interfaces\Controllers\Orders\" />
+    <Folder Include="Interfaces\Controllers\Products\" />
+    <Folder Include="Interfaces\Controllers\Rules\" />
+    <Folder Include="Interfaces\Controllers\Search\" />
+    <Folder Include="Interfaces\Controllers\TaxationsAndAccounts\" />
+    <Folder Include="Interfaces\Controllers\TechServices\" />
+    <Folder Include="Interfaces\Controllers\WorkEffort\" />
     <Folder Include="Interfaces\Models\OperationsResearch\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
