@@ -210,6 +210,32 @@
     <Compile Include="Interfaces\Models\Search\Extensions\ITicket.cs" />
     <Compile Include="Interfaces\Models\Search\Extensions\IWebsiteInquiry.cs" />
     <Compile Include="Interfaces\Models\Search\IPartySearchFact.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\Extensions\IMoney.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBaseTaxationContext.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessAccountTaxationTask.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountPartyRole.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountPartyRoleType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountRelationship.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountRelationshipType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountRoot.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountStatus.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountStatusType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAccountType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAgreementRole.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationAgreementRoleType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationEvent.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationEventDescription.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationPartyRole.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationPartyRoleType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationRelationship.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationRelationshipType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationStatus.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationTask.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationTaskType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IBusinessTaxationType.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IFinancialTaxation.cs" />
+    <Compile Include="Interfaces\Models\TaxationsAndAccounts\IFinancialTaxationAccount.cs" />
     <Compile Include="Interfaces\Models\TechServices\Extensions\ICategory.cs" />
     <Compile Include="Interfaces\Models\TechServices\Extensions\IContactPurpose.cs" />
     <Compile Include="Interfaces\Models\TechServices\Extensions\IContactType.cs" />
@@ -240,7 +266,9 @@
     <Compile Include="Interfaces\Models\TechServices\IUserDefinedField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces\Models\OperationsResearch\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
