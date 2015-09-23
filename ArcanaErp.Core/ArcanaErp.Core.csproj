@@ -201,6 +201,9 @@
     <Compile Include="Interfaces\Models\Products\IProductTypeRelationshipType.cs" />
     <Compile Include="Interfaces\Models\Products\IProductTypeRoleType.cs" />
     <Compile Include="Interfaces\Models\Products\ISimpleProductOffer.cs" />
+    <Compile Include="Interfaces\Models\Rules\ICustomerTaxationContext.cs" />
+    <Compile Include="Interfaces\Models\Rules\IEnvironmentTaxationContext.cs" />
+    <Compile Include="Interfaces\Models\Rules\ISearchTaxationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
