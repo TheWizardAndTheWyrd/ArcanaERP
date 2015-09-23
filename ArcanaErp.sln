@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Core", "ArcanaErp.Core\ArcanaErp.Core.csproj", "{A06E1265-48A3-4430-8C39-98CF50944C9E}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database", "ArcanaErp.Database\ArcanaErp.Database.sqlproj", "{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database", "ArcanaErp.Database\ArcanaErp.Database.sqlproj", "{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,12 @@ Global
 		{A06E1265-48A3-4430-8C39-98CF50944C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06E1265-48A3-4430-8C39-98CF50944C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A06E1265-48A3-4430-8C39-98CF50944C9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D69280A7-AFC7-4FB5-B847-11952F4AFDC5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
