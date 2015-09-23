@@ -210,6 +210,34 @@
     <Compile Include="Interfaces\Models\Search\Extensions\ITicket.cs" />
     <Compile Include="Interfaces\Models\Search\Extensions\IWebsiteInquiry.cs" />
     <Compile Include="Interfaces\Models\Search\IPartySearchFact.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\ICategory.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IContactPurpose.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IContactType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IErpInstance.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\INote.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\INoteType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IParty.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IRelationshipType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\Extensions\IRoleType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAttributeType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAttributeValue.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAuditLog.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAuditLogItem.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAuditLogItemType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IAuditLogType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\ICapability.cs" />
+    <Compile Include="Interfaces\Models\TechServices\ICapabilityAccessor.cs" />
+    <Compile Include="Interfaces\Models\TechServices\ICapabilityType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IEncryptionKey.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IFileAsset.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IGroup.cs" />
+    <Compile Include="Interfaces\Models\TechServices\INotification.cs" />
+    <Compile Include="Interfaces\Models\TechServices\INotificationType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IScopeType.cs" />
+    <Compile Include="Interfaces\Models\TechServices\ISecurityRole.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IUser.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IUserDefinedData.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IUserDefinedField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
