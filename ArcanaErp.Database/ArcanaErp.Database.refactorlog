@@ -14,4 +14,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Description" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="3a2fa8f8-3cb5-44cb-8439-cff2428c8d86" ChangeDateTime="09/23/2015 22:28:16">
+    <Property Name="ElementName" Value="[dbo].[AgreementType].[LEft]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AgreementType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Left" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f5484242-8227-4926-89ab-ff82ba627cb2" ChangeDateTime="09/23/2015 22:28:52">
+    <Property Name="ElementName" Value="[dbo].[AgreementType].[Left]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AgreementType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LeftInt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9fd069a5-4370-4c96-9408-7019af561367" ChangeDateTime="09/23/2015 22:59:49">
+    <Property Name="ElementName" Value="[dbo].[AgreementItem].[Agreement]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AgreementItem]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AgreementItemTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d4f75ca6-7ad2-4f94-b96a-6db625491671" ChangeDateTime="09/23/2015 23:42:37">
+    <Property Name="ElementName" Value="[dbo].[AgreementPartyRole].[PartyID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AgreementPartyRole]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PartyId" />
+  </Operation>
 </Operations>

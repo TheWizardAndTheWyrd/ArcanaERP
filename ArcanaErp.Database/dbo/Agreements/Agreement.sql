@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Agreement]
 (
-	[Id] uniqueidentifier CONSTRAINT Guid_Default DEFAULT NEWSEQUENTIALID() ROWGUIDCOL,
+	[Id] uniqueidentifier CONSTRAINT AgreementGuidDefault DEFAULT NEWSEQUENTIALID() ROWGUIDCOL,
     [Description] NVARCHAR(MAX),
     [AgreementTypeId] UNIQUEIDENTIFIER NULL, 
     [AgreementStatus] NVARCHAR(MAX) NULL, 
@@ -10,5 +10,5 @@
     [ThroughDate] DATETIME NULL, 
     [ExternalIdentifier] NVARCHAR(MAX) NULL, 
     [ExternalIdentifierSource] NVARCHAR(MAX) NULL, 
-    CONSTRAINT Guid_PK PRIMARY KEY (Id)
+    CONSTRAINT AgreementGuid_PK PRIMARY KEY (Id)
 )
