@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ArcanaErp.Database.Reference</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{3eae86a0-b5df-48d8-bc9f-f3d88ff03535}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ArcanaErp.Database.Reference</RootNamespace>
+    <AssemblyName>ArcanaErp.Database.Reference</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\notification_types.sql" />
+    <Build Include="dbo\Tables\preferences.sql" />
+    <Build Include="dbo\Tables\preference_types.sql" />
+    <Build Include="dbo\Tables\preference_options.sql" />
+    <Build Include="dbo\Tables\preference_options_preference_types.sql" />
+    <Build Include="dbo\Tables\valid_preference_types.sql" />
+    <Build Include="dbo\Tables\user_preferences.sql" />
+    <Build Include="dbo\Tables\applications.sql" />
+    <Build Include="dbo\Tables\schema_migrations.sql" />
+    <Build Include="dbo\Tables\applications_users.sql" />
+    <Build Include="dbo\Tables\compass_ae_instances.sql" />
+    <Build Include="dbo\Tables\tree_menu_node_defs.sql" />
+    <Build Include="dbo\Tables\configurations.sql" />
+    <Build Include="dbo\Tables\compass_ae_instance_party_roles.sql" />
+    <Build Include="dbo\Tables\parties.sql" />
+    <Build Include="dbo\Tables\valid_configurations.sql" />
+    <Build Include="dbo\Tables\party_roles.sql" />
+    <Build Include="dbo\Tables\configuration_items.sql" />
+    <Build Include="dbo\Tables\role_types.sql" />
+    <Build Include="dbo\Tables\configuration_item_types.sql" />
+    <Build Include="dbo\Tables\relationship_types.sql" />
+    <Build Include="dbo\Tables\party_relationships.sql" />
+    <Build Include="dbo\Tables\configuration_item_types_configurations.sql" />
+    <Build Include="dbo\Tables\organizations.sql" />
+    <Build Include="dbo\Tables\configuration_options.sql" />
+    <Build Include="dbo\Tables\individuals.sql" />
+    <Build Include="dbo\Tables\configuration_item_types_configuration_options.sql" />
+    <Build Include="dbo\Tables\contact_types.sql" />
+    <Build Include="dbo\Tables\contact_purposes.sql" />
+    <Build Include="dbo\Tables\configuration_items_configuration_options.sql" />
+    <Build Include="dbo\Tables\job_trackers.sql" />
+    <Build Include="dbo\Tables\contact_purposes_contacts.sql" />
+    <Build Include="dbo\Tables\postal_addresses.sql" />
+    <Build Include="dbo\Tables\websites.sql" />
+    <Build Include="dbo\Tables\email_addresses.sql" />
+    <Build Include="dbo\Tables\website_hosts.sql" />
+    <Build Include="dbo\Tables\phone_numbers.sql" />
+    <Build Include="dbo\Tables\website_inquiries.sql" />
+    <Build Include="dbo\Tables\money.sql" />
+    <Build Include="dbo\Tables\website_sections.sql" />
+    <Build Include="dbo\Tables\currencies.sql" />
+    <Build Include="dbo\Tables\categories.sql" />
+    <Build Include="dbo\Tables\website_section_versions.sql" />
+    <Build Include="dbo\Tables\category_classifications.sql" />
+    <Build Include="dbo\Tables\descriptive_assets.sql" />
+    <Build Include="dbo\Tables\view_types.sql" />
+    <Build Include="dbo\Tables\geo_countries.sql" />
+    <Build Include="dbo\Tables\geo_zones.sql" />
+    <Build Include="dbo\Tables\notes.sql" />
+    <Build Include="dbo\Tables\note_types.sql" />
+    <Build Include="dbo\Tables\contents.sql" />
+    <Build Include="dbo\Tables\valid_note_types.sql" />
+    <Build Include="dbo\Tables\content_versions.sql" />
+    <Build Include="dbo\Tables\status_applications.sql" />
+    <Build Include="dbo\Tables\tracked_status_types.sql" />
+    <Build Include="dbo\Tables\facilities.sql" />
+    <Build Include="dbo\Tables\facility_types.sql" />
+    <Build Include="dbo\Tables\fixed_assets.sql" />
+    <Build Include="dbo\Tables\fixed_asset_types.sql" />
+    <Build Include="dbo\Tables\website_section_contents.sql" />
+    <Build Include="dbo\Tables\party_fixed_asset_assignments.sql" />
+    <Build Include="dbo\Tables\fixed_asset_party_roles.sql" />
+    <Build Include="dbo\Tables\themes.sql" />
+    <Build Include="dbo\Tables\unit_of_measurements.sql" />
+    <Build Include="dbo\Tables\published_websites.sql" />
+    <Build Include="dbo\Tables\generated_items.sql" />
+    <Build Include="dbo\Tables\published_elements.sql" />
+    <Build Include="dbo\Tables\entity_party_roles.sql" />
+    <Build Include="dbo\Tables\comments.sql" />
+    <Build Include="dbo\Tables\contacts.sql" />
+    <Build Include="dbo\Tables\website_nav_items.sql" />
+    <Build Include="dbo\Tables\users.sql" />
+    <Build Include="dbo\Tables\website_navs.sql" />
+    <Build Include="dbo\Tables\tags.sql" />
+    <Build Include="dbo\Tables\groups.sql" />
+    <Build Include="dbo\Tables\taggings.sql" />
+    <Build Include="dbo\Tables\security_roles.sql" />
+    <Build Include="dbo\Tables\website_party_roles.sql" />
+    <Build Include="dbo\Tables\sessions.sql" />
+    <Build Include="dbo\Tables\documented_items.sql" />
+    <Build Include="dbo\Tables\audit_logs.sql" />
+    <Build Include="dbo\Tables\documents.sql" />
+    <Build Include="dbo\Tables\audit_log_types.sql" />
+    <Build Include="dbo\Tables\document_types.sql" />
+    <Build Include="dbo\Tables\audit_log_items.sql" />
+    <Build Include="dbo\Tables\valid_documents.sql" />
+    <Build Include="dbo\Tables\audit_log_item_types.sql" />
+    <Build Include="dbo\Tables\reports.sql" />
+    <Build Include="dbo\Tables\file_assets.sql" />
+    <Build Include="dbo\Tables\data_migrations.sql" />
+    <Build Include="dbo\Tables\file_asset_holders.sql" />
+    <Build Include="dbo\Tables\delayed_jobs.sql" />
+    <Build Include="dbo\Tables\capable_models.sql" />
+    <Build Include="dbo\Tables\capability_types.sql" />
+    <Build Include="dbo\Tables\capabilities.sql" />
+    <Build Include="dbo\Tables\capability_accessors.sql" />
+    <Build Include="dbo\Tables\scope_types.sql" />
+    <Build Include="dbo\Tables\parties_security_roles.sql" />
+    <Build Include="dbo\Tables\notifications.sql" />
+  </ItemGroup>
+</Project>
