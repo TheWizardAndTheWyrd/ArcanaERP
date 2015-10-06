@@ -30,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -326,6 +337,297 @@
     <Compile Include="Interfaces\Models\WorkEffort\IWorkOrderItem.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IWorkOrderItemFulfillment.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IWorkRequirementFulfillment.cs" />
+    <Compile Include="Models\Reference\application.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\audit_logs.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\audit_log_items.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\audit_log_item_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\audit_log_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\capability.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\capability_accessors.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\capability_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\capable_models.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\category.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\category_classifications.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\comment.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\compass_ae_instances.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\compass_ae_instance_party_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\configuration.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\configuration_items.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\configuration_item_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\configuration_item_types_configuration_options.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\configuration_options.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\contact.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\contact_purposes.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\contact_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\content.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\content_versions.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\currency.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\delayed_jobs.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\descriptive_assets.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\document.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\documented_items.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\document_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\email_addresses.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\entity_party_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\facility.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\facility_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\file_assets.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\file_asset_holders.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\fixed_assets.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\fixed_asset_party_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\fixed_asset_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\generated_items.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\geo_countries.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\geo_zones.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\group.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\individual.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\job_trackers.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\money.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\note.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\note_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\notification.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\notification_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\organization.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\party.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\party_fixed_asset_assignments.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\party_relationships.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\party_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\phone_numbers.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\postal_addresses.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\preference.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\preference_options.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\preference_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\published_elements.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\published_websites.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\ReferenceDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenceDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\ReferenceDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\ReferenceDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenceDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\relationship_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\report.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\role_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\schema_migrations.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\scope_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\security_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\session.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\status_applications.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\tag.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\tagging.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\theme.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\tracked_status_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\tree_menu_node_defs.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\unit_of_measurements.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\user.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\user_preferences.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\valid_configurations.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\valid_documents.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\valid_note_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\valid_preference_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\view_types.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_hosts.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_inquiries.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_navs.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_nav_items.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_party_roles.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_sections.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_section_contents.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reference\website_section_versions.cs">
+      <DependentUpon>ReferenceDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -348,6 +650,32 @@
     <Folder Include="Interfaces\Controllers\TechServices\" />
     <Folder Include="Interfaces\Controllers\WorkEffort\" />
     <Folder Include="Interfaces\Models\OperationsResearch\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Models\Reference\ReferenceDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ReferenceDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Reference\ReferenceDataModel.edmx.diagram">
+      <DependentUpon>ReferenceDataModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Reference\ReferenceDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReferenceDataModel.edmx</DependentUpon>
+      <LastGenOutput>ReferenceDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Reference\ReferenceDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ReferenceDataModel.edmx</DependentUpon>
+      <LastGenOutput>ReferenceDataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
