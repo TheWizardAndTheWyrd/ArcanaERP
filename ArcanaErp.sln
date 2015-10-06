@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Core", "ArcanaErp
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database", "ArcanaErp.Database\ArcanaErp.Database.sqlproj", "{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database.Reference", "ArcanaErp.Database.Reference\ArcanaErp.Database.Reference.sqlproj", "{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,12 @@ Global
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

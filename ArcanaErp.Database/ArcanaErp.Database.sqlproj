@@ -58,17 +58,8 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="dbo" />
-    <Folder Include="dbo\Agreements" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Agreements\Agreement.sql" />
-    <Build Include="dbo\Agreements\AgreementType.sql" />
-    <Build Include="dbo\Agreements\AgreementItem.sql" />
-    <Build Include="dbo\Agreements\AgreementPartyRole.sql" />
-    <Build Include="dbo\Agreements\AgreementRelationship.sql" />
-    <Build Include="dbo\Agreements\AgreementRelationshipType.sql" />
-    <Build Include="dbo\Agreements\AgreementRoleType.sql" />
-    <Build Include="dbo\Agreements\LoyaltyProgramCode.sql" />
     <Build Include="reference_structure_refactored_for-TSQL.sql" />
   </ItemGroup>
   <ItemGroup>
