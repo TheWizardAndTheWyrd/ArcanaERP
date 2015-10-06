@@ -69,6 +69,7 @@
     <Build Include="dbo\Agreements\AgreementRelationshipType.sql" />
     <Build Include="dbo\Agreements\AgreementRoleType.sql" />
     <Build Include="dbo\Agreements\LoyaltyProgramCode.sql" />
+    <Build Include="reference_structure_refactored_for-TSQL.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ArcanaErp.Database.refactorlog" />
