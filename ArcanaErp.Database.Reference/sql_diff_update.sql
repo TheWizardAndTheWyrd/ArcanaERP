@@ -1,842 +1,842 @@
-CREATE TABLE "Report" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Name" varchar(255), "Internal_Identifier" varchar(255), "Template" text, "Query" text, "Created_At" datetime NOT NULL, "Updated_At" datetime NOT NULL);
+CREATE TABLE "Report" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Name" varchar(255), "InternalIdentifier" varchar(255), "Template" text, "Query" text, "CreatedAt" datetime NOT NULL, "UpdatedAt" datetime NOT NULL);
 GO
-CREATE Index "Report_Internal_Identifier_Index" ON "Report" ("Internal_Identifier"); 
+CREATE Index "ReportInternalIdentifierIndex" ON "Report" ("InternalIdentifier"); 
 GO
-CREATE TABLE "Agreement" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Agreement_Type_Id" integer, "Agreement_Status" varchar(255), "Product_Id" integer, "Agreement_Date" date, "From_Date" date, "Through_Date" date, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Agreement" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "AgreementTypeId" integer, "AgreementStatus" varchar(255), "ProductId" integer, "AgreementDate" date, "FromDate" date, "ThroughDate" date, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_On_Agreement_Type_Id" ON "Agreement" ("Agreement_Type_Id"); 
+CREATE Index "IndexAgreementOnAgreementTypeId" ON "Agreement" ("AgreementTypeId"); 
 GO
-CREATE Index "Index_Agreement_On_Product_Id" ON "Agreement" ("Product_Id"); 
+CREATE Index "IndexAgreementOnProductId" ON "Agreement" ("ProductId"); 
 GO
-CREATE TABLE "Agreement_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Type_On_Parent_Id" ON "Agreement_Type" ("Parent_Id"); 
+CREATE Index "IndexAgreementTypeOnParentId" ON "AgreementType" ("ParentId"); 
 GO
-CREATE Index "Index_Agreement_Type_On_LeftValue" ON "Agreement_Type" ("LeftValue"); 
+CREATE Index "IndexAgreementTypeOnLeftValue" ON "AgreementType" ("LeftValue"); 
 GO
-CREATE Index "Index_Agreement_Type_On_RightValue" ON "Agreement_Type" ("RightValue"); 
+CREATE Index "IndexAgreementTypeOnRightValue" ON "AgreementType" ("RightValue"); 
 GO
-CREATE TABLE "Agreement_Item" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Agreement_Id" integer, "Agreement_Item_Type_Id" integer, "Agreement_Item_Value" varchar(255), "Description" varchar(255), "Agreement_Item_Rule_String" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementItem" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "AgreementId" integer, "AgreementItemTypeId" integer, "AgreementItemValue" varchar(255), "Description" varchar(255), "AgreementItemRuleString" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Item_On_Agreement_Id" ON "Agreement_Item" ("Agreement_Id"); 
+CREATE Index "IndexAgreementItemOnAgreementId" ON "AgreementItem" ("AgreementId"); 
 GO
-CREATE Index "Index_Agreement_Item_On_Agreement_Item_Type_Id" ON "Agreement_Item" ("Agreement_Item_Type_Id"); 
+CREATE Index "IndexAgreementItemOnAgreementItemTypeId" ON "AgreementItem" ("AgreementItemTypeId"); 
 GO
-CREATE TABLE "Agreement_Item_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementItemType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Item_Type_On_Parent_Id" ON "Agreement_Item_Type" ("Parent_Id"); 
+CREATE Index "IndexAgreementItemTypeOnParentId" ON "AgreementItemType" ("ParentId"); 
 GO
-CREATE Index "Index_Agreement_Item_Type_On_LeftValue" ON "Agreement_Item_Type" ("LeftValue"); 
+CREATE Index "IndexAgreementItemTypeOnLeftValue" ON "AgreementItemType" ("LeftValue"); 
 GO
-CREATE Index "Index_Agreement_Item_Type_On_RightValue" ON "Agreement_Item_Type" ("RightValue"); 
+CREATE Index "IndexAgreementItemTypeOnRightValue" ON "AgreementItemType" ("RightValue"); 
 GO
-CREATE TABLE "Agreement_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Agreement_Id" integer, "Party_Id" integer, "Role_Type_Id" integer, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "AgreementId" integer, "PartyId" integer, "RoleTypeId" integer, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Party_Role_On_Agreement_Id" ON "Agreement_Party_Role" ("Agreement_Id"); 
+CREATE Index "IndexAgreementPartyRoleOnAgreementId" ON "AgreementPartyRole" ("AgreementId"); 
 GO
-CREATE Index "Index_Agreement_Party_Role_On_Party_Id" ON "Agreement_Party_Role" ("Party_Id"); 
+CREATE Index "IndexAgreementPartyRoleOnPartyId" ON "AgreementPartyRole" ("PartyId"); 
 GO
-CREATE Index "Index_Agreement_Party_Role_On_Role_Type_Id" ON "Agreement_Party_Role" ("Role_Type_Id"); 
+CREATE Index "IndexAgreementPartyRoleOnRoleTypeId" ON "AgreementPartyRole" ("RoleTypeId"); 
 GO
-CREATE TABLE "Agreement_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Agreement_Relationship_Type_Id" integer, "Description" varchar(255), "Agreement_Id_From" integer, "Agreement_Id_To" integer, "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "AgreementRelationshipTypeId" integer, "Description" varchar(255), "AgreementIdFrom" integer, "AgreementIdTo" integer, "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Relationship_On_Agreement_Relationship_Type_Id" ON "Agreement_Relationship" ("Agreement_Relationship_Type_Id"); 
+CREATE Index "IndexAgreementRelationshipOnAgreementRelationshipTypeId" ON "AgreementRelationship" ("AgreementRelationshipTypeId"); 
 GO
-CREATE Index "Index_Agreement_Relationship_On_Status_Type_Id" ON "Agreement_Relationship" ("Status_Type_Id"); 
+CREATE Index "IndexAgreementRelationshipOnStatusTypeId" ON "AgreementRelationship" ("StatusTypeId"); 
 GO
-CREATE TABLE "Agreement_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Valid_From_Role_Type_Id" integer, "Valid_To_Role_Type_Id" integer, "Name" varchar(255), "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "ValidFromRoleTypeId" integer, "ValidToRoleTypeId" integer, "Name" varchar(255), "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Relationship_Type_On_Parent_Id" ON "Agreement_Relationship_Type" ("Parent_Id"); 
+CREATE Index "IndexAgreementRelationshipTypeOnParentId" ON "AgreementRelationshipType" ("ParentId"); 
 GO
-CREATE Index "Index_Agreement_Relationship_Type_On_Valid_From_Role_Type_Id" ON "Agreement_Relationship_Type" ("Valid_From_Role_Type_Id"); 
+CREATE Index "IndexAgreementRelationshipTypeOnValidFromRoleTypeId" ON "AgreementRelationshipType" ("ValidFromRoleTypeId"); 
 GO
-CREATE Index "Index_Agreement_Relationship_Type_On_Valid_To_Role_Type_Id" ON "Agreement_Relationship_Type" ("Valid_To_Role_Type_Id"); 
+CREATE Index "IndexAgreementRelationshipTypeOnValidToRoleTypeId" ON "AgreementRelationshipType" ("ValidToRoleTypeId"); 
 GO
-CREATE TABLE "Agreement_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AgreementRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Agreement_Role_Type_On_Parent_Id" ON "Agreement_Role_Type" ("Parent_Id"); 
+CREATE Index "IndexAgreementRoleTypeOnParentId" ON "AgreementRoleType" ("ParentId"); 
 GO
-CREATE Index "Index_Agreement_Role_Type_On_LeftValue" ON "Agreement_Role_Type" ("LeftValue"); 
+CREATE Index "IndexAgreementRoleTypeOnLeftValue" ON "AgreementRoleType" ("LeftValue"); 
 GO
-CREATE Index "Index_Agreement_Role_Type_On_RightValue" ON "Agreement_Role_Type" ("RightValue"); 
+CREATE Index "IndexAgreementRoleTypeOnRightValue" ON "AgreementRoleType" ("RightValue"); 
 GO
-CREATE TABLE "Loyalty_Program_Code" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Identifier" varchar(255), "Name" varchar(255), "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "LoyaltyProgramCode" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Identifier" varchar(255), "Name" varchar(255), "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Fee" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Fee_Record_Id" integer, "Fee_Record_Type" varchar(255), "Money_Id" integer, "Fee_Type_Id" integer, "Description" varchar(255), "Start_Date" DATETIME, "End_Date" DATETIME, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Fee" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FeeRecordId" integer, "FeeRecordType" varchar(255), "MoneyId" integer, "FeeTypeId" integer, "Description" varchar(255), "StartDate" DATETIME, "EndDate" DATETIME, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Fee_Record_Index" ON "Fee" ("Fee_Record_Id", "Fee_Record_Type"); 
+CREATE Index "FeeRecordIndex" ON "Fee" ("FeeRecordId", "FeeRecordType"); 
 GO
-CREATE Index "Index_Fee_On_Fee_Type_Id" ON "Fee" ("Fee_Type_Id"); 
+CREATE Index "IndexFeeOnFeeTypeId" ON "Fee" ("FeeTypeId"); 
 GO
-CREATE Index "Index_Fee_On_Money_Id" ON "Fee" ("Money_Id"); 
+CREATE Index "IndexFeeOnMoneyId" ON "Fee" ("MoneyId"); 
 GO
-CREATE TABLE "Fee_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "FeeType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ParentId" integer, "LeftValue" integer, "RightValue" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Price_Component_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PriceComponentType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Pricing_Plan" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "From_Date" date, "Through_Date" date, "matching_rules" varchar(255), "Pricing_calculation" varchar(255), "Is_simple_Amount" BIT, "currency_Id" integer, "Money_Amount" decimal(8,2), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PricingPlan" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "FromDate" date, "ThroughDate" date, "matchingrules" varchar(255), "Pricingcalculation" varchar(255), "IssimpleAmount" BIT, "currencyId" integer, "MoneyAmount" decimal(8,2), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Pricing_Plan_Component" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Price_Component_Type_Id" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "matching_rules" varchar(255), "Pricing_calculation" varchar(255), "Is_simple_Amount" BIT, "currency_Id" integer, "Money_Amount" decimal(8,2), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PricingPlanComponent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PriceComponentTypeId" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "matchingrules" varchar(255), "Pricingcalculation" varchar(255), "IssimpleAmount" BIT, "currencyId" integer, "MoneyAmount" decimal(8,2), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Pricing_Plan_Component_On_Price_Component_Type_Id" ON "Pricing_Plan_Component" ("Price_Component_Type_Id"); 
+CREATE Index "IndexPricingPlanComponentOnPriceComponentTypeId" ON "PricingPlanComponent" ("PriceComponentTypeId"); 
 GO
-CREATE TABLE "Valid_Price_Plan_Component" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Pricing_Plan_Id" integer, "Pricing_Plan_Component_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ValidPricePlanComponent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PricingPlanId" integer, "PricingPlanComponentId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Valid_Price_Plan_Component_On_Pricing_Plan_Id" ON "Valid_Price_Plan_Component" ("Pricing_Plan_Id"); 
+CREATE Index "IndexValidPricePlanComponentOnPricingPlanId" ON "ValidPricePlanComponent" ("PricingPlanId"); 
 GO
-CREATE Index "Index_Valid_Price_Plan_Component_On_Pricing_Plan_Component_Id" ON "Valid_Price_Plan_Component" ("Pricing_Plan_Component_Id"); 
+CREATE Index "IndexValidPricePlanComponentOnPricingPlanComponentId" ON "ValidPricePlanComponent" ("PricingPlanComponentId"); 
 GO
-CREATE TABLE "Pricing_Plan_Assignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Pricing_Plan_Id" integer, "Priceable_Item_Id" integer, "Priceable_Item_Type" varchar(255), "Priority" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PricingPlanAssignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PricingPlanId" integer, "PriceableItemId" integer, "PriceableItemType" varchar(255), "Priority" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Pricing_Plan_Assignment_On_Pricing_Plan_Id" ON "Pricing_Plan_Assignment" ("Pricing_Plan_Id"); 
+CREATE Index "IndexPricingPlanAssignmentOnPricingPlanId" ON "PricingPlanAssignment" ("PricingPlanId"); 
 GO
-CREATE Index "Priceable_Item_Index" ON "Pricing_Plan_Assignment" ("Priceable_Item_Id", "Priceable_Item_Type"); 
+CREATE Index "PriceableItemIndex" ON "PricingPlanAssignment" ("PriceableItemId", "PriceableItemType"); 
 GO
-CREATE TABLE "Price" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Priced_Item_Id" integer, "Priced_Item_Type" varchar(255), "Pricing_Plan_Id" integer, "Money_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Price" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "PricedItemId" integer, "PricedItemType" varchar(255), "PricingPlanId" integer, "MoneyId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Price_On_Money_Id" ON "Price" ("Money_Id"); 
+CREATE Index "IndexPriceOnMoneyId" ON "Price" ("MoneyId"); 
 GO
-CREATE Index "Index_Price_On_Pricing_Plan_Id" ON "Price" ("Pricing_Plan_Id"); 
+CREATE Index "IndexPriceOnPricingPlanId" ON "Price" ("PricingPlanId"); 
 GO
-CREATE Index "Priced_Item_Index" ON "Price" ("Priced_Item_Id", "Priced_Item_Type"); 
+CREATE Index "PricedItemIndex" ON "Price" ("PricedItemId", "PricedItemType"); 
 GO
-CREATE TABLE "Price_Component" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Pricing_Plan_Component_Id" integer, "Price_Id" integer, "Money_Id" integer, "Priced_Component_Id" integer, "Priced_Component_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PriceComponent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "PricingPlanComponentId" integer, "PriceId" integer, "MoneyId" integer, "PricedComponentId" integer, "PricedComponentType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Price_Component_On_Money_Id" ON "Price_Component" ("Money_Id"); 
+CREATE Index "IndexPriceComponentOnMoneyId" ON "PriceComponent" ("MoneyId"); 
 GO
-CREATE Index "Index_Price_Component_On_Pricing_Plan_Component_Id" ON "Price_Component" ("Pricing_Plan_Component_Id"); 
+CREATE Index "IndexPriceComponentOnPricingPlanComponentId" ON "PriceComponent" ("PricingPlanComponentId"); 
 GO
-CREATE Index "Index_Price_Component_On_Price_Id" ON "Price_Component" ("Price_Id"); 
+CREATE Index "IndexPriceComponentOnPriceId" ON "PriceComponent" ("PriceId"); 
 GO
-CREATE Index "Priced_Component_Index" ON "Price_Component" ("Priced_Component_Id", "Priced_Component_Type"); 
+CREATE Index "PricedComponentIndex" ON "PriceComponent" ("PricedComponentId", "PricedComponentType"); 
 GO
-CREATE TABLE "Payment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Success" BIT, "Reference_Number" varchar(255), "Financial_Taxation_Id" integer, "current_state" varchar(255), "authorization_Code" varchar(255), "External_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Payment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Success" BIT, "ReferenceNumber" varchar(255), "FinancialTaxationId" integer, "currentstate" varchar(255), "authorizationCode" varchar(255), "ExternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Payment_On_Financial_Taxation_Id" ON "Payment" ("Financial_Taxation_Id"); 
+CREATE Index "IndexPaymentOnFinancialTaxationId" ON "Payment" ("FinancialTaxationId"); 
 GO
-CREATE TABLE "Payment_Gateways" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Params" varchar(255), "Payment_Gateway_Action_Id" integer, "Payment_Id" integer, "response" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PaymentGateways" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Params" varchar(255), "PaymentGatewayActionId" integer, "PaymentId" integer, "response" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Payment_Gateway_Action" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PaymentGatewayAction" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Payment_Gateway_Action_On_Internal_Identifier" ON "Payment_Gateway_Action" ("Internal_Identifier"); 
+CREATE Index "IndexPaymentGatewayActionOnInternalIdentifier" ON "PaymentGatewayAction" ("InternalIdentifier"); 
 GO
-CREATE TABLE "Credit_Card" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Crypted_Private_Card_Number" varchar(255), "Crypted_Private_Cvc" varchar(255), "Expiration_month" integer, "Expiration_year" integer, "Description" varchar(255), "name_On_Card" varchar(255), "Card_Type" varchar(255), "Postal_Address_Id" integer, "Credit_Card_Token" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CreditCard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CryptedPrivateCardNumber" varchar(255), "CryptedPrivateCvc" varchar(255), "Expirationmonth" integer, "Expirationyear" integer, "Description" varchar(255), "nameOnCard" varchar(255), "CardType" varchar(255), "PostalAddressId" integer, "CreditCardToken" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Credit_Card_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Credit_Card_Account_Pupose_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CreditCardAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CreditCardAccountPuposeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Credit_Card_Account_Pupose_Index" ON "Credit_Card_Account" ("Credit_Card_Account_Pupose_Id"); 
+CREATE Index "CreditCardAccountPuposeIndex" ON "CreditCardAccount" ("CreditCardAccountPuposeId"); 
 GO
-CREATE TABLE "Credit_Card_Account_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Credit_Card_Account_Id" integer, "Role_Type_Id" integer, "Party_Id" integer, "Credit_Card_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CreditCardAccountPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CreditCardAccountId" integer, "RoleTypeId" integer, "PartyId" integer, "CreditCardId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Credit_Card_Account_Party_Role_On_Credit_Card_Account_Id" ON "Credit_Card_Account_Party_Role" ("Credit_Card_Account_Id"); 
+CREATE Index "IndexCreditCardAccountPartyRoleOnCreditCardAccountId" ON "CreditCardAccountPartyRole" ("CreditCardAccountId"); 
 GO
-CREATE Index "Index_Credit_Card_Account_Party_Role_On_Role_Type_Id" ON "Credit_Card_Account_Party_Role" ("Role_Type_Id"); 
+CREATE Index "IndexCreditCardAccountPartyRoleOnRoleTypeId" ON "CreditCardAccountPartyRole" ("RoleTypeId"); 
 GO
-CREATE Index "Index_Credit_Card_Account_Party_Role_On_Party_Id" ON "Credit_Card_Account_Party_Role" ("Party_Id"); 
+CREATE Index "IndexCreditCardAccountPartyRoleOnPartyId" ON "CreditCardAccountPartyRole" ("PartyId"); 
 GO
-CREATE Index "Index_Credit_Card_Account_Party_Role_On_Credit_Card_Id" ON "Credit_Card_Account_Party_Role" ("Credit_Card_Id"); 
+CREATE Index "IndexCreditCardAccountPartyRoleOnCreditCardId" ON "CreditCardAccountPartyRole" ("CreditCardId"); 
 GO
-CREATE TABLE "Credit_Card_Account_Purpose" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CreditCardAccountPurpose" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Accepted_Credit_Card" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Organization_Id" integer, "Card_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "AcceptedCreditCard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "OrganizationId" integer, "CardType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Bank_Account_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BankAccountType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Bank_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Routing_Number" varchar(255), "Crypted_Private_Account_Number" varchar(255), "name_On_Account" varchar(255), "Bank_Account_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BankAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "RoutingNumber" varchar(255), "CryptedPrivateAccountNumber" varchar(255), "nameOnAccount" varchar(255), "BankAccountTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Bank_Account_Account_Type_Index" ON "Bank_Account" ("Bank_Account_Type_Id"); 
+CREATE Index "BankAccountAccountTypeIndex" ON "BankAccount" ("BankAccountTypeId"); 
 GO
-CREATE TABLE "Order_Taxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Order_Taxation_Type_Id" integer, "Order_Taxation_Record_Id" integer, "Order_Taxation_Record_Type" varchar(255), "email" varchar(255), "phone_Number" varchar(255), "ship_To_first_name" varchar(255), "ship_To_last_name" varchar(255), "ship_To_Address_Line_1" varchar(255), "ship_To_Address_Line_2" varchar(255), "ship_To_city" varchar(255), "ship_To_state" varchar(255), "ship_To_Postal_Code" varchar(255), "ship_To_country_name" varchar(255), "Customer_ip" varchar(255), "Order_Number" varchar(255), "error_Message" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Payment_Gateway_Taxation_Id" varchar(255), "Credit_Card_Id" integer, "bill_To_first_name" varchar(255), "bill_To_last_name" varchar(255), "bill_To_Address_Line_1" varchar(255), "bill_To_Address_Line_2" varchar(255), "bill_To_city" varchar(255), "bill_To_state" varchar(255), "bill_To_Postal_Code" varchar(255), "bill_To_country_name" varchar(255), "bill_To_country" varchar(255), "ship_To_country" varchar(255), "Sales_Tax" decimal(8,2)); 
+CREATE TABLE "OrderTaxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "OrderTaxationTypeId" integer, "OrderTaxationRecordId" integer, "OrderTaxationRecordType" varchar(255), "email" varchar(255), "phoneNumber" varchar(255), "shipTofirstname" varchar(255), "shipTolastname" varchar(255), "shipToAddressLine1" varchar(255), "shipToAddressLine2" varchar(255), "shipTocity" varchar(255), "shipTostate" varchar(255), "shipToPostalCode" varchar(255), "shipTocountryname" varchar(255), "Customerip" varchar(255), "OrderNumber" varchar(255), "errorMessage" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "PaymentGatewayTaxationId" varchar(255), "CreditCardId" integer, "billTofirstname" varchar(255), "billTolastname" varchar(255), "billToAddressLine1" varchar(255), "billToAddressLine2" varchar(255), "billTocity" varchar(255), "billTostate" varchar(255), "billToPostalCode" varchar(255), "billTocountryname" varchar(255), "billTocountry" varchar(255), "shipTocountry" varchar(255), "SalesTax" decimal(8,2)); 
 GO
-CREATE Index "Index_Order_Taxation_On_Order_Taxation_Type_Id" ON "Order_Taxation" ("Order_Taxation_Type_Id"); 
+CREATE Index "IndexOrderTaxationOnOrderTaxationTypeId" ON "OrderTaxation" ("OrderTaxationTypeId"); 
 GO
-CREATE Index "Order_Taxation_Record_Index" ON "Order_Taxation" ("Order_Taxation_Record_Id", "Order_Taxation_Record_Type"); 
+CREATE Index "OrderTaxationRecordIndex" ON "OrderTaxation" ("OrderTaxationRecordId", "OrderTaxationRecordType"); 
 GO
-CREATE TABLE "Product_Instance" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Product_Instance_Record_Id" integer, "Product_Instance_Record_Type" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Product_Type_Id" integer, "Type" varchar(255), "Product_Availability_Status_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductInstance" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "ProductInstanceRecordId" integer, "ProductInstanceRecordType" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ProductTypeId" integer, "Type" varchar(255), "ProductAvailabilityStatusTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Instance_Parent_Id_Index" ON "Product_Instance" ("Parent_Id"); 
+CREATE Index "ProductInstanceParentIdIndex" ON "ProductInstance" ("ParentId"); 
 GO
-CREATE Index "Product_Instance_LeftValue_Index" ON "Product_Instance" ("LeftValue"); 
+CREATE Index "ProductInstanceLeftValueIndex" ON "ProductInstance" ("LeftValue"); 
 GO
-CREATE Index "Product_Instance_RightValue_Index" ON "Product_Instance" ("RightValue"); 
+CREATE Index "ProductInstanceRightValueIndex" ON "ProductInstance" ("RightValue"); 
 GO
-CREATE Index "Product_Instance_Poly_Index" ON "Product_Instance" ("Product_Instance_Record_Id", "Product_Instance_Record_Type"); 
+CREATE Index "ProductInstancePolyIndex" ON "ProductInstance" ("ProductInstanceRecordId", "ProductInstanceRecordType"); 
 GO
-CREATE Index "Product_Instance_Product_Type_Index" ON "Product_Instance" ("Product_Type_Id"); 
+CREATE Index "ProductInstanceProductTypeIndex" ON "ProductInstance" ("ProductTypeId"); 
 GO
-CREATE TABLE "Product_Offer" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Offer_Record_Id" integer, "Product_Offer_Record_Type" varchar(255), "Description" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Valid_From" date, "Valid_To" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductOffer" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductOfferRecordId" integer, "ProductOfferRecordType" varchar(255), "Description" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ValidFrom" date, "ValidTo" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Offer_Poly_Index" ON "Product_Offer" ("Product_Offer_Record_Id", "Product_Offer_Record_Type"); 
+CREATE Index "ProductOfferPolyIndex" ON "ProductOffer" ("ProductOfferRecordId", "ProductOfferRecordType"); 
 GO
-CREATE Index "Product_Offer_Valid_From_Index" ON "Product_Offer" ("Valid_From"); 
+CREATE Index "ProductOfferValidFromIndex" ON "ProductOffer" ("ValidFrom"); 
 GO
-CREATE Index "Product_Offer_Valid_To_Index" ON "Product_Offer" ("Valid_To"); 
+CREATE Index "ProductOfferValidToIndex" ON "ProductOffer" ("ValidTo"); 
 GO
-CREATE TABLE "simple_Product_Offer" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Type_Id" integer, "Description" varchar(255), "string" varchar(255), "Base_Price" decimal(8,2), "uom" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "simpleProductOffer" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductTypeId" integer, "Description" varchar(255), "string" varchar(255), "BasePrice" decimal(8,2), "uom" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "simple_Product_Offer_Product_Type_Id_Index" ON "simple_Product_Offer" ("Product_Type_Id"); 
+CREATE Index "simpleProductOfferProductTypeIdIndex" ON "simpleProductOffer" ("ProductTypeId"); 
 GO
-CREATE TABLE "Product_Instance_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductInstanceRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Relationship_Type_Parent_Id_Index" ON "Product_Instance_Relationship_Type" ("Parent_Id"); 
+CREATE Index "ProductRelationshipTypeParentIdIndex" ON "ProductInstanceRelationshipType" ("ParentId"); 
 GO
-CREATE Index "Product_Relationship_Type_LeftValue_Index" ON "Product_Instance_Relationship_Type" ("LeftValue"); 
+CREATE Index "ProductRelationshipTypeLeftValueIndex" ON "ProductInstanceRelationshipType" ("LeftValue"); 
 GO
-CREATE Index "Product_Relationship_Type_RightValue_Index" ON "Product_Instance_Relationship_Type" ("RightValue"); 
+CREATE Index "ProductRelationshipTypeRightValueIndex" ON "ProductInstanceRelationshipType" ("RightValue"); 
 GO
-CREATE TABLE "Product_Instance_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductInstanceRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Instance_Role_Type_Parent_Id_Index" ON "Product_Instance_Role_Type" ("Parent_Id"); 
+CREATE Index "ProductInstanceRoleTypeParentIdIndex" ON "ProductInstanceRoleType" ("ParentId"); 
 GO
-CREATE Index "Product_Instance_Role_Type_LeftValue_Index" ON "Product_Instance_Role_Type" ("LeftValue"); 
+CREATE Index "ProductInstanceRoleTypeLeftValueIndex" ON "ProductInstanceRoleType" ("LeftValue"); 
 GO
-CREATE Index "Product_Instance_Role_Type_RightValue_Index" ON "Product_Instance_Role_Type" ("RightValue"); 
+CREATE Index "ProductInstanceRoleTypeRightValueIndex" ON "ProductInstanceRoleType" ("RightValue"); 
 GO
-CREATE TABLE "Product_Instance_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Instance_Relationship_Type_Id" integer, "Description" varchar(255), "Product_Instance_Id_From" integer, "Product_Instance_Id_To" integer, "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductInstanceRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductInstanceRelationshipTypeId" integer, "Description" varchar(255), "ProductInstanceIdFrom" integer, "ProductInstanceIdTo" integer, "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Instance_Relationship_Type_Index" ON "Product_Instance_Relationship" ("Product_Instance_Relationship_Type_Id"); 
+CREATE Index "ProductInstanceRelationshipTypeIndex" ON "ProductInstanceRelationship" ("ProductInstanceRelationshipTypeId"); 
 GO
-CREATE Index "Product_Instance_Relationship_Instance_From_Index" ON "Product_Instance_Relationship" ("Product_Instance_Id_From"); 
+CREATE Index "ProductInstanceRelationshipInstanceFromIndex" ON "ProductInstanceRelationship" ("ProductInstanceIdFrom"); 
 GO
-CREATE Index "Product_Instance_Relationship_Instance_To_Index" ON "Product_Instance_Relationship" ("Product_Instance_Id_To"); 
+CREATE Index "ProductInstanceRelationshipInstanceToIndex" ON "ProductInstanceRelationship" ("ProductInstanceIdTo"); 
 GO
-CREATE Index "Product_Instance_Relationship_Type_From_Index" ON "Product_Instance_Relationship" ("Role_Type_Id_From"); 
+CREATE Index "ProductInstanceRelationshipTypeFromIndex" ON "ProductInstanceRelationship" ("RoleTypeIdFrom"); 
 GO
-CREATE Index "Product_Instance_Relationship_Type_To_Index" ON "Product_Instance_Relationship" ("Role_Type_Id_To"); 
+CREATE Index "ProductInstanceRelationshipTypeToIndex" ON "ProductInstanceRelationship" ("RoleTypeIdTo"); 
 GO
-CREATE TABLE "Product_Type_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductTypeRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Type_Relationship_Type_Parent_Id_Index" ON "Product_Instance_Role_Type" ("Parent_Id"); 
+CREATE Index "ProductTypeRelationshipTypeParentIdIndex" ON "ProductInstanceRoleType" ("ParentId"); 
 GO
-CREATE Index "Product_Type_Relationship_Type_LeftValue_Index" ON "Product_Instance_Role_Type" ("LeftValue"); 
+CREATE Index "ProductTypeRelationshipTypeLeftValueIndex" ON "ProductInstanceRoleType" ("LeftValue"); 
 GO
-CREATE Index "Product_Type_Relationship_Type_RightValue_Index" ON "Product_Instance_Role_Type" ("RightValue"); 
+CREATE Index "ProductTypeRelationshipTypeRightValueIndex" ON "ProductInstanceRoleType" ("RightValue"); 
 GO
-CREATE TABLE "Product_Type_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductTypeRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Type_Role_Type_Parent_Id_Index" ON "Product_Instance_Role_Type" ("Parent_Id"); 
+CREATE Index "ProductTypeRoleTypeParentIdIndex" ON "ProductInstanceRoleType" ("ParentId"); 
 GO
-CREATE Index "Product_Type_Role_Type_LeftValue_Index" ON "Product_Instance_Role_Type" ("LeftValue"); 
+CREATE Index "ProductTypeRoleTypeLeftValueIndex" ON "ProductInstanceRoleType" ("LeftValue"); 
 GO
-CREATE Index "Product_Type_Role_Type_RightValue_Index" ON "Product_Instance_Role_Type" ("RightValue"); 
+CREATE Index "ProductTypeRoleTypeRightValueIndex" ON "ProductInstanceRoleType" ("RightValue"); 
 GO
-CREATE TABLE "Product_Type_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Type_Relationship_Type_Id" integer, "Description" varchar(255), "Product_Type_Id_From" integer, "Product_Type_Id_To" integer, "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductTypeRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductTypeRelationshipTypeId" integer, "Description" varchar(255), "ProductTypeIdFrom" integer, "ProductTypeIdTo" integer, "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Type_Relationship_Type_Index" ON "Product_Type_Relationship" ("Product_Type_Relationship_Type_Id"); 
+CREATE Index "ProductTypeRelationshipTypeIndex" ON "ProductTypeRelationship" ("ProductTypeRelationshipTypeId"); 
 GO
-CREATE Index "Product_Type_Relationship_Type_From_Index" ON "Product_Type_Relationship" ("Product_Type_Id_From"); 
+CREATE Index "ProductTypeRelationshipTypeFromIndex" ON "ProductTypeRelationship" ("ProductTypeIdFrom"); 
 GO
-CREATE Index "Product_Type_Relationship_Type_To_Index" ON "Product_Type_Relationship" ("Product_Type_Id_To"); 
+CREATE Index "ProductTypeRelationshipTypeToIndex" ON "ProductTypeRelationship" ("ProductTypeIdTo"); 
 GO
-CREATE Index "Product_Type_Relationship_Role_From_Index" ON "Product_Type_Relationship" ("Role_Type_Id_From"); 
+CREATE Index "ProductTypeRelationshipRoleFromIndex" ON "ProductTypeRelationship" ("RoleTypeIdFrom"); 
 GO
-CREATE Index "Product_Type_Relationship_Role_To_Index" ON "Product_Type_Relationship" ("Role_Type_Id_To"); 
+CREATE Index "ProductTypeRelationshipRoleToIndex" ON "ProductTypeRelationship" ("RoleTypeIdTo"); 
 GO
-CREATE TABLE "Product_Availability_Status_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductAvailabilityStatusType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Avail_Status_Type_Parent_Id_Index" ON "Product_Availability_Status_Type" ("Parent_Id"); 
+CREATE Index "ProductAvailStatusTypeParentIdIndex" ON "ProductAvailabilityStatusType" ("ParentId"); 
 GO
-CREATE Index "Product_Avail_Status_Type_LeftValue_Index" ON "Product_Availability_Status_Type" ("LeftValue"); 
+CREATE Index "ProductAvailStatusTypeLeftValueIndex" ON "ProductAvailabilityStatusType" ("LeftValue"); 
 GO
-CREATE Index "Product_Avail_Status_Type_RightValue_Index" ON "Product_Availability_Status_Type" ("RightValue"); 
+CREATE Index "ProductAvailStatusTypeRightValueIndex" ON "ProductAvailabilityStatusType" ("RightValue"); 
 GO
-CREATE TABLE "Product_Type_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Role_Type_Id" integer, "Product_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductTypePartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "RoleTypeId" integer, "ProductTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Type_Party_Role_Party_Index" ON "Product_Type_Party_Role" ("Party_Id"); 
+CREATE Index "ProductTypePartyRolePartyIndex" ON "ProductTypePartyRole" ("PartyId"); 
 GO
-CREATE Index "Product_Type_Party_Role_Role_Index" ON "Product_Type_Party_Role" ("Role_Type_Id"); 
+CREATE Index "ProductTypePartyRoleRoleIndex" ON "ProductTypePartyRole" ("RoleTypeId"); 
 GO
-CREATE Index "Product_Type_Party_Role_Product_Type_Index" ON "Product_Type_Party_Role" ("Product_Type_Id"); 
+CREATE Index "ProductTypePartyRoleProductTypeIndex" ON "ProductTypePartyRole" ("ProductTypeId"); 
 GO
-CREATE TABLE "Product_Feature_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalId" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Product_Feature_Applicability" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Feature_Of_Record_Id" integer, "Feature_Of_Record_Type" varchar(255), "Product_Feature_Id" integer, "Is_mandatory" BIT, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureApplicability" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FeatureOfRecordId" integer, "FeatureOfRecordType" varchar(255), "ProductFeatureId" integer, "Ismandatory" BIT, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Feature_Record_Index" ON "Product_Feature_Applicability" ("Feature_Of_Record_Type", "Feature_Of_Record_Id"); 
+CREATE Index "ProductFeatureRecordIndex" ON "ProductFeatureApplicability" ("FeatureOfRecordType", "FeatureOfRecordId"); 
 GO
-CREATE TABLE "Product_Feature_Type_Product_Feature_Value" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Feature_Type_Id" integer, "Product_Feature_Value_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureTypeProductFeatureValue" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductFeatureTypeId" integer, "ProductFeatureValueId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Feature_Type_Feature_Value_Type_Index" ON "Product_Feature_Type_Product_Feature_Value" ("Product_Feature_Type_Id"); 
+CREATE Index "ProductFeatureTypeFeatureValueTypeIndex" ON "ProductFeatureTypeProductFeatureValue" ("ProductFeatureTypeId"); 
 GO
-CREATE Index "Product_Feature_Type_Feature_Value_Value_Index" ON "Product_Feature_Type_Product_Feature_Value" ("Product_Feature_Value_Id"); 
+CREATE Index "ProductFeatureTypeFeatureValueValueIndex" ON "ProductFeatureTypeProductFeatureValue" ("ProductFeatureValueId"); 
 GO
-CREATE TABLE "Product_Feature" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Feature_Type_Id" integer, "Product_Feature_Value_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeature" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductFeatureTypeId" integer, "ProductFeatureValueId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Feature_Type_Index" ON "Product_Feature" ("Product_Feature_Type_Id"); 
+CREATE Index "ProductFeatureTypeIndex" ON "ProductFeature" ("ProductFeatureTypeId"); 
 GO
-CREATE Index "Product_Feature_Value_Index" ON "Product_Feature" ("Product_Feature_Value_Id"); 
+CREATE Index "ProductFeatureValueIndex" ON "ProductFeature" ("ProductFeatureValueId"); 
 GO
-CREATE TABLE "Product_Feature_Value" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "value" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureValue" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "value" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Product_Feature_Interaction_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureInteractionType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Communication_Event" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "From_Contact_Mechanism_Id" integer, "From_Contact_Mechanism_Type" varchar(255), "To_Contact_Mechanism_Id" integer, "To_Contact_Mechanism_Type" varchar(255), "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "Party_Id_From" integer, "Party_Id_To" integer, "Short_Description" varchar(255), "Status_Type_Id" integer, "Case_Id" integer, "date_Time_Started" DATETIME, "date_Time_Ended" DATETIME, "notes" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CommunicationEvent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FromContactMechanismId" integer, "FromContactMechanismType" varchar(255), "ToContactMechanismId" integer, "ToContactMechanismType" varchar(255), "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "PartyIdFrom" integer, "PartyIdTo" integer, "ShortDescription" varchar(255), "StatusTypeId" integer, "CaseId" integer, "dateTimeStarted" DATETIME, "dateTimeEnded" DATETIME, "notes" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Communication_Event_On_Status_Type_Id" ON "Communication_Event" ("Status_Type_Id"); 
+CREATE Index "IndexCommunicationEventOnStatusTypeId" ON "CommunicationEvent" ("StatusTypeId"); 
 GO
-CREATE Index "Index_Communication_Event_On_Case_Id" ON "Communication_Event" ("Case_Id"); 
+CREATE Index "IndexCommunicationEventOnCaseId" ON "CommunicationEvent" ("CaseId"); 
 GO
-CREATE Index "Index_Communication_Event_On_Role_Type_Id_From" ON "Communication_Event" ("Role_Type_Id_From"); 
+CREATE Index "IndexCommunicationEventOnRoleTypeIdFrom" ON "CommunicationEvent" ("RoleTypeIdFrom"); 
 GO
-CREATE Index "Index_Communication_Event_On_Role_Type_Id_To" ON "Communication_Event" ("Role_Type_Id_To"); 
+CREATE Index "IndexCommunicationEventOnRoleTypeIdTo" ON "CommunicationEvent" ("RoleTypeIdTo"); 
 GO
-CREATE Index "Index_Communication_Event_On_Party_Id_From" ON "Communication_Event" ("Party_Id_From"); 
+CREATE Index "IndexCommunicationEventOnPartyIdFrom" ON "CommunicationEvent" ("PartyIdFrom"); 
 GO
-CREATE Index "Index_Communication_Event_On_Party_Id_To" ON "Communication_Event" ("Party_Id_To"); 
+CREATE Index "IndexCommunicationEventOnPartyIdTo" ON "CommunicationEvent" ("PartyIdTo"); 
 GO
-CREATE Index "To_Contact_Mechanism_Index" ON "Communication_Event" ("To_Contact_Mechanism_Id", "To_Contact_Mechanism_Type"); 
+CREATE Index "ToContactMechanismIndex" ON "CommunicationEvent" ("ToContactMechanismId", "ToContactMechanismType"); 
 GO
-CREATE Index "From_Contact_Mechanism_Index" ON "Communication_Event" ("From_Contact_Mechanism_Id", "From_Contact_Mechanism_Type"); 
+CREATE Index "FromContactMechanismIndex" ON "CommunicationEvent" ("FromContactMechanismId", "FromContactMechanismType"); 
 GO
-CREATE TABLE "Communication_Event_Pupose_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CommunicationEventPuposeType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Communication_Event_Pupose_Type_On_Parent_Id" ON "Communication_Event_Pupose_Type" ("Parent_Id"); 
+CREATE Index "IndexCommunicationEventPuposeTypeOnParentId" ON "CommunicationEventPuposeType" ("ParentId"); 
 GO
-CREATE TABLE "Communication_Event_Purpose" ("Communication_Event_Id" integer, "Communication_Event_Pupose_Type_Id" integer); 
+CREATE TABLE "CommunicationEventPurpose" ("CommunicationEventId" integer, "CommunicationEventPuposeTypeId" integer); 
 GO
-CREATE Index "Index_Communication_Event_Purpose_On_Communication_Event_Id" ON "Communication_Event_Purpose" ("Communication_Event_Id"); 
+CREATE Index "IndexCommunicationEventPurposeOnCommunicationEventId" ON "CommunicationEventPurpose" ("CommunicationEventId"); 
 GO
-CREATE Index "Index_Communication_Event_Purpose_On_Communication_Event_Pupose_Type_Id" ON "Communication_Event_Purpose" ("Communication_Event_Pupose_Type_Id"); 
+CREATE Index "IndexCommunicationEventPurposeOnCommunicationEventPuposeTypeId" ON "CommunicationEventPurpose" ("CommunicationEventPuposeTypeId"); 
 GO
-CREATE TABLE "Communication_Event_Status" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CommunicationEventStatus" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Communication_Event_Status_On_Parent_Id" ON "Communication_Event_Status" ("Parent_Id"); 
+CREATE Index "IndexCommunicationEventStatusOnParentId" ON "CommunicationEventStatus" ("ParentId"); 
 GO
-CREATE TABLE "GeneralLedger_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "GeneralLedgerAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Price_Plan_Comp_GeneralLedger_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Pricing_Plan_Component_Id" integer, "GeneralLedger_Account_Id" integer, "mapping_Rule_klass" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PricePlanCompGeneralLedgerAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PricingPlanComponentId" integer, "GeneralLedgerAccountId" integer, "mappingRuleklass" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Inventory_Entry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Inventory_Entry_Record_Id" integer, "Inventory_Entry_Record_Type" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Product_Type_Id" integer, "Number_Available" integer, "sku" varchar(255), "Number_Sold" integer, "Unit_Of_Measurement_Id" integer, "Number_In_Stock" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryEntry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InventoryEntryRecordId" integer, "InventoryEntryRecordType" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ProductTypeId" integer, "NumberAvailable" integer, "sku" varchar(255), "NumberSold" integer, "UnitOfMeasurementId" integer, "NumberInStock" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Inventory_Entry_UnitOfMeasurement_Index" ON "Inventory_Entry" ("Unit_Of_Measurement_Id"); 
+CREATE Index "InventoryEntryUnitOfMeasurementIndex" ON "InventoryEntry" ("UnitOfMeasurementId"); 
 GO
-CREATE Index "Bii_1" ON "Inventory_Entry" ("Inventory_Entry_Record_Id", "Inventory_Entry_Record_Type"); 
+CREATE Index "Bii1" ON "InventoryEntry" ("InventoryEntryRecordId", "InventoryEntryRecordType"); 
 GO
-CREATE Index "Index_Inventory_Entry_On_Product_Type_Id" ON "Inventory_Entry" ("Product_Type_Id"); 
+CREATE Index "IndexInventoryEntryOnProductTypeId" ON "InventoryEntry" ("ProductTypeId"); 
 GO
-CREATE TABLE "Inventory_Entry_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryEntryRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Inventory_Entry_Relationship_Type_On_Parent_Id" ON "Inventory_Entry_Relationship_Type" ("Parent_Id"); 
+CREATE Index "IndexInventoryEntryRelationshipTypeOnParentId" ON "InventoryEntryRelationshipType" ("ParentId"); 
 GO
-CREATE TABLE "Inventory_Entry_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryEntryRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Inventory_Entry_Role_Type_On_Parent_Id" ON "Inventory_Entry_Role_Type" ("Parent_Id"); 
+CREATE Index "IndexInventoryEntryRoleTypeOnParentId" ON "InventoryEntryRoleType" ("ParentId"); 
 GO
-CREATE TABLE "Inventory_Entry_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Inventory_Entry_Relationship_Type_Id" integer, "Description" varchar(255), "Inventory_Entry_Id_From" integer, "Inventory_Entry_Id_To" integer, "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryEntryRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InventoryEntryRelationshipTypeId" integer, "Description" varchar(255), "InventoryEntryIdFrom" integer, "InventoryEntryIdTo" integer, "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Inventory_Entry_Relationship_On_Inventory_Entry_Relationship_Type_Id" ON "Inventory_Entry_Relationship" ("Inventory_Entry_Relationship_Type_Id"); 
+CREATE Index "IndexInventoryEntryRelationshipOnInventoryEntryRelationshipTypeId" ON "InventoryEntryRelationship" ("InventoryEntryRelationshipTypeId"); 
 GO
-CREATE Index "Index_Inventory_Entry_Relationship_On_Status_Type_Id" ON "Inventory_Entry_Relationship" ("Status_Type_Id"); 
+CREATE Index "IndexInventoryEntryRelationshipOnStatusTypeId" ON "InventoryEntryRelationship" ("StatusTypeId"); 
 GO
-CREATE TABLE "Product_Instance_Inventory_Entry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Instance_Id" integer, "Inventory_Entry_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductInstanceInventoryEntry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductInstanceId" integer, "InventoryEntryId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Product_Instance_Inventory_Entry_On_Product_Instance_Id" ON "Product_Instance_Inventory_Entry" ("Product_Instance_Id"); 
+CREATE Index "IndexProductInstanceInventoryEntryOnProductInstanceId" ON "ProductInstanceInventoryEntry" ("ProductInstanceId"); 
 GO
-CREATE Index "Index_Product_Instance_Inventory_Entry_On_Inventory_Entry_Id" ON "Product_Instance_Inventory_Entry" ("Inventory_Entry_Id"); 
+CREATE Index "IndexProductInstanceInventoryEntryOnInventoryEntryId" ON "ProductInstanceInventoryEntry" ("InventoryEntryId"); 
 GO
-CREATE TABLE "Inventory_Entry_Location" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Inventory_Entry_Id" integer, "Facility_Id" integer, "Valid_From" DATETIME, "Valid_Through" DATETIME, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryEntryLocation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InventoryEntryId" integer, "FacilityId" integer, "ValidFrom" DATETIME, "ValidThrough" DATETIME, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Inventory_Entry_Location_Inventory_Entry_Index" ON "Inventory_Entry_Location" ("Inventory_Entry_Id"); 
+CREATE Index "InventoryEntryLocationInventoryEntryIndex" ON "InventoryEntryLocation" ("InventoryEntryId"); 
 GO
-CREATE Index "Inventory_Entry_Location_Facility_Index" ON "Inventory_Entry_Location" ("Facility_Id"); 
+CREATE Index "InventoryEntryLocationFacilityIndex" ON "InventoryEntryLocation" ("FacilityId"); 
 GO
-CREATE TABLE "Inventory_Pickup_Taxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Fixed_Asset_Id" integer, "Description" varchar(255), "Quantity" integer, "Unit_Of_Measurement_Id" integer, "Comment" text, "Inventory_Entry_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryPickupTaxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FixedAssetId" integer, "Description" varchar(255), "Quantity" integer, "UnitOfMeasurementId" integer, "Comment" text, "InventoryEntryId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Inventory_Pickup_Taxation_On_Fixed_Asset_Id" ON "Inventory_Pickup_Taxation" ("Fixed_Asset_Id"); 
+CREATE Index "IndexInventoryPickupTaxationOnFixedAssetId" ON "InventoryPickupTaxation" ("FixedAssetId"); 
 GO
-CREATE Index "Index_Inventory_Pickup_Taxation_On_Inventory_Entry_Id" ON "Inventory_Pickup_Taxation" ("Inventory_Entry_Id"); 
+CREATE Index "IndexInventoryPickupTaxationOnInventoryEntryId" ON "InventoryPickupTaxation" ("InventoryEntryId"); 
 GO
-CREATE TABLE "Inventory_DropOff_Taxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Fixed_Asset_Id" integer, "Description" varchar(255), "Quantity" integer, "Unit_Of_Measurement_Id" integer, "Comment" text, "Inventory_Entry_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InventoryDropOffTaxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FixedAssetId" integer, "Description" varchar(255), "Quantity" integer, "UnitOfMeasurementId" integer, "Comment" text, "InventoryEntryId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Inventory_DropOff_Taxation_On_Fixed_Asset_Id" ON "Inventory_DropOff_Taxation" ("Fixed_Asset_Id"); 
+CREATE Index "IndexInventoryDropOffTaxationOnFixedAssetId" ON "InventoryDropOffTaxation" ("FixedAssetId"); 
 GO
-CREATE Index "Index_Inventory_DropOff_Taxation_On_Inventory_Entry_Id" ON "Inventory_DropOff_Taxation" ("Inventory_Entry_Id"); 
+CREATE Index "IndexInventoryDropOffTaxationOnInventoryEntryId" ON "InventoryDropOffTaxation" ("InventoryEntryId"); 
 GO
-CREATE TABLE "Invoice" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Invoice_Number" varchar(255), "Description" varchar(255), "Message" varchar(255), "Invoice_Date" date, "Due_Date" date, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Product_Id" integer, "Invoice_Type_Id" integer, "Billing_Account_Id" integer, "Invoice_Payment_Strategy_Type_Id" integer, "Balance_Id" integer, "Calculate_Balance_Strategy_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Sales_Tax" decimal(8,2)); 
+CREATE TABLE "Invoice" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InvoiceNumber" varchar(255), "Description" varchar(255), "Message" varchar(255), "InvoiceDate" date, "DueDate" date, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ProductId" integer, "InvoiceTypeId" integer, "BillingAccountId" integer, "InvoicePaymentStrategyTypeId" integer, "BalanceId" integer, "CalculateBalanceStrategyTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "SalesTax" decimal(8,2)); 
 GO
-CREATE Index "Product_Type_Index" ON "Invoice" ("Product_Id"); 
+CREATE Index "ProductTypeIndex" ON "Invoice" ("ProductId"); 
 GO
-CREATE Index "Invoice_Type_Index" ON "Invoice" ("Invoice_Type_Id"); 
+CREATE Index "InvoiceTypeIndex" ON "Invoice" ("InvoiceTypeId"); 
 GO
-CREATE Index "Invoice_Billing_Account_Index" ON "Invoice" ("Billing_Account_Id"); 
+CREATE Index "InvoiceBillingAccountIndex" ON "Invoice" ("BillingAccountId"); 
 GO
-CREATE Index "Invoice_Payment_stragegy_Index" ON "Invoice" ("Invoice_Payment_Strategy_Type_Id"); 
+CREATE Index "InvoicePaymentstragegyIndex" ON "Invoice" ("InvoicePaymentStrategyTypeId"); 
 GO
-CREATE TABLE "Invoice_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoiceType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Invoice_Payment_Strategy_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicePaymentStrategyType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Invoiced_Record" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Invoice_Item_Id" integer, "Invoiceable_Item_Id" integer, "Invoiceable_Item_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicedRecord" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InvoiceItemId" integer, "InvoiceableItemId" integer, "InvoiceableItemType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Invoiced_Record_Invoiceable_Item_Index" ON "Invoiced_Record" ("Invoiceable_Item_Id", "Invoiceable_Item_Type"); 
+CREATE Index "InvoicedRecordInvoiceableItemIndex" ON "InvoicedRecord" ("InvoiceableItemId", "InvoiceableItemType"); 
 GO
-CREATE TABLE "Invoice_Item_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoiceItemType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Invoice_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Role_Type_Id" integer, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Invoice_Id" integer, "Party_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicePartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "RoleTypeId" integer, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "InvoiceId" integer, "PartyId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Invoice_Party_Invoice_Id_Index" ON "Invoice_Party_Role" ("Invoice_Id"); 
+CREATE Index "InvoicePartyInvoiceIdIndex" ON "InvoicePartyRole" ("InvoiceId"); 
 GO
-CREATE Index "Invoice_Party_Party_Id_Index" ON "Invoice_Party_Role" ("Party_Id"); 
+CREATE Index "InvoicePartyPartyIdIndex" ON "InvoicePartyRole" ("PartyId"); 
 GO
-CREATE TABLE "Billing_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "SEnd_Paper_Bills" BIT Default 'f', "Payable_Online" BIT Default 'f', "Billing_Date" date, "Calculate_Balance_Strategy_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BillingAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "SEndPaperBills" BIT Default 'f', "PayableOnline" BIT Default 'f', "BillingDate" date, "CalculateBalanceStrategyTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Billing_Contact_Mechanism" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Contact_Mechanism_Id" integer, "Contact_Mechanism_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BillingContactMechanism" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "ContactMechanismId" integer, "ContactMechanismType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Billing_Contact_Mechanism_Index" ON "Billing_Contact_Mechanism" ("Contact_Mechanism_Id", "Contact_Mechanism_Type"); 
+CREATE Index "BillingContactMechanismIndex" ON "BillingContactMechanism" ("ContactMechanismId", "ContactMechanismType"); 
 GO
-CREATE TABLE "Recurring_Payment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Payment_Account_Id" integer, "Payment_Account_Type" varchar(255), "Billing_Account_Id" integer, "Pay_Up_To_Amount" decimal(8,2), "Payment_Amount" decimal(8,2), "Payment_Day" integer, "From_Date" date, "Through_Date" date, "enabled" BIT, "text_To_pay" BIT, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "RecurringPayment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PaymentAccountId" integer, "PaymentAccountType" varchar(255), "BillingAccountId" integer, "PayUpToAmount" decimal(8,2), "PaymentAmount" decimal(8,2), "PaymentDay" integer, "FromDate" date, "ThroughDate" date, "enabled" BIT, "textTopay" BIT, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Payment_Account_Index" ON "Recurring_Payment" ("Payment_Account_Id", "Payment_Account_Type"); 
+CREATE Index "PaymentAccountIndex" ON "RecurringPayment" ("PaymentAccountId", "PaymentAccountType"); 
 GO
-CREATE Index "Index_Recurring_Payment_On_Billing_Account_Id" ON "Recurring_Payment" ("Billing_Account_Id"); 
+CREATE Index "IndexRecurringPaymentOnBillingAccountId" ON "RecurringPayment" ("BillingAccountId"); 
 GO
-CREATE TABLE "Payment_Application" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Financial_Taxation_Id" integer, "Payment_Applied_To_Id" integer, "Payment_Applied_To_Type" varchar(255), "Applied_Money_Amount_Id" integer, "Comment" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PaymentApplication" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FinancialTaxationId" integer, "PaymentAppliedToId" integer, "PaymentAppliedToType" varchar(255), "AppliedMoneyAmountId" integer, "Comment" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Payment_Applied_To_Index" ON "Payment_Application" ("Payment_Applied_To_Id", "Payment_Applied_To_Type"); 
+CREATE Index "PaymentAppliedToIndex" ON "PaymentApplication" ("PaymentAppliedToId", "PaymentAppliedToType"); 
 GO
-CREATE Index "Index_Payment_Application_On_Financial_Taxation_Id" ON "Payment_Application" ("Financial_Taxation_Id"); 
+CREATE Index "IndexPaymentApplicationOnFinancialTaxationId" ON "PaymentApplication" ("FinancialTaxationId"); 
 GO
-CREATE Index "Index_Payment_Application_On_Applied_Money_Amount_Id" ON "Payment_Application" ("Applied_Money_Amount_Id"); 
+CREATE Index "IndexPaymentApplicationOnAppliedMoneyAmountId" ON "PaymentApplication" ("AppliedMoneyAmountId"); 
 GO
-CREATE TABLE "Invoice_Payment_Term_Set" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Invoice_Id" integer, "Invoice_Item_Id" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicePaymentTermSet" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InvoiceId" integer, "InvoiceItemId" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Invoice_Payment_Term_Set_On_Invoice_Id" ON "Invoice_Payment_Term_Set" ("Invoice_Id"); 
+CREATE Index "IndexInvoicePaymentTermSetOnInvoiceId" ON "InvoicePaymentTermSet" ("InvoiceId"); 
 GO
-CREATE Index "Index_Invoice_Payment_Term_Set_On_Invoice_Item_Id" ON "Invoice_Payment_Term_Set" ("Invoice_Item_Id"); 
+CREATE Index "IndexInvoicePaymentTermSetOnInvoiceItemId" ON "InvoicePaymentTermSet" ("InvoiceItemId"); 
 GO
-CREATE TABLE "Invoice_Payment_Term" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Invoice_Payment_Term_Type_Id" integer, "Invoice_Payment_Term_Set_Id" integer, "Description" varchar(255), "Pay_by" date, "Amount" decimal(8,2), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicePaymentTerm" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InvoicePaymentTermTypeId" integer, "InvoicePaymentTermSetId" integer, "Description" varchar(255), "Payby" date, "Amount" decimal(8,2), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Invoice_Payment_Term_On_Invoice_Payment_Term_Type_Id" ON "Invoice_Payment_Term" ("Invoice_Payment_Term_Type_Id"); 
+CREATE Index "IndexInvoicePaymentTermOnInvoicePaymentTermTypeId" ON "InvoicePaymentTerm" ("InvoicePaymentTermTypeId"); 
 GO
-CREATE Index "Index_Invoice_Payment_Term_On_Invoice_Payment_Term_Set_Id" ON "Invoice_Payment_Term" ("Invoice_Payment_Term_Set_Id"); 
+CREATE Index "IndexInvoicePaymentTermOnInvoicePaymentTermSetId" ON "InvoicePaymentTerm" ("InvoicePaymentTermSetId"); 
 GO
-CREATE TABLE "Invoice_Payment_Term_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "InvoicePaymentTermType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Calculate_Balance_Strategy_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CalculateBalanceStrategyType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Invoice_Item" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Invoice_Id" integer, "Invoice_Item_Type_Id" integer, "Item_seq_Id" integer, "Item_Description" text(255), "Quantity" decimal(8,2), "Amount" decimal(8,2), "Taxable" BIT, "Unit_Price" decimal(8,2), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Sales_Tax" decimal(8,2), "Taxed" BIT); 
+CREATE TABLE "InvoiceItem" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InvoiceId" integer, "InvoiceItemTypeId" integer, "ItemseqId" integer, "ItemDescription" text(255), "Quantity" decimal(8,2), "Amount" decimal(8,2), "Taxable" BIT, "UnitPrice" decimal(8,2), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "SalesTax" decimal(8,2), "Taxed" BIT); 
 GO
-CREATE Index "Invoice_Id_Index" ON "Invoice_Item" ("Invoice_Id"); 
+CREATE Index "InvoiceIdIndex" ON "InvoiceItem" ("InvoiceId"); 
 GO
-CREATE Index "Invoice_Item_Type_Id_Index" ON "Invoice_Item" ("Invoice_Item_Type_Id"); 
+CREATE Index "InvoiceItemTypeIdIndex" ON "InvoiceItem" ("InvoiceItemTypeId"); 
 GO
-CREATE TABLE "Order_Taxation_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderTaxationType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Order_Taxation_Type_On_Parent_Id" ON "Order_Taxation_Type" ("Parent_Id"); 
+CREATE Index "IndexOrderTaxationTypeOnParentId" ON "OrderTaxationType" ("ParentId"); 
 GO
-CREATE TABLE "Order_Line_Item" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Order_Taxation_Id" integer, "Order_Line_Item_Type_Id" integer, "Product_Instance_Id" integer, "Product_Instance_Description" varchar(255), "Product_Type_Id" integer, "Product_Type_Description" varchar(255), "Sold_Price" decimal(8,2), "Sold_Price_UnitOfMeasurement" integer, "Sold_Amount" integer, "Sold_Amount_UnitOfMeasurement" integer, "Product_Offer_Id" integer, "Quantity" integer, "Unit_Of_Measurement_Id" integer, "Product_Offer_Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Unit_Price" decimal, "Sales_Tax" decimal(8,2), "Taxed" BIT); 
+CREATE TABLE "OrderLineItem" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "OrderTaxationId" integer, "OrderLineItemTypeId" integer, "ProductInstanceId" integer, "ProductInstanceDescription" varchar(255), "ProductTypeId" integer, "ProductTypeDescription" varchar(255), "SoldPrice" decimal(8,2), "SoldPriceUnitOfMeasurement" integer, "SoldAmount" integer, "SoldAmountUnitOfMeasurement" integer, "ProductOfferId" integer, "Quantity" integer, "UnitOfMeasurementId" integer, "ProductOfferDescription" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "UnitPrice" decimal, "SalesTax" decimal(8,2), "Taxed" BIT); 
 GO
-CREATE Index "Order_Line_Item_UnitOfMeasurement_Index" ON "Order_Line_Item" ("Unit_Of_Measurement_Id"); 
+CREATE Index "OrderLineItemUnitOfMeasurementIndex" ON "OrderLineItem" ("UnitOfMeasurementId"); 
 GO
-CREATE Index "Index_Order_Line_Item_On_Order_Taxation_Id" ON "Order_Line_Item" ("Order_Taxation_Id"); 
+CREATE Index "IndexOrderLineItemOnOrderTaxationId" ON "OrderLineItem" ("OrderTaxationId"); 
 GO
-CREATE Index "Index_Order_Line_Item_On_Order_Line_Item_Type_Id" ON "Order_Line_Item" ("Order_Line_Item_Type_Id"); 
+CREATE Index "IndexOrderLineItemOnOrderLineItemTypeId" ON "OrderLineItem" ("OrderLineItemTypeId"); 
 GO
-CREATE Index "Index_Order_Line_Item_On_Product_Instance_Id" ON "Order_Line_Item" ("Product_Instance_Id"); 
+CREATE Index "IndexOrderLineItemOnProductInstanceId" ON "OrderLineItem" ("ProductInstanceId"); 
 GO
-CREATE Index "Index_Order_Line_Item_On_Product_Type_Id" ON "Order_Line_Item" ("Product_Type_Id"); 
+CREATE Index "IndexOrderLineItemOnProductTypeId" ON "OrderLineItem" ("ProductTypeId"); 
 GO
-CREATE Index "Index_Order_Line_Item_On_Product_Offer_Id" ON "Order_Line_Item" ("Product_Offer_Id"); 
+CREATE Index "IndexOrderLineItemOnProductOfferId" ON "OrderLineItem" ("ProductOfferId"); 
 GO
-CREATE TABLE "Order_Line_Item_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderLineItemType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Order_Line_Item_Type_On_Parent_Id" ON "Order_Line_Item_Type" ("Parent_Id"); 
+CREATE Index "IndexOrderLineItemTypeOnParentId" ON "OrderLineItemType" ("ParentId"); 
 GO
-CREATE TABLE "Order_Line_Item_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Role_Type_Id" integer, "Business_Taxation_Account_Root_Id" integer, "Order_Line_Item_Id" integer, "Party_Id" integer, "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderLineItemPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "RoleTypeId" integer, "BusinessTaxationAccountRootId" integer, "OrderLineItemId" integer, "PartyId" integer, "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Order_Line_Item_Party_Role_Order_Line_Item_Index" ON "Order_Line_Item_Party_Role" ("Order_Line_Item_Id"); 
+CREATE Index "OrderLineItemPartyRoleOrderLineItemIndex" ON "OrderLineItemPartyRole" ("OrderLineItemId"); 
 GO
-CREATE Index "Order_Line_Item_Party_Role_Party_Index" ON "Order_Line_Item_Party_Role" ("Party_Id"); 
+CREATE Index "OrderLineItemPartyRolePartyIndex" ON "OrderLineItemPartyRole" ("PartyId"); 
 GO
-CREATE Index "Order_Line_Item_Party_Role_Role_Type_Index" ON "Order_Line_Item_Party_Role" ("Role_Type_Id"); 
+CREATE Index "OrderLineItemPartyRoleRoleTypeIndex" ON "OrderLineItemPartyRole" ("RoleTypeId"); 
 GO
-CREATE Index "Order_Line_Item_Party_Role_Business_Taxation_Account_Root_Index" ON "Order_Line_Item_Party_Role" ("Business_Taxation_Account_Root_Id"); 
+CREATE Index "OrderLineItemPartyRoleBusinessTaxationAccountRootIndex" ON "OrderLineItemPartyRole" ("BusinessTaxationAccountRootId"); 
 GO
-CREATE TABLE "Order_Line_Item_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Order_Line_Item_Relationship_Type_Id" integer, "Description" varchar(255), "Order_Line_Item_Id_From" integer, "Order_Line_Item_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderLineItemRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "OrderLineItemRelationshipTypeId" integer, "Description" varchar(255), "OrderLineItemIdFrom" integer, "OrderLineItemIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Order_Line_Item_Relationship_On_Order_Line_Item_Relationship_Type_Id" ON "Order_Line_Item_Relationship" ("Order_Line_Item_Relationship_Type_Id"); 
+CREATE Index "OrderLineItemRelationshipOnOrderLineItemRelationshipTypeId" ON "OrderLineItemRelationship" ("OrderLineItemRelationshipTypeId"); 
 GO
-CREATE Index "Index_Order_Line_Item_Relationship_On_Status_Type_Id" ON "Order_Line_Item_Relationship" ("Status_Type_Id"); 
+CREATE Index "IndexOrderLineItemRelationshipOnStatusTypeId" ON "OrderLineItemRelationship" ("StatusTypeId"); 
 GO
-CREATE TABLE "Order_Line_Item_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderLineItemRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Order_Line_Item_Relationship_Type_On_Parent_Id" ON "Order_Line_Item_Relationship_Type" ("Parent_Id"); 
+CREATE Index "IndexOrderLineItemRelationshipTypeOnParentId" ON "OrderLineItemRelationshipType" ("ParentId"); 
 GO
-CREATE TABLE "Charge_Lines" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Sti_Type" varchar(255), "Money_Id" integer, "Description" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Charged_Item_Id" integer, "Charged_Item_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Charge_Type_Id" integer, "Sales_Tax" decimal(8,2), "Taxed" BIT); 
+CREATE TABLE "ChargeLines" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "StiType" varchar(255), "MoneyId" integer, "Description" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ChargedItemId" integer, "ChargedItemType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "ChargeTypeId" integer, "SalesTax" decimal(8,2), "Taxed" BIT); 
 GO
-CREATE Index "Charged_Item_Index" ON "Charge_Lines" ("Charged_Item_Id", "Charged_Item_Type"); 
+CREATE Index "ChargedItemIndex" ON "ChargeLines" ("ChargedItemId", "ChargedItemType"); 
 GO
-CREATE TABLE "Charge_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Taxable" BIT); 
+CREATE TABLE "ChargeType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "Taxable" BIT); 
 GO
-CREATE TABLE "Sales_Tax_Lines" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Sales_Tax_Policy_Id" integer, "Rate" decimal(8,2), "Comment" text, "Taxed_Record_Id" integer, "Taxed_Record_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "SalesTaxLines" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "SalesTaxPolicyId" integer, "Rate" decimal(8,2), "Comment" text, "TaxedRecordId" integer, "TaxedRecordType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Sales_Tax_Policy" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "SalesTaxPolicy" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Product_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Product_Type_Record_Id" integer, "Product_Type_Record_Type" varchar(255), "External_Identifier" varchar(255), "Internal_Identifier" varchar(255), "External_Id_Source" varchar(255), "Default_Image_Url" varchar(255), "List_View_Image_Id" integer, "Type" varchar(255), "sku" varchar(255), "Comment" text, "Unit_Of_Measurement_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Available_On_Web" BIT, "Length" decimal, "Width" decimal, "Height" decimal, "Weight" decimal, "Cylindrical" BIT, "Taxable" BIT); 
+CREATE TABLE "ProductType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "ProductTypeRecordId" integer, "ProductTypeRecordType" varchar(255), "ExternalIdentifier" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "DefaultImageUrl" varchar(255), "ListViewImageId" integer, "Type" varchar(255), "sku" varchar(255), "Comment" text, "UnitOfMeasurementId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "AvailableOnWeb" BIT, "Length" decimal, "Width" decimal, "Height" decimal, "Weight" decimal, "Cylindrical" BIT, "Taxable" BIT); 
 GO
-CREATE Index "Product_Type_Parent_Id_Index" ON "Product_Type" ("Parent_Id"); 
+CREATE Index "ProductTypeParentIdIndex" ON "ProductType" ("ParentId"); 
 GO
-CREATE Index "Product_Type_LeftValue_Index" ON "Product_Type" ("LeftValue"); 
+CREATE Index "ProductTypeLeftValueIndex" ON "ProductType" ("LeftValue"); 
 GO
-CREATE Index "Product_Type_RightValue_Index" ON "Product_Type" ("RightValue"); 
+CREATE Index "ProductTypeRightValueIndex" ON "ProductType" ("RightValue"); 
 GO
-CREATE Index "Product_Type_UnitOfMeasurement_Index" ON "Product_Type" ("Unit_Of_Measurement_Id"); 
+CREATE Index "ProductTypeUnitOfMeasurementIndex" ON "ProductType" ("UnitOfMeasurementId"); 
 GO
-CREATE Index "Product_Type_Poly_Index" ON "Product_Type" ("Product_Type_Record_Id", "Product_Type_Record_Type"); 
+CREATE Index "ProductTypePolyIndex" ON "ProductType" ("ProductTypeRecordId", "ProductTypeRecordType"); 
 GO
-CREATE Index "Index_Product_Type_On_Available_On_Web" ON "Product_Type" ("Available_On_Web"); 
+CREATE Index "IndexProductTypeOnAvailableOnWeb" ON "ProductType" ("AvailableOnWeb"); 
 GO
-CREATE TABLE "Product_Feature_InterAction" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Product_Feature_From_Id" integer, "Product_Feature_To_Id" integer, "Product_Feature_Interaction_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "ProductFeatureInterAction" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ProductFeatureFromId" integer, "ProductFeatureToId" integer, "ProductFeatureInteractionTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Product_Feature_int_Feature_Index" ON "Product_Feature_InterAction" ("Product_Feature_From_Id"); 
+CREATE Index "ProductFeatureintFeatureIndex" ON "ProductFeatureInterAction" ("ProductFeatureFromId"); 
 GO
-CREATE Index "Product_Feature_int_interacted_Feature_Index" ON "Product_Feature_InterAction" ("Product_Feature_To_Id"); 
+CREATE Index "ProductFeatureintinteractedFeatureIndex" ON "ProductFeatureInterAction" ("ProductFeatureToId"); 
 GO
-CREATE Index "Product_Feature_int_interacted_Feature_Type_Index" ON "Product_Feature_InterAction" ("Product_Feature_Interaction_Type_Id"); 
+CREATE Index "ProductFeatureintinteractedFeatureTypeIndex" ON "ProductFeatureInterAction" ("ProductFeatureInteractionTypeId"); 
 GO
-CREATE Index "Product_ft_vals_IId_Index" ON "Product_Feature_Value" ("Internal_Identifier"); 
+CREATE Index "ProductftvalsIIdIndex" ON "ProductFeatureValue" ("InternalIdentifier"); 
 GO
-CREATE Index "Product_ft_int_Type_IId_Index" ON "Product_Feature_Interaction_Type" ("Internal_Identifier"); 
+CREATE Index "ProductftintTypeIIdIndex" ON "ProductFeatureInteractionType" ("InternalIdentifier"); 
 GO
-CREATE Index "Product_ft_Type_IId_Index" ON "Product_Feature_Type" ("Internal_Identifier"); 
+CREATE Index "ProductftTypeIIdIndex" ON "ProductFeatureType" ("InternalIdentifier"); 
 GO
-CREATE Index "Product_ft_Type_Nested_Set_Index" ON "Product_Feature_Type" ("RightValue", "LeftValue", "Parent_Id"); 
+CREATE Index "ProductftTypeNestedSetIndex" ON "ProductFeatureType" ("RightValue", "LeftValue", "ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Event" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Business_Taxation_Account_Root_Id" integer, "Business_Taxation_Type_Id" integer, "Entered_Date" DATETIME, "Post_Date" DATETIME, "Business_Taxation_Record_Id" integer, "Business_Taxation_Record_Type" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationEvent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "BusinessTaxationAccountRootId" integer, "BusinessTaxationTypeId" integer, "EnteredDate" DATETIME, "PostDate" DATETIME, "BusinessTaxationRecordId" integer, "BusinessTaxationRecordType" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Event_On_Business_Taxation_Account_Root_Id" ON "Business_Taxation_Event" ("Business_Taxation_Account_Root_Id"); 
+CREATE Index "IndexBusinessTaxationEventOnBusinessTaxationAccountRootId" ON "BusinessTaxationEvent" ("BusinessTaxationAccountRootId"); 
 GO
-CREATE Index "Index_Business_Taxation_Event_On_Business_Taxation_Type_Id" ON "Business_Taxation_Event" ("Business_Taxation_Type_Id"); 
+CREATE Index "IndexBusinessTaxationEventOnBusinessTaxationTypeId" ON "BusinessTaxationEvent" ("BusinessTaxationTypeId"); 
 GO
-CREATE Index "Btai_1" ON "Business_Taxation_Event" ("Business_Taxation_Record_Id", "Business_Taxation_Record_Type"); 
+CREATE Index "Btai1" ON "BusinessTaxationEvent" ("BusinessTaxationRecordId", "BusinessTaxationRecordType"); 
 GO
-CREATE TABLE "Business_Taxation_Event_Description" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Event_Id" integer, "Language_Id" integer, "Locale_Id" integer, "Priority" integer, "Sequence" integer, "Short_Description" varchar(255), "Long_Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationEventDescription" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationEventId" integer, "LanguageId" integer, "LocaleId" integer, "Priority" integer, "Sequence" integer, "ShortDescription" varchar(255), "LongDescription" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Event_Description_On_Business_Taxation_Event_Id" ON "Business_Taxation_Event_Description" ("Business_Taxation_Event_Id"); 
+CREATE Index "IndexBusinessTaxationEventDescriptionOnBusinessTaxationEventId" ON "BusinessTaxationEventDescription" ("BusinessTaxationEventId"); 
 GO
-CREATE Index "Index_Business_Taxation_Event_Description_On_Language_Id" ON "Business_Taxation_Event_Description" ("Language_Id"); 
+CREATE Index "IndexBusinessTaxationEventDescriptionOnLanguageId" ON "BusinessTaxationEventDescription" ("LanguageId"); 
 GO
-CREATE Index "Index_Business_Taxation_Event_Description_On_Locale_Id" ON "Business_Taxation_Event_Description" ("Locale_Id"); 
+CREATE Index "IndexBusinessTaxationEventDescriptionOnLocaleId" ON "BusinessTaxationEventDescription" ("LocaleId"); 
 GO
-CREATE TABLE "Business_Taxation_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Business_Taxation_Type_Nested_Set_Index" ON "Business_Taxation_Type" ("Parent_Id", "LeftValue", "RightValue"); 
+CREATE Index "BusinessTaxationTypeNestedSetIndex" ON "BusinessTaxationType" ("ParentId", "LeftValue", "RightValue"); 
 GO
-CREATE TABLE "Business_Taxation_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Relationship_Type_Id" integer, "Description" varchar(255), "Taxation_Event_Id_From" integer, "Taxation_Event_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationRelationshipTypeId" integer, "Description" varchar(255), "TaxationEventIdFrom" integer, "TaxationEventIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Relationship_On_Business_Taxation_Relationship_Type_Id" ON "Business_Taxation_Relationship" ("Business_Taxation_Relationship_Type_Id"); 
+CREATE Index "IndexBusinessTaxationRelationshipOnBusinessTaxationRelationshipTypeId" ON "BusinessTaxationRelationship" ("BusinessTaxationRelationshipTypeId"); 
 GO
-CREATE Index "Index_Business_Taxation_Relationship_On_Status_Type_Id" ON "Business_Taxation_Relationship" ("Status_Type_Id"); 
+CREATE Index "IndexBusinessTaxationRelationshipOnStatusTypeId" ON "BusinessTaxationRelationship" ("StatusTypeId"); 
 GO
-CREATE TABLE "Business_Taxation_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Relationship_Type_On_Parent_Id" ON "Business_Taxation_Relationship_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationRelationshipTypeOnParentId" ON "BusinessTaxationRelationshipType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Status" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationStatus" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Business_Taxation_Task" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationTask" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Business_Taxation_Task_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationTaskType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Task_Type_On_Parent_Id" ON "Business_Taxation_Task_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationTaskTypeOnParentId" ON "BusinessTaxationTaskType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Event_Id" integer, "Party_Id" integer, "Business_Taxation_Party_Role_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationEventId" integer, "PartyId" integer, "BusinessTaxationPartyRoleTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Party_Role_On_Business_Taxation_Event_Id" ON "Business_Taxation_Party_Role" ("Business_Taxation_Event_Id"); 
+CREATE Index "IndexBusinessTaxationPartyRoleOnBusinessTaxationEventId" ON "BusinessTaxationPartyRole" ("BusinessTaxationEventId"); 
 GO
-CREATE Index "Index_Business_Taxation_Party_Role_On_Party_Id" ON "Business_Taxation_Party_Role" ("Party_Id"); 
+CREATE Index "IndexBusinessTaxationPartyRoleOnPartyId" ON "BusinessTaxationPartyRole" ("PartyId"); 
 GO
-CREATE Index "Index_Business_Taxation_Party_Role_On_Business_Taxation_Party_Role_Type_Id" ON "Business_Taxation_Party_Role" ("Business_Taxation_Party_Role_Type_Id"); 
+CREATE Index "IndexBusinessTaxationPartyRoleOnBusinessTaxationPartyRoleTypeId" ON "BusinessTaxationPartyRole" ("BusinessTaxationPartyRoleTypeId"); 
 GO
-CREATE TABLE "Business_Taxation_Party_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationPartyRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Party_Role_Type_On_Parent_Id" ON "Business_Taxation_Party_Role_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationPartyRoleTypeOnParentId" ON "BusinessTaxationPartyRoleType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Root" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Status" integer, "Business_Taxation_Account_Id" integer, "Business_Taxation_Account_Type" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Type" varchar(255), "Business_Taxation_Account_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountRoot" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Status" integer, "BusinessTaxationAccountId" integer, "BusinessTaxationAccountType" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "Type" varchar(255), "BusinessTaxationAccountTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Btai_2" ON "Business_Taxation_Account_Root" ("Business_Taxation_Account_Id", "Business_Taxation_Account_Type"); 
+CREATE Index "Btai2" ON "BusinessTaxationAccountRoot" ("BusinessTaxationAccountId", "BusinessTaxationAccountType"); 
 GO
-CREATE Index "Btai_3" ON "Business_Taxation_Account_Root" ("Business_Taxation_Account_Type_Id"); 
+CREATE Index "Btai3" ON "BusinessTaxationAccountRoot" ("BusinessTaxationAccountTypeId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Status_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountStatusType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Business_Taxation_Account_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Type_On_Parent_Id" ON "Business_Taxation_Account_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationAccountTypeOnParentId" ON "BusinessTaxationAccountType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Status" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountStatus" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Business_Taxation_Account_Relationship_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountRelationshipType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Relationship_Type_On_Parent_Id" ON "Business_Taxation_Account_Relationship_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationAccountRelationshipTypeOnParentId" ON "BusinessTaxationAccountRelationshipType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Relationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Account_Relationship_Type_Id" integer, "Description" varchar(255), "Business_Taxation_Account_Root_Id_From" integer, "Business_Taxation_Account_Root_Id_To" integer, "Status_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountRelationship" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationAccountRelationshipTypeId" integer, "Description" varchar(255), "BusinessTaxationAccountRootIdFrom" integer, "BusinessTaxationAccountRootIdTo" integer, "StatusTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Relationship_On_Business_Taxation_Account_Relationship_Type_Id" ON "Business_Taxation_Account_Relationship" ("Business_Taxation_Account_Relationship_Type_Id"); 
+CREATE Index "IndexBusinessTaxationAccountRelationshipOnBusinessTaxationAccountRelationshipTypeId" ON "BusinessTaxationAccountRelationship" ("BusinessTaxationAccountRelationshipTypeId"); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Relationship_On_Status_Type_Id" ON "Business_Taxation_Account_Relationship" ("Status_Type_Id"); 
+CREATE Index "IndexBusinessTaxationAccountRelationshipOnStatusTypeId" ON "BusinessTaxationAccountRelationship" ("StatusTypeId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Business_Taxation_Account_Root_Id" integer, "Party_Id" integer, "Business_Taxation_Account_Party_Type_Id" integer, "Is_Default_Billing_Account_Flag" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "BusinessTaxationAccountRootId" integer, "PartyId" integer, "BusinessTaxationAccountPartyTypeId" integer, "IsDefaultBillingAccountFlag" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Party_Role_On_Business_Taxation_Account_Root_Id" ON "Business_Taxation_Account_Party_Role" ("Business_Taxation_Account_Root_Id"); 
+CREATE Index "IndexBusinessTaxationAccountPartyRoleOnBusinessTaxationAccountRootId" ON "BusinessTaxationAccountPartyRole" ("BusinessTaxationAccountRootId"); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Party_Role_On_Party_Id" ON "Business_Taxation_Account_Party_Role" ("Party_Id"); 
+CREATE Index "IndexBusinessTaxationAccountPartyRoleOnPartyId" ON "BusinessTaxationAccountPartyRole" ("PartyId"); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Party_Role_On_Business_Taxation_Account_Party_Type_Id" ON "Business_Taxation_Account_Party_Role" ("Business_Taxation_Account_Party_Type_Id"); 
+CREATE Index "IndexBusinessTaxationAccountPartyRoleOnBusinessTaxationAccountPartyTypeId" ON "BusinessTaxationAccountPartyRole" ("BusinessTaxationAccountPartyTypeId"); 
 GO
-CREATE TABLE "Business_Taxation_Account_Party_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAccountPartyType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Account_Party_Type_On_Parent_Id" ON "Business_Taxation_Account_Party_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationAccountPartyTypeOnParentId" ON "BusinessTaxationAccountPartyType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Account_Taxation_Task" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Task_Id" integer, "Business_Taxation_Account_Id" integer, "Description" varchar(255), "Comments" varchar(255), "Entered_Date" DATETIME, "requested_Date" DATETIME, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessAccountTaxationTask" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationTaskId" integer, "BusinessTaxationAccountId" integer, "Description" varchar(255), "Comments" varchar(255), "EnteredDate" DATETIME, "requestedDate" DATETIME, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Account_Taxation_Task_On_Business_Taxation_Task_Id" ON "Business_Account_Taxation_Task" ("Business_Taxation_Task_Id"); 
+CREATE Index "IndexBusinessAccountTaxationTaskOnBusinessTaxationTaskId" ON "BusinessAccountTaxationTask" ("BusinessTaxationTaskId"); 
 GO
-CREATE Index "Index_Business_Account_Taxation_Task_On_Business_Taxation_Account_Id" ON "Business_Account_Taxation_Task" ("Business_Taxation_Account_Id"); 
+CREATE Index "IndexBusinessAccountTaxationTaskOnBusinessTaxationAccountId" ON "BusinessAccountTaxationTask" ("BusinessTaxationAccountId"); 
 GO
-CREATE TABLE "Business_Taxation_Agreement_Role_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAgreementRoleType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Agreement_Role_Type_On_Parent_Id" ON "Business_Taxation_Agreement_Role_Type" ("Parent_Id"); 
+CREATE Index "IndexBusinessTaxationAgreementRoleTypeOnParentId" ON "BusinessTaxationAgreementRoleType" ("ParentId"); 
 GO
-CREATE TABLE "Business_Taxation_Agreement_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Event_Id" integer, "Business_Taxation_Event_Type" varchar(255), "Agreement_Id" integer, "Business_Taxation_Agreement_Role_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BusinessTaxationAgreementRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationEventId" integer, "BusinessTaxationEventType" varchar(255), "AgreementId" integer, "BusinessTaxationAgreementRoleTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Business_Taxation_Agreement_Role_On_Agreement_Id" ON "Business_Taxation_Agreement_Role" ("Agreement_Id"); 
+CREATE Index "IndexBusinessTaxationAgreementRoleOnAgreementId" ON "BusinessTaxationAgreementRole" ("AgreementId"); 
 GO
-CREATE Index "Index_Business_Taxation_Agreement_Role_On_Business_Taxation_Agreement_Role_Type_Id" ON "Business_Taxation_Agreement_Role" ("Business_Taxation_Agreement_Role_Type_Id"); 
+CREATE Index "IndexBusinessTaxationAgreementRoleOnBusinessTaxationAgreementRoleTypeId" ON "BusinessTaxationAgreementRole" ("BusinessTaxationAgreementRoleTypeId"); 
 GO
-CREATE TABLE "Financial_Taxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Money_Id" integer, "apply_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "FinancialTaxation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "MoneyId" integer, "applyDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Financial_Taxation_Assignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Financial_Taxation_Id" integer, "Financial_Taxation_Record_Id" integer, "Financial_Taxation_Record_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "FinancialTaxationAssignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FinancialTaxationId" integer, "FinancialTaxationRecordId" integer, "FinancialTaxationRecordType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Financial_Taxation_Account" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Account_Number" varchar(255), "Agreement_Id" integer, "Balance_Id" integer, "Balance_Date" date, "Calculate_Balance" BIT, "Payment_Due_Id" integer, "Due_Date" date, "Financial_Account_Id" integer, "Financial_Account_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "FinancialTaxationAccount" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "AccountNumber" varchar(255), "AgreementId" integer, "BalanceId" integer, "BalanceDate" date, "CalculateBalance" BIT, "PaymentDueId" integer, "DueDate" date, "FinancialAccountId" integer, "FinancialAccountType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Base_Taxation_Context" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Business_Taxation_Event_Id" integer, "Taxation_Context_Record_Id" integer, "Taxation_Context_Record_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "BaseTaxationContext" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "BusinessTaxationEventId" integer, "TaxationContextRecordId" integer, "TaxationContextRecordType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Taxation_Context_Record_Index" ON "Base_Taxation_Context" ("Taxation_Context_Record_Id", "Taxation_Context_Record_Type"); 
+CREATE Index "TaxationContextRecordIndex" ON "BaseTaxationContext" ("TaxationContextRecordId", "TaxationContextRecordType"); 
 GO
-CREATE TABLE "Skill_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "SkillType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Party_Skill" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Skill_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PartySkill" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "SkillTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Party_Skill_Index" ON "Party_Skill" ("Party_Id", "Skill_Type_Id"); 
+CREATE Index "PartySkillIndex" ON "PartySkill" ("PartyId", "SkillTypeId"); 
 GO
-CREATE TABLE "Good_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "GoodType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Deliverable" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Deliverable_Record_Type" varchar(255), "Deliverable_Record_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Deliverable" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "DeliverableRecordType" varchar(255), "DeliverableRecordId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Deliverable_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "DeliverableType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Requirement" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Type" varchar(255), "Projected_Completion_Time" integer, "Estimated_budget_Money_Id" integer, "Requirement_Type_Id" integer, "Requirement_Record_Id" integer, "Requirement_Record_Type" varchar(255), "Fixed_Asset_Id" integer, "Product_Id" integer, "Deliverable_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Requirement" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Type" varchar(255), "ProjectedCompletionTime" integer, "EstimatedbudgetMoneyId" integer, "RequirementTypeId" integer, "RequirementRecordId" integer, "RequirementRecordType" varchar(255), "FixedAssetId" integer, "ProductId" integer, "DeliverableId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Requirement_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "RequirementType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Requirement_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Requirement_Id" integer, "Party_Id" integer, "Role_Type_Id" integer, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Valid_From" DATETIME, "Valid_To" DATETIME, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "RequirementPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "RequirementId" integer, "PartyId" integer, "RoleTypeId" integer, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "ValidFrom" DATETIME, "ValidTo" DATETIME, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Requirement_Party_Role_Index" ON "Requirement_Party_Role" ("Requirement_Id", "Party_Id", "Role_Type_Id"); 
+CREATE Index "RequirementPartyRoleIndex" ON "RequirementPartyRole" ("RequirementId", "PartyId", "RoleTypeId"); 
 GO
-CREATE TABLE "Associated_Work_Effort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Associated_Record_Id" integer, "Associated_Record_Type" varchar(255)); 
+CREATE TABLE "AssociatedWorkEffort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "AssociatedRecordId" integer, "AssociatedRecordType" varchar(255)); 
 GO
-CREATE Index "Associated_Record_Id_Type_Index" ON "Associated_Work_Effort" ("Associated_Record_Id", "Associated_Record_Type"); 
+CREATE Index "AssociatedRecordIdTypeIndex" ON "AssociatedWorkEffort" ("AssociatedRecordId", "AssociatedRecordType"); 
 GO
-CREATE Index "Index_Associated_Work_Effort_On_Work_Effort_Id" ON "Associated_Work_Effort" ("Work_Effort_Id"); 
+CREATE Index "IndexAssociatedWorkEffortOnWorkEffortId" ON "AssociatedWorkEffort" ("WorkEffortId"); 
 GO
-CREATE TABLE "Work_Effort_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Work_Effort_Pupose_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortPuposeType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Work_Effort_Association_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Valid_From_Role_Type_Id" integer, "Valid_To_Role_Type_Id" integer, "Name" varchar(255), "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortAssociationType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "ValidFromRoleTypeId" integer, "ValidToRoleTypeId" integer, "Name" varchar(255), "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Association_Type_On_Valid_From_Role_Type_Id" ON "Work_Effort_Association_Type" ("Valid_From_Role_Type_Id"); 
+CREATE Index "IndexWorkEffortAssociationTypeOnValidFromRoleTypeId" ON "WorkEffortAssociationType" ("ValidFromRoleTypeId"); 
 GO
-CREATE Index "Index_Work_Effort_Association_Type_On_Valid_To_Role_Type_Id" ON "Work_Effort_Association_Type" ("Valid_To_Role_Type_Id"); 
+CREATE Index "IndexWorkEffortAssociationTypeOnValidToRoleTypeId" ON "WorkEffortAssociationType" ("ValidToRoleTypeId"); 
 GO
-CREATE TABLE "Work_Effort_Association" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Association_Type_Id" integer, "Description" varchar(255), "Work_Effort_Id_From" integer, "Work_Effort_Id_To" integer, "Role_Type_Id_From" integer, "Role_Type_Id_To" integer, "Relationship_Type_Id" integer, "Effective_From" DATETIME, "Effective_Through" DATETIME, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Lag" integer, "Lag_Unit" varchar(255)); 
+CREATE TABLE "WorkEffortAssociation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortAssociationTypeId" integer, "Description" varchar(255), "WorkEffortIdFrom" integer, "WorkEffortIdTo" integer, "RoleTypeIdFrom" integer, "RoleTypeIdTo" integer, "RelationshipTypeId" integer, "EffectiveFrom" DATETIME, "EffectiveThrough" DATETIME, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "Lag" integer, "LagUnit" varchar(255)); 
 GO
-CREATE Index "Index_Work_Effort_Association_On_Relationship_Type_Id" ON "Work_Effort_Association" ("Relationship_Type_Id"); 
+CREATE Index "IndexWorkEffortAssociationOnRelationshipTypeId" ON "WorkEffortAssociation" ("RelationshipTypeId"); 
 GO
-CREATE TABLE "Work_Order_Item_Fulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Order_Line_Item_Id" integer, "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkOrderItemFulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "OrderLineItemId" integer, "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Work_Order_Item_Fulfillment_Index" ON "Work_Order_Item_Fulfillment" ("Work_Effort_Id", "Order_Line_Item_Id"); 
+CREATE Index "WorkOrderItemFulfillmentIndex" ON "WorkOrderItemFulfillment" ("WorkEffortId", "OrderLineItemId"); 
 GO
-CREATE TABLE "Work_Order_Item" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkOrderItem" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Order_Requirement_Commitment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Order_Line_Item_Id" integer, "Requirement_Id" integer, "Description" varchar(255), "Quantity" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "OrderRequirementCommitment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "OrderLineItemId" integer, "RequirementId" integer, "Description" varchar(255), "Quantity" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Order_Item_Requirement_Fulfillment_Index" ON "Order_Requirement_Commitment" ("Order_Line_Item_Id", "Requirement_Id"); 
+CREATE Index "OrderItemRequirementFulfillmentIndex" ON "OrderRequirementCommitment" ("OrderLineItemId", "RequirementId"); 
 GO
-CREATE TABLE "Work_Requirement_Fulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Work_Effort_Id" integer, "Requirement_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkRequirementFulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "WorkEffortId" integer, "RequirementId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Work_Order_Requirement_Fulfillment_Index" ON "Work_Requirement_Fulfillment" ("Work_Effort_Id", "Requirement_Id"); 
+CREATE Index "WorkOrderRequirementFulfillmentIndex" ON "WorkRequirementFulfillment" ("WorkEffortId", "RequirementId"); 
 GO
-CREATE TABLE "Work_Effort_Party_Assignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Role_Type_Id" integer, "Party_Id" integer, "assigned_From" DATETIME, "assigned_Through" DATETIME, "Comments" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Resource_allocation" integer); 
+CREATE TABLE "WorkEffortPartyAssignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "RoleTypeId" integer, "PartyId" integer, "assignedFrom" DATETIME, "assignedThrough" DATETIME, "Comments" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "Resourceallocation" integer); 
 GO
-CREATE Index "Index_Work_Effort_Party_Assignment_On_assigned_From" ON "Work_Effort_Party_Assignment" ("assigned_From"); 
+CREATE Index "IndexWorkEffortPartyAssignmentOnassignedFrom" ON "WorkEffortPartyAssignment" ("assignedFrom"); 
 GO
-CREATE Index "Index_Work_Effort_Party_Assignment_On_assigned_Through" ON "Work_Effort_Party_Assignment" ("assigned_Through"); 
+CREATE Index "IndexWorkEffortPartyAssignmentOnassignedThrough" ON "WorkEffortPartyAssignment" ("assignedThrough"); 
 GO
-CREATE Index "Index_Work_Effort_Party_Assignment_On_Work_Effort_Id" ON "Work_Effort_Party_Assignment" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortPartyAssignmentOnWorkEffortId" ON "WorkEffortPartyAssignment" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Party_Assignment_On_Party_Id" ON "Work_Effort_Party_Assignment" ("Party_Id"); 
+CREATE Index "IndexWorkEffortPartyAssignmentOnPartyId" ON "WorkEffortPartyAssignment" ("PartyId"); 
 GO
-CREATE TABLE "Work_Effort_Inventory_Assignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Inventory_Entry_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortInventoryAssignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "InventoryEntryId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Work_Effort_Inventory_Assignment_Index" ON "Work_Effort_Inventory_Assignment" ("Work_Effort_Id", "Inventory_Entry_Id"); 
+CREATE Index "WorkEffortInventoryAssignmentIndex" ON "WorkEffortInventoryAssignment" ("WorkEffortId", "InventoryEntryId"); 
 GO
-CREATE TABLE "Work_Effort_Fixed_Asset_Assignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Fixed_Asset_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortFixedAssetAssignment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "FixedAssetId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Work_Effort_Fixed_Asset_assign_Index" ON "Work_Effort_Fixed_Asset_Assignment" ("Work_Effort_Id", "Fixed_Asset_Id"); 
+CREATE Index "WorkEffortFixedAssetassignIndex" ON "WorkEffortFixedAssetAssignment" ("WorkEffortId", "FixedAssetId"); 
 GO
-CREATE TABLE "Work_Effort_Type_Association" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Type_Assoc_Type" integer, "Work_Effort_Type_Id_From" integer, "Work_Effort_Type_Id_To" integer, "Description" varchar(255), "Comments" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortTypeAssociation" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortTypeAssocType" integer, "WorkEffortTypeIdFrom" integer, "WorkEffortTypeIdTo" integer, "Description" varchar(255), "Comments" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Work_Effort_Fixed_Asset_Standard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Fixed_Asset_Type_Id" integer, "Estimated_Quantity" decimal, "Estimated_Duration" decimal, "Estimated_Cost_Money_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortFixedAssetStandard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "FixedAssetTypeId" integer, "EstimatedQuantity" decimal, "EstimatedDuration" decimal, "EstimatedCostMoneyId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Fixed_Asset_Standard_On_Work_Effort_Id" ON "Work_Effort_Fixed_Asset_Standard" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortFixedAssetStandardOnWorkEffortId" ON "WorkEffortFixedAssetStandard" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Fixed_Asset_Standard_On_Fixed_Asset_Type_Id" ON "Work_Effort_Fixed_Asset_Standard" ("Fixed_Asset_Type_Id"); 
+CREATE Index "IndexWorkEffortFixedAssetStandardOnFixedAssetTypeId" ON "WorkEffortFixedAssetStandard" ("FixedAssetTypeId"); 
 GO
-CREATE TABLE "Work_Effort_Skill_Standard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Skill_Type_Id" integer, "Estimated_Number_People" decimal, "Estimated_Duration" decimal, "Estimated_Cost_Money_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortSkillStandard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "SkillTypeId" integer, "EstimatedNumberPeople" decimal, "EstimatedDuration" decimal, "EstimatedCostMoneyId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Skill_Standard_On_Work_Effort_Id" ON "Work_Effort_Skill_Standard" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortSkillStandardOnWorkEffortId" ON "WorkEffortSkillStandard" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Skill_Standard_On_Skill_Type_Id" ON "Work_Effort_Skill_Standard" ("Skill_Type_Id"); 
+CREATE Index "IndexWorkEffortSkillStandardOnSkillTypeId" ON "WorkEffortSkillStandard" ("SkillTypeId"); 
 GO
-CREATE TABLE "Work_Effort_Good_Standard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Good_Type_Id" integer, "Estimated_Quantity" decimal, "Estimated_Cost_Money_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortGoodStandard" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "GoodTypeId" integer, "EstimatedQuantity" decimal, "EstimatedCostMoneyId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Good_Standard_On_Work_Effort_Id" ON "Work_Effort_Good_Standard" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortGoodStandardOnWorkEffortId" ON "WorkEffortGoodStandard" ("WorkEffortId"); 
 GO
-CREATE TABLE "Work_Effort_Inventory_Produced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Inventory_Entry_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortInventoryProduced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "InventoryEntryId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Inventory_Produced_On_Work_Effort_Id" ON "Work_Effort_Inventory_Produced" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortInventoryProducedOnWorkEffortId" ON "WorkEffortInventoryProduced" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Inventory_Produced_On_Inventory_Entry_Id" ON "Work_Effort_Inventory_Produced" ("Inventory_Entry_Id"); 
+CREATE Index "IndexWorkEffortInventoryProducedOnInventoryEntryId" ON "WorkEffortInventoryProduced" ("InventoryEntryId"); 
 GO
-CREATE TABLE "Work_Effort_Deliverable_Produced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Deliverable_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortDeliverableProduced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "DeliverableId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Deliverable_Produced_On_Work_Effort_Id" ON "Work_Effort_Deliverable_Produced" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortDeliverableProducedOnWorkEffortId" ON "WorkEffortDeliverableProduced" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Deliverable_Produced_On_Deliverable_Id" ON "Work_Effort_Deliverable_Produced" ("Deliverable_Id"); 
+CREATE Index "IndexWorkEffortDeliverableProducedOnDeliverableId" ON "WorkEffortDeliverableProduced" ("DeliverableId"); 
 GO
-CREATE TABLE "Work_Effort_Fixed_Asset_Serviced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Fixed_Asset_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WorkEffortFixedAssetServiced" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "FixedAssetId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Work_Effort_Fixed_Asset_Serviced_On_Work_Effort_Id" ON "Work_Effort_Fixed_Asset_Serviced" ("Work_Effort_Id"); 
+CREATE Index "IndexWorkEffortFixedAssetServicedOnWorkEffortId" ON "WorkEffortFixedAssetServiced" ("WorkEffortId"); 
 GO
-CREATE Index "Index_Work_Effort_Fixed_Asset_Serviced_On_Fixed_Asset_Id" ON "Work_Effort_Fixed_Asset_Serviced" ("Fixed_Asset_Id"); 
+CREATE Index "IndexWorkEffortFixedAssetServicedOnFixedAssetId" ON "WorkEffortFixedAssetServiced" ("FixedAssetId"); 
 GO
-CREATE TABLE "Party_Resource_Availability" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "From_Date" DATETIME, "To_Date" DATETIME, "Party_Id" integer, "Party_Type_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PartyResourceAvailability" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "FromDate" DATETIME, "ToDate" DATETIME, "PartyId" integer, "PartyTypeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Party_Resource_Availability_On_From_Date" ON "Party_Resource_Availability" ("From_Date"); 
+CREATE Index "IndexPartyResourceAvailabilityOnFromDate" ON "PartyResourceAvailability" ("FromDate"); 
 GO
-CREATE Index "Index_Party_Resource_Availability_On_To_Date" ON "Party_Resource_Availability" ("To_Date"); 
+CREATE Index "IndexPartyResourceAvailabilityOnToDate" ON "PartyResourceAvailability" ("ToDate"); 
 GO
-CREATE Index "Index_Party_Resource_Availability_On_Party_Type_Id" ON "Party_Resource_Availability" ("Party_Type_Id"); 
+CREATE Index "IndexPartyResourceAvailabilityOnPartyTypeId" ON "PartyResourceAvailability" ("PartyTypeId"); 
 GO
-CREATE Index "Index_Party_Resource_Availability_On_Party_Id" ON "Party_Resource_Availability" ("Party_Id"); 
+CREATE Index "IndexPartyResourceAvailabilityOnPartyId" ON "PartyResourceAvailability" ("PartyId"); 
 GO
-CREATE TABLE "Party_Resource_Availability_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PartyResourceAvailabilityType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Party_Resource_Availability_Type_On_Internal_Identifier" ON "Party_Resource_Availability_Type" ("Internal_Identifier"); 
+CREATE Index "IndexPartyResourceAvailabilityTypeOnInternalIdentifier" ON "PartyResourceAvailabilityType" ("InternalIdentifier"); 
 GO
-CREATE Index "Index_Party_Resource_Availability_Type_On_Description" ON "Party_Resource_Availability_Type" ("Description"); 
+CREATE Index "IndexPartyResourceAvailabilityTypeOnDescription" ON "PartyResourceAvailabilityType" ("Description"); 
 GO
-CREATE TABLE "Transportation_Route" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "TransportationRoute" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Transportation_Route_Segment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Sequence" integer, "Estimated_Start" DATETIME, "Estimated_Arrival" DATETIME, "Actual_Start" DATETIME, "Actual_Arrival" DATETIME, "Start_Mileage" integer, "End_Mileage" integer, "Fuel_Used" integer, "Transportation_Route_Id" integer, "From_Transportation_Route_stop_Id" integer, "To_Transportation_Route_stop_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "TransportationRouteSegment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "Comments" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "Sequence" integer, "EstimatedStart" DATETIME, "EstimatedArrival" DATETIME, "ActualStart" DATETIME, "ActualArrival" DATETIME, "StartMileage" integer, "EndMileage" integer, "FuelUsed" integer, "TransportationRouteId" integer, "FromTransportationRoutestopId" integer, "ToTransportationRoutestopId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Transportation_Route_Stop" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Description" varchar(255), "Postal_Address_Id" integer, "GeoLocation" varchar(255), "Sequence" integer, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Transportation_Route_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "TransportationRouteStop" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "Description" varchar(255), "PostalAddressId" integer, "GeoLocation" varchar(255), "Sequence" integer, "ExternalIdentifier" varchar(255), "ExternalIdSource" varchar(255), "TransportationRouteId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Associated_Transportation_Route" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Transportation_Route_Id" integer, "Associated_Record_Id" integer, "Associated_Record_Type" varchar(255)); 
+CREATE TABLE "AssociatedTransportationRoute" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "TransportationRouteId" integer, "AssociatedRecordId" integer, "AssociatedRecordType" varchar(255)); 
 GO
-CREATE Index "Associated_Route_Record_Id_Type_Index" ON "Associated_Transportation_Route" ("Associated_Record_Id", "Associated_Record_Type"); 
+CREATE Index "AssociatedRouteRecordIdTypeIndex" ON "AssociatedTransportationRoute" ("AssociatedRecordId", "AssociatedRecordType"); 
 GO
-CREATE Index "Associated_Route_Transportation_Route_Id_Index" ON "Associated_Transportation_Route" ("Transportation_Route_Id"); 
+CREATE Index "AssociatedRouteTransportationRouteIdIndex" ON "AssociatedTransportationRoute" ("TransportationRouteId"); 
 GO
-CREATE TABLE "Role_Type_Work_Effort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Role_Type_Id" integer, "Work_Effort_Id" integer); 
+CREATE TABLE "RoleTypeWorkEffort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "RoleTypeId" integer, "WorkEffortId" integer); 
 GO
-CREATE Index "Role_Type_Work_Effort_Index" ON "Role_Type_Work_Effort" ("Role_Type_Id", "Work_Effort_Id"); 
+CREATE Index "RoleTypeWorkEffortIndex" ON "RoleTypeWorkEffort" ("RoleTypeId", "WorkEffortId"); 
 GO
-CREATE TABLE "Position_Type" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Internal_Identifier" varchar(255), "External_Identifier" varchar(255), "External_Identifer_Source" varchar(255), "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Title" varchar(255), "Benefit_Percent" decimal(8,2), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PositionType" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "InternalIdentifier" varchar(255), "ExternalIdentifier" varchar(255), "ExternalIdentiferSource" varchar(255), "ParentId" integer, "LeftValue" integer, "RightValue" integer, "Title" varchar(255), "BenefitPercent" decimal(8,2), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Position_Type_On_Parent_Id" ON "Position_Type" ("Parent_Id"); 
+CREATE Index "IndexPositionTypeOnParentId" ON "PositionType" ("ParentId"); 
 GO
-CREATE Index "Index_Position_Type_On_LeftValue" ON "Position_Type" ("LeftValue"); 
+CREATE Index "IndexPositionTypeOnLeftValue" ON "PositionType" ("LeftValue"); 
 GO
-CREATE Index "Index_Position_Type_On_RightValue" ON "Position_Type" ("RightValue"); 
+CREATE Index "IndexPositionTypeOnRightValue" ON "PositionType" ("RightValue"); 
 GO
-CREATE TABLE "Position" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Position_Type_Id" integer, "Estimated_From_Date" date, "Estimated_Through_Date" date, "Salary_Flag" BIT, "exempt_Flag" BIT, "full_Time_Flag" BIT, "temporary_Flag" BIT, "Actual_From_Date" date, "Actual_Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Position" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "PositionTypeId" integer, "EstimatedFromDate" date, "EstimatedThroughDate" date, "SalaryFlag" BIT, "exemptFlag" BIT, "fullTimeFlag" BIT, "temporaryFlag" BIT, "ActualFromDate" date, "ActualThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Position_On_Position_Type_Id" ON "Position" ("Position_Type_Id"); 
+CREATE Index "IndexPositionOnPositionTypeId" ON "Position" ("PositionTypeId"); 
 GO
-CREATE Index "Index_Position_On_Party_Id" ON "Position" ("Party_Id"); 
+CREATE Index "IndexPositionOnPartyId" ON "Position" ("PartyId"); 
 GO
-CREATE TABLE "Position_Fulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "held_by_Party_Id" integer, "Position_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "PositionFulfillment" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "heldbyPartyId" integer, "PositionId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Position_Fulfillment_On_Position_Id" ON "Position_Fulfillment" ("Position_Id"); 
+CREATE Index "IndexPositionFulfillmentOnPositionId" ON "PositionFulfillment" ("PositionId"); 
 GO
-CREATE Index "Index_Position_Fulfillment_On_held_by_Party_Id" ON "Position_Fulfillment" ("held_by_Party_Id"); 
+CREATE Index "IndexPositionFulfillmentOnheldbyPartyId" ON "PositionFulfillment" ("heldbyPartyId"); 
 GO
-CREATE TABLE "Time_sheet_Entry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Work_Effort_Id" integer, "Description" varchar(255), "Worked_Date" date, "Entered_Date" DATETIME, "regular_hours_Worked" decimal(5,2), "overTime_hours_Worked" decimal(5,2), "Start_Time" DATETIME, "End_Time" DATETIME, "Comments" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "TimesheetEntry" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WorkEffortId" integer, "Description" varchar(255), "WorkedDate" date, "EnteredDate" DATETIME, "regularhoursWorked" decimal(5,2), "overTimehoursWorked" decimal(5,2), "StartTime" DATETIME, "EndTime" DATETIME, "Comments" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Time_sheet_Entry_On_Work_Effort_Id" ON "Time_sheet_Entry" ("Work_Effort_Id"); 
+CREATE Index "IndexTimesheetEntryOnWorkEffortId" ON "TimesheetEntry" ("WorkEffortId"); 
 GO
-CREATE TABLE "Time_sheet_Entry_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Time_sheet_Entry_Id" integer, "Party_Id" integer, "Role_Type_Id" integer, "From_Date" date, "Through_Date" date, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "TimesheetEntryPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "TimesheetEntryId" integer, "PartyId" integer, "RoleTypeId" integer, "FromDate" date, "ThroughDate" date, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Index_Time_sheet_Entry_Party_Role_On_Time_sheet_Entry_Id" ON "Time_sheet_Entry_Party_Role" ("Time_sheet_Entry_Id"); 
+CREATE Index "IndexTimesheetEntryPartyRoleOnTimesheetEntryId" ON "TimesheetEntryPartyRole" ("TimesheetEntryId"); 
 GO
-CREATE Index "Index_Time_sheet_Entry_Party_Role_On_Party_Id" ON "Time_sheet_Entry_Party_Role" ("Party_Id"); 
+CREATE Index "IndexTimesheetEntryPartyRoleOnPartyId" ON "TimesheetEntryPartyRole" ("PartyId"); 
 GO
-CREATE Index "Index_Time_sheet_Entry_Party_Role_On_Role_Type_Id" ON "Time_sheet_Entry_Party_Role" ("Role_Type_Id"); 
+CREATE Index "IndexTimesheetEntryPartyRoleOnRoleTypeId" ON "TimesheetEntryPartyRole" ("RoleTypeId"); 
 GO
-CREATE TABLE "Experience" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Experience" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "staffing_Position" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Internal_Identifier" varchar(255), "Custom_Fields" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "staffingPosition" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "InternalIdentifier" varchar(255), "CustomFields" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Wc_Code" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Wc_Code" varchar(255), "Description" varchar(255), "Internal_Identifier" varchar(255), "Custom_Fields" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "WcCode" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "WcCode" varchar(255), "Description" varchar(255), "InternalIdentifier" varchar(255), "CustomFields" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Shift" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Description" varchar(255), "Internal_Identifier" varchar(255), "Custom_Fields" text, "Shift_Start" DATETIME, "Shift_End" DATETIME, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Shift" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "Description" varchar(255), "InternalIdentifier" varchar(255), "CustomFields" text, "ShiftStart" DATETIME, "ShiftEnd" DATETIME, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Candidate_Submission" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Order_Line_Item_Id" integer, "Description" varchar(255), "Internal_Identifier" varchar(255), "Custom_Fields" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CandidateSubmission" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "OrderLineItemId" integer, "Description" varchar(255), "InternalIdentifier" varchar(255), "CustomFields" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Resume" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "File_Content" text, "Xml_Resume_Data" text); 
+CREATE TABLE "Resume" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "FileContent" text, "XmlResumeData" text); 
 GO
-CREATE TABLE "Calendar_Event" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Title" varchar(255), "StartTime" DATETIME, "EndTime" DATETIME, "All_Day" BIT Default 'f', "Is_Public" BIT Default 't', "Description" text, "List_View_Image_Url" varchar(255), "Status" varchar(255), "Custom_Fields" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CalendarEvent" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Title" varchar(255), "StartTime" DATETIME, "EndTime" DATETIME, "AllDay" BIT Default 'f', "IsPublic" BIT Default 't', "Description" text, "ListViewImageUrl" varchar(255), "Status" varchar(255), "CustomFields" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Calendar_Event_Id_Index" ON "Calendar_Event" ("Id"); 
+CREATE Index "CalendarEventIdIndex" ON "CalendarEvent" ("Id"); 
 GO
-CREATE Index "Calendar_Event_StartTime_Index" ON "Calendar_Event" ("StartTime"); 
+CREATE Index "CalendarEventStartTimeIndex" ON "CalendarEvent" ("StartTime"); 
 GO
-CREATE Index "Calendar_Event_EndTime_Index" ON "Calendar_Event" ("EndTime"); 
+CREATE Index "CalendarEventEndTimeIndex" ON "CalendarEvent" ("EndTime"); 
 GO
-CREATE TABLE "Calendar_Event_Party_Role" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Party_Id" integer, "Role_Type_Id" integer, "Calendar_Event_Id" integer, "Description" text, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CalendarEventPartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "PartyId" integer, "RoleTypeId" integer, "CalendarEventId" integer, "Description" text, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "CalendarEventPartyRole_Id_Index" ON "Calendar_Event_Party_Role" ("Id"); 
+CREATE Index "CalendarEventPartyRoleIdIndex" ON "CalendarEventPartyRole" ("Id"); 
 GO
-CREATE Index "CalendarEventPartyRole_Party_Id_Index" ON "Calendar_Event_Party_Role" ("Party_Id"); 
+CREATE Index "CalendarEventPartyRolePartyIdIndex" ON "CalendarEventPartyRole" ("PartyId"); 
 GO
-CREATE Index "CalendarEventPartyRole_EventId_Index" ON "Calendar_Event_Party_Role" ("Calendar_Event_Id"); 
+CREATE Index "CalendarEventPartyRoleEventIdIndex" ON "CalendarEventPartyRole" ("CalendarEventId"); 
 GO
-CREATE Index "CalendarEventPartyRole_RoleType_Id_Index" ON "Calendar_Event_Party_Role" ("Role_Type_Id"); 
+CREATE Index "CalendarEventPartyRoleRoleTypeIdIndex" ON "CalendarEventPartyRole" ("RoleTypeId"); 
 GO
-CREATE TABLE "Calendar_Invite" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Title" varchar(255), "Invite_text" text, "Calendar_Event_Id" integer, "Inviter_Id" integer, "Invitee_Id" integer, "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "CalendarInvite" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Title" varchar(255), "Invitetext" text, "CalendarEventId" integer, "InviterId" integer, "InviteeId" integer, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE Index "Calendar_Invite_Id_Index" ON "Calendar_Invite" ("Id"); 
+CREATE Index "CalendarInviteIdIndex" ON "CalendarInvite" ("Id"); 
 GO
-CREATE Index "CalendarInvite_Event_Id_Index" ON "Calendar_Invite" ("Calendar_Event_Id"); 
+CREATE Index "CalendarInviteEventIdIndex" ON "CalendarInvite" ("CalendarEventId"); 
 GO
-CREATE Index "CalendarInvite_Inviter_Id_Index" ON "Calendar_Invite" ("Inviter_Id"); 
+CREATE Index "CalendarInviteInviterIdIndex" ON "CalendarInvite" ("InviterId"); 
 GO
-CREATE Index "CalendarInvite_Invitee_Id_Index" ON "Calendar_Invite" ("Invitee_Id"); 
+CREATE Index "CalendarInviteInviteeIdIndex" ON "CalendarInvite" ("InviteeId"); 
 GO
-CREATE TABLE "Project" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Project_Record_Id" integer, "Project_Record_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
+CREATE TABLE "Project" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "ProjectRecordId" integer, "ProjectRecordType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
-CREATE TABLE "Work_Effort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Parent_Id" integer, "LeftValue" integer, "RightValue" integer, "Facility_Id" integer, "Projected_Cost_Money_Id" integer, "Actual_Cost_Money_Id" integer, "Fixed_Asset_Id" integer, "Work_Effort_Pupose_Type_Id" integer, "Work_Effort_Type_Id" integer, "Description" varchar(255), "Type" varchar(255), "Start_At" DATETIME, "End_At" DATETIME, "Work_Effort_Record_Id" integer, "Work_Effort_Record_Type" varchar(255), "Work_Effort_Item_Id" integer, "Work_Effort_Item_Type" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL, "Comments" text, "Percent_Done" integer, "Duration" integer, "Duration_Unit" varchar(255), "Effort" integer, "Effort_Unit" varchar(255), "Base_Line_Start_At" DATETIME, "Base_Line_End_At" DATETIME, "Base_Line_Percent_Done" integer, "Project_Id" integer, "Sequence" integer Default 0); 
+CREATE TABLE "WorkEffort" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "ParentId" integer, "LeftValue" integer, "RightValue" integer, "FacilityId" integer, "ProjectedCostMoneyId" integer, "ActualCostMoneyId" integer, "FixedAssetId" integer, "WorkEffortPuposeTypeId" integer, "WorkEffortTypeId" integer, "Description" varchar(255), "Type" varchar(255), "StartAt" DATETIME, "EndAt" DATETIME, "WorkEffortRecordId" integer, "WorkEffortRecordType" varchar(255), "WorkEffortItemId" integer, "WorkEffortItemType" varchar(255), "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL, "Comments" text, "PercentDone" integer, "Duration" integer, "DurationUnit" varchar(255), "Effort" integer, "EffortUnit" varchar(255), "BaseLineStartAt" DATETIME, "BaseLineEndAt" DATETIME, "BaseLinePercentDone" integer, "ProjectId" integer, "Sequence" integer Default 0); 
 GO
-CREATE Index "Work_Effort_Record_Id_Type_Index" ON "Work_Effort" ("Work_Effort_Record_Id", "Work_Effort_Record_Type"); 
+CREATE Index "WorkEffortRecordIdTypeIndex" ON "WorkEffort" ("WorkEffortRecordId", "WorkEffortRecordType"); 
 GO
-CREATE Index "Work_Item_Index" ON "Work_Effort" ("Work_Effort_Item_Type", "Work_Effort_Item_Id"); 
+CREATE Index "WorkItemIndex" ON "WorkEffort" ("WorkEffortItemType", "WorkEffortItemId"); 
 GO
-CREATE Index "Index_Work_Effort_On_Fixed_Asset_Id" ON "Work_Effort" ("Fixed_Asset_Id"); 
+CREATE Index "IndexWorkEffortOnFixedAssetId" ON "WorkEffort" ("FixedAssetId"); 
 GO
-CREATE Index "Index_Work_Effort_On_finished_At" ON "Work_Effort" ("End_At"); 
+CREATE Index "IndexWorkEffortOnfinishedAt" ON "WorkEffort" ("EndAt"); 
 GO
-CREATE Index "Work_Effort_Project_Index" ON "Work_Effort" ("Project_Id"); 
+CREATE Index "WorkEffortProjectIndex" ON "WorkEffort" ("ProjectId"); 
 GO
