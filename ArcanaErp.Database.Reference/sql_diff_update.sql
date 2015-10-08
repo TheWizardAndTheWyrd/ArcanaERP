@@ -1,4 +1,6 @@
-CREATE Index "Reports_Internal_Identifier_Index" ON "Reports" ("Internal_Identifier"); 
+CREATE TABLE "Report" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Name" varchar(255), "Internal_Identifier" varchar(255), "Template" text, "Query" text, "Created_At" datetime NOT NULL, "Updated_At" datetime NOT NULL);
+GO
+CREATE Index "Report_Internal_Identifier_Index" ON "Report" ("Internal_Identifier"); 
 GO
 CREATE TABLE "Agreement" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Description" varchar(255), "Agreement_Type_Id" integer, "Agreement_Status" varchar(255), "Product_Id" integer, "Agreement_Date" date, "From_Date" date, "Through_Date" date, "External_Identifier" varchar(255), "External_Id_Source" varchar(255), "Created_At" DATETIME NOT NULL, "Updated_At" DATETIME NOT NULL); 
 GO
