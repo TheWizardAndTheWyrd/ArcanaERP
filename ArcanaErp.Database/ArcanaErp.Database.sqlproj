@@ -14,7 +14,7 @@
     </RootPath>
     <RootNamespace>ArcanaErp.Database</RootNamespace>
     <AssemblyName>ArcanaErp.Database</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -58,11 +60,110 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="dbo" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="reference_structure_refactored_for-TSQL.sql" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ArcanaErp.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\NotificationType.sql" />
+    <Build Include="dbo\Tables\Preference.sql" />
+    <Build Include="dbo\Tables\PreferenceType.sql" />
+    <Build Include="dbo\Tables\PreferenceOption.sql" />
+    <Build Include="dbo\Tables\PreferenceOptionPreferenceType.sql" />
+    <Build Include="dbo\Tables\ValidPreferenceType.sql" />
+    <Build Include="dbo\Tables\UsersPreference.sql" />
+    <Build Include="dbo\Tables\Application.sql" />
+    <Build Include="dbo\Tables\SchemaMigration.sql" />
+    <Build Include="dbo\Tables\ApplicationUsers.sql" />
+    <Build Include="dbo\Tables\ArcanaErpInstance.sql" />
+    <Build Include="dbo\Tables\TreeMenuNodeDef.sql" />
+    <Build Include="dbo\Tables\Configuration.sql" />
+    <Build Include="dbo\Tables\ArcanaErpInstancePartyRole.sql" />
+    <Build Include="dbo\Tables\Party.sql" />
+    <Build Include="dbo\Tables\ValidConfiguration.sql" />
+    <Build Include="dbo\Tables\PartyRole.sql" />
+    <Build Include="dbo\Tables\ConfigurationItems.sql" />
+    <Build Include="dbo\Tables\RoleType.sql" />
+    <Build Include="dbo\Tables\ConfigurationItemType.sql" />
+    <Build Include="dbo\Tables\RelationshipType.sql" />
+    <Build Include="dbo\Tables\PartyRelationship.sql" />
+    <Build Include="dbo\Tables\ConfigurationItemTypeConfiguration.sql" />
+    <Build Include="dbo\Tables\OrganizatiOn.sql" />
+    <Build Include="dbo\Tables\ConfigurationOption.sql" />
+    <Build Include="dbo\Tables\Individual.sql" />
+    <Build Include="dbo\Tables\ConfigurationItemTypeConfigurationOption.sql" />
+    <Build Include="dbo\Tables\ContactType.sql" />
+    <Build Include="dbo\Tables\ContactPurpose.sql" />
+    <Build Include="dbo\Tables\ConfigurationItemsConfigurationOption.sql" />
+    <Build Include="dbo\Tables\JobTracker.sql" />
+    <Build Include="dbo\Tables\ContactPurposeContact.sql" />
+    <Build Include="dbo\Tables\PostalAddresses.sql" />
+    <Build Include="dbo\Tables\WebSites.sql" />
+    <Build Include="dbo\Tables\EmailAddress.sql" />
+    <Build Include="dbo\Tables\WebSiteHost.sql" />
+    <Build Include="dbo\Tables\PhoneNumber.sql" />
+    <Build Include="dbo\Tables\WebSiteInquiry.sql" />
+    <Build Include="dbo\Tables\Money.sql" />
+    <Build Include="dbo\Tables\WebSiteSection.sql" />
+    <Build Include="dbo\Tables\Currency.sql" />
+    <Build Include="dbo\Tables\Category.sql" />
+    <Build Include="dbo\Tables\WebSiteSectionVersions.sql" />
+    <Build Include="dbo\Tables\CategoryClassification.sql" />
+    <Build Include="dbo\Tables\DescriptiveAsset.sql" />
+    <Build Include="dbo\Tables\ViewType.sql" />
+    <Build Include="dbo\Tables\GeoCountry.sql" />
+    <Build Include="dbo\Tables\GeoZone.sql" />
+    <Build Include="dbo\Tables\Note.sql" />
+    <Build Include="dbo\Tables\NoteType.sql" />
+    <Build Include="dbo\Tables\Content.sql" />
+    <Build Include="dbo\Tables\ValidNoteType.sql" />
+    <Build Include="dbo\Tables\ContentVersions.sql" />
+    <Build Include="dbo\Tables\StatusApplication.sql" />
+    <Build Include="dbo\Tables\TrackedStatusType.sql" />
+    <Build Include="dbo\Tables\Facility.sql" />
+    <Build Include="dbo\Tables\FacilityType.sql" />
+    <Build Include="dbo\Tables\FixedAsset.sql" />
+    <Build Include="dbo\Tables\FixedAssetType.sql" />
+    <Build Include="dbo\Tables\WebSiteSectionContent.sql" />
+    <Build Include="dbo\Tables\PartyFixedAssetAssignment.sql" />
+    <Build Include="dbo\Tables\FixedAssetPartyRole.sql" />
+    <Build Include="dbo\Tables\Theme.sql" />
+    <Build Include="dbo\Tables\UnitOfMeasurement.sql" />
+    <Build Include="dbo\Tables\PublishedWebSites.sql" />
+    <Build Include="dbo\Tables\GeneratedItems.sql" />
+    <Build Include="dbo\Tables\Publishedelements.sql" />
+    <Build Include="dbo\Tables\EntityPartyRole.sql" />
+    <Build Include="dbo\Tables\Comments.sql" />
+    <Build Include="dbo\Tables\Contact.sql" />
+    <Build Include="dbo\Tables\WebSitenavItems.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\WebSitenavs.sql" />
+    <Build Include="dbo\Tables\Tag.sql" />
+    <Build Include="dbo\Tables\Groups.sql" />
+    <Build Include="dbo\Tables\Taggings.sql" />
+    <Build Include="dbo\Tables\SecurityRole.sql" />
+    <Build Include="dbo\Tables\WebSitePartyRole.sql" />
+    <Build Include="dbo\Tables\Sessions.sql" />
+    <Build Include="dbo\Tables\DocumentedItems.sql" />
+    <Build Include="dbo\Tables\AuditLog.sql" />
+    <Build Include="dbo\Tables\Documents.sql" />
+    <Build Include="dbo\Tables\AuditLogType.sql" />
+    <Build Include="dbo\Tables\DocumentType.sql" />
+    <Build Include="dbo\Tables\AuditLogItems.sql" />
+    <Build Include="dbo\Tables\ValidDocuments.sql" />
+    <Build Include="dbo\Tables\AuditLogItemType.sql" />
+    <Build Include="dbo\Tables\Report.sql" />
+    <Build Include="dbo\Tables\FileAsset.sql" />
+    <Build Include="dbo\Tables\DataMigrations.sql" />
+    <Build Include="dbo\Tables\FileAssetHolder.sql" />
+    <Build Include="dbo\Tables\DelayedJob.sql" />
+    <Build Include="dbo\Tables\CapableModels.sql" />
+    <Build Include="dbo\Tables\CapabilityType.sql" />
+    <Build Include="dbo\Tables\Capability.sql" />
+    <Build Include="dbo\Tables\CapabilityAccessor.sql" />
+    <Build Include="dbo\Tables\ScopeType.sql" />
+    <Build Include="dbo\Tables\PartySecurityRole.sql" />
+    <Build Include="dbo\Tables\Notification.sql" />
   </ItemGroup>
 </Project>

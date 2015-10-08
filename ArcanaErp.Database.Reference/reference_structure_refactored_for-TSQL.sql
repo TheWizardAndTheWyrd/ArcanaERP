@@ -620,13 +620,13 @@ CREATE TABLE "WebSitenavs" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WebSite
 GO
 CREATE INDEX "IndexWebSitenavsOnWebSiteId" ON "WebSitenavs" ("WebSiteId"); 
 GO
-CREATE TABLE "tags" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Name" VARCHAR(255)); 
+CREATE TABLE "Tag" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "Name" VARCHAR(255)); 
 GO
-CREATE TABLE "taggings" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "tagId" INTEGER, "taggableId" INTEGER, "taggerId" INTEGER, "taggerType" VARCHAR(255), "taggableType" VARCHAR(255), "Context" VARCHAR(255), "CreatedAt" DATETIME); 
+CREATE TABLE "Taggings" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "TagId" INTEGER, "TaggableId" INTEGER, "TaggerId" INTEGER, "TaggerType" VARCHAR(255), "TaggableType" VARCHAR(255), "Context" VARCHAR(255), "CreatedAt" DATETIME); 
 GO
-CREATE INDEX "IndextaggingsOntagId" ON "taggings" ("tagId"); 
+CREATE INDEX "IndexTaggingsOnTagId" ON "Taggings" ("TagId"); 
 GO
-CREATE INDEX "taggablepolyIndex" ON "taggings" ("taggableId", "taggableType", "Context"); 
+CREATE INDEX "TaggablepolyIndex" ON "Taggings" ("TaggableId", "TaggableType", "Context"); 
 GO
 CREATE TABLE "WebSitePartyRole" ("Id" INTEGER PRIMARY KEY IDENTITY NOT NULL, "WebSiteId" INTEGER, "RoleTypeId" INTEGER, "PartyId" INTEGER, "CreatedAt" DATETIME NOT NULL, "UpdatedAt" DATETIME NOT NULL); 
 GO
