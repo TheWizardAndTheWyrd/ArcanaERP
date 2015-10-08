@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Agreements;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("AgreementItem")]
-    public partial class AgreementItem
+    public partial class AgreementItem : IAgreementItem
     {
         public int Id { get; set; }
 

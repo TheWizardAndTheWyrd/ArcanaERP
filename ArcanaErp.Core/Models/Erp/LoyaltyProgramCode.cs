@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Agreements;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("LoyaltyProgramCode")]
-    public partial class LoyaltyProgramCode
+    public partial class LoyaltyProgramCode : ILoyaltyProgramCode
     {
         public int Id { get; set; }
 
