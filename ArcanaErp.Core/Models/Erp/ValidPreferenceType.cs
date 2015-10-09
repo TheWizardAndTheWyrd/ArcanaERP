@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ValidPreferenceType")]
-    public partial class ValidPreferenceType
+    public partial class ValidPreferenceType : IValidPreferenceType
     {
         public int Id { get; set; }
 

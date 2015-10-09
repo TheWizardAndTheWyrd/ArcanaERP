@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Users] (
+﻿CREATE TABLE [dbo].[User] (
     [Id]                          INT           IDENTITY (1, 1) NOT NULL,
     [UserName]                    VARCHAR (255) NULL,
     [Email]                       VARCHAR (255) NULL,
@@ -28,42 +28,42 @@
     [CreatedAt]                   DATETIME      NOT NULL,
     [UpdatedAt]                   DATETIME      NOT NULL,
     [UnlockToken]                 VARCHAR (255) DEFAULT (NULL) NULL,
-    [LastloginFromIpAddress]      VARCHAR (255) DEFAULT (NULL) NULL,
+    [LastLoginFromIpAddress]      VARCHAR (255) DEFAULT (NULL) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [IndexUsersOnEmail]
-    ON [dbo].[Users]([Email] ASC);
+    ON [dbo].[User]([Email] ASC);
 
 
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [IndexUsersOnUserName]
-    ON [dbo].[Users]([UserName] ASC);
+    ON [dbo].[User]([UserName] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [ActivityIndex]
-    ON [dbo].[Users]([LastLogoutAt] ASC, [LastActivityAt] ASC);
+    ON [dbo].[User]([LastLogoutAt] ASC, [LastActivityAt] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersOnRememberMeToken]
-    ON [dbo].[Users]([RememberMeToken] ASC);
+    ON [dbo].[User]([RememberMeToken] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersOnResetPasswordToken]
-    ON [dbo].[Users]([ResetPasswordToken] ASC);
+    ON [dbo].[User]([ResetPasswordToken] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersOnActivationToken]
-    ON [dbo].[Users]([ActivationToken] ASC);
+    ON [dbo].[User]([ActivationToken] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [UsersPartyIdIndex]
-    ON [dbo].[Users]([PartyId] ASC);
+    ON [dbo].[User]([PartyId] ASC);
 

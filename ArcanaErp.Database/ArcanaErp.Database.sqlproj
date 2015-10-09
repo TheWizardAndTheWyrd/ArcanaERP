@@ -89,7 +89,7 @@
     <Build Include="dbo\Tables\PositionFulfillment.sql" />
     <Build Include="dbo\Tables\ChargeLines.sql" />
     <Build Include="dbo\Tables\PricingPlanAssignment.sql" />
-    <Build Include="dbo\Tables\UsersPreference.sql" />
+    <Build Include="dbo\Tables\UserPreference.sql" />
     <Build Include="dbo\Tables\TimesheetEntry.sql" />
     <Build Include="dbo\Tables\ChargeType.sql" />
     <Build Include="dbo\Tables\Price.sql" />
@@ -251,7 +251,7 @@
     <Build Include="dbo\Tables\WebSitenavItems.sql" />
     <Build Include="dbo\Tables\WorkEffortAssociationType.sql" />
     <Build Include="dbo\Tables\InventoryEntryLocation.sql" />
-    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\User.sql" />
     <Build Include="dbo\Tables\WorkEffortAssociation.sql" />
     <Build Include="dbo\Tables\InventoryPickupTaxation.sql" />
     <Build Include="dbo\Tables\WebSitenavs.sql" />

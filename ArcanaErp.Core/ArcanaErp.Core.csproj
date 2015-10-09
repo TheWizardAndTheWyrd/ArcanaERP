@@ -557,7 +557,7 @@
     <Compile Include="Models\Erp\TreeMenuNodeDefinition.cs" />
     <Compile Include="Models\Erp\UnitOfMeasurement.cs" />
     <Compile Include="Models\Erp\User.cs" />
-    <Compile Include="Models\Erp\UsersPreference.cs" />
+    <Compile Include="Models\Erp\UserPreference.cs" />
     <Compile Include="Models\Erp\ValidConfiguration.cs" />
     <Compile Include="Models\Erp\ValidDocument.cs" />
     <Compile Include="Models\Erp\ValidNoteType.cs" />

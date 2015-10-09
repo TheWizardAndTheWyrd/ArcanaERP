@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[UsersPreference] (
+﻿CREATE TABLE [dbo].[UserPreference] (
     [Id]                    INT           IDENTITY (1, 1) NOT NULL,
-    [UsersId]               INT           NULL,
+    [UserId]               INT           NULL,
     [PreferenceId]          INT           NULL,
     [PreferencedRecordId]   INT           NULL,
     [PreferencedRecordType] VARCHAR (255) NULL,
@@ -12,20 +12,20 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersPreferenceOnUsersId]
-    ON [dbo].[UsersPreference]([UsersId] ASC);
+    ON [dbo].[UserPreference]([UserId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersPreferenceOnPreferenceId]
-    ON [dbo].[UsersPreference]([PreferenceId] ASC);
+    ON [dbo].[UserPreference]([PreferenceId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersPreferenceOnPreferencedRecordId]
-    ON [dbo].[UsersPreference]([PreferencedRecordId] ASC);
+    ON [dbo].[UserPreference]([PreferencedRecordId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexUsersPreferenceOnPreferencedRecordType]
-    ON [dbo].[UsersPreference]([PreferencedRecordType] ASC);
+    ON [dbo].[UserPreference]([PreferencedRecordType] ASC);
 

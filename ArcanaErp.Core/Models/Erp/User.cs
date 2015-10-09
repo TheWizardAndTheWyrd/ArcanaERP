@@ -82,6 +82,6 @@ namespace ArcanaErp.Core.Models.Erp
         public string UnlockToken { get; set; }
 
         [StringLength(255)]
-        public string LastloginFromIpAddress { get; set; }
+        public string LastLoginFromIpAddress { get; set; }
     }
 }

@@ -229,7 +229,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<TreeMenuNodeDefinition> TreeMenuNodeDefs { get; set; }
         public virtual DbSet<UnitOfMeasurement> UnitOfMeasurements { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UsersPreference> UsersPreferences { get; set; }
+        public virtual DbSet<UserPreference> UsersPreferences { get; set; }
         public virtual DbSet<ValidConfiguration> ValidConfigurations { get; set; }
         public virtual DbSet<ValidDocument> ValidDocuments { get; set; }
         public virtual DbSet<ValidNoteType> ValidNoteTypes { get; set; }
@@ -3145,10 +3145,10 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.LastloginFromIpAddress)
+                .Property(e => e.LastLoginFromIpAddress)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<UsersPreference>()
+            modelBuilder.Entity<UserPreference>()
                 .Property(e => e.PreferencedRecordType)
                 .IsUnicode(false);
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -6,12 +8,12 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("UsersPreference")]
-    public partial class UsersPreference
+    [Table("UserPreference")]
+    public partial class UserPreference : IUserPreference
     {
         public int Id { get; set; }
 
-        public int? UsersId { get; set; }
+        public int? UserId { get; set; }
 
         public int? PreferenceId { get; set; }
 
