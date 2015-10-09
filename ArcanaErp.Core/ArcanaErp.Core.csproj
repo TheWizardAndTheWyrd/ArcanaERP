@@ -554,7 +554,7 @@
     <Compile Include="Models\Erp\TransportationRoute.cs" />
     <Compile Include="Models\Erp\TransportationRouteSegment.cs" />
     <Compile Include="Models\Erp\TransportationRouteStop.cs" />
-    <Compile Include="Models\Erp\TreeMenuNodeDef.cs" />
+    <Compile Include="Models\Erp\TreeMenuNodeDefinition.cs" />
     <Compile Include="Models\Erp\UnitOfMeasurement.cs" />
     <Compile Include="Models\Erp\User.cs" />
     <Compile Include="Models\Erp\UsersPreference.cs" />

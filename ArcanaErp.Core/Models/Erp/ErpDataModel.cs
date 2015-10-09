@@ -226,7 +226,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<TransportationRoute> TransportationRoutes { get; set; }
         public virtual DbSet<TransportationRouteSegment> TransportationRouteSegments { get; set; }
         public virtual DbSet<TransportationRouteStop> TransportationRouteStops { get; set; }
-        public virtual DbSet<TreeMenuNodeDef> TreeMenuNodeDefs { get; set; }
+        public virtual DbSet<TreeMenuNodeDefinition> TreeMenuNodeDefs { get; set; }
         public virtual DbSet<UnitOfMeasurement> UnitOfMeasurements { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UsersPreference> UsersPreferences { get; set; }
@@ -3032,32 +3032,32 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
                 .Property(e => e.NodeType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
                 .Property(e => e.MenuShortName)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
                 .Property(e => e.MenuDescription)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
-                .Property(e => e.text)
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
+                .Property(e => e.Text)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
                 .Property(e => e.IconUrl)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
-                .Property(e => e.targetUrl)
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
+                .Property(e => e.TargetUrl)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TreeMenuNodeDef>()
-                .Property(e => e.resourceclass)
+            modelBuilder.Entity<TreeMenuNodeDefinition>()
+                .Property(e => e.ResourceClass)
                 .IsUnicode(false);
 
             modelBuilder.Entity<UnitOfMeasurement>()

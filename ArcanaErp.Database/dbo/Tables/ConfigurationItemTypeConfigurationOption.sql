@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [dbo].[ConfigurationItemTypeConfigurationOption] (
     [Id]                      INT      IDENTITY (1, 1) NOT NULL,
     [ConfigurationItemTypeId] INT      NULL,
-    [ConfigurationoptiOnId]   INT      NULL,
-    [isdefault]               BIT      DEFAULT ('f') NULL,
+    [ConfigurationOptionId]   INT      NULL,
+    [IsDefault]               BIT      DEFAULT ('f') NULL,
     [CreatedAt]               DATETIME NOT NULL,
     [UpdatedAt]               DATETIME NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -16,5 +16,5 @@ CREATE NONCLUSTERED INDEX [ConfItemTypeConfoptIdItemIndex]
 
 GO
 CREATE NONCLUSTERED INDEX [ConfItemTypeConfoptIdoptIndex]
-    ON [dbo].[ConfigurationItemTypeConfigurationOption]([ConfigurationoptiOnId] ASC);
+    ON [dbo].[ConfigurationItemTypeConfigurationOption]([ConfigurationOptionId] ASC);
 

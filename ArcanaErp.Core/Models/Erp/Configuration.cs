@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("Configuration")]
-    public partial class Configuration
+    public partial class Configuration : IConfiguration
     {
         public int Id { get; set; }
 
@@ -19,7 +21,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public bool? Active { get; set; }
 
-        public bool? isTempateText { get; set; }
+        public bool? IsTemplateText { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

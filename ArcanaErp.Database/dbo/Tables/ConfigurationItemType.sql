@@ -3,7 +3,7 @@
     [ParentId]               INT           NULL,
     [LeftValue]              INT           NULL,
     [RightValue]             INT           NULL,
-    [precedence]             INT           DEFAULT ((0)) NULL,
+    [Precedence]             INT           DEFAULT ((0)) NULL,
     [Description]            VARCHAR (255) NULL,
     [InternalIdentifier]     VARCHAR (255) NULL,
     [AllowUserDefinedOption] BIT           DEFAULT ('f') NULL,
@@ -36,5 +36,5 @@ CREATE NONCLUSTERED INDEX [ConfigurationItemTypeInternalIdentifierIndex]
 
 GO
 CREATE NONCLUSTERED INDEX [ConfigItemTypeprecedenceIndex]
-    ON [dbo].[ConfigurationItemType]([precedence] ASC);
+    ON [dbo].[ConfigurationItemType]([Precedence] ASC);
 

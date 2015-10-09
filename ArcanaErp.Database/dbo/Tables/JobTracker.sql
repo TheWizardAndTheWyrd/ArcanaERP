@@ -4,7 +4,7 @@
     [JobClass]  VARCHAR (255) NULL,
     [RunTime]   VARCHAR (255) NULL,
     [LastRunAt] DATETIME      NULL,
-    [nextRunAt] DATETIME      NULL,
+    [NextRunAt] DATETIME      NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

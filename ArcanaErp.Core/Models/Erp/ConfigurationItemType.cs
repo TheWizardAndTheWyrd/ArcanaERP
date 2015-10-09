@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ConfigurationItemType")]
-    public partial class ConfigurationItemType
+    public partial class ConfigurationItemType : IConfigurationItemType
     {
         public int Id { get; set; }
 
@@ -17,7 +19,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? RightValue { get; set; }
 
-        public int? precedence { get; set; }
+        public int? Precedence { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

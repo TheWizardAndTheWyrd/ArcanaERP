@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("JobTracker")]
-    public partial class JobTracker
+    public partial class JobTracker : IJobTracker
     {
         public int Id { get; set; }
 
@@ -22,6 +24,6 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime? LastRunAt { get; set; }
 
-        public DateTime? nextRunAt { get; set; }
+        public DateTime? NextRunAt { get; set; }
     }
 }

@@ -1,7 +1,14 @@
-﻿namespace ArcanaErp.Core.Interfaces.Models.Application
+﻿using System;
+
+namespace ArcanaErp.Core.Interfaces.Models.Application
 {
     public interface IConfigurationItem
     {
-         
+        int Id { get; set; }
+        int? ConfigurationId { get; set; }
+        int? ConfigurationItemTypeId { get; set; }
+        int? ConfigurationoptiOnId { get; set; }
+        DateTime CreatedAt { get; set; }
+        DateTime UpdatedAt { get; set; }
     }
 }

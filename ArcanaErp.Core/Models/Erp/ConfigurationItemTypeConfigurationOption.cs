@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,15 +9,15 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ConfigurationItemTypeConfigurationOption")]
-    public partial class ConfigurationItemTypeConfigurationOption
+    public partial class ConfigurationItemTypeConfigurationOption : IConfigurationItemTypeConfigurationOption
     {
         public int Id { get; set; }
 
         public int? ConfigurationItemTypeId { get; set; }
 
-        public int? ConfigurationoptiOnId { get; set; }
+        public int? ConfigurationOptionId { get; set; }
 
-        public bool? isdefault { get; set; }
+        public bool? IsDefault { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

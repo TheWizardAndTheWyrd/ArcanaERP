@@ -4,7 +4,7 @@
     [InternalIdentifier] VARCHAR (255) NULL,
     [Value]              VARCHAR (255) NULL,
     [Comment]            TEXT          NULL,
-    [Usersdefined]       BIT           DEFAULT ('f') NULL,
+    [UserDefined]       BIT           DEFAULT ('f') NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -23,5 +23,5 @@ CREATE NONCLUSTERED INDEX [IndexConfigurationOptionOnInternalIdentifier]
 
 GO
 CREATE NONCLUSTERED INDEX [IndexConfigurationOptionOnUsersdefined]
-    ON [dbo].[ConfigurationOption]([Usersdefined] ASC);
+    ON [dbo].[ConfigurationOption]([UserDefined] ASC);
 

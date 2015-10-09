@@ -1,3 +1,7 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,11 +11,11 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("Preference")]
-    public partial class Preference
+    public partial class Preference : IPreference
     {
         public int Id { get; set; }
 
-        public int? PreferenceoptiOnId { get; set; }
+        public int? PreferenceOptionId { get; set; }
 
         public int? PreferenceTypeId { get; set; }
 

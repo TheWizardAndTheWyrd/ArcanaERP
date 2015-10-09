@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -6,7 +8,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class ConfigurationItem
+    public partial class ConfigurationItem : IConfigurationItem
     {
         public int Id { get; set; }
 

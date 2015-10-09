@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ConfigurationOption")]
-    public partial class ConfigurationOption
+    public partial class ConfigurationOption : IConfigurationOption
     {
         public int Id { get; set; }
 
@@ -23,7 +25,7 @@ namespace ArcanaErp.Core.Models.Erp
         [Column(TypeName = "text")]
         public string Comment { get; set; }
 
-        public bool? Usersdefined { get; set; }
+        public bool? UserDefined { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

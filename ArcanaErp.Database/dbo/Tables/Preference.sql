@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Preference] (
     [Id]                 INT      IDENTITY (1, 1) NOT NULL,
-    [PreferenceoptiOnId] INT      NULL,
+    [PreferenceOptionId] INT      NULL,
     [PreferenceTypeId]   INT      NULL,
     [CreatedAt]          DATETIME NOT NULL,
     [UpdatedAt]          DATETIME NOT NULL,
@@ -10,7 +10,7 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPreferenceOnPreferenceoptiOnId]
-    ON [dbo].[Preference]([PreferenceoptiOnId] ASC);
+    ON [dbo].[Preference]([PreferenceOptionId] ASC);
 
 
 GO

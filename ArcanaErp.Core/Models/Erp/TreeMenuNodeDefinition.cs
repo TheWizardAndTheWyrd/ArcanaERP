@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Application;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -6,8 +8,8 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("TreeMenuNodeDef")]
-    public partial class TreeMenuNodeDef
+    [Table("TreeMenuNodeDefinition")]
+    public partial class TreeMenuNodeDefinition : ITreeMenuNodeDefinition
     {
         public int Id { get; set; }
 
@@ -27,16 +29,16 @@ namespace ArcanaErp.Core.Models.Erp
         public string MenuDescription { get; set; }
 
         [StringLength(255)]
-        public string text { get; set; }
+        public string Text { get; set; }
 
         [StringLength(255)]
         public string IconUrl { get; set; }
 
         [StringLength(255)]
-        public string targetUrl { get; set; }
+        public string TargetUrl { get; set; }
 
         [StringLength(255)]
-        public string resourceclass { get; set; }
+        public string ResourceClass { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

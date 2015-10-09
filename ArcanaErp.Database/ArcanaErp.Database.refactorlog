@@ -42,4 +42,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="PartyId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7df0364a-a57f-4ad5-b1a5-d288a318ac4c" ChangeDateTime="10/09/2015 00:03:31">
+    <Property Name="ElementName" Value="[dbo].[Configuration].[isTempateText]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Configuration]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsTemplateText" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="35f4c46c-d8cd-41ea-9275-6ddf82482a1e" ChangeDateTime="10/09/2015 00:08:41">
+    <Property Name="ElementName" Value="[dbo].[ConfigurationItemType].[precedence]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConfigurationItemType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Precedence" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4f98a0a3-5ee0-4d5e-991b-f1b9d757be60" ChangeDateTime="10/09/2015 00:12:42">
+    <Property Name="ElementName" Value="[dbo].[ConfigurationItemTypeConfigurationOption].[isdefault]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConfigurationItemTypeConfigurationOption]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsDefault" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7d9f07f4-3550-49b4-b23f-df18279ca5c2" ChangeDateTime="10/09/2015 00:12:57">
+    <Property Name="ElementName" Value="[dbo].[ConfigurationItemTypeConfigurationOption].[ConfigurationoptiOnId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConfigurationItemTypeConfigurationOption]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ConfigurationOptionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4e66ea6b-92d0-4452-8200-1d2102c16208" ChangeDateTime="10/09/2015 00:16:26">
+    <Property Name="ElementName" Value="[dbo].[ConfigurationOption].[Usersdefined]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ConfigurationOption]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserDefined" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="311ce445-3b56-4ed3-bde3-63b797a6f053" ChangeDateTime="10/09/2015 01:33:24">
+    <Property Name="ElementName" Value="[dbo].[JobTracker].[nextRunAt]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[JobTracker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NextRunAt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c107206f-138e-4968-a84b-9b1809bd4d28" ChangeDateTime="10/09/2015 01:38:17">
+    <Property Name="ElementName" Value="[dbo].[Preference].[PreferenceoptiOnId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Preference]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PreferenceOptionId" />
+  </Operation>
 </Operations>
