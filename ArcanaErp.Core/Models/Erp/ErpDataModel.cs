@@ -433,7 +433,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<ArcanaErpInstance>()
-                .Property(e => e.GuId)
+                .Property(e => e.GuidString)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ArcanaErpInstancePartyRole>()
@@ -1041,7 +1041,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<ContactPurpose>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ContactType>()
@@ -1061,7 +1061,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<ContactType>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Content>()
@@ -1161,7 +1161,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.definitiOn)
+                .Property(e => e.Definition)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
@@ -1169,23 +1169,23 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.numericcode)
+                .Property(e => e.NumericCode)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.majorunitsymbol)
+                .Property(e => e.MajorUnitSymbol)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.minorunitsymbol)
+                .Property(e => e.MinorUnitSymbol)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.ratioofminorunitTomajorunit)
+                .Property(e => e.RatioOfMinorUnitToMajorUnit)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Currency>()
-                .Property(e => e.postfixlabel)
+                .Property(e => e.PostFixLabel)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DelayedJob>()
@@ -1261,7 +1261,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<DescriptiveAsset>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DescriptiveAsset>()
@@ -1341,7 +1341,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<FacilityType>()
-                .Property(e => e.ExternalIdentifersource)
+                .Property(e => e.ExternalIdentiferSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Fee>()
@@ -1449,7 +1449,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<FixedAsset>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<FixedAsset>()
@@ -1473,7 +1473,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<FixedAssetType>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<GeneralLedgerAccount>()
@@ -1513,7 +1513,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<GeoCountry>()
-                .Property(e => e.isocode3)
+                .Property(e => e.IsoCode3)
                 .IsUnicode(false);
 
             modelBuilder.Entity<GeoZone>()

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("FacilityType")]
-    public partial class FacilityType
+    public partial class FacilityType : IFacilityType
     {
         public int Id { get; set; }
 
@@ -21,7 +23,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdentifersource { get; set; }
+        public string ExternalIdentiferSource { get; set; }
 
         public int? ParentId { get; set; }
 

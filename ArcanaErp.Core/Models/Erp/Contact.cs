@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("Contact")]
-    public partial class Contact
+    public partial class Contact : IContact
     {
         public int Id { get; set; }
 

@@ -6,7 +6,7 @@
     [Type]               VARCHAR (255)  NULL,
     [Schema]             VARCHAR (255)  DEFAULT ('public') NULL,
     [ParentId]           INT            NULL,
-    [GuId]               VARCHAR (255)  NULL,
+    [GuidString]         VARCHAR (255)  NULL,
     [CreatedAt]          DATETIME       NOT NULL,
     [UpdatedAt]          DATETIME       NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -35,5 +35,5 @@ CREATE NONCLUSTERED INDEX [ParentIdIndex]
 
 GO
 CREATE NONCLUSTERED INDEX [GuIdIndex]
-    ON [dbo].[ArcanaErpInstance]([GuId] ASC);
+    ON [dbo].[ArcanaErpInstance]([GuidString] ASC);
 

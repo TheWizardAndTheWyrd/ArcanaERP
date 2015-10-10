@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("GeoCountry")]
-    public partial class GeoCountry
+    public partial class GeoCountry : IGeoCountry
     {
         public int Id { get; set; }
 
@@ -18,9 +20,9 @@ namespace ArcanaErp.Core.Models.Erp
         public string IsoCode2 { get; set; }
 
         [StringLength(255)]
-        public string isocode3 { get; set; }
+        public string IsoCode3 { get; set; }
 
-        public bool? display { get; set; }
+        public bool? Display { get; set; }
 
         public int? ExternalId { get; set; }
 

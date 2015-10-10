@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("DescriptiveAsset")]
-    public partial class DescriptiveAsset
+    public partial class DescriptiveAsset : IDescriptiveAsset
     {
         public int Id { get; set; }
 
@@ -23,7 +25,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdsource { get; set; }
+        public string ExternalIdSource { get; set; }
 
         public int? DescribedRecordId { get; set; }
 

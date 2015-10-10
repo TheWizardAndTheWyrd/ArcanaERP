@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ContactPurpose")]
-    public partial class ContactPurpose
+    public partial class ContactPurpose : IContactPurpose
     {
         public int Id { get; set; }
 
@@ -30,7 +32,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdsource { get; set; }
+        public string ExternalIdSource { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

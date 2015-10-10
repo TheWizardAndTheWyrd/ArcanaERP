@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("ArcanaErpInstance")]
-    public partial class ArcanaErpInstance
+    public partial class ArcanaErpInstance : IErpInstance
     {
         public int Id { get; set; }
 
@@ -28,7 +30,7 @@ namespace ArcanaErp.Core.Models.Erp
         public int? ParentId { get; set; }
 
         [StringLength(255)]
-        public string GuId { get; set; }
+        public string GuidString { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -98,4 +98,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="UserId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="6c356835-f6df-402f-94a7-49824b0ec3f2" ChangeDateTime="10/10/2015 00:26:16">
+    <Property Name="ElementName" Value="[dbo].[FacilityType].[ExternalIdentifersource]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FacilityType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExternalIdentiferSource" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="61b41bae-6837-4057-a131-619ae54eb2d0" ChangeDateTime="10/10/2015 00:39:55">
+    <Property Name="ElementName" Value="[dbo].[FixedAssetType].[ExternalIdsource]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FixedAssetType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExternalIdsSource" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b9a3be1c-1baa-4501-9cc8-939969b3c69d" ChangeDateTime="10/10/2015 00:40:02">
+    <Property Name="ElementName" Value="[dbo].[FixedAssetType].[ExternalIdsSource]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FixedAssetType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ExternalIdSource" />
+  </Operation>
 </Operations>

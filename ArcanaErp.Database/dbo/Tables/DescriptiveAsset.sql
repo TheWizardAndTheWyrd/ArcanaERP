@@ -4,7 +4,7 @@
     [InternalIdentifier]  VARCHAR (255) NULL,
     [Description]         TEXT          NULL,
     [ExternalIdentifier]  VARCHAR (255) NULL,
-    [ExternalIdsource]    VARCHAR (255) NULL,
+    [ExternalIdSource]    VARCHAR (255) NULL,
     [DescribedRecordId]   INT           NULL,
     [DescribedRecordType] VARCHAR (255) NULL,
     [CreatedAt]           DATETIME      NOT NULL,
