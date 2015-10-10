@@ -29,5 +29,7 @@ namespace ArcanaErp.Web.JsonApi.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ArcanaErp.Core.Models.Erp.Agreement> Agreements { get; set; }
     }
 }

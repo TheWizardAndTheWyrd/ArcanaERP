@@ -206,6 +206,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Agreements\AgreementsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -276,6 +277,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Application\" />
+    <Folder Include="Controllers\BaseErpServices\" />
+    <Folder Include="Controllers\Commerce\" />
+    <Folder Include="Controllers\CommunicationEvents\" />
+    <Folder Include="Controllers\ContentManagementSystem\" />
+    <Folder Include="Controllers\DatabaseAdmin\" />
+    <Folder Include="Controllers\FinancialAccounting\" />
+    <Folder Include="Controllers\Inventory\" />
+    <Folder Include="Controllers\Invoicing\" />
+    <Folder Include="Controllers\OperationsResearch\" />
+    <Folder Include="Controllers\Orders\" />
+    <Folder Include="Controllers\Products\" />
+    <Folder Include="Controllers\Rules\" />
+    <Folder Include="Controllers\Search\" />
+    <Folder Include="Controllers\TaxationsAndAccounts\" />
+    <Folder Include="Controllers\TechServices\" />
+    <Folder Include="Controllers\WorkEffort\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -284,6 +302,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArcanaErp.Core\ArcanaErp.Core.csproj">
+      <Project>{a06e1265-48a3-4430-8c39-98cf50944c9e}</Project>
+      <Name>ArcanaErp.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
