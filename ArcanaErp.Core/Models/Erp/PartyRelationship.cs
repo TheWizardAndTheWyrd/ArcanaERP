@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("PartyRelationship")]
-    public partial class PartyRelationship
+    public partial class PartyRelationship : IPartyRelationship
     {
         public int Id { get; set; }
 
@@ -32,13 +34,13 @@ namespace ArcanaErp.Core.Models.Erp
         public DateTime? FromDate { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? thruDate { get; set; }
+        public DateTime? ThroughDate { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdsource { get; set; }
+        public string ExternalIdSource { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

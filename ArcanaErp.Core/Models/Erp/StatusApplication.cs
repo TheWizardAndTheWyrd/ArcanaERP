@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("StatusApplication")]
-    public partial class StatusApplication
+    public partial class StatusApplication : IStatusApplication
     {
         public int Id { get; set; }
 
@@ -20,7 +22,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime? FromDate { get; set; }
 
-        public DateTime? thruDate { get; set; }
+        public DateTime? ThroughDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

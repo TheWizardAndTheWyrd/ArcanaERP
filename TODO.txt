@@ -1,0 +1,43 @@
+ _______                                 _______ ______  ______  
+(_______)                               (_______|_____ \(_____ \ 
+ _______  ____ ____ _____ ____  _____    _____   _____) )_____) )
+|  ___  |/ ___) ___|____ |  _ \(____ |  |  ___) |  __  /|  ____/ 
+| |   | | |  ( (___/ ___ | | | / ___ |  | |_____| |  \ \| |      
+|_|   |_|_|   \____)_____|_| |_\_____|  |_______)_|   |_|_|v0.0.1-alpha     
+                                                                 
+Arcana ERP v0.0.1-alpha
+(c) 2015 The Wizard & The Wyrd, LLC
+rev. October 10, 2015
+
+Summary:
+========
+There is a lot of work to be done before the initial release, and this list is not chronological:
+  * Add missing model properties to ErpDataModel.cs - likely to see breaks during unit testing.
+  * Choose a suitable Open Source License and LICENSE.txt file.
+  * De-duplicate Interface code - a lot of the interfaces share a common code base:
+```	
+	public interface INameOfInterface
+    {
+        int Id { get; set; }
+        string Description { get; set; }
+        string InternalIdentifier { get; set; }
+        string ExternalIdentifier { get; set; }
+        int? LeftValue { get; set; }
+        int? RightValue { get; set; }
+        int? ParentId { get; set; }
+        DateTime CreatedAt { get; set; }
+        DateTime UpdatedAt { get; set; }
+    }
+```
+  * Create shared base class implementation for the above often-repeat interface members.
+  * Create Model unit tests for each data model.
+  * Create CRUD controllers for each model.
+  * Create unit tests for each CRUD controller.
+  * Enable code-first migrations.
+  * Test Entity Framework migrations with difference database providers; initially:
+    * SQL Server
+	* PostgreSQL
+	* MySQL
+	* Possibly FireBird
+  * Use some kind of project management system, like Atlassian (or GitHub) for manaaging features and bugs.
+  * Create a corporate site for ArcanaERP.com (commercial) and ArcanaERP.org (open source).

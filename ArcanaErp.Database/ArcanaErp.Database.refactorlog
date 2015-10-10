@@ -119,4 +119,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ExternalIdSource" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="1eafd4b4-de7b-4fa3-b5b4-e9ef5d671d3e" ChangeDateTime="10/10/2015 07:39:41">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[Addressline2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AddressLine2" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3317f47a-c042-4d15-9c50-665777621089" ChangeDateTime="10/10/2015 07:39:47">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[Addressline1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AddressLine1" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a39d9d4e-3c6d-42f8-90dc-34d0d5eeebd8" ChangeDateTime="10/10/2015 07:40:04">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[city]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="City" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="788e6aed-df3c-40b6-a239-a0a8471f8138" ChangeDateTime="10/10/2015 07:40:11">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[zip]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Zip" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0e1a516b-6143-4e36-b34e-d20caf192f2e" ChangeDateTime="10/10/2015 07:40:20">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[GeozOneId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GeoZoneId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6e927486-b3ce-409b-b0cb-dfe8da0a3d1e" ChangeDateTime="10/10/2015 07:40:26">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[latitude]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Latitude" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="faaed9e3-298c-460b-b3c5-b12b896fb855" ChangeDateTime="10/10/2015 07:40:33">
+    <Property Name="ElementName" Value="[dbo].[PostalAddress].[lOngitude]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PostalAddress]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Longitude" />
+  </Operation>
 </Operations>

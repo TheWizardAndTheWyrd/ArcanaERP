@@ -476,7 +476,7 @@
     <Compile Include="Models\Erp\OrderRequirementCommitment.cs" />
     <Compile Include="Models\Erp\OrderTaxation.cs" />
     <Compile Include="Models\Erp\OrderTaxationType.cs" />
-    <Compile Include="Models\Erp\OrganizatiOn.cs" />
+    <Compile Include="Models\Erp\Organization.cs" />
     <Compile Include="Models\Erp\Party.cs" />
     <Compile Include="Models\Erp\PartyFixedAssetAssignment.cs" />
     <Compile Include="Models\Erp\PartyRelationship.cs" />

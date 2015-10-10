@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("Individual")]
-    public partial class Individual
+    public partial class Individual : IIndividual
     {
         public int Id { get; set; }
 
@@ -20,57 +22,57 @@ namespace ArcanaErp.Core.Models.Erp
         public string CurrentFirstName { get; set; }
 
         [StringLength(255)]
-        public string CurrentmIddleName { get; set; }
+        public string CurrentMiddleName { get; set; }
 
         [StringLength(255)]
-        public string CurrentpersOnalTitle { get; set; }
+        public string CurrentPersonalTitle { get; set; }
 
         [StringLength(255)]
-        public string Currentsuffix { get; set; }
+        public string CurrentSuffix { get; set; }
 
         [StringLength(255)]
-        public string CurrentnickName { get; set; }
+        public string CurrentNickName { get; set; }
 
         [StringLength(1)]
-        public string gender { get; set; }
+        public string Gender { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? birthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
 
         public decimal? Height { get; set; }
 
-        public int? weight { get; set; }
+        public int? Weight { get; set; }
 
         [StringLength(255)]
-        public string mothersmaIdenName { get; set; }
+        public string MothersMaidenName { get; set; }
 
         [StringLength(1)]
-        public string maritalStatus { get; set; }
+        public string MaritalStatus { get; set; }
 
         [StringLength(255)]
-        public string socialSecuritynumber { get; set; }
+        public string SocialSecurityNumber { get; set; }
 
-        public int? Currentpassportnumber { get; set; }
+        public int? CurrentPassportNumber { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? CurrentpassportexpireDate { get; set; }
+        public DateTime? CurrentPassportExpireDate { get; set; }
 
-        public int? Totalyearsworkexperience { get; set; }
+        public int? TotalYearsWorkExperience { get; set; }
 
         [StringLength(255)]
         public string Comments { get; set; }
 
         [StringLength(255)]
-        public string enCryptedssn { get; set; }
+        public string EncryptedSsn { get; set; }
 
         [StringLength(255)]
-        public string tempssn { get; set; }
+        public string TempSsn { get; set; }
 
         [StringLength(255)]
         public string Salt { get; set; }
 
         [StringLength(255)]
-        public string ssnLastfour { get; set; }
+        public string SsnLastfour { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

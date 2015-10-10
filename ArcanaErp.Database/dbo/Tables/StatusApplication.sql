@@ -4,7 +4,7 @@
     [StatusApplicationRecordId]   INT           NULL,
     [StatusApplicationRecordType] VARCHAR (255) NULL,
     [FromDate]                    DATETIME      NULL,
-    [thruDate]                    DATETIME      NULL,
+    [ThroughDate]                 DATETIME      NULL,
     [CreatedAt]                   DATETIME      NOT NULL,
     [UpdatedAt]                   DATETIME      NOT NULL,
     [PartyId]                     INT           NULL,
@@ -29,7 +29,7 @@ CREATE NONCLUSTERED INDEX [FromDateIndex]
 
 GO
 CREATE NONCLUSTERED INDEX [thruDateIndex]
-    ON [dbo].[StatusApplication]([thruDate] ASC);
+    ON [dbo].[StatusApplication]([ThroughDate] ASC);
 
 
 GO

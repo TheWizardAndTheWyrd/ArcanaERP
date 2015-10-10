@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -6,8 +8,8 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("OrganizatiOn")]
-    public partial class OrganizatiOn
+    [Table("Organization")]
+    public partial class Organization : IOrganization
     {
         public int Id { get; set; }
 
@@ -15,7 +17,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string Description { get; set; }
 
         [StringLength(255)]
-        public string TaxIdnumber { get; set; }
+        public string TaxIdNumber { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

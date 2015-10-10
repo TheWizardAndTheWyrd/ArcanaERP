@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,13 +9,13 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("PhoneNumber")]
-    public partial class PhoneNumber
+    public partial class PhoneNumber : IPhoneNumber
     {
         public int Id { get; set; }
 
         [Column("Phonenumber")]
         [StringLength(255)]
-        public string Phonenumber1 { get; set; }
+        public string PhoneNumber1 { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

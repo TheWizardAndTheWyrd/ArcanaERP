@@ -149,7 +149,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<OrderRequirementCommitment> OrderRequirementCommitments { get; set; }
         public virtual DbSet<OrderTaxation> OrderTaxations { get; set; }
         public virtual DbSet<OrderTaxationType> OrderTaxationTypes { get; set; }
-        public virtual DbSet<OrganizatiOn> OrganizatiOns { get; set; }
+        public virtual DbSet<Organization> Organizations { get; set; }
         public virtual DbSet<Party> Parties { get; set; }
         public virtual DbSet<PartyFixedAssetAssignment> PartyFixedAssetAssignments { get; set; }
         public virtual DbSet<PartyRelationship> PartyRelationships { get; set; }
@@ -1557,23 +1557,23 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.CurrentmIddleName)
+                .Property(e => e.CurrentMiddleName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.CurrentpersOnalTitle)
+                .Property(e => e.CurrentPersonalTitle)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.Currentsuffix)
+                .Property(e => e.CurrentSuffix)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.CurrentnickName)
+                .Property(e => e.CurrentNickName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.gender)
+                .Property(e => e.Gender)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
@@ -1581,15 +1581,15 @@ namespace ArcanaErp.Core.Models.Erp
                 .HasPrecision(5, 2);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.mothersmaIdenName)
+                .Property(e => e.MothersMaidenName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.maritalStatus)
+                .Property(e => e.MaritalStatus)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.socialSecuritynumber)
+                .Property(e => e.SocialSecurityNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
@@ -1597,11 +1597,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.enCryptedssn)
+                .Property(e => e.EncryptedSsn)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.tempssn)
+                .Property(e => e.TempSsn)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
@@ -1609,7 +1609,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Individual>()
-                .Property(e => e.ssnLastfour)
+                .Property(e => e.SsnLastfour)
                 .IsUnicode(false);
 
             modelBuilder.Entity<InventoryDropOffTaxation>()
@@ -1885,7 +1885,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Money>()
-                .Property(e => e.amount)
+                .Property(e => e.Amount)
                 .HasPrecision(8, 2);
 
             modelBuilder.Entity<Note>()
@@ -2140,12 +2140,12 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrganizatiOn>()
+            modelBuilder.Entity<Organization>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrganizatiOn>()
-                .Property(e => e.TaxIdnumber)
+            modelBuilder.Entity<Organization>()
+                .Property(e => e.TaxIdNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Party>()
@@ -2169,7 +2169,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PartyRelationship>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PartyResourceAvailabilityType>()
@@ -2225,7 +2225,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhoneNumber>()
-                .Property(e => e.Phonenumber1)
+                .Property(e => e.PhoneNumber1)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhoneNumber>()
@@ -2261,15 +2261,15 @@ namespace ArcanaErp.Core.Models.Erp
                 .HasPrecision(8, 2);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.Addressline1)
+                .Property(e => e.AddressLine1)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.Addressline2)
+                .Property(e => e.AddressLine2)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.city)
+                .Property(e => e.City)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
@@ -2277,7 +2277,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.zip)
+                .Property(e => e.Zip)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
@@ -2289,11 +2289,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.latitude)
+                .Property(e => e.Latitude)
                 .HasPrecision(12, 8);
 
             modelBuilder.Entity<PostalAddress>()
-                .Property(e => e.lOngitude)
+                .Property(e => e.Longitude)
                 .HasPrecision(12, 8);
 
             modelBuilder.Entity<PreferenceOption>()

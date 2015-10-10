@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Money] (
     [Id]          INT            IDENTITY (1, 1) NOT NULL,
     [Description] VARCHAR (255)  NULL,
-    [amount]      DECIMAL (8, 2) NULL,
+    [Amount]      DECIMAL (8, 2) NULL,
     [CurrencyId]  INT            NULL,
     [CreatedAt]   DATETIME       NOT NULL,
     [UpdatedAt]   DATETIME       NOT NULL,

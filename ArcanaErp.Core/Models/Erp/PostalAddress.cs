@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -6,24 +8,24 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class PostalAddress
+    public partial class PostalAddress : IPostalAddress
     {
         public int Id { get; set; }
 
         [StringLength(255)]
-        public string Addressline1 { get; set; }
+        public string AddressLine1 { get; set; }
 
         [StringLength(255)]
-        public string Addressline2 { get; set; }
+        public string AddressLine2 { get; set; }
 
         [StringLength(255)]
-        public string city { get; set; }
+        public string City { get; set; }
 
         [StringLength(255)]
         public string State { get; set; }
 
         [StringLength(255)]
-        public string zip { get; set; }
+        public string Zip { get; set; }
 
         [StringLength(255)]
         public string Country { get; set; }
@@ -33,11 +35,11 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? GeoCountryId { get; set; }
 
-        public int? GeozOneId { get; set; }
+        public int? GeoZoneId { get; set; }
 
-        public decimal? latitude { get; set; }
+        public decimal? Latitude { get; set; }
 
-        public decimal? lOngitude { get; set; }
+        public decimal? Longitude { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

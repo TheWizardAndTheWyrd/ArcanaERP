@@ -135,7 +135,7 @@
     <Build Include="dbo\Tables\BusinessTaxationRelationshipType.sql" />
     <Build Include="dbo\Tables\AcceptedCreditCard.sql" />
     <Build Include="dbo\Tables\ConfigurationItemTypeConfiguration.sql" />
-    <Build Include="dbo\Tables\OrganizatiOn.sql" />
+    <Build Include="dbo\Tables\Organization.sql" />
     <Build Include="dbo\Tables\CalendarEventPartyRole.sql" />
     <Build Include="dbo\Tables\BusinessTaxationStatus.sql" />
     <Build Include="dbo\Tables\ConfigurationOption.sql" />
@@ -157,7 +157,7 @@
     <Build Include="dbo\Tables\JobTracker.sql" />
     <Build Include="dbo\Tables\ContactPurposeContact.sql" />
     <Build Include="dbo\Tables\BusinessTaxationPartyRoleType.sql" />
-    <Build Include="dbo\Tables\PostalAddresses.sql" />
+    <Build Include="dbo\Tables\PostalAddress.sql" />
     <Build Include="dbo\Tables\ProductOffer.sql" />
     <Build Include="dbo\Tables\WebSites.sql" />
     <Build Include="dbo\Tables\BusinessTaxationAccountRoot.sql" />

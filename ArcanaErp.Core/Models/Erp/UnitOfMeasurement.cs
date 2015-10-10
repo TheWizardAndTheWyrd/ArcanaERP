@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("UnitOfMeasurement")]
-    public partial class UnitOfMeasurement
+    public partial class UnitOfMeasurement : IUnitOfMeasurement
     {
         public int Id { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.BaseErpServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,14 +9,14 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("Money")]
-    public partial class Money
+    public partial class Money : IMoney
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public decimal? amount { get; set; }
+        public decimal? Amount { get; set; }
 
         public int? CurrencyId { get; set; }
 

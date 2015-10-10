@@ -9,9 +9,9 @@
     [PriorityTypeId]     INT           NULL,
     [RelationshipTypeId] INT           NULL,
     [FromDate]           DATE          NULL,
-    [thruDate]           DATE          NULL,
+    [ThroughDate]           DATE          NULL,
     [ExternalIdentifier] VARCHAR (255) NULL,
-    [ExternalIdsource]   VARCHAR (255) NULL,
+    [ExternalIdSource]   VARCHAR (255) NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
