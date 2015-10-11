@@ -1,15 +1,10 @@
 ﻿using System.Linq;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Controllers;
-using ArcanaErp.Core.Interfaces.Models.Agreements;
-using ArcanaErp.Core.Models.Erp;
 
 namespace ArcanaErp.Core.Interfaces.Controllers.Agreements
 {
-    public interface IAgreementsController<T1, T2, T3, in T4, T5>
+    public interface IAgreementsController<T1, T2, T3, in T4, out T5>
     {
         //IQueryable<Agreement> GetAgreements();
         IQueryable<T1> GetAgreements();

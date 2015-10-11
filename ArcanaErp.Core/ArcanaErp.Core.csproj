@@ -92,7 +92,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementItemsController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementItemTypesController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementPartyRolesController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementRelationshipsController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementRelationshipTypesController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementRoleTypesController.cs" />
     <Compile Include="Interfaces\Controllers\Agreements\IAgreementsController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\IAgreementTypesController.cs" />
+    <Compile Include="Interfaces\Controllers\Agreements\ILoyaltyProgramCodesController.cs" />
     <Compile Include="Interfaces\Models\Agreements\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreement.cs" />
     <Compile Include="Interfaces\Models\Agreements\IAgreementItem.cs" />

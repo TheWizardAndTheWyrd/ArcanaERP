@@ -7,11 +7,12 @@
                                                                  
 Arcana ERP v0.0.1-alpha
 (c) 2015 The Wizard & The Wyrd, LLC
-rev. October 10, 2015
+rev. October 11, 2015
 
 Summary:
 ========
 There is a lot of work to be done before the initial release, and this list is not chronological:
+  * Consider breaking up ArcanaErp.Web.JsonApi into micro-services.
   * Add missing model properties to ErpDataModel.cs - likely to see breaks during unit testing.
   * Choose a suitable Open Source License and LICENSE.txt file.
   * De-duplicate Interface code - a lot of the interfaces share a common code base:
