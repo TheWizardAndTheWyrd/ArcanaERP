@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Web.JsonApi", "Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Web.JsonApi.Tests", "ArcanaErp.Web.JsonApi.Tests\ArcanaErp.Web.JsonApi.Tests.csproj", "{F52F64C9-779F-40D4-B453-FB47B52702F5}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArcanaErp.Web.Lambda", "ArcanaErp.Web.Lambda\ArcanaErp.Web.Lambda.fsproj", "{818DF217-0160-4961-B6F7-D97948E8DBE2}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArcanaErp.Core.Lambda", "ArcanaErp.Core.Lambda\ArcanaErp.Core.Lambda.fsproj", "{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
