@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using ArcanaErp.Core.Lambda;
 
     [Table("BusinessAccountTaxationTask")]
-    public partial class BusinessAccountTaxationTask
+    public partial class BusinessAccountTaxationTask : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -23,7 +24,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime? EnteredDate { get; set; }
 
-        public DateTime? requestedDate { get; set; }
+        public DateTime? RequestedDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

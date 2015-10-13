@@ -7,8 +7,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class ConfigurationItem : IConfigurationItem
+    public partial class ConfigurationItem : IConfigurationItem, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -16,7 +17,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? ConfigurationItemTypeId { get; set; }
 
-        public int? ConfigurationoptiOnId { get; set; }
+        public int? ConfigurationOptionId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

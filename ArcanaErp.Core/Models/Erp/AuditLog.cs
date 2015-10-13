@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using ArcanaErp.Core.Lambda;
 
     [Table("AuditLog")]
-    public partial class AuditLog
+    public partial class AuditLog : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -20,7 +21,7 @@ namespace ArcanaErp.Core.Models.Erp
         public int? PartyId { get; set; }
 
         [Column(TypeName = "text")]
-        public string additiOnalinfo { get; set; }
+        public string AdditionalInfo { get; set; }
 
         public int? AuditLogTypeId { get; set; }
 

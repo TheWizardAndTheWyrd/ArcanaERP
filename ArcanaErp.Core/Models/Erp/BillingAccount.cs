@@ -11,7 +11,7 @@ namespace ArcanaErp.Core.Models.Erp
     {
         public int Id { get; set; }
 
-        public bool? SEndPaperBills { get; set; }
+        public bool? SendPaperBills { get; set; }
 
         public bool? PayableOnline { get; set; }
 

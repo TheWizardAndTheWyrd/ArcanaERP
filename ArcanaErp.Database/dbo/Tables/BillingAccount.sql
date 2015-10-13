@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[BillingAccount] (
     [Id]                             INT      IDENTITY (1, 1) NOT NULL,
-    [SEndPaperBills]                 BIT      DEFAULT ('f') NULL,
+    [SendPaperBills]                 BIT      DEFAULT ('f') NULL,
     [PayableOnline]                  BIT      DEFAULT ('f') NULL,
     [BillingDate]                    DATE     NULL,
     [CalculateBalanceStrategyTypeId] INT      NULL,

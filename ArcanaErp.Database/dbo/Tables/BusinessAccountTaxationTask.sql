@@ -5,7 +5,7 @@
     [Description]               VARCHAR (255) NULL,
     [Comments]                  VARCHAR (255) NULL,
     [EnteredDate]               DATETIME      NULL,
-    [requestedDate]             DATETIME      NULL,
+    [RequestedDate]             DATETIME      NULL,
     [CreatedAt]                 DATETIME      NOT NULL,
     [UpdatedAt]                 DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

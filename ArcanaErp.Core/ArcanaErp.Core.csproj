@@ -416,7 +416,7 @@
     <Compile Include="Models\Erp\BusinessTaxationAccountRelationship.cs" />
     <Compile Include="Models\Erp\BusinessTaxationAccountRelationshipType.cs" />
     <Compile Include="Models\Erp\BusinessTaxationAccountRoot.cs" />
-    <Compile Include="Models\Erp\BusinessTaxationAccountStatu.cs" />
+    <Compile Include="Models\Erp\BusinessTaxationAccountStatus.cs" />
     <Compile Include="Models\Erp\BusinessTaxationAccountStatusType.cs" />
     <Compile Include="Models\Erp\BusinessTaxationAccountType.cs" />
     <Compile Include="Models\Erp\BusinessTaxationAgreementRole.cs" />
@@ -427,7 +427,7 @@
     <Compile Include="Models\Erp\BusinessTaxationPartyRoleType.cs" />
     <Compile Include="Models\Erp\BusinessTaxationRelationship.cs" />
     <Compile Include="Models\Erp\BusinessTaxationRelationshipType.cs" />
-    <Compile Include="Models\Erp\BusinessTaxationStatu.cs" />
+    <Compile Include="Models\Erp\BusinessTaxationStatus.cs" />
     <Compile Include="Models\Erp\BusinessTaxationTask.cs" />
     <Compile Include="Models\Erp\BusinessTaxationTaskType.cs" />
     <Compile Include="Models\Erp\BusinessTaxationType.cs" />
@@ -446,8 +446,8 @@
     <Compile Include="Models\Erp\ChargeType.cs" />
     <Compile Include="Models\Erp\Comment.cs" />
     <Compile Include="Models\Erp\CommunicationEvent.cs" />
-    <Compile Include="Models\Erp\CommunicationEventPuposeType.cs" />
-    <Compile Include="Models\Erp\CommunicationEventStatu.cs" />
+    <Compile Include="Models\Erp\CommunicationEventPurposeType.cs" />
+    <Compile Include="Models\Erp\CommunicationEventStatus.cs" />
     <Compile Include="Models\Erp\Configuration.cs" />
     <Compile Include="Models\Erp\ConfigurationItem.cs" />
     <Compile Include="Models\Erp\ConfigurationItemType.cs" />
@@ -669,6 +669,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArcanaErp.Core.Lambda\ArcanaErp.Core.Lambda.fsproj">
+      <Project>{3f39ea6d-6121-4a9b-ac7f-d49ac26ce56a}</Project>
+      <Name>ArcanaErp.Core.Lambda</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

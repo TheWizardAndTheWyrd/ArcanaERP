@@ -5,8 +5,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class Comment
+    public partial class Comment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -19,11 +20,11 @@ namespace ArcanaErp.Core.Models.Erp
         [Column("Comment", TypeName = "text")]
         public string Comment1 { get; set; }
 
-        public int? approved { get; set; }
+        public int? Approved { get; set; }
 
-        public DateTime? approvedat { get; set; }
+        public DateTime? ApprovedAt { get; set; }
 
-        public int? UsersId { get; set; }
+        public int? UserId { get; set; }
 
         public int? CommentedRecordId { get; set; }
 

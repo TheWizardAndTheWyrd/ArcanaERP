@@ -120,7 +120,7 @@
     <Build Include="dbo\Tables\PartyRole.sql" />
     <Build Include="dbo\Tables\CandidateSubmission.sql" />
     <Build Include="dbo\Tables\BusinessTaxationEventDescription.sql" />
-    <Build Include="dbo\Tables\ConfigurationItems.sql" />
+    <Build Include="dbo\Tables\ConfigurationItem.sql" />
     <Build Include="dbo\Tables\CreditCardAccount.sql" />
     <Build Include="dbo\Tables\RoleType.sql" />
     <Build Include="dbo\Tables\Resume.sql" />
@@ -206,7 +206,7 @@
     <Build Include="dbo\Tables\FinancialTaxationAccount.sql" />
     <Build Include="dbo\Tables\ValidNoteType.sql" />
     <Build Include="dbo\Tables\ProductFeatureValue.sql" />
-    <Build Include="dbo\Tables\ContentVersions.sql" />
+    <Build Include="dbo\Tables\ContentVersion.sql" />
     <Build Include="dbo\Tables\BaseTaxationContext.sql" />
     <Build Include="dbo\Tables\StatusApplication.sql" />
     <Build Include="dbo\Tables\ProductFeatureInteractionType.sql" />
@@ -215,7 +215,7 @@
     <Build Include="dbo\Tables\CommunicationEvent.sql" />
     <Build Include="dbo\Tables\PartySkill.sql" />
     <Build Include="dbo\Tables\Facility.sql" />
-    <Build Include="dbo\Tables\CommunicationEventPuposeType.sql" />
+    <Build Include="dbo\Tables\CommunicationEventPurposeType.sql" />
     <Build Include="dbo\Tables\GoodType.sql" />
     <Build Include="dbo\Tables\FacilityType.sql" />
     <Build Include="dbo\Tables\CommunicationEventPurpose.sql" />
@@ -244,7 +244,7 @@
     <Build Include="dbo\Tables\WorkEffortType.sql" />
     <Build Include="dbo\Tables\InventoryEntryRelationship.sql" />
     <Build Include="dbo\Tables\EntityPartyRole.sql" />
-    <Build Include="dbo\Tables\Comments.sql" />
+    <Build Include="dbo\Tables\Comment.sql" />
     <Build Include="dbo\Tables\WorkEffortPuposeType.sql" />
     <Build Include="dbo\Tables\ProductInstanceInventoryEntry.sql" />
     <Build Include="dbo\Tables\Contact.sql" />

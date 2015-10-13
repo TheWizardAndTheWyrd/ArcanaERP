@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using ArcanaErp.Core.Lambda;
 
     [Table("BusinessTaxationAccountPartyRole")]
-    public partial class BusinessTaxationAccountPartyRole
+    public partial class BusinessTaxationAccountPartyRole : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

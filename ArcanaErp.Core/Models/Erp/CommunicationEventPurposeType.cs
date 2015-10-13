@@ -6,8 +6,8 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CommunicationEventPuposeType")]
-    public partial class CommunicationEventPuposeType
+    [Table("CommunicationEventPurposeType")]
+    public partial class CommunicationEventPurposeType
     {
         public int Id { get; set; }
 

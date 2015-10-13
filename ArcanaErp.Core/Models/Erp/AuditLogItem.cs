@@ -5,8 +5,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using ArcanaErp.Core.Lambda;
 
-    public partial class AuditLogItem
+    public partial class AuditLogItem : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

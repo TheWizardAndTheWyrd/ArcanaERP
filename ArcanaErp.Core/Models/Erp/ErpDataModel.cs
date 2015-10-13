@@ -41,7 +41,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<BusinessTaxationAccountRelationship> BusinessTaxationAccountRelationships { get; set; }
         public virtual DbSet<BusinessTaxationAccountRelationshipType> BusinessTaxationAccountRelationshipTypes { get; set; }
         public virtual DbSet<BusinessTaxationAccountRoot> BusinessTaxationAccountRoots { get; set; }
-        public virtual DbSet<BusinessTaxationAccountStatu> BusinessTaxationAccountStatus { get; set; }
+        public virtual DbSet<BusinessTaxationAccountStatus> BusinessTaxationAccountStatus { get; set; }
         public virtual DbSet<BusinessTaxationAccountStatusType> BusinessTaxationAccountStatusTypes { get; set; }
         public virtual DbSet<BusinessTaxationAccountType> BusinessTaxationAccountTypes { get; set; }
         public virtual DbSet<BusinessTaxationAgreementRole> BusinessTaxationAgreementRoles { get; set; }
@@ -52,7 +52,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<BusinessTaxationPartyRoleType> BusinessTaxationPartyRoleTypes { get; set; }
         public virtual DbSet<BusinessTaxationRelationship> BusinessTaxationRelationships { get; set; }
         public virtual DbSet<BusinessTaxationRelationshipType> BusinessTaxationRelationshipTypes { get; set; }
-        public virtual DbSet<BusinessTaxationStatu> BusinessTaxationStatus { get; set; }
+        public virtual DbSet<BusinessTaxationStatus> BusinessTaxationStatus { get; set; }
         public virtual DbSet<BusinessTaxationTask> BusinessTaxationTasks { get; set; }
         public virtual DbSet<BusinessTaxationTaskType> BusinessTaxationTaskTypes { get; set; }
         public virtual DbSet<BusinessTaxationType> BusinessTaxationTypes { get; set; }
@@ -724,11 +724,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationStatu>()
+            modelBuilder.Entity<BusinessTaxationStatus>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationStatu>()
+            modelBuilder.Entity<BusinessTaxationStatus>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 

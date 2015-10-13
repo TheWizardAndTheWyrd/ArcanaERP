@@ -2,7 +2,7 @@
     [Id]                          INT           IDENTITY (1, 1) NOT NULL,
     [RoutingNumber]               VARCHAR (255) NULL,
     [CryptedPrivateAccountNumber] VARCHAR (255) NULL,
-    [nameOnAccount]               VARCHAR (255) NULL,
+    [NameOnAccount]               VARCHAR (255) NULL,
     [BankAccountTypeId]           INT           NULL,
     [CreatedAt]                   DATETIME      NOT NULL,
     [UpdatedAt]                   DATETIME      NOT NULL,

@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Configuration")]
-    public partial class Configuration : IConfiguration
+    public partial class Configuration : IConfiguration, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Content")]
-    public partial class Content
+    public partial class Content : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -33,7 +34,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public bool? displayTitle { get; set; }
+        public bool? DisplayTitle { get; set; }
 
         public int? Version { get; set; }
 

@@ -9,7 +9,7 @@ namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
         string ContactMechanismType { get; set; }
         bool? IsPrimary { get; set; }
         string ExternalIdentifier { get; set; }
-        string ExternalIdsource { get; set; }
+        string ExternalIdSource { get; set; }
         DateTime CreatedAt { get; set; }
         DateTime UpdatedAt { get; set; }
         string ContactRecordType { get; set; }

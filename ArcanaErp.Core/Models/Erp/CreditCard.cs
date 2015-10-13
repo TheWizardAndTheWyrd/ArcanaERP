@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("CreditCard")]
-    public partial class CreditCard
+    public partial class CreditCard : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -17,15 +18,15 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string CryptedPrivateCvc { get; set; }
 
-        public int? Expirationmonth { get; set; }
+        public int? ExpirationMonth { get; set; }
 
-        public int? Expirationyear { get; set; }
+        public int? ExpirationYear { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
         [StringLength(255)]
-        public string nameOnCard { get; set; }
+        public string NameOnCard { get; set; }
 
         [StringLength(255)]
         public string CardType { get; set; }

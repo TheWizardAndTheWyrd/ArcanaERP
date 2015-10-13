@@ -4,7 +4,7 @@
     [ContactMechanismType] VARCHAR (255) NULL,
     [IsPrimary]            BIT           NULL,
     [ExternalIdentifier]   VARCHAR (255) NULL,
-    [ExternalIdsource]     VARCHAR (255) NULL,
+    [ExternalIdSource]     VARCHAR (255) NULL,
     [CreatedAt]            DATETIME      NOT NULL,
     [UpdatedAt]            DATETIME      NOT NULL,
     [ContactRecordType]    VARCHAR (255) NULL,

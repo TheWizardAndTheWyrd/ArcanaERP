@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("CommunicationEvent")]
-    public partial class CommunicationEvent
+    public partial class CommunicationEvent : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -36,12 +37,12 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? CaseId { get; set; }
 
-        public DateTime? dateTimeStarted { get; set; }
+        public DateTime? DateTimeStarted { get; set; }
 
-        public DateTime? dateTimeEnded { get; set; }
+        public DateTime? DateTimeEnded { get; set; }
 
         [StringLength(255)]
-        public string notes { get; set; }
+        public string Notes { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }

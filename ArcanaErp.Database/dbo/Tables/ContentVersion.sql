@@ -9,9 +9,9 @@
     [CreatedById]        INT           DEFAULT (NULL) NULL,
     [UpdatedById]        INT           DEFAULT (NULL) NULL,
     [InternalIdentifier] VARCHAR (255) DEFAULT (NULL) NULL,
-    [displayTitle]       BIT           DEFAULT (NULL) NULL,
-    [CreatedAt]          DATETIME      DEFAULT (NULL) NULL,
-    [UpdatedAt]          DATETIME      DEFAULT (NULL) NULL,
+    [DisplayTitle]       BIT           DEFAULT (NULL) NULL,
+    [CreatedAt]          DATETIME      DEFAULT (NULL) NOT NULL,
+    [UpdatedAt]          DATETIME      DEFAULT (NULL) NOT NULL,
     [VersionedType]      VARCHAR (255) DEFAULT (NULL) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );

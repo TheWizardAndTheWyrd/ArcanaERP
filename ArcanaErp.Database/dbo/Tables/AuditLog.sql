@@ -3,7 +3,7 @@
     [Application]     VARCHAR (255) NULL,
     [Description]     VARCHAR (255) NULL,
     [PartyId]         INT           NULL,
-    [additiOnalinfo]  TEXT          NULL,
+    [AdditionalInfo]  TEXT          NULL,
     [AuditLogTypeId]  INT           NULL,
     [EventRecordId]   INT           NULL,
     [EventRecordType] VARCHAR (255) NULL,

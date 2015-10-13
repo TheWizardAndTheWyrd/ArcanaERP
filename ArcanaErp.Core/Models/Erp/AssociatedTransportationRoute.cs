@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using ArcanaErp.Core.Lambda;
 
     [Table("AssociatedTransportationRoute")]
-    public partial class AssociatedTransportationRoute
+    public partial class AssociatedTransportationRoute : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -17,5 +18,9 @@ namespace ArcanaErp.Core.Models.Erp
 
         [StringLength(255)]
         public string AssociatedRecordType { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
     }
 }

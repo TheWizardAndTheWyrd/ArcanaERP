@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Capability")]
-    public partial class Capability
+    public partial class Capability : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -16,10 +17,10 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? CapabilityTypeId { get; set; }
 
-        public int? CapabilityresourceId { get; set; }
+        public int? CapabilityResourceId { get; set; }
 
         [StringLength(255)]
-        public string CapabilityresourceType { get; set; }
+        public string CapabilityResourceType { get; set; }
 
         public int? ScopeTypeId { get; set; }
 

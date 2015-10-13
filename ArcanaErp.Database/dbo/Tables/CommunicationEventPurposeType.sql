@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[CommunicationEventPuposeType] (
+﻿CREATE TABLE [dbo].[CommunicationEventPurposeType] (
     [Id]                 INT           IDENTITY (1, 1) NOT NULL,
     [ParentId]           INT           NULL,
     [LeftValue]          INT           NULL,
@@ -16,5 +16,5 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IndexCommunicationEventPuposeTypeOnParentId]
-    ON [dbo].[CommunicationEventPuposeType]([ParentId] ASC);
+    ON [dbo].[CommunicationEventPurposeType]([ParentId] ASC);
 

@@ -8,7 +8,7 @@
     [CreatedById]        INT           NULL,
     [UpdatedById]        INT           NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
-    [displayTitle]       BIT           NULL,
+    [DisplayTitle]       BIT           NULL,
     [Version]            INT           NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,

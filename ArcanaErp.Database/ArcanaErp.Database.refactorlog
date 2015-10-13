@@ -168,4 +168,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Longitude" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="a585a4df-67ba-40c8-8ebb-0a4ad04824e0" ChangeDateTime="10/13/2015 06:32:37">
+    <Property Name="ElementName" Value="[dbo].[Comments].[approved]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Comments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Approved" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d39ddd85-783c-4b63-a6e6-6b49ed494ee9" ChangeDateTime="10/13/2015 06:32:51">
+    <Property Name="ElementName" Value="[dbo].[Comments].[approvedat]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Comments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ApprovedAt" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6b14b782-a277-4128-aaa1-5e43f76422bb" ChangeDateTime="10/13/2015 06:32:59">
+    <Property Name="ElementName" Value="[dbo].[Comments].[UsersId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Comments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
 </Operations>

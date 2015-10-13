@@ -1,11 +1,11 @@
-﻿CREATE TABLE [dbo].[Comments] (
+﻿CREATE TABLE [dbo].[Comment] (
     [Id]                  INT           IDENTITY (1, 1) NOT NULL,
     [CommentorName]       VARCHAR (255) NULL,
     [Email]               VARCHAR (255) NULL,
     [Comment]             TEXT          NULL,
-    [approved]            INT           NULL,
-    [approvedat]          DATETIME      NULL,
-    [UsersId]             INT           NULL,
+    [Approved]            INT           NULL,
+    [ApprovedAt]          DATETIME      NULL,
+    [UserId]             INT           NULL,
     [CommentedRecordId]   INT           NULL,
     [CommentedRecordType] VARCHAR (255) NULL,
     [CreatedAt]           DATETIME      NOT NULL,
@@ -16,15 +16,15 @@
 
 GO
 CREATE NONCLUSTERED INDEX [CommentedRecordIndex]
-    ON [dbo].[Comments]([CommentedRecordId] ASC, [CommentedRecordType] ASC);
+    ON [dbo].[Comment]([CommentedRecordId] ASC, [CommentedRecordType] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexCommentsOnapproved]
-    ON [dbo].[Comments]([approved] ASC);
+    ON [dbo].[Comment]([Approved] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexCommentsOnUsersId]
-    ON [dbo].[Comments]([UsersId] ASC);
+    ON [dbo].[Comment]([UserId] ASC);
 
