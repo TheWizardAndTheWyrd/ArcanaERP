@@ -273,7 +273,7 @@
     <Build Include="dbo\Tables\AuditLog.sql" />
     <Build Include="dbo\Tables\WorkEffortPartyAssignment.sql" />
     <Build Include="dbo\Tables\InvoicedRecord.sql" />
-    <Build Include="dbo\Tables\Documents.sql" />
+    <Build Include="dbo\Tables\Document.sql" />
     <Build Include="dbo\Tables\AuditLogType.sql" />
     <Build Include="dbo\Tables\WorkEffortInventoryAssignment.sql" />
     <Build Include="dbo\Tables\InvoiceItemType.sql" />

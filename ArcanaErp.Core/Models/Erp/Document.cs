@@ -5,8 +5,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class Document
+    public partial class Document : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -29,7 +30,7 @@ namespace ArcanaErp.Core.Models.Erp
         public int? DocumentTypeId { get; set; }
 
         [Column(TypeName = "text")]
-        public string cusTomfields { get; set; }
+        public string CustomFields { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

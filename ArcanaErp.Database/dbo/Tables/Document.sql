@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Documents] (
+﻿CREATE TABLE [dbo].[Document] (
     [Id]                 INT           IDENTITY (1, 1) NOT NULL,
     [ExternalIdentifier] VARCHAR (255) NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
@@ -7,7 +7,7 @@
     [DocumentRecordId]   INT           NULL,
     [DocumentRecordType] VARCHAR (255) NULL,
     [DocumentTypeId]     INT           NULL,
-    [cusTomfields]       TEXT          NULL,
+    [CustomFields]       TEXT          NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
@@ -16,15 +16,15 @@
 
 GO
 CREATE NONCLUSTERED INDEX [DocumentRecordpolyIndex]
-    ON [dbo].[Documents]([DocumentRecordType] ASC, [DocumentRecordId] ASC);
+    ON [dbo].[Document]([DocumentRecordType] ASC, [DocumentRecordId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [DocumentTypeIndex]
-    ON [dbo].[Documents]([DocumentTypeId] ASC);
+    ON [dbo].[Document]([DocumentTypeId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [DocumentsInternalIdentifierIndex]
-    ON [dbo].[Documents]([InternalIdentifier] ASC);
+    ON [dbo].[Document]([InternalIdentifier] ASC);
 
