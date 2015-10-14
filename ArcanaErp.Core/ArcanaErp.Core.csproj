@@ -572,7 +572,7 @@
     <Compile Include="Models\Erp\ProductTypeRelationshipType.cs" />
     <Compile Include="Models\Erp\ProductTypeRoleType.cs" />
     <Compile Include="Models\Erp\Project.cs" />
-    <Compile Include="Models\Erp\Publishedelement.cs" />
+    <Compile Include="Models\Erp\PublishedElement.cs" />
     <Compile Include="Models\Erp\PublishedWebSite.cs" />
     <Compile Include="Models\Erp\RecurringPayment.cs" />
     <Compile Include="Models\Erp\RelationshipType.cs" />
@@ -590,9 +590,9 @@
     <Compile Include="Models\Erp\SecurityRole.cs" />
     <Compile Include="Models\Erp\Session.cs" />
     <Compile Include="Models\Erp\Shift.cs" />
-    <Compile Include="Models\Erp\simpleProductOffer.cs" />
+    <Compile Include="Models\Erp\SimpleProductOffer.cs" />
     <Compile Include="Models\Erp\SkillType.cs" />
-    <Compile Include="Models\Erp\staffingPosition.cs" />
+    <Compile Include="Models\Erp\StaffingPosition.cs" />
     <Compile Include="Models\Erp\StatusApplication.cs" />
     <Compile Include="Models\Erp\Tag.cs" />
     <Compile Include="Models\Erp\Tagging.cs" />
@@ -617,8 +617,8 @@
     <Compile Include="Models\Erp\WebSite.cs" />
     <Compile Include="Models\Erp\WebSiteHost.cs" />
     <Compile Include="Models\Erp\WebSiteInquiry.cs" />
-    <Compile Include="Models\Erp\WebSitenav.cs" />
-    <Compile Include="Models\Erp\WebSitenavItem.cs" />
+    <Compile Include="Models\Erp\WebSiteNav.cs" />
+    <Compile Include="Models\Erp\WebSiteNavItem.cs" />
     <Compile Include="Models\Erp\WebSitePartyRole.cs" />
     <Compile Include="Models\Erp\WebSiteSection.cs" />
     <Compile Include="Models\Erp\WebSiteSectionContent.cs" />

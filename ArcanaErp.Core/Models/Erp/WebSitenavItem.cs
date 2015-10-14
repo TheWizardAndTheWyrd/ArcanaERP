@@ -5,12 +5,13 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class WebSitenavItem
+    public partial class WebSiteNavItem : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
-        public int? WebSitenavId { get; set; }
+        public int? WebSiteNavId { get; set; }
 
         [StringLength(255)]
         public string Title { get; set; }
@@ -20,10 +21,10 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? Position { get; set; }
 
-        public int? linkedToItemId { get; set; }
+        public int? LinkedToItemId { get; set; }
 
         [StringLength(255)]
-        public string linkedToItemType { get; set; }
+        public string LinkedToItemType { get; set; }
 
         public int? ParentId { get; set; }
 

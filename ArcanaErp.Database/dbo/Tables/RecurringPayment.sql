@@ -8,8 +8,8 @@
     [PaymentDay]         INT            NULL,
     [FromDate]           DATE           NULL,
     [ThroughDate]        DATE           NULL,
-    [enabled]            BIT            NULL,
-    [textTopay]          BIT            NULL,
+    [Enabled]            BIT            NULL,
+    [TextToPay]          BIT            NULL,
     [CreatedAt]          DATETIME       NOT NULL,
     [UpdatedAt]          DATETIME       NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

@@ -30,6 +30,8 @@ There is a lot of work to be done before the initial release, and this list is n
         DateTime UpdatedAt { get; set; }
     }
 ```
+  * [Table("")] attribute on each model class.
+  * Make sure Comment and Comments are consistent.
   * Examine OrderTransaction.cs and OrderTransaction.sql for potential decomposition into smaller models.
   * Create shared base class implementation for the above often-repeat interface members.
   * Create Model unit tests for each data model.

@@ -2,7 +2,7 @@
     [Id]               INT           IDENTITY (1, 1) NOT NULL,
     [WebSiteSectionId] INT           NULL,
     [ContentId]        INT           NULL,
-    [Contentarea]      VARCHAR (255) NULL,
+    [ContentArea]      VARCHAR (255) NULL,
     [Position]         INT           DEFAULT ((0)) NULL,
     [CreatedAt]        DATETIME      NOT NULL,
     [UpdatedAt]        DATETIME      NOT NULL,

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Payment")]
-    public partial class Payment
+    public partial class Payment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -19,10 +20,10 @@ namespace ArcanaErp.Core.Models.Erp
         public int? FinancialTransactionId { get; set; }
 
         [StringLength(255)]
-        public string currentstate { get; set; }
+        public string CurrentState { get; set; }
 
         [StringLength(255)]
-        public string authorizationCode { get; set; }
+        public string AuthorizationCode { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }

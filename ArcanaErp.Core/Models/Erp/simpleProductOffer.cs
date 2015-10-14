@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    [Table("simpleProductOffer")]
-    public partial class simpleProductOffer
+    [Table("SimpleProductOffer")]
+    public partial class SimpleProductOffer : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -18,11 +19,11 @@ namespace ArcanaErp.Core.Models.Erp
 
         [Column("string")]
         [StringLength(255)]
-        public string _string { get; set; }
+        public string StringValue { get; set; }
 
         public decimal? BasePrice { get; set; }
 
-        public int? uom { get; set; }
+        public int? Uom { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

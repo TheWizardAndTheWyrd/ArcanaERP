@@ -5,8 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class WebSiteSectionVersion
+    [Table("WebSiteSectionVersion")]
+    public partial class WebSiteSectionVersion : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -37,11 +39,11 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public bool? renderbaseLayout { get; set; }
+        public bool? RenderBaseLayout { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         [StringLength(255)]
         public string VersionedType { get; set; }

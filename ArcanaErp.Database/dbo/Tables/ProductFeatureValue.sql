@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[ProductFeatureValue] (
     [Id]                 INT           IDENTITY (1, 1) NOT NULL,
-    [value]              VARCHAR (255) NULL,
+    [Value]              VARCHAR (255) NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
     [ExternalIdentifier] VARCHAR (255) NULL,
     [ExternalIdSource]   VARCHAR (255) NULL,

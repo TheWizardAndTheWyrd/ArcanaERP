@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("TimesheetEntry")]
-    public partial class TimesheetEntry
+    public partial class TimesheetEntry : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -21,9 +22,9 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime? EnteredDate { get; set; }
 
-        public decimal? regularhoursWorked { get; set; }
+        public decimal? RegularHoursWorked { get; set; }
 
-        public decimal? overTimehoursWorked { get; set; }
+        public decimal? OverTimehoursWorked { get; set; }
 
         public DateTime? StartTime { get; set; }
 

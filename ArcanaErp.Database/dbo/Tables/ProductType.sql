@@ -12,7 +12,7 @@
     [DefaultImageUrl]       VARCHAR (255) NULL,
     [ListViewImageId]       INT           NULL,
     [Type]                  VARCHAR (255) NULL,
-    [sku]                   VARCHAR (255) NULL,
+    [Sku]                   VARCHAR (255) NULL,
     [Comment]               TEXT          NULL,
     [UnitOfMeasurementId]   INT           NULL,
     [CreatedAt]             DATETIME      NOT NULL,

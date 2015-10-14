@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("PricePlanCompGeneralLedgerAccount")]
-    public partial class PricePlanCompGeneralLedgerAccount
+    public partial class PricePlanCompGeneralLedgerAccount : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -16,7 +17,7 @@ namespace ArcanaErp.Core.Models.Erp
         public int? GeneralLedgerAccountId { get; set; }
 
         [StringLength(255)]
-        public string mappingRuleklass { get; set; }
+        public string MappingRuleClass { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

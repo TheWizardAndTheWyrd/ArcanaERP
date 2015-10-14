@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[WebSiteSectionVersions] (
+﻿CREATE TABLE [dbo].[WebSiteSectionVersion] (
     [Id]                 INT           IDENTITY (1, 1) NOT NULL,
     [WebSiteSectionId]   INT           NULL,
     [Version]            INT           NULL,
@@ -11,9 +11,9 @@
     [Position]           INT           DEFAULT ((0)) NULL,
     [UseMarkDown]        BIT           DEFAULT (NULL) NULL,
     [InternalIdentifier] VARCHAR (255) DEFAULT (NULL) NULL,
-    [renderbaseLayout]   BIT           DEFAULT ('t') NULL,
-    [CreatedAt]          DATETIME      DEFAULT (NULL) NULL,
-    [UpdatedAt]          DATETIME      DEFAULT (NULL) NULL,
+    [RenderBaseLayout]   BIT           DEFAULT ('t') NULL,
+    [CreatedAt]          DATETIME      NOT NULL,
+    [UpdatedAt]          DATETIME      NOT NULL,
     [VersionedType]      VARCHAR (255) DEFAULT (NULL) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
@@ -21,15 +21,15 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSiteSectionVersionsOnWebSiteSectionId]
-    ON [dbo].[WebSiteSectionVersions]([WebSiteSectionId] ASC);
+    ON [dbo].[WebSiteSectionVersion]([WebSiteSectionId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [WebSiteSectionVersionsWebSiteIdIndex]
-    ON [dbo].[WebSiteSectionVersions]([WebSiteId] ASC);
+    ON [dbo].[WebSiteSectionVersion]([WebSiteId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [WebSiteSectionVersionsInternalIdentifierIndex]
-    ON [dbo].[WebSiteSectionVersions]([InternalIdentifier] ASC);
+    ON [dbo].[WebSiteSectionVersion]([InternalIdentifier] ASC);
 

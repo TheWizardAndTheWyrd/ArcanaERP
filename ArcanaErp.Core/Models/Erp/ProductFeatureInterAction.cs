@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("ProductFeatureInterAction")]
-    public partial class ProductFeatureInterAction
+    public partial class ProductFeatureInterAction : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("ProductFeatureApplicability")]
-    public partial class ProductFeatureApplicability
+    public partial class ProductFeatureApplicability : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -18,7 +19,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? ProductFeatureId { get; set; }
 
-        public bool? Ismandatory { get; set; }
+        public bool? IsMandatory { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("ProductType")]
-    public partial class ProductType
+    public partial class ProductType : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -43,7 +44,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string Type { get; set; }
 
         [StringLength(255)]
-        public string sku { get; set; }
+        public string Sku { get; set; }
 
         [Column(TypeName = "text")]
         public string Comment { get; set; }

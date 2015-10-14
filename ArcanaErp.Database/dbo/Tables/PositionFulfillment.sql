@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[PositionFulfillment] (
     [Id]            INT           IDENTITY (1, 1) NOT NULL,
     [Description]   VARCHAR (255) NULL,
-    [heldbyPartyId] INT           NULL,
+    [HeldByPartyId] INT           NULL,
     [PositionId]    INT           NULL,
     [FromDate]      DATE          NULL,
     [ThroughDate]   DATE          NULL,
@@ -18,5 +18,5 @@ CREATE NONCLUSTERED INDEX [IndexPositionFulfillmentOnPositionId]
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPositionFulfillmentOnheldbyPartyId]
-    ON [dbo].[PositionFulfillment]([heldbyPartyId] ASC);
+    ON [dbo].[PositionFulfillment]([HeldByPartyId] ASC);
 

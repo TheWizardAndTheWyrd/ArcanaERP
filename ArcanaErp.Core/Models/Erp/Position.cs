@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Position")]
-    public partial class Position
+    public partial class Position : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -23,11 +24,11 @@ namespace ArcanaErp.Core.Models.Erp
 
         public bool? SalaryFlag { get; set; }
 
-        public bool? exemptFlag { get; set; }
+        public bool? ExemptFlag { get; set; }
 
-        public bool? fullTimeFlag { get; set; }
+        public bool? FullTimeFlag { get; set; }
 
-        public bool? temporaryFlag { get; set; }
+        public bool? TemporaryFlag { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? ActualFromDate { get; set; }

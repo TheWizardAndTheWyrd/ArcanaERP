@@ -4,7 +4,7 @@
     [FixedAssetId]         INT      NULL,
     [AssignedFrom]         DATETIME NULL,
     [Assignedthru]         DATETIME NULL,
-    [allocatedcostMoneyId] INT      NULL,
+    [AllocatedCostMoneyId] INT      NULL,
     [CreatedAt]            DATETIME NOT NULL,
     [UpdatedAt]            DATETIME NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

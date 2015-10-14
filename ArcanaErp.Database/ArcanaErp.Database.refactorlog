@@ -189,4 +189,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="UserId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="ae3a8d0b-1751-4896-8002-cdb7739332b2" ChangeDateTime="10/14/2015 05:28:40">
+    <Property Name="ElementName" Value="[dbo].[PositionFulfillment].[heldbyPartyId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PositionFulfillment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HeldByPartyId" />
+  </Operation>
 </Operations>

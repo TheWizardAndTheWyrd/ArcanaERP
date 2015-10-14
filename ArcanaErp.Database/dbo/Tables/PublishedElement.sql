@@ -1,8 +1,8 @@
-﻿CREATE TABLE [dbo].[Publishedelements] (
+﻿CREATE TABLE [dbo].[PublishedElement] (
     [Id]                         INT           IDENTITY (1, 1) NOT NULL,
     [PublishedWebSiteId]         INT           NULL,
-    [PublishedelementRecordId]   INT           NULL,
-    [PublishedelementRecordType] VARCHAR (255) NULL,
+    [PublishedElementRecordId]   INT           NULL,
+    [PublishedElementRecordType] VARCHAR (255) NULL,
     [Version]                    INT           NULL,
     [PublishedById]              INT           NULL,
     [CreatedAt]                  DATETIME      NOT NULL,
@@ -13,20 +13,20 @@
 
 GO
 CREATE NONCLUSTERED INDEX [PublishedelmIndex]
-    ON [dbo].[Publishedelements]([PublishedelementRecordId] ASC, [PublishedelementRecordType] ASC);
+    ON [dbo].[PublishedElement]([PublishedElementRecordId] ASC, [PublishedElementRecordType] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPublishedelementsOnPublishedWebSiteId]
-    ON [dbo].[Publishedelements]([PublishedWebSiteId] ASC);
+    ON [dbo].[PublishedElement]([PublishedWebSiteId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPublishedelementsOnVersion]
-    ON [dbo].[Publishedelements]([Version] ASC);
+    ON [dbo].[PublishedElement]([Version] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPublishedelementsOnPublishedById]
-    ON [dbo].[Publishedelements]([PublishedById] ASC);
+    ON [dbo].[PublishedElement]([PublishedById] ASC);
 

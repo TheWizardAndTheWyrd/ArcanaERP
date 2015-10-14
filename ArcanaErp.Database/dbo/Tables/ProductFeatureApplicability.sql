@@ -3,7 +3,7 @@
     [FeatureOfRecordId]   INT           NULL,
     [FeatureOfRecordType] VARCHAR (255) NULL,
     [ProductFeatureId]    INT           NULL,
-    [Ismandatory]         BIT           NULL,
+    [IsMandatory]         BIT           NULL,
     [CreatedAt]           DATETIME      NOT NULL,
     [UpdatedAt]           DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

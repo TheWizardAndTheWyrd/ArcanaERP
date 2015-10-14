@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("PricingPlan")]
-    public partial class PricingPlan
+    public partial class PricingPlan : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -33,14 +34,14 @@ namespace ArcanaErp.Core.Models.Erp
         public DateTime? ThroughDate { get; set; }
 
         [StringLength(255)]
-        public string matchingrules { get; set; }
+        public string MatchingRules { get; set; }
 
         [StringLength(255)]
-        public string Pricingcalculation { get; set; }
+        public string PricingCalculation { get; set; }
 
-        public bool? IssimpleAmount { get; set; }
+        public bool? IsSimpleAmount { get; set; }
 
-        public int? currencyId { get; set; }
+        public int? CurrencyId { get; set; }
 
         public decimal? MoneyAmount { get; set; }
 

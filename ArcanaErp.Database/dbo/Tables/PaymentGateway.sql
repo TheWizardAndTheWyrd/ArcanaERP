@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[PaymentGateways] (
+﻿CREATE TABLE [dbo].[PaymentGateway] (
     [Id]                     INT           IDENTITY (1, 1) NOT NULL,
-    [Params]                 VARCHAR (255) NULL,
+    [Parameters]             VARCHAR (255) NULL,
     [PaymentGatewayActionId] INT           NULL,
     [PaymentId]              INT           NULL,
-    [response]               VARCHAR (255) NULL,
+    [Response]               VARCHAR (255) NULL,
     [CreatedAt]              DATETIME      NOT NULL,
     [UpdatedAt]              DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

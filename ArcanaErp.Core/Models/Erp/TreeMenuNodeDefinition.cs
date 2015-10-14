@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("TreeMenuNodeDefinition")]
-    public partial class TreeMenuNodeDefinition : ITreeMenuNodeDefinition
+    public partial class TreeMenuNodeDefinition : ITreeMenuNodeDefinition, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

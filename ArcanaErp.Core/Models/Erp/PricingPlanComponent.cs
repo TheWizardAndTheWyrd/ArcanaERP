@@ -29,14 +29,14 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdSource { get; set; }
 
         [StringLength(255)]
-        public string matchingrules { get; set; }
+        public string MatchingRules { get; set; }
 
         [StringLength(255)]
-        public string Pricingcalculation { get; set; }
+        public string PricingCalculation { get; set; }
 
-        public bool? IssimpleAmount { get; set; }
+        public bool? IsSimpleAmount { get; set; }
 
-        public int? currencyId { get; set; }
+        public int? CurrencyId { get; set; }
 
         public decimal? MoneyAmount { get; set; }
 

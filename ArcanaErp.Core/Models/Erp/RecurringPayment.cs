@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("RecurringPayment")]
-    public partial class RecurringPayment
+    public partial class RecurringPayment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -30,9 +31,9 @@ namespace ArcanaErp.Core.Models.Erp
         [Column(TypeName = "date")]
         public DateTime? ThroughDate { get; set; }
 
-        public bool? enabled { get; set; }
+        public bool? Enabled { get; set; }
 
-        public bool? textTopay { get; set; }
+        public bool? TextToPay { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

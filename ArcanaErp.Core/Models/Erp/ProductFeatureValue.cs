@@ -5,14 +5,15 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("ProductFeatureValue")]
-    public partial class ProductFeatureValue
+    public partial class ProductFeatureValue : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
         [StringLength(255)]
-        public string value { get; set; }
+        public string Value { get; set; }
 
         [StringLength(255)]
         public string InternalIdentifier { get; set; }

@@ -5,17 +5,18 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class Publishedelement
+    public partial class PublishedElement : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
         public int? PublishedWebSiteId { get; set; }
 
-        public int? PublishedelementRecordId { get; set; }
+        public int? PublishedElementRecordId { get; set; }
 
         [StringLength(255)]
-        public string PublishedelementRecordType { get; set; }
+        public string PublishedElementRecordType { get; set; }
 
         public int? Version { get; set; }
 

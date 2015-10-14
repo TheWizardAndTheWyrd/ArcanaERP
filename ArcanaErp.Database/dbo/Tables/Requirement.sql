@@ -6,7 +6,7 @@
     [Description]             VARCHAR (255) NULL,
     [Type]                    VARCHAR (255) NULL,
     [ProjectedCompletionTime] INT           NULL,
-    [EstimatedbudgetMoneyId]  INT           NULL,
+    [EstimatedBudgetMoneyId]  INT           NULL,
     [RequirementTypeId]       INT           NULL,
     [RequirementRecordId]     INT           NULL,
     [RequirementRecordType]   VARCHAR (255) NULL,

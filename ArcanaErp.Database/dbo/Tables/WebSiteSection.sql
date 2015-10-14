@@ -11,7 +11,7 @@
     [UseMarkDown]        BIT           NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
     [Version]            INT           NULL,
-    [renderbaseLayout]   BIT           DEFAULT ('t') NULL,
+    [RenderBaseLayout]   BIT           DEFAULT ('t') NULL,
     [ParentId]           INT           NULL,
     [LeftValue]          INT           NULL,
     [RightValue]         INT           NULL,

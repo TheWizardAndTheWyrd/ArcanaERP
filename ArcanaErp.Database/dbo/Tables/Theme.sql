@@ -2,7 +2,7 @@
     [Id]        INT           IDENTITY (1, 1) NOT NULL,
     [WebSiteId] INT           NULL,
     [Name]      VARCHAR (255) NULL,
-    [themeId]   VARCHAR (255) NULL,
+    [ThemeId]   VARCHAR (255) NULL,
     [Author]    VARCHAR (255) NULL,
     [Version]   INT           NULL,
     [HomePage]  VARCHAR (255) NULL,

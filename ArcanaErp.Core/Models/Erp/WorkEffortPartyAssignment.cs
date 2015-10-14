@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("WorkEffortPartyAssignment")]
-    public partial class WorkEffortPartyAssignment
+    public partial class WorkEffortPartyAssignment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -17,9 +18,9 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? PartyId { get; set; }
 
-        public DateTime? assignedFrom { get; set; }
+        public DateTime? AssignedFrom { get; set; }
 
-        public DateTime? assignedThrough { get; set; }
+        public DateTime? AssignedThrough { get; set; }
 
         [Column(TypeName = "text")]
         public string Comments { get; set; }
@@ -28,6 +29,6 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime UpdatedAt { get; set; }
 
-        public int? Resourceallocation { get; set; }
+        public int? ResourceAllocation { get; set; }
     }
 }

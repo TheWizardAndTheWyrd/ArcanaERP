@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("PartyFixedAssetAssignment")]
-    public partial class PartyFixedAssetAssignment
+    public partial class PartyFixedAssetAssignment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -19,7 +20,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime? Assignedthru { get; set; }
 
-        public int? allocatedcostMoneyId { get; set; }
+        public int? AllocatedCostMoneyId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

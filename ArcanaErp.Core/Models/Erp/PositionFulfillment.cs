@@ -5,16 +5,17 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("PositionFulfillment")]
-    public partial class PositionFulfillment
+    public partial class PositionFulfillment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? heldbyPartyId { get; set; }
+        public int? HeldByPartyId { get; set; }
 
         public int? PositionId { get; set; }
 

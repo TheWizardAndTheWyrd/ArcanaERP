@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("PriceComponentType")]
-    public partial class PriceComponentType
+    public partial class PriceComponentType : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

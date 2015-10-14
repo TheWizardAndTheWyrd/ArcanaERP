@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("ValidPreferenceType")]
-    public partial class ValidPreferenceType : IValidPreferenceType
+    public partial class ValidPreferenceType : IValidPreferenceType, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -19,5 +20,9 @@ namespace ArcanaErp.Core.Models.Erp
 
         [StringLength(255)]
         public string PreferencedRecordType { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
     }
 }

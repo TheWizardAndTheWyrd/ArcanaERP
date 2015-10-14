@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Theme")]
-    public partial class Theme
+    public partial class Theme : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -17,7 +18,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string Name { get; set; }
 
         [StringLength(255)]
-        public string themeId { get; set; }
+        public string ThemeId { get; set; }
 
         [StringLength(255)]
         public string Author { get; set; }

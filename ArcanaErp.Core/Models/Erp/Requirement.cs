@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Requirement")]
-    public partial class Requirement
+    public partial class Requirement : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -25,7 +26,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? ProjectedCompletionTime { get; set; }
 
-        public int? EstimatedbudgetMoneyId { get; set; }
+        public int? EstimatedBudgetMoneyId { get; set; }
 
         public int? RequirementTypeId { get; set; }
 

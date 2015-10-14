@@ -1,11 +1,11 @@
-﻿CREATE TABLE [dbo].[WebSitenavItems] (
+﻿CREATE TABLE [dbo].[WebSitenavItem] (
     [Id]               INT           IDENTITY (1, 1) NOT NULL,
-    [WebSitenavId]     INT           NULL,
+    [WebSiteNavId]     INT           NULL,
     [Title]            VARCHAR (255) NULL,
     [Url]              VARCHAR (255) NULL,
     [Position]         INT           DEFAULT ((0)) NULL,
-    [linkedToItemId]   INT           NULL,
-    [linkedToItemType] VARCHAR (255) NULL,
+    [LinkedToItemId]   INT           NULL,
+    [LinkedToItemType] VARCHAR (255) NULL,
     [ParentId]         INT           NULL,
     [LeftValue]        INT           NULL,
     [RightValue]       INT           NULL,
@@ -17,30 +17,30 @@
 
 GO
 CREATE NONCLUSTERED INDEX [linkedToIndex]
-    ON [dbo].[WebSitenavItems]([linkedToItemId] ASC, [linkedToItemType] ASC);
+    ON [dbo].[WebSiteNavItem]([LinkedToItemId] ASC, [LinkedToItemType] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavItemsOnWebSitenavId]
-    ON [dbo].[WebSitenavItems]([WebSitenavId] ASC);
+    ON [dbo].[WebSiteNavItem]([WebSiteNavId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavItemsOnPosition]
-    ON [dbo].[WebSitenavItems]([Position] ASC);
+    ON [dbo].[WebSiteNavItem]([Position] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavItemsOnParentId]
-    ON [dbo].[WebSitenavItems]([ParentId] ASC);
+    ON [dbo].[WebSiteNavItem]([ParentId] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavItemsOnLeftValue]
-    ON [dbo].[WebSitenavItems]([LeftValue] ASC);
+    ON [dbo].[WebSiteNavItem]([LeftValue] ASC);
 
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavItemsOnRightValue]
-    ON [dbo].[WebSitenavItems]([RightValue] ASC);
+    ON [dbo].[WebSiteNavItem]([RightValue] ASC);
 

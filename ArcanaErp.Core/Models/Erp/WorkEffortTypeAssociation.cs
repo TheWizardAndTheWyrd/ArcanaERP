@@ -5,13 +5,14 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("WorkEffortTypeAssociation")]
-    public partial class WorkEffortTypeAssociation
+    public partial class WorkEffortTypeAssociation : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
-        public int? WorkEffortTypeAssocType { get; set; }
+        public int? WorkEffortTypeAssociationType { get; set; }
 
         public int? WorkEffortTypeIdFrom { get; set; }
 

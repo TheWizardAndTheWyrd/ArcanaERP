@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("UnitOfMeasurement")]
-    public partial class UnitOfMeasurement : IUnitOfMeasurement
+    public partial class UnitOfMeasurement : IUnitOfMeasurement, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[WebSitenavs] (
+﻿CREATE TABLE [dbo].[WebSiteNav] (
     [Id]        INT           IDENTITY (1, 1) NOT NULL,
     [WebSiteId] INT           NULL,
     [Name]      VARCHAR (255) NULL,
@@ -10,5 +10,5 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IndexWebSitenavsOnWebSiteId]
-    ON [dbo].[WebSitenavs]([WebSiteId] ASC);
+    ON [dbo].[WebSiteNav]([WebSiteId] ASC);
 
