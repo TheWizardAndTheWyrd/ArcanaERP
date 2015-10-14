@@ -7,7 +7,7 @@
     [CurrentState]       VARCHAR (255) NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
-    [cusTomfields]       TEXT          NULL,
+    [CustomFields]       TEXT          NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("FacilityType")]
-    public partial class FacilityType : IFacilityType
+    public partial class FacilityType : IFacilityType, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

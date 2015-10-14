@@ -3,7 +3,7 @@
     [InvoicePaymentTermTypeId] INT            NULL,
     [InvoicePaymentTermSetId]  INT            NULL,
     [Description]              VARCHAR (255)  NULL,
-    [Payby]                    DATE           NULL,
+    [PayBy]                    DATE           NULL,
     [Amount]                   DECIMAL (8, 2) NULL,
     [CreatedAt]                DATETIME       NOT NULL,
     [UpdatedAt]                DATETIME       NOT NULL,

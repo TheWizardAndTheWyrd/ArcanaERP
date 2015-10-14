@@ -8,6 +8,6 @@ namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
         int? GeoCountryId { get; set; }
         string ZoneCode { get; set; }
         string ZoneName { get; set; }
-        DateTime? CreatedAt { get; set; }
+        DateTime CreatedAt { get; set; }
     }
 }

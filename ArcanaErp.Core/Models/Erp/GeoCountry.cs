@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("GeoCountry")]
-    public partial class GeoCountry : IGeoCountry
+    public partial class GeoCountry : IGeoCountry, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -26,6 +27,8 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? ExternalId { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
     }
 }

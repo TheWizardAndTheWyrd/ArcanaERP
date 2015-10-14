@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("OrderRequirementCommitment")]
-    public partial class OrderRequirementCommitment
+    public partial class OrderRequirementCommitment : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

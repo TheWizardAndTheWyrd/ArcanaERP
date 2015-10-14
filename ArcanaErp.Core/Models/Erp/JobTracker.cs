@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("JobTracker")]
-    public partial class JobTracker : IJobTracker
+    public partial class JobTracker : IJobTracker, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -25,5 +26,9 @@ namespace ArcanaErp.Core.Models.Erp
         public DateTime? LastRunAt { get; set; }
 
         public DateTime? NextRunAt { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
     }
 }

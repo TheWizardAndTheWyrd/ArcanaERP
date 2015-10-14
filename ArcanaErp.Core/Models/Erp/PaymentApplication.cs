@@ -11,7 +11,7 @@ namespace ArcanaErp.Core.Models.Erp
     {
         public int Id { get; set; }
 
-        public int? FinancialTaxationId { get; set; }
+        public int? FinancialTransactionId { get; set; }
 
         public int? PaymentAppliedToId { get; set; }
 

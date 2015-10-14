@@ -32,30 +32,30 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<AuditLogType> AuditLogTypes { get; set; }
         public virtual DbSet<BankAccount> BankAccounts { get; set; }
         public virtual DbSet<BankAccountType> BankAccountTypes { get; set; }
-        public virtual DbSet<BaseTaxationContext> BaseTaxationContexts { get; set; }
+        public virtual DbSet<BaseTransactionContext> BaseTransactionContexts { get; set; }
         public virtual DbSet<BillingAccount> BillingAccounts { get; set; }
         public virtual DbSet<BillingContactMechanism> BillingContactMechanism { get; set; }
-        public virtual DbSet<BusinessAccountTaxationTask> BusinessAccountTaxationTasks { get; set; }
-        public virtual DbSet<BusinessTaxationAccountPartyRole> BusinessTaxationAccountPartyRoles { get; set; }
-        public virtual DbSet<BusinessTaxationAccountPartyType> BusinessTaxationAccountPartyTypes { get; set; }
-        public virtual DbSet<BusinessTaxationAccountRelationship> BusinessTaxationAccountRelationships { get; set; }
-        public virtual DbSet<BusinessTaxationAccountRelationshipType> BusinessTaxationAccountRelationshipTypes { get; set; }
-        public virtual DbSet<BusinessTaxationAccountRoot> BusinessTaxationAccountRoots { get; set; }
-        public virtual DbSet<BusinessTaxationAccountStatus> BusinessTaxationAccountStatus { get; set; }
-        public virtual DbSet<BusinessTaxationAccountStatusType> BusinessTaxationAccountStatusTypes { get; set; }
-        public virtual DbSet<BusinessTaxationAccountType> BusinessTaxationAccountTypes { get; set; }
-        public virtual DbSet<BusinessTaxationAgreementRole> BusinessTaxationAgreementRoles { get; set; }
-        public virtual DbSet<BusinessTaxationAgreementRoleType> BusinessTaxationAgreementRoleTypes { get; set; }
-        public virtual DbSet<BusinessTaxationEvent> BusinessTaxationEvents { get; set; }
-        public virtual DbSet<BusinessTaxationEventDescription> BusinessTaxationEventDescriptions { get; set; }
-        public virtual DbSet<BusinessTaxationPartyRole> BusinessTaxationPartyRoles { get; set; }
-        public virtual DbSet<BusinessTaxationPartyRoleType> BusinessTaxationPartyRoleTypes { get; set; }
-        public virtual DbSet<BusinessTaxationRelationship> BusinessTaxationRelationships { get; set; }
-        public virtual DbSet<BusinessTaxationRelationshipType> BusinessTaxationRelationshipTypes { get; set; }
-        public virtual DbSet<BusinessTaxationStatus> BusinessTaxationStatus { get; set; }
-        public virtual DbSet<BusinessTaxationTask> BusinessTaxationTasks { get; set; }
-        public virtual DbSet<BusinessTaxationTaskType> BusinessTaxationTaskTypes { get; set; }
-        public virtual DbSet<BusinessTaxationType> BusinessTaxationTypes { get; set; }
+        public virtual DbSet<BusinessAccountTransactionTask> BusinessAccountTransactionTasks { get; set; }
+        public virtual DbSet<BusinessTransactionAccountPartyRole> BusinessTransactionAccountPartyRoles { get; set; }
+        public virtual DbSet<BusinessTransactionAccountPartyType> BusinessTransactionAccountPartyTypes { get; set; }
+        public virtual DbSet<BusinessTransactionAccountRelationship> BusinessTransactionAccountRelationships { get; set; }
+        public virtual DbSet<BusinessTransactionAccountRelationshipType> BusinessTransactionAccountRelationshipTypes { get; set; }
+        public virtual DbSet<BusinessTransactionAccountRoot> BusinessTransactionAccountRoots { get; set; }
+        public virtual DbSet<BusinessTransactionAccountStatus> BusinessTransactionAccountStatus { get; set; }
+        public virtual DbSet<BusinessTransactionAccountStatusType> BusinessTransactionAccountStatusTypes { get; set; }
+        public virtual DbSet<BusinessTransactionAccountType> BusinessTransactionAccountTypes { get; set; }
+        public virtual DbSet<BusinessTransactionAgreementRole> BusinessTransactionAgreementRoles { get; set; }
+        public virtual DbSet<BusinessTransactionAgreementRoleType> BusinessTransactionAgreementRoleTypes { get; set; }
+        public virtual DbSet<BusinessTransactionEvent> BusinessTransactionEvents { get; set; }
+        public virtual DbSet<BusinessTransactionEventDescription> BusinessTransactionEventDescriptions { get; set; }
+        public virtual DbSet<BusinessTransactionPartyRole> BusinessTransactionPartyRoles { get; set; }
+        public virtual DbSet<BusinessTransactionPartyRoleType> BusinessTransactionPartyRoleTypes { get; set; }
+        public virtual DbSet<BusinessTransactionRelationship> BusinessTransactionRelationships { get; set; }
+        public virtual DbSet<BusinessTransactionRelationshipType> BusinessTransactionRelationshipTypes { get; set; }
+        public virtual DbSet<BusinessTransactionStatus> BusinessTransactionStatus { get; set; }
+        public virtual DbSet<BusinessTransactionTask> BusinessTransactionTasks { get; set; }
+        public virtual DbSet<BusinessTransactionTaskType> BusinessTransactionTaskTypes { get; set; }
+        public virtual DbSet<BusinessTransactionType> BusinessTransactionTypes { get; set; }
         public virtual DbSet<CalculateBalanceStrategyType> CalculateBalanceStrategyTypes { get; set; }
         public virtual DbSet<CalendarEvent> CalendarEvents { get; set; }
         public virtual DbSet<CalendarEventPartyRole> CalendarEventPartyRoles { get; set; }
@@ -104,9 +104,9 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<FeeType> FeeTypes { get; set; }
         public virtual DbSet<FileAsset> FileAssets { get; set; }
         public virtual DbSet<FileAssetHolder> FileAssetHolders { get; set; }
-        public virtual DbSet<FinancialTaxation> FinancialTaxations { get; set; }
-        public virtual DbSet<FinancialTaxationAccount> FinancialTaxationAccounts { get; set; }
-        public virtual DbSet<FinancialTaxationAssignment> FinancialTaxationAssignments { get; set; }
+        public virtual DbSet<FinancialTransaction> FinancialTransactions { get; set; }
+        public virtual DbSet<FinancialTransactionAccount> FinancialTransactionAccounts { get; set; }
+        public virtual DbSet<FinancialTransactionAssignment> FinancialTransactionAssignments { get; set; }
         public virtual DbSet<FixedAsset> FixedAssets { get; set; }
         public virtual DbSet<FixedAssetPartyRole> FixedAssetPartyRoles { get; set; }
         public virtual DbSet<FixedAssetType> FixedAssetTypes { get; set; }
@@ -117,13 +117,13 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<GoodType> GoodTypes { get; set; }
         public virtual DbSet<Group> Groups { get; set; }
         public virtual DbSet<Individual> Individuals { get; set; }
-        public virtual DbSet<InventoryDropOffTaxation> InventoryDropOffTaxations { get; set; }
+        public virtual DbSet<InventoryDropOffTransaction> InventoryDropOffTransactions { get; set; }
         public virtual DbSet<InventoryEntry> InventoryEntries { get; set; }
         public virtual DbSet<InventoryEntryLocation> InventoryEntryLocations { get; set; }
         public virtual DbSet<InventoryEntryRelationship> InventoryEntryRelationships { get; set; }
         public virtual DbSet<InventoryEntryRelationshipType> InventoryEntryRelationshipTypes { get; set; }
         public virtual DbSet<InventoryEntryRoleType> InventoryEntryRoleTypes { get; set; }
-        public virtual DbSet<InventoryPickupTaxation> InventoryPickupTaxations { get; set; }
+        public virtual DbSet<InventoryPickupTransaction> InventoryPickupTransactions { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<InvoicedRecord> InvoicedRecords { get; set; }
         public virtual DbSet<InvoiceItem> InvoiceItems { get; set; }
@@ -147,8 +147,8 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<OrderLineItemRelationshipType> OrderLineItemRelationshipTypes { get; set; }
         public virtual DbSet<OrderLineItemType> OrderLineItemTypes { get; set; }
         public virtual DbSet<OrderRequirementCommitment> OrderRequirementCommitments { get; set; }
-        public virtual DbSet<OrderTaxation> OrderTaxations { get; set; }
-        public virtual DbSet<OrderTaxationType> OrderTaxationTypes { get; set; }
+        public virtual DbSet<OrderTransaction> OrderTransactions { get; set; }
+        public virtual DbSet<OrderTransactionType> OrderTransactionTypes { get; set; }
         public virtual DbSet<Organization> Organizations { get; set; }
         public virtual DbSet<Party> Parties { get; set; }
         public virtual DbSet<PartyFixedAssetAssignment> PartyFixedAssetAssignments { get; set; }
@@ -540,8 +540,8 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BaseTaxationContext>()
-                .Property(e => e.TaxationContextRecordType)
+            modelBuilder.Entity<BaseTransactionContext>()
+                .Property(e => e.TransactionContextRecordType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<BillingContactMechanism>()
@@ -552,215 +552,215 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ContactMechanismType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessAccountTaxationTask>()
+            modelBuilder.Entity<BusinessAccountTransactionTask>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessAccountTaxationTask>()
+            modelBuilder.Entity<BusinessAccountTransactionTask>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyRole>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyRole>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyType>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyType>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyType>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyType>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountPartyType>()
+            modelBuilder.Entity<BusinessTransactionAccountPartyType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationship>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationship>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationshipType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationshipType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationshipType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationshipType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionAccountRelationshipType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRoot>()
+            modelBuilder.Entity<BusinessTransactionAccountRoot>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRoot>()
-                .Property(e => e.BusinessTaxationAccountType)
+            modelBuilder.Entity<BusinessTransactionAccountRoot>()
+                .Property(e => e.BusinessTransactionAccountType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRoot>()
+            modelBuilder.Entity<BusinessTransactionAccountRoot>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRoot>()
+            modelBuilder.Entity<BusinessTransactionAccountRoot>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountRoot>()
+            modelBuilder.Entity<BusinessTransactionAccountRoot>()
                 .Property(e => e.Type)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountType>()
+            modelBuilder.Entity<BusinessTransactionAccountType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountType>()
+            modelBuilder.Entity<BusinessTransactionAccountType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountType>()
+            modelBuilder.Entity<BusinessTransactionAccountType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountType>()
+            modelBuilder.Entity<BusinessTransactionAccountType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAccountType>()
+            modelBuilder.Entity<BusinessTransactionAccountType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAgreementRole>()
-                .Property(e => e.BusinessTaxationEventType)
+            modelBuilder.Entity<BusinessTransactionAgreementRole>()
+                .Property(e => e.BusinessTransactionEventType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAgreementRoleType>()
+            modelBuilder.Entity<BusinessTransactionAgreementRoleType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAgreementRoleType>()
+            modelBuilder.Entity<BusinessTransactionAgreementRoleType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationAgreementRoleType>()
+            modelBuilder.Entity<BusinessTransactionAgreementRoleType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEvent>()
+            modelBuilder.Entity<BusinessTransactionEvent>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEvent>()
-                .Property(e => e.BusinessTaxationRecordType)
+            modelBuilder.Entity<BusinessTransactionEvent>()
+                .Property(e => e.BusinessTransactionRecordType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEvent>()
+            modelBuilder.Entity<BusinessTransactionEvent>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEvent>()
+            modelBuilder.Entity<BusinessTransactionEvent>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEventDescription>()
+            modelBuilder.Entity<BusinessTransactionEventDescription>()
                 .Property(e => e.ShortDescription)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationEventDescription>()
+            modelBuilder.Entity<BusinessTransactionEventDescription>()
                 .Property(e => e.LongDescription)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationPartyRoleType>()
+            modelBuilder.Entity<BusinessTransactionPartyRoleType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationPartyRoleType>()
+            modelBuilder.Entity<BusinessTransactionPartyRoleType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationPartyRoleType>()
+            modelBuilder.Entity<BusinessTransactionPartyRoleType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationship>()
+            modelBuilder.Entity<BusinessTransactionRelationship>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionRelationshipType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionRelationshipType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionRelationshipType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionRelationshipType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationRelationshipType>()
+            modelBuilder.Entity<BusinessTransactionRelationshipType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationStatus>()
+            modelBuilder.Entity<BusinessTransactionStatus>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationStatus>()
+            modelBuilder.Entity<BusinessTransactionStatus>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationTask>()
+            modelBuilder.Entity<BusinessTransactionTask>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationTaskType>()
+            modelBuilder.Entity<BusinessTransactionTaskType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationTaskType>()
+            modelBuilder.Entity<BusinessTransactionTaskType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationType>()
+            modelBuilder.Entity<BusinessTransactionType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationType>()
+            modelBuilder.Entity<BusinessTransactionType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationType>()
+            modelBuilder.Entity<BusinessTransactionType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationType>()
+            modelBuilder.Entity<BusinessTransactionType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<BusinessTaxationType>()
+            modelBuilder.Entity<BusinessTransactionType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
@@ -1420,16 +1420,16 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ScopedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<FinancialTaxationAccount>()
+            modelBuilder.Entity<FinancialTransactionAccount>()
                 .Property(e => e.AccountNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<FinancialTaxationAccount>()
+            modelBuilder.Entity<FinancialTransactionAccount>()
                 .Property(e => e.FinancialAccountType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<FinancialTaxationAssignment>()
-                .Property(e => e.FinancialTaxationRecordType)
+            modelBuilder.Entity<FinancialTransactionAssignment>()
+                .Property(e => e.FinancialTransactionRecordType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<FixedAsset>()
@@ -1612,11 +1612,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.SsnLastfour)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<InventoryDropOffTaxation>()
+            modelBuilder.Entity<InventoryDropOffTransaction>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<InventoryDropOffTaxation>()
+            modelBuilder.Entity<InventoryDropOffTransaction>()
                 .Property(e => e.Comment)
                 .IsUnicode(false);
 
@@ -1684,11 +1684,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<InventoryPickupTaxation>()
+            modelBuilder.Entity<InventoryPickupTransaction>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<InventoryPickupTaxation>()
+            modelBuilder.Entity<InventoryPickupTransaction>()
                 .Property(e => e.Comment)
                 .IsUnicode(false);
 
@@ -2012,131 +2012,131 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
-                .Property(e => e.OrderTaxationRecordType)
+            modelBuilder.Entity<OrderTransaction>()
+                .Property(e => e.OrderTransactionRecordType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.email)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.phoneNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTofirstname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTolastname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipToAddressLine1)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipToAddressLine2)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTocity)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTostate)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipToPostalCode)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTocountryname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.Customerip)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.OrderNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.errorMessage)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
-                .Property(e => e.PaymentGatewayTaxationId)
+            modelBuilder.Entity<OrderTransaction>()
+                .Property(e => e.PaymentGatewayTransactionId)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTofirstname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTolastname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billToAddressLine1)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billToAddressLine2)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTocity)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTostate)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billToPostalCode)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTocountryname)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.billTocountry)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.shipTocountry)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxation>()
+            modelBuilder.Entity<OrderTransaction>()
                 .Property(e => e.SalesTax)
                 .HasPrecision(8, 2);
 
-            modelBuilder.Entity<OrderTaxationType>()
+            modelBuilder.Entity<OrderTransactionType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxationType>()
+            modelBuilder.Entity<OrderTransactionType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxationType>()
+            modelBuilder.Entity<OrderTransactionType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxationType>()
+            modelBuilder.Entity<OrderTransactionType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<OrderTaxationType>()
+            modelBuilder.Entity<OrderTransactionType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 

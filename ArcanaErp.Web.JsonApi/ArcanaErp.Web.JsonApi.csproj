@@ -299,8 +299,8 @@
     <Folder Include="Controllers\Products\" />
     <Folder Include="Controllers\Rules\" />
     <Folder Include="Controllers\Search\" />
-    <Folder Include="Controllers\TaxationsAndAccounts\" />
     <Folder Include="Controllers\TechServices\" />
+    <Folder Include="Controllers\TransactionsAndAccounts\" />
     <Folder Include="Controllers\WorkEffort\" />
   </ItemGroup>
   <ItemGroup>
@@ -312,6 +312,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ArcanaErp.Core.Lambda\ArcanaErp.Core.Lambda.fsproj">
+      <Project>{3f39ea6d-6121-4a9b-ac7f-d49ac26ce56a}</Project>
+      <Name>ArcanaErp.Core.Lambda</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ArcanaErp.Core\ArcanaErp.Core.csproj">
       <Project>{a06e1265-48a3-4430-8c39-98cf50944c9e}</Project>
       <Name>ArcanaErp.Core</Name>

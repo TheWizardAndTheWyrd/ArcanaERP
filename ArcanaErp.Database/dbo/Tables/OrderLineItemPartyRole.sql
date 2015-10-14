@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[OrderLineItemPartyRole] (
     [Id]                            INT           IDENTITY (1, 1) NOT NULL,
     [RoleTypeId]                    INT           NULL,
-    [BusinessTaxationAccountRootId] INT           NULL,
+    [BusinessTransactionAccountRootId] INT           NULL,
     [OrderLineItemId]               INT           NULL,
     [PartyId]                       INT           NULL,
     [Description]                   VARCHAR (255) NULL,
@@ -27,6 +27,6 @@ CREATE NONCLUSTERED INDEX [OrderLineItemPartyRoleRoleTypeIndex]
 
 
 GO
-CREATE NONCLUSTERED INDEX [OrderLineItemPartyRoleBusinessTaxationAccountRootIndex]
-    ON [dbo].[OrderLineItemPartyRole]([BusinessTaxationAccountRootId] ASC);
+CREATE NONCLUSTERED INDEX [OrderLineItemPartyRoleBusinessTransactionAccountRootIndex]
+    ON [dbo].[OrderLineItemPartyRole]([BusinessTransactionAccountRootId] ASC);
 

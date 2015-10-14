@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[OrderLineItem] (
     [Id]                          INT            IDENTITY (1, 1) NOT NULL,
-    [OrderTaxationId]             INT            NULL,
+    [OrderTransactionId]             INT            NULL,
     [OrderLineItemTypeId]         INT            NULL,
     [ProductInstanceId]           INT            NULL,
     [ProductInstanceDescription]  VARCHAR (255)  NULL,
@@ -29,8 +29,8 @@ CREATE NONCLUSTERED INDEX [OrderLineItemUnitOfMeasurementIndex]
 
 
 GO
-CREATE NONCLUSTERED INDEX [IndexOrderLineItemOnOrderTaxationId]
-    ON [dbo].[OrderLineItem]([OrderTaxationId] ASC);
+CREATE NONCLUSTERED INDEX [IndexOrderLineItemOnOrderTransactionId]
+    ON [dbo].[OrderLineItem]([OrderTransactionId] ASC);
 
 
 GO

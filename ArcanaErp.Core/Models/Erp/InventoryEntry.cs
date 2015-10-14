@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("InventoryEntry")]
-    public partial class InventoryEntry
+    public partial class InventoryEntry : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -30,7 +31,7 @@ namespace ArcanaErp.Core.Models.Erp
         public int? NumberAvailable { get; set; }
 
         [StringLength(255)]
-        public string sku { get; set; }
+        public string Sku { get; set; }
 
         public int? NumberSold { get; set; }
 

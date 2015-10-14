@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[PaymentApplication] (
     [Id]                   INT           IDENTITY (1, 1) NOT NULL,
-    [FinancialTaxationId]  INT           NULL,
+    [FinancialTransactionId]  INT           NULL,
     [PaymentAppliedToId]   INT           NULL,
     [PaymentAppliedToType] VARCHAR (255) NULL,
     [AppliedMoneyAmountId] INT           NULL,
@@ -17,8 +17,8 @@ CREATE NONCLUSTERED INDEX [PaymentAppliedToIndex]
 
 
 GO
-CREATE NONCLUSTERED INDEX [IndexPaymentApplicationOnFinancialTaxationId]
-    ON [dbo].[PaymentApplication]([FinancialTaxationId] ASC);
+CREATE NONCLUSTERED INDEX [IndexPaymentApplicationOnFinancialTransactionId]
+    ON [dbo].[PaymentApplication]([FinancialTransactionId] ASC);
 
 
 GO

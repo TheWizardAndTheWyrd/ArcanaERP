@@ -2,7 +2,7 @@
     [Id]                INT            IDENTITY (1, 1) NOT NULL,
     [InvoiceId]         INT            NULL,
     [InvoiceItemTypeId] INT            NULL,
-    [ItemseqId]         INT            NULL,
+    [ItemSequenceId]    INT            NULL,
     [ItemDescription]   TEXT           NULL,
     [Quantity]          DECIMAL (8, 2) NULL,
     [Amount]            DECIMAL (8, 2) NULL,

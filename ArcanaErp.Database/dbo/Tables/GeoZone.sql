@@ -3,7 +3,8 @@
     [GeoCountryId] INT           NULL,
     [ZoneCode]     VARCHAR (255) DEFAULT ((2)) NULL,
     [ZoneName]     VARCHAR (255) NULL,
-    [CreatedAt]    DATETIME      NULL,
+    [CreatedAt]    DATETIME      NOT NULL,
+	[UpdatedAt]    DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

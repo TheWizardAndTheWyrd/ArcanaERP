@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("GeoZone")]
-    public partial class GeoZone : IGeoZone
+    public partial class GeoZone : IGeoZone, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -21,6 +22,8 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ZoneName { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
     }
 }

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("InvoicePaymentTerm")]
-    public partial class InvoicePaymentTerm
+    public partial class InvoicePaymentTerm : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -19,7 +20,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string Description { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? Payby { get; set; }
+        public DateTime? PayBy { get; set; }
 
         public decimal? Amount { get; set; }
 

@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("Notification")]
-    public partial class Notification
+    public partial class Notification : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -29,6 +30,6 @@ namespace ArcanaErp.Core.Models.Erp
         public DateTime UpdatedAt { get; set; }
 
         [Column(TypeName = "text")]
-        public string cusTomfields { get; set; }
+        public string CusomFields { get; set; }
     }
 }

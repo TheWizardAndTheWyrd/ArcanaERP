@@ -5,13 +5,14 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("OrderLineItem")]
-    public partial class OrderLineItem
+    public partial class OrderLineItem : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
-        public int? OrderTaxationId { get; set; }
+        public int? OrderTransactionId { get; set; }
 
         public int? OrderLineItemTypeId { get; set; }
 

@@ -10,6 +10,6 @@ namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
         string IsoCode3 { get; set; }
         bool? Display { get; set; }
         int? ExternalId { get; set; }
-        DateTime? CreatedAt { get; set; }
+        DateTime CreatedAt { get; set; }
     }
 }

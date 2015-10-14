@@ -7,7 +7,7 @@
     [ExternalIdSource]         VARCHAR (255) NULL,
     [ProductTypeId]            INT           NULL,
     [NumberAvailable]          INT           NULL,
-    [sku]                      VARCHAR (255) NULL,
+    [Sku]                      VARCHAR (255) NULL,
     [NumberSold]               INT           NULL,
     [UnitOfMeasurementId]      INT           NULL,
     [NumberInStock]            INT           NULL,

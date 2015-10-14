@@ -5,9 +5,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("InvoiceItem")]
-    public partial class InvoiceItem
+    public partial class InvoiceItem : Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
@@ -15,7 +16,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public int? InvoiceItemTypeId { get; set; }
 
-        public int? ItemseqId { get; set; }
+        public int? ItemSequenceId { get; set; }
 
         [Column(TypeName = "text")]
         public string ItemDescription { get; set; }

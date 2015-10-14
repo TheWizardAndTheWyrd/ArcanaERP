@@ -7,9 +7,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
     [Table("LoyaltyProgramCode")]
-    public partial class LoyaltyProgramCode : ILoyaltyProgramCode
+    public partial class LoyaltyProgramCode : ILoyaltyProgramCode, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 

@@ -7,8 +7,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Lambda;
 
-    public partial class GeneratedItem : IGeneratedItem
+    public partial class GeneratedItem : IGeneratedItem, Interfaces.IBaseErpModel
     {
         public int Id { get; set; }
 
