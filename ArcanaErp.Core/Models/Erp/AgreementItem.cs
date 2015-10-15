@@ -7,10 +7,9 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using ArcanaErp.Core.Lambda;
 
     [Table("AgreementItem")]
-    public partial class AgreementItem : IAgreementItem, Interfaces.IBaseErpModel
+    public partial class AgreementItem : IAgreementItem
     {
         public int Id { get; set; }
 

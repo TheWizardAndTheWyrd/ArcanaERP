@@ -71,8 +71,8 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<ChargeType> ChargeTypes { get; set; }
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<CommunicationEvent> CommunicationEvents { get; set; }
-        public virtual DbSet<CommunicationEventPuposeType> CommunicationEventPuposeTypes { get; set; }
-        public virtual DbSet<CommunicationEventStatu> CommunicationEventStatus { get; set; }
+        public virtual DbSet<CommunicationEventPurposeType> CommunicationEventPuposeTypes { get; set; }
+        public virtual DbSet<CommunicationEventStatus> CommunicationEventStatus { get; set; }
         public virtual DbSet<Configuration> Configurations { get; set; }
         public virtual DbSet<ConfigurationItem> ConfigurationItems { get; set; }
         public virtual DbSet<ConfigurationItemType> ConfigurationItemTypes { get; set; }
@@ -196,7 +196,7 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<ProductTypeRelationshipType> ProductTypeRelationshipTypes { get; set; }
         public virtual DbSet<ProductTypeRoleType> ProductTypeRoleTypes { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
-        public virtual DbSet<Publishedelement> Publishedelements { get; set; }
+        public virtual DbSet<PublishedElement> PublishedElements { get; set; }
         public virtual DbSet<PublishedWebSite> PublishedWebSites { get; set; }
         public virtual DbSet<RecurringPayment> RecurringPayments { get; set; }
         public virtual DbSet<RelationshipType> RelationshipTypes { get; set; }
@@ -213,9 +213,9 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<SecurityRole> SecurityRoles { get; set; }
         public virtual DbSet<Session> Sessions { get; set; }
         public virtual DbSet<Shift> Shifts { get; set; }
-        public virtual DbSet<simpleProductOffer> simpleProductOffers { get; set; }
+        public virtual DbSet<SimpleProductOffer> SimpleProductOffers { get; set; }
         public virtual DbSet<SkillType> SkillTypes { get; set; }
-        public virtual DbSet<staffingPosition> staffingPositions { get; set; }
+        public virtual DbSet<StaffingPosition> StaffingPositions { get; set; }
         public virtual DbSet<StatusApplication> StatusApplications { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<Tagging> Taggings { get; set; }
@@ -239,8 +239,8 @@ namespace ArcanaErp.Core.Models.Erp
         public virtual DbSet<WcCode> WcCodes { get; set; }
         public virtual DbSet<WebSiteHost> WebSiteHosts { get; set; }
         public virtual DbSet<WebSiteInquiry> WebSiteInquiries { get; set; }
-        public virtual DbSet<WebSitenavItem> WebSitenavItems { get; set; }
-        public virtual DbSet<WebSitenav> WebSitenavs { get; set; }
+        public virtual DbSet<WebSiteNavItem> WebSiteNavItems { get; set; }
+        public virtual DbSet<WebSiteNav> WebSiteNavs { get; set; }
         public virtual DbSet<WebSitePartyRole> WebSitePartyRoles { get; set; }
         public virtual DbSet<WebSite> WebSites { get; set; }
         public virtual DbSet<WebSiteSection> WebSiteSections { get; set; }
@@ -457,7 +457,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLog>()
-                .Property(e => e.additiOnalinfo)
+                .Property(e => e.AdditionalInfo)
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLog>()
@@ -529,7 +529,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<BankAccount>()
-                .Property(e => e.nameOnAccount)
+                .Property(e => e.NameOnAccount)
                 .IsUnicode(false);
 
             modelBuilder.Entity<BankAccountType>()
@@ -821,7 +821,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Capability>()
-                .Property(e => e.CapabilityresourceType)
+                .Property(e => e.CapabilityResourceType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Capability>()
@@ -829,7 +829,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<CapabilityAccessor>()
-                .Property(e => e.CapabilityaccessorRecordType)
+                .Property(e => e.CapabilityAccessorRecordType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CapabilityType>()
@@ -925,7 +925,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<CommunicationEvent>()
-                .Property(e => e.notes)
+                .Property(e => e.Notes)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CommunicationEvent>()
@@ -936,43 +936,43 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventPuposeType>()
+            modelBuilder.Entity<CommunicationEventPurposeType>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventPuposeType>()
+            modelBuilder.Entity<CommunicationEventPurposeType>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventPuposeType>()
+            modelBuilder.Entity<CommunicationEventPurposeType>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventPuposeType>()
+            modelBuilder.Entity<CommunicationEventPurposeType>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventPuposeType>()
+            modelBuilder.Entity<CommunicationEventPurposeType>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventStatu>()
+            modelBuilder.Entity<CommunicationEventStatus>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventStatu>()
+            modelBuilder.Entity<CommunicationEventStatus>()
                 .Property(e => e.Comments)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventStatu>()
+            modelBuilder.Entity<CommunicationEventStatus>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventStatu>()
+            modelBuilder.Entity<CommunicationEventStatus>()
                 .Property(e => e.ExternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CommunicationEventStatu>()
+            modelBuilder.Entity<CommunicationEventStatus>()
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
@@ -1017,7 +1017,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Contact>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Contact>()
@@ -1125,7 +1125,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<CreditCard>()
-                .Property(e => e.nameOnCard)
+                .Property(e => e.NameOnCard)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CreditCard>()
@@ -1189,11 +1189,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<DelayedJob>()
-                .Property(e => e.handler)
+                .Property(e => e.Handler)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DelayedJob>()
-                .Property(e => e.Lasterror)
+                .Property(e => e.LastError)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DelayedJob>()
@@ -1289,7 +1289,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Document>()
-                .Property(e => e.cusTomfields)
+                .Property(e => e.CustomFields)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DocumentType>()
@@ -1637,7 +1637,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<InventoryEntry>()
-                .Property(e => e.sku)
+                .Property(e => e.Sku)
                 .IsUnicode(false);
 
             modelBuilder.Entity<InventoryEntryRelationship>()
@@ -1925,7 +1925,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Notification>()
-                .Property(e => e.cusTomfields)
+                .Property(e => e.CustomFields)
                 .IsUnicode(false);
 
             modelBuilder.Entity<NotificationType>()
@@ -2021,47 +2021,47 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.email)
+                .Property(e => e.Email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.phoneNumber)
+                .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTofirstname)
+                .Property(e => e.ShipToFirstName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTolastname)
+                .Property(e => e.ShipToLastName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipToAddressLine1)
+                .Property(e => e.ShipToAddressLine1)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipToAddressLine2)
+                .Property(e => e.ShipToAddressLine2)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTocity)
+                .Property(e => e.ShipToCity)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTostate)
+                .Property(e => e.ShipToState)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipToPostalCode)
+                .Property(e => e.ShipToPostalCode)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTocountryname)
+                .Property(e => e.ShipToCountryName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.Customerip)
+                .Property(e => e.CustomerIp)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
@@ -2069,7 +2069,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.errorMessage)
+                .Property(e => e.ErrorMessage)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
@@ -2077,43 +2077,43 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTofirstname)
+                .Property(e => e.BillToFirstName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTolastname)
+                .Property(e => e.BillToLastName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billToAddressLine1)
+                .Property(e => e.BillToAddressLine1)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billToAddressLine2)
+                .Property(e => e.BillToAddressLine2)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTocity)
+                .Property(e => e.BillToCity)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTostate)
+                .Property(e => e.BillToState)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billToPostalCode)
+                .Property(e => e.BillToPostalCode)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTocountryname)
+                .Property(e => e.BillToCountryName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.billTocountry)
+                .Property(e => e.BillToCountry)
                 .IsUnicode(false);
-
+            
             modelBuilder.Entity<OrderTransaction>()
-                .Property(e => e.shipTocountry)
+                .Property(e => e.ShipToCountry)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderTransaction>()
@@ -2189,11 +2189,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
-                .Property(e => e.currentstate)
+                .Property(e => e.CurrentState)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
-                .Property(e => e.authorizationCode)
+                .Property(e => e.AuthorizationCode)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Payment>()
@@ -2217,11 +2217,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PaymentGateway>()
-                .Property(e => e.Params)
+                .Property(e => e.Parameters)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PaymentGateway>()
-                .Property(e => e.response)
+                .Property(e => e.Response)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhoneNumber>()
@@ -2349,7 +2349,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricePlanCompGeneralLedgerAccount>()
-                .Property(e => e.mappingRuleklass)
+                .Property(e => e.MappingRuleClass)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlan>()
@@ -2373,11 +2373,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlan>()
-                .Property(e => e.matchingrules)
+                .Property(e => e.MatchingRules)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlan>()
-                .Property(e => e.Pricingcalculation)
+                .Property(e => e.PricingCalculation)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlan>()
@@ -2409,11 +2409,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlanComponent>()
-                .Property(e => e.matchingrules)
+                .Property(e => e.MatchingRules)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlanComponent>()
-                .Property(e => e.Pricingcalculation)
+                .Property(e => e.PricingCalculation)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PricingPlanComponent>()
@@ -2465,7 +2465,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<ProductFeatureValue>()
-                .Property(e => e.value)
+                .Property(e => e.Value)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ProductFeatureValue>()
@@ -2593,7 +2593,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<ProductType>()
-                .Property(e => e.sku)
+                .Property(e => e.Sku)
                 .IsUnicode(false);
 
             modelBuilder.Entity<ProductType>()
@@ -2668,8 +2668,8 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ProjectRecordType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Publishedelement>()
-                .Property(e => e.PublishedelementRecordType)
+            modelBuilder.Entity<PublishedElement>()
+                .Property(e => e.PublishedElementRecordType)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PublishedWebSite>()
@@ -2845,7 +2845,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Session>()
-                .Property(e => e.sessiOnId)
+                .Property(e => e.SessionId)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Session>()
@@ -2864,15 +2864,15 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.CustomFields)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<simpleProductOffer>()
+            modelBuilder.Entity<SimpleProductOffer>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<simpleProductOffer>()
-                .Property(e => e._string)
+            modelBuilder.Entity<SimpleProductOffer>()
+                .Property(e => e.StringValue)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<simpleProductOffer>()
+            modelBuilder.Entity<SimpleProductOffer>()
                 .Property(e => e.BasePrice)
                 .HasPrecision(8, 2);
 
@@ -2896,11 +2896,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<staffingPosition>()
+            modelBuilder.Entity<StaffingPosition>()
                 .Property(e => e.InternalIdentifier)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<staffingPosition>()
+            modelBuilder.Entity<StaffingPosition>()
                 .Property(e => e.CustomFields)
                 .IsUnicode(false);
 
@@ -2929,7 +2929,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<Theme>()
-                .Property(e => e.themeId)
+                .Property(e => e.ThemeId)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Theme>()
@@ -2949,11 +2949,11 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<TimesheetEntry>()
-                .Property(e => e.regularhoursWorked)
+                .Property(e => e.RegularHoursWorked)
                 .HasPrecision(5, 2);
 
             modelBuilder.Entity<TimesheetEntry>()
-                .Property(e => e.overTimehoursWorked)
+                .Property(e => e.OverTimeHoursWorked)
                 .HasPrecision(5, 2);
 
             modelBuilder.Entity<TimesheetEntry>()
@@ -3212,19 +3212,19 @@ namespace ArcanaErp.Core.Models.Erp
                 .Property(e => e.Message)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<WebSitenavItem>()
+            modelBuilder.Entity<WebSiteNavItem>()
                 .Property(e => e.Title)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<WebSitenavItem>()
+            modelBuilder.Entity<WebSiteNavItem>()
                 .Property(e => e.Url)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<WebSitenavItem>()
-                .Property(e => e.linkedToItemType)
+            modelBuilder.Entity<WebSiteNavItem>()
+                .Property(e => e.LinkedToItemType)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<WebSitenav>()
+            modelBuilder.Entity<WebSiteNav>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
@@ -3269,7 +3269,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<WebSiteSectionContent>()
-                .Property(e => e.Contentarea)
+                .Property(e => e.ContentArea)
                 .IsUnicode(false);
 
             modelBuilder.Entity<WebSiteSectionVersion>()

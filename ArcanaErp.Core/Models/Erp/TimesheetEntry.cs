@@ -24,7 +24,7 @@ namespace ArcanaErp.Core.Models.Erp
 
         public decimal? RegularHoursWorked { get; set; }
 
-        public decimal? OverTimehoursWorked { get; set; }
+        public decimal? OverTimeHoursWorked { get; set; }
 
         public DateTime? StartTime { get; set; }
 

@@ -30,6 +30,6 @@ namespace ArcanaErp.Core.Models.Erp
         public DateTime UpdatedAt { get; set; }
 
         [Column(TypeName = "text")]
-        public string CusomFields { get; set; }
+        public string CustomFields { get; set; }
     }
 }

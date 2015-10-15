@@ -2,7 +2,9 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.Agreements
 {
-    public interface IAgreementItemType
+    public interface IAgreementItemType : Lambda.Interfaces.IBaseErpModel,
+                                          Lambda.Interfaces.IBaseErpModelExternalId,
+                                          Lambda.Interfaces.IBaseErpModelDescription
     {
         int Id { get; set; }
         int? ParentId { get; set; }
