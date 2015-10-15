@@ -1,8 +1,4 @@
-﻿namespace ArcanaErp.Core.Lambda
-
-open System
-
-// Lambda.Interfaces contains base interfaces with immutable members.
+﻿// Lambda.Interfaces contains base interfaces with immutable members.
 // Ideally, we are working towards removing all mutable state from Arcana ERP
 // and going purely functional in our architecutre
 //
@@ -27,12 +23,19 @@ open System
 //   * Reduced memory overhead, which in turn, will greatly increase performance.
 //   * And, perhaps most important of all, the ability to easily reason about our system.
 
+namespace ArcanaErp.Core.Lambda
+
+open System
+
 module Interfaces =
     
     type IBaseErpModel =
         abstract member Id : int with get, set
         abstract member CreatedAt : DateTime with get, set
         abstract member UpdatedAt : DateTime with get, set
+
+    type IBaseErpModelParentId =
+        abstract member ParentId : int with get, set
 
     type IBaseErpModelExternalId =
         abstract member ExternalIdentifier : string with get, set
@@ -48,6 +51,9 @@ module Interfaces =
         abstract member FromDate : DateTime with get, set
         abstract member ThroughDate: DateTime with get, set
 
-    type ILeftRightValues =
+    type IBaseErpModelLeftRightValues =
         abstract member LeftValue : int with get, set
         abstract member RightValue : int with get, set
+
+    type IBaseErpModelComments =
+        abstract member Comments : string with get, set

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AcceptedCreditCard")]
-    public partial class AcceptedCreditCard : Interfaces.IBaseErpModel
+    public partial class AcceptedCreditCard : IAcceptedCreditCard
     {
         public int Id { get; set; }
 

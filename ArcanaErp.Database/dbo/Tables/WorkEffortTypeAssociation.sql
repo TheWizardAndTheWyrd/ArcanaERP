@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[WorkEffortTypeAssociation] (
     [Id]                      INT           IDENTITY (1, 1) NOT NULL,
-    [WorkEffortTypeAssocType] INT           NULL,
+    [WorkEffortTypeAssociationType] INT     NULL,
     [WorkEffortTypeIdFrom]    INT           NULL,
     [WorkEffortTypeIdTo]      INT           NULL,
     [Description]             VARCHAR (255) NULL,

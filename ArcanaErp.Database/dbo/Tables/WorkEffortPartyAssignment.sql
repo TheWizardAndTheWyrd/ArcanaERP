@@ -3,12 +3,12 @@
     [WorkEffortId]       INT      NULL,
     [RoleTypeId]         INT      NULL,
     [PartyId]            INT      NULL,
-    [assignedFrom]       DATETIME NULL,
-    [assignedThrough]    DATETIME NULL,
+    [AssignedFrom]       DATETIME NULL,
+    [AssignedThrough]    DATETIME NULL,
     [Comments]           TEXT     NULL,
     [CreatedAt]          DATETIME NOT NULL,
     [UpdatedAt]          DATETIME NOT NULL,
-    [Resourceallocation] INT      NULL,
+    [ResourceAllocation] INT      NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
