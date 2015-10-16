@@ -57,3 +57,14 @@ module Interfaces =
 
     type IBaseErpModelComments =
         abstract member Comments : string with get, set
+
+    type IBaseErpModelAgreement =
+        abstract member AgreementTypeId : int with get, set
+        abstract member AgreementStatus : string with get, set
+        abstract member AgreementDate : DateTime with get, set
+
+    type IBaseErpModelProduct =
+        abstract member ProductId : int with get, set
+
+    type IBaseErpModelOrganization =
+        abstract member OrganizationId : int with get, set
