@@ -14,7 +14,7 @@ namespace ArcanaErp.Core.Models.Erp
     {
         public int Id { get; set; }
 
-        public int? OrganizationId { get; set; }
+        public int OrganizationId { get; set; }
 
         [StringLength(255)]
         public string CardType { get; set; }

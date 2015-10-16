@@ -1,9 +1,9 @@
 ﻿namespace ArcanaErp.Core.Interfaces.Models.Commerce
 {
-    public interface IAcceptedCreditCard : Lambda.Interfaces.IBaseErpModel
+    public interface IAcceptedCreditCard : Lambda.Interfaces.IBaseErpModel,
+                                           Lambda.Interfaces.IBaseErpModelOrganization,
+                                           Lambda.Interfaces.ICardType
     {
-        int? OrganizationId { get; set; }
 
-        string CardType { get; set; }
     }
 }

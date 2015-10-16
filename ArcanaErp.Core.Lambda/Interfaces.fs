@@ -63,8 +63,17 @@ module Interfaces =
         abstract member AgreementStatus : string with get, set
         abstract member AgreementDate : DateTime with get, set
 
+    type IBaseErpModelAgreementItem =
+        abstract member AgreementId : int with get, set
+        abstract member AgreementItemTypeId : int with get, set
+        abstract member AgreementItemValue : string with get, set
+        abstract member AgreementItemRuleString : string with get, set
+
     type IBaseErpModelProduct =
         abstract member ProductId : int with get, set
 
     type IBaseErpModelOrganization =
         abstract member OrganizationId : int with get, set
+
+    type ICardType =
+        abstract member CardType : string with get, set
