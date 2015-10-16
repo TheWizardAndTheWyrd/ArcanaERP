@@ -7,7 +7,8 @@ namespace ArcanaErp.Core.Interfaces.Models.Agreements
                                           Lambda.Interfaces.IBaseErpModelInternalId,
                                           Lambda.Interfaces.IBaseErpModelExternalId,
                                           Lambda.Interfaces.IBaseErpModelDescription, 
-                                          Lambda.Interfaces.IBaseErpModelComments
+                                          Lambda.Interfaces.IBaseErpModelComments,
+                                          Lambda.Interfaces.IBaseErpModelLeftRightValues
     {
 
     }
