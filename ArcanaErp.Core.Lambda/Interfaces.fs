@@ -58,6 +58,9 @@ module Interfaces =
     type IBaseErpModelComments =
         abstract member Comments : string with get, set
 
+    type IBaseErpModelAgreementId =
+        abstract member AgreementId : int with get, set
+
     type IBaseErpModelAgreement =
         abstract member AgreementTypeId : int with get, set
         abstract member AgreementStatus : string with get, set
@@ -69,6 +72,17 @@ module Interfaces =
         abstract member AgreementItemValue : string with get, set
         abstract member AgreementItemRuleString : string with get, set
 
+    type IBaseErpModelAgreementTraffic =
+        abstract member AgreementIdFrom : int with get, set
+        abstract member AgreementIdTo : int with get, set
+
+    type IBaseErpModelRoleTypeTraffic =
+        abstract member RoleTypeIdFrom : int with get, set
+        abstract member RoleTypeIdTo : int with get, set
+
+    type IBaseErpModelAgreementRelationshipTypeId =
+        abstract member AgreementRelationshipTypeId : int with get, set
+
     type IBaseErpModelProduct =
         abstract member ProductId : int with get, set
 
@@ -77,3 +91,12 @@ module Interfaces =
 
     type ICardType =
         abstract member CardType : string with get, set
+
+    type IBaseErpModelPartyId =
+        abstract member PartyId : int with get, set
+
+    type IBaseErpModelRoleTypeId = 
+        abstract member RoleTypeId : int with get, set
+
+    type IBaseErpModelStatusTypeId =
+        abstract member StatusTypeId : int with get, set

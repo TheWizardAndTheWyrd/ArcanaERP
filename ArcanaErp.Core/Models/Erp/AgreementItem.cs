@@ -13,9 +13,9 @@ namespace ArcanaErp.Core.Models.Erp
     {
         public int Id { get; set; }
 
-        public int? AgreementId { get; set; }
+        public int AgreementId { get; set; }
 
-        public int? AgreementItemTypeId { get; set; }
+        public int AgreementItemTypeId { get; set; }
 
         [StringLength(255)]
         public string AgreementItemValue { get; set; }
