@@ -37,6 +37,9 @@ module Interfaces =
     type IBaseErpModelParentId =
         abstract member ParentId : int with get, set
 
+    type IBaseErpModelName =
+        abstract member Name : string with get, set
+
     type IBaseErpModelExternalId =
         abstract member ExternalIdentifier : string with get, set
         abstract member ExternalIdSource : string with get, set
@@ -82,6 +85,10 @@ module Interfaces =
 
     type IBaseErpModelAgreementRelationshipTypeId =
         abstract member AgreementRelationshipTypeId : int with get, set
+
+    type IBaseErpModelAgreementRelstionshipTypeValidTraffic = 
+        abstract member ValidFromRoleTypeId : int with get, set
+        abstract member ValidToRoleTypeId : int with get, set
 
     type IBaseErpModelProduct =
         abstract member ProductId : int with get, set

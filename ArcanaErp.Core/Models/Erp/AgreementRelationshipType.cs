@@ -10,19 +10,19 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AgreementRelationshipType")]
-    public partial class AgreementRelationshipType : IAgreementRelationshipType, Interfaces.IBaseErpModel
+    public partial class AgreementRelationshipType : IAgreementRelationshipType
     {
         public int Id { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
-        public int? ValidFromRoleTypeId { get; set; }
+        public int ValidFromRoleTypeId { get; set; }
 
-        public int? ValidToRoleTypeId { get; set; }
+        public int ValidToRoleTypeId { get; set; }
 
         [StringLength(255)]
         public string Name { get; set; }
