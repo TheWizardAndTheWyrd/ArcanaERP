@@ -10,15 +10,15 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AgreementRoleType")]
-    public partial class AgreementRoleType : IAgreementRoleType, Interfaces.IBaseErpModel
+    public partial class AgreementRoleType : IAgreementRoleType
     {
         public int Id { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
