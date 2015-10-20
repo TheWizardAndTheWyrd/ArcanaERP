@@ -10,18 +10,18 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("ArcanaErpInstancePartyRole")]
-    public partial class ArcanaErpInstancePartyRole : IErpInstancePartyRole, Interfaces.IBaseErpModel
+    public partial class ArcanaErpInstancePartyRole : IErpInstancePartyRole
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? ArcanaErpInstanceId { get; set; }
+        public int ArcanaErpInstanceId { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? RoleTypeId { get; set; }
+        public int RoleTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

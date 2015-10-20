@@ -121,3 +121,6 @@ module Interfaces =
         abstract member Version : decimal with get, set
         abstract member Schema : string with get, set
         abstract member GuidString : string with get, set
+
+    type IBaseErpModelArcanaErpInstanceId =
+        abstract member ArcanaErpInstanceId : int with get, set
