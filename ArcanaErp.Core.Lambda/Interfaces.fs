@@ -107,3 +107,12 @@ module Interfaces =
 
     type IBaseErpModelStatusTypeId =
         abstract member StatusTypeId : int with get, set
+
+    type IBaseErpModelIcon =
+        abstract member Icon : string with get, set
+
+    type IBaseErpModelCanDelete =
+        abstract member CanDelete : bool with get, set
+
+    type IBaseErpModelType =
+        abstract member Type : string with get, set

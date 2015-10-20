@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("Application")]
-    public partial class Application : IApplication, Interfaces.IBaseErpModel
+    public partial class Application : IApplication
     {
         public int Id { get; set; }
 
@@ -26,7 +26,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Type { get; set; }
 
-        public bool? CanDelete { get; set; }
+        public bool CanDelete { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

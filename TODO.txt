@@ -12,6 +12,7 @@ rev. October 11, 2015
 Summary:
 ========
 There is a lot of work to be done before the initial release, and this list is not chronological:
+  * Examine the pros and cons of using multiple DbContext objects based on ERP Module function/purpose.
   * Consider breaking up ArcanaErp.Web.JsonApi into micro-services.
   * Add missing model properties to ErpDataModel.cs - likely to see breaks during unit testing.
   * Choose a suitable Open Source License and LICENSE.txt file.
