@@ -116,3 +116,8 @@ module Interfaces =
 
     type IBaseErpModelType =
         abstract member Type : string with get, set
+
+    type IBaseErpModelErpInstance =
+        abstract member Version : decimal with get, set
+        abstract member Schema : string with get, set
+        abstract member GuidString : string with get, set

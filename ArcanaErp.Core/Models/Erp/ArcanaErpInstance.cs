@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("ArcanaErpInstance")]
-    public partial class ArcanaErpInstance : IErpInstance, Interfaces.IBaseErpModel
+    public partial class ArcanaErpInstance : IErpInstance
     {
         public int Id { get; set; }
 
@@ -20,7 +20,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public decimal? Version { get; set; }
+        public decimal Version { get; set; }
 
         [StringLength(255)]
         public string Type { get; set; }
@@ -28,7 +28,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Schema { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
         [StringLength(255)]
         public string GuidString { get; set; }

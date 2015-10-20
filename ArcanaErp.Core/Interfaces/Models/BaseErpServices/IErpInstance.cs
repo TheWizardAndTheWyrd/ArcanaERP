@@ -2,17 +2,13 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IErpInstance
+    public interface IErpInstance : Lambda.Interfaces.IBaseErpModel,
+                                    Lambda.Interfaces.IBaseErpModelDescription,
+                                    Lambda.Interfaces.IBaseErpModelInternalId,
+                                    Lambda.Interfaces.IBaseErpModelParentId,
+                                    Lambda.Interfaces.IBaseErpModelType,
+                                    Lambda.Interfaces.IBaseErpModelErpInstance
     {
-        int Id { get; set; }
-        string Description { get; set; }
-        string InternalIdentifier { get; set; }
-        decimal? Version { get; set; }
-        string Type { get; set; }
-        string Schema { get; set; }
-        int? ParentId { get; set; }
-        string GuidString { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }
