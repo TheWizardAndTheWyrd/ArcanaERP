@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AuditLog")]
-    public partial class AuditLog : Interfaces.IBaseErpModel
+    public partial class AuditLog : IAuditLog
     {
         public int Id { get; set; }
 
@@ -18,14 +20,14 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
         [Column(TypeName = "text")]
         public string AdditionalInfo { get; set; }
 
-        public int? AuditLogTypeId { get; set; }
+        public int AuditLogTypeId { get; set; }
 
-        public int? EventRecordId { get; set; }
+        public int EventRecordId { get; set; }
 
         [StringLength(255)]
         public string EventRecordType { get; set; }

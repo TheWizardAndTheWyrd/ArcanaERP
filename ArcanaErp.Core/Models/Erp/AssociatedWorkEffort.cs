@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AssociatedWorkEffort")]
-    public partial class AssociatedWorkEffort : Interfaces.IBaseErpModel
+    public partial class AssociatedWorkEffort : IAssociatedWorkEffort
     {
         public int Id { get; set; }
 
-        public int? WorkEffortId { get; set; }
+        public int WorkEffortId { get; set; }
 
-        public int? AssociatedRecordId { get; set; }
+        public int AssociatedRecordId { get; set; }
 
         [StringLength(255)]
         public string AssociatedRecordType { get; set; }

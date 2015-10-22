@@ -469,7 +469,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLogItem>()
-                .Property(e => e.AuditLogItemoldValue)
+                .Property(e => e.AuditLogItemOldValue)
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLogItem>()
@@ -485,7 +485,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLogItemType>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLogItemType>()
@@ -517,7 +517,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<AuditLogType>()
-                .Property(e => e.ExternalIdsource)
+                .Property(e => e.ExternalIdSource)
                 .IsUnicode(false);
 
             modelBuilder.Entity<BankAccount>()

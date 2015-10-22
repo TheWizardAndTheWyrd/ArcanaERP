@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,19 +9,19 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using ArcanaErp.Core.Lambda;
 
-    public partial class AuditLogItem : Interfaces.IBaseErpModel
+    public partial class AuditLogItem : IAuditLogItem
     {
         public int Id { get; set; }
 
-        public int? AuditLogId { get; set; }
+        public int AuditLogId { get; set; }
 
-        public int? AuditLogItemTypeId { get; set; }
+        public int AuditLogItemTypeId { get; set; }
 
         [StringLength(255)]
         public string AuditLogItemValue { get; set; }
 
         [StringLength(255)]
-        public string AuditLogItemoldValue { get; set; }
+        public string AuditLogItemOldValue { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

@@ -124,3 +124,30 @@ module Interfaces =
 
     type IBaseErpModelArcanaErpInstanceId =
         abstract member ArcanaErpInstanceId : int with get, set
+
+    type IBaseErpModelTransportationRoute =
+        abstract member TransportationRouteId : int with get, set
+    
+    type IBaseErpModelAssociatedRecord =
+        abstract member AssociatedRecordId : int with get, set
+        abstract member AssociatedRecordType : string with get, set
+
+    type IBaseErpModelWorkEffortId =
+        abstract member WorkEffortId : int with get, set
+
+    type IBaseErpModelWorkAuditLog =
+        abstract member Application : string with get, set
+        abstract member AdditionalInfo : string with get, set
+        abstract member AuditLogTypeId : int with get, set
+        abstract member EventRecordId : int with get, set
+        abstract member EventRecordType : string with get, set
+
+    type IBaseErpModelAuditLogItem =
+        abstract member AuditLogId : int with get, set
+        abstract member AuditLogItemTypeId : int with get, set
+        abstract member AuditLogItemValue : string with get, set
+        abstract member AuditLogItemOldValue : string with get, set
+
+    type IBaseErpModelErrorCode =
+        abstract member ErrorCode : string with get, set
+

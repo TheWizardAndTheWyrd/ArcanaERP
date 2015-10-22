@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("AuditLogItemType")]
-    public partial class AuditLogItemType : Interfaces.IBaseErpModel
+    public partial class AuditLogItemType : IAuditLogItemType
     {
         public int Id { get; set; }
 
@@ -19,7 +21,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdsource { get; set; }
+        public string ExternalIdSource { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
@@ -27,11 +29,11 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Comments { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
