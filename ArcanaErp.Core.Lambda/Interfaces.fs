@@ -158,7 +158,6 @@ module Interfaces =
         abstract member BankAccountTypeId : int with get, set
 
     type IBaseErpModelBaseTransactionContext =
-        abstract member BusinessTransactionEventId : int with get, set
         abstract member TransactionContextRecordId : int with get, set
         abstract member TransactionContextRecordType : string with get, set
 
@@ -204,3 +203,46 @@ module Interfaces =
 
     type IBaseErpModelBusinessTransactionAccountRelationshipTypeId =
         abstract member BusinessTransactionAccountRelationshipTypeId : int with get, set
+
+    type IBaseErpModelStatus =
+        abstract member Status : int with get, set
+
+    type IBaseErpModelBusinessTransactionAccountType =
+        abstract member BusinessTransactionAccountType : string with get, set
+
+    type IBaseErpModelBusinessTransactionAccountTypeId =
+        abstract member BusinessTransactionAccountTypeId : int with get, set
+
+    type IBaseErpModelBusinessTransactionEventId =
+        abstract member BusinessTransactionEventId : int with get, set
+
+    type IBaseErpModelBusinessTransactionAgreementRole =
+        abstract member BusinessTransactionEventType : string with get, set
+        abstract member BusinessTransactionAgreementRoleTypeId : int with get, set
+
+    type IBaseErpModelBusinessTransactionEvent =
+        abstract member BusinessTransactionTypeId : int with get, set
+        abstract member BusinessTransactionRecordId : int with get, set
+        abstract member BusinessTransactionRecordType : string with get, set
+
+    type IBaseErpModelShortDescription =
+        abstract member ShortDescription : string with get, set
+
+    type IBaseErpModelLongDescription =
+        abstract member LongDescription : string with get, set
+
+    type IBaseErpModelBusinessTransactionEventDescription =
+        abstract member LanguageId : int with get, set
+        abstract member LocaleId: int with get, set
+        abstract member Priority : int with get, set
+        abstract member Sequence : int with get, set
+
+    type IBaseErpModelBusinessTransactionPartyRoleTypeId =
+        abstract member BusinessTransactionPartyRoleTypeId : int with get, set
+
+    type IBaseErpModelTransactionEventTraffic =
+        abstract member TransactionEventIdFrom : int with get, set
+        abstract member TransactionEventIdTo : int with get, set
+
+    type IBaseErpModelBusinessTransactionRelationshipTypeId =
+        abstract member BusinessTransactionRelationshipTypeId : int with get, set

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,22 +10,22 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("BusinessTransactionEvent")]
-    public partial class BusinessTransactionEvent : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionEvent : IBusinessTransactionEvent
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public bool BusinessTransactionAccountRootId { get; set; }
+        public int BusinessTransactionAccountRootId { get; set; }
 
-        public int? BusinessTransactionTypeId { get; set; }
+        public int BusinessTransactionTypeId { get; set; }
 
-        public DateTime? EnteredDate { get; set; }
+        public DateTime EnteredDate { get; set; }
 
-        public DateTime? PostDate { get; set; }
+        public DateTime PostDate { get; set; }
 
-        public int? BusinessTransactionRecordId { get; set; }
+        public int BusinessTransactionRecordId { get; set; }
 
         [StringLength(255)]
         public string BusinessTransactionRecordType { get; set; }

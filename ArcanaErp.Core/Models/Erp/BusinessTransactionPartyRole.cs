@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,15 +10,15 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("BusinessTransactionPartyRole")]
-    public partial class BusinessTransactionPartyRole : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionPartyRole : IBusinessTransactionPartyRole
     {
         public int Id { get; set; }
 
-        public int? BusinessTransactionEventId { get; set; }
+        public int BusinessTransactionEventId { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? BusinessTransactionPartyRoleTypeId { get; set; }
+        public int BusinessTransactionPartyRoleTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

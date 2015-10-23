@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("BusinessTransactionAccountStatusType")]
-    public partial class BusinessTransactionAccountStatusType : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionAccountStatusType : IBusinessTransactionAccountStatusType
     {
         public int Id { get; set; }
 
