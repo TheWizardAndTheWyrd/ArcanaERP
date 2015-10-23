@@ -15,7 +15,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? BusinessTransactionAccountRootId { get; set; }
+        public bool BusinessTransactionAccountRootId { get; set; }
 
         public int? BusinessTransactionTypeId { get; set; }
 

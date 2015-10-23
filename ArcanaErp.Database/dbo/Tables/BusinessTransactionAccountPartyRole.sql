@@ -4,7 +4,7 @@
     [BusinessTransactionAccountRootId]      INT           NULL,
     [PartyId]                            INT           NULL,
     [BusinessTransactionAccountPartyTypeId] INT           NULL,
-    [IsDefaultBillingAccountFlag]        INT           NULL,
+    [IsDefaultBillingAccountFlag]        BIT           NULL,
     [CreatedAt]                          DATETIME      NOT NULL,
     [UpdatedAt]                          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

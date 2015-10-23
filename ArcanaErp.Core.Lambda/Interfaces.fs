@@ -86,7 +86,7 @@ module Interfaces =
     type IBaseErpModelAgreementRelationshipTypeId =
         abstract member AgreementRelationshipTypeId : int with get, set
 
-    type IBaseErpModelAgreementRelstionshipTypeValidTraffic = 
+    type IBaseErpModelAgreementRelationshipTypeValidTraffic = 
         abstract member ValidFromRoleTypeId : int with get, set
         abstract member ValidToRoleTypeId : int with get, set
 
@@ -173,3 +173,34 @@ module Interfaces =
     type IBaseErpModelBillingContactMechanism =
         abstract member ContactMechanismId : int with get, set
         abstract member ContactMechanismType : string with get, set
+
+    type IBaseErpModelEnteredDate =
+        abstract member EnteredDate : DateTime with get, set
+
+    type IBaseErpModelRequestedDate =
+        abstract member RequestedDate : DateTime with get, set
+
+    type IBaseErpModelPostDate =
+        abstract member PostDate : DateTime with get, set
+
+    type IBaseErpModelBusinessTransactionTaskId =
+        abstract member BusinessTransactionTaskId : int with get, set
+
+    type IBaseErpModelBusinessBusinessTransactionAccountId =
+        abstract member BusinessTransactionAccountId : int with get, set
+
+    type IBaseErpModelBusinessTransactionAccountRootId =
+        abstract member BusinessTransactionAccountRootId : int with get, set
+
+    type IBaseErpModelBusinessTransactionAccountPartyTypeId =
+        abstract member BusinessTransactionAccountPartyTypeId : int with get, set
+
+    type IBaseErpModelIsDefaultBillingAccountFlag =
+        abstract member IsDefaultBillingAccountFlag : bool with get, set
+
+    type IBaseErpModelBusinessTransactionAccountRootTraffic =
+        abstract member BusinessTransactionAccountRootIdFrom : int with get, set
+        abstract member BusinessTransactionAccountRootIdTo : int with get, set
+
+    type IBaseErpModelBusinessTransactionAccountRelationshipTypeId =
+        abstract member BusinessTransactionAccountRelationshipTypeId : int with get, set

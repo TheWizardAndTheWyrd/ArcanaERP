@@ -301,8 +301,10 @@
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBaseTransactionContext.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessAccountTransactionTask.cs" />
+    <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountParty.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountPartyRole.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountPartyRoleType.cs" />
+    <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountPartyType.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountRelationship.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountRelationshipType.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBusinessTransactionAccountRoot.cs" />

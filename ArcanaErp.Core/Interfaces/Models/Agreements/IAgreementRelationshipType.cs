@@ -8,7 +8,7 @@ namespace ArcanaErp.Core.Interfaces.Models.Agreements
                                                   Lambda.Interfaces.IBaseErpModelDescription,
                                                   Lambda.Interfaces.IBaseErpModelInternalId,
                                                   Lambda.Interfaces.IBaseErpModelExternalId,
-                                                  Lambda.Interfaces.IBaseErpModelAgreementRelstionshipTypeValidTraffic,
+                                                  Lambda.Interfaces.IBaseErpModelAgreementRelationshipTypeValidTraffic,
                                                   Lambda.Interfaces.IBaseErpModelName
     {
 

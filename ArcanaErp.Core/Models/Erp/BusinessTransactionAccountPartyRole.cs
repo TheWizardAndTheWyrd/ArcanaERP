@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,20 +10,20 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("BusinessTransactionAccountPartyRole")]
-    public partial class BusinessTransactionAccountPartyRole : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionAccountPartyRole : IBusinessTransactionAccountPartyRole
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? BusinessTransactionAccountRootId { get; set; }
+        public int BusinessTransactionAccountRootId { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? BusinessTransactionAccountPartyTypeId { get; set; }
+        public int BusinessTransactionAccountPartyTypeId { get; set; }
 
-        public int? IsDefaultBillingAccountFlag { get; set; }
+        public bool IsDefaultBillingAccountFlag { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
