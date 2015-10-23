@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,18 +9,18 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
 
     [Table("BillingAccount")]
-    public partial class BillingAccount
+    public partial class BillingAccount : IBillingAccount
     {
         public int Id { get; set; }
 
-        public bool? SendPaperBills { get; set; }
+        public bool SendPaperBills { get; set; }
 
-        public bool? PayableOnline { get; set; }
+        public bool PayableOnline { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? BillingDate { get; set; }
+        public DateTime BillingDate { get; set; }
 
-        public int? CalculateBalanceStrategyTypeId { get; set; }
+        public int CalculateBalanceStrategyTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

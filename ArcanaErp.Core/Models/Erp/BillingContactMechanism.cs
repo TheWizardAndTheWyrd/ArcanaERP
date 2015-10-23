@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,14 +9,14 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using ArcanaErp.Core.Lambda;
 
-    public partial class BillingContactMechanism : Interfaces.IBaseErpModel
+    public partial class BillingContactMechanism : IBillingContactMechanism
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? ContactMechanismId { get; set; }
+        public int ContactMechanismId { get; set; }
 
         [StringLength(255)]
         public string ContactMechanismType { get; set; }

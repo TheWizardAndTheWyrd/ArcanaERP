@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using ArcanaErp.Core.Lambda;
 
     [Table("BaseTransactionContext")]
-    public partial class BaseTransactionContext : Interfaces.IBaseErpModel
+    public partial class BaseTransactionContext : IBaseTransactionContext
     {
         public int Id { get; set; }
 
-        public int? BusinessTransactionEventId { get; set; }
+        public int BusinessTransactionEventId { get; set; }
 
-        public int? TransactionContextRecordId { get; set; }
+        public int TransactionContextRecordId { get; set; }
 
         [StringLength(255)]
         public string TransactionContextRecordType { get; set; }

@@ -6,9 +6,10 @@ namespace ArcanaErp.Core.Models.Erp
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
     using ArcanaErp.Core.Lambda;
+    using Interfaces.Models.Commerce;
 
     [Table("BankAccount")]
-    public partial class BankAccount : Interfaces.IBaseErpModel
+    public partial class BankAccount : IBankAccount
     {
         public int Id { get; set; }
 
@@ -21,7 +22,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string NameOnAccount { get; set; }
 
-        public int? BankAccountTypeId { get; set; }
+        public int BankAccountTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -151,3 +151,25 @@ module Interfaces =
     type IBaseErpModelErrorCode =
         abstract member ErrorCode : string with get, set
 
+    type IBaseErpModelBankAccount =
+        abstract member RoutingNumber : string with get, set
+        abstract member CryptedPrivateAccountNumber : string with get, set
+        abstract member NameOnAccount : string with get, set
+        abstract member BankAccountTypeId : int with get, set
+
+    type IBaseErpModelBaseTransactionContext =
+        abstract member BusinessTransactionEventId : int with get, set
+        abstract member TransactionContextRecordId : int with get, set
+        abstract member TransactionContextRecordType : string with get, set
+
+    type IBaseErpModelCalculateBalanceStrategyTypeId =
+        abstract member CalculateBalanceStrategyTypeId : int with get, set
+
+    type IBaseErpModelBillingAccount =
+        abstract member SendPaperBills : bool with get, set
+        abstract member PayableOnline : bool with get, set
+        abstract member BillingDate : DateTime with get, set
+
+    type IBaseErpModelBillingContactMechanism =
+        abstract member ContactMechanismId : int with get, set
+        abstract member ContactMechanismType : string with get, set

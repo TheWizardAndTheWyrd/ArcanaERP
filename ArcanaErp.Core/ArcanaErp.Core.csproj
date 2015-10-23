@@ -250,6 +250,7 @@
     <Compile Include="Interfaces\Models\Invoicing\Extensions\IProductType.cs" />
     <Compile Include="Interfaces\Models\Invoicing\Extensions\IWorkEffort.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IBillingAccount.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IBillingContactMechanism.cs" />
     <Compile Include="Interfaces\Models\Invoicing\ICalculateBalanceStrategyType.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoice.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoiceItem.cs" />
