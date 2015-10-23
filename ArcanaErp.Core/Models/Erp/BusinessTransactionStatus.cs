@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class BusinessTransactionStatus : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionStatus : IBusinessTransactionStatus
     {
         public int Id { get; set; }
 

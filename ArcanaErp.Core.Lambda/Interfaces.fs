@@ -205,7 +205,7 @@ module Interfaces =
         abstract member BusinessTransactionAccountRelationshipTypeId : int with get, set
 
     type IBaseErpModelStatus =
-        abstract member Status : int with get, set
+        abstract member Status : string with get, set
 
     type IBaseErpModelBusinessTransactionAccountType =
         abstract member BusinessTransactionAccountType : string with get, set
@@ -246,3 +246,26 @@ module Interfaces =
 
     type IBaseErpModelBusinessTransactionRelationshipTypeId =
         abstract member BusinessTransactionRelationshipTypeId : int with get, set
+
+    type ITimeRange =
+        abstract member StartTime : DateTime with get, set
+        abstract member EndTime : DateTime with get, set
+
+    type IBaseErpModelTitle =
+        abstract member Title : string with get, set
+
+    type IBaseErpModelCalendarEvent =
+        abstract member AllDay : bool with get, set
+        abstract member IsPublic : bool with get, set
+        abstract member ListViewImageUrl : string with get, set
+
+    type IBaseErpModelCustomFields =
+        abstract member CustomFields : string with get, set
+
+    type IBaseErpModelCalendarEventId =
+        abstract member CalendarEventId : int with get, set
+
+    type IBaseErpModelCalendarInvite =
+        abstract member InviteText : string with get, set
+        abstract member InviterId : int with get, set
+        abstract member InviteeId : int with get, set

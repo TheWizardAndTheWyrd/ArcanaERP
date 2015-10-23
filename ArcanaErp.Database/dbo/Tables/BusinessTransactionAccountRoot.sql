@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[BusinessTransactionAccountRoot] (
     [Id]                            INT           IDENTITY (1, 1) NOT NULL,
     [Description]                   VARCHAR (255) NULL,
-    [Status]                        INT           NULL,
+    [Status]                        VARCHAR (255) NULL,
     [BusinessTransactionAccountId]     INT           NULL,
     [BusinessTransactionAccountType]   VARCHAR (255) NULL,
     [ExternalIdentifier]            VARCHAR (255) NULL,

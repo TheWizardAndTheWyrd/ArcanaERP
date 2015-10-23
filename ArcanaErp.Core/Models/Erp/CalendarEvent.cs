@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,20 +10,20 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CalendarEvent")]
-    public partial class CalendarEvent : Interfaces.IBaseErpModel
+    public partial class CalendarEvent : ICalendarEvent
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Title { get; set; }
 
-        public DateTime? StartTime { get; set; }
+        public DateTime StartTime { get; set; }
 
-        public DateTime? EndTime { get; set; }
+        public DateTime EndTime { get; set; }
 
-        public bool? AllDay { get; set; }
+        public bool AllDay { get; set; }
 
-        public bool? IsPublic { get; set; }
+        public bool IsPublic { get; set; }
 
         [Column(TypeName = "text")]
         public string Description { get; set; }

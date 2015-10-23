@@ -801,7 +801,7 @@ namespace ArcanaErp.Core.Models.Erp
                 .IsUnicode(false);
 
             modelBuilder.Entity<CalendarInvite>()
-                .Property(e => e.Invitetext)
+                .Property(e => e.InviteText)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CandidateSubmission>()

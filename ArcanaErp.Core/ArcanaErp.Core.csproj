@@ -356,6 +356,9 @@
     <Compile Include="Interfaces\Models\WorkEffort\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IAssociatedTransportationRoute.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IAssociatedWorkEffort.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\ICalendarEvent.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\ICalendarEventPartyRole.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\ICalendarInvite.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverable.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverableType.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IGoodType.cs" />

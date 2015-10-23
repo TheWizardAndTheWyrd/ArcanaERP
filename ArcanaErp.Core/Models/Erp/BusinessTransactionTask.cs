@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("BusinessTransactionTask")]
-    public partial class BusinessTransactionTask : Interfaces.IBaseErpModel
+    public partial class BusinessTransactionTask : IBusinessTransactionTask
     {
         public int Id { get; set; }
 

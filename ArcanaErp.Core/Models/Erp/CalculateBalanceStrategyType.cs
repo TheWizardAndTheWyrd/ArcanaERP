@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CalculateBalanceStrategyType")]
-    public partial class CalculateBalanceStrategyType : Interfaces.IBaseErpModel
+    public partial class CalculateBalanceStrategyType : ICalculateBalanceStrategyType
     {
         public int Id { get; set; }
 

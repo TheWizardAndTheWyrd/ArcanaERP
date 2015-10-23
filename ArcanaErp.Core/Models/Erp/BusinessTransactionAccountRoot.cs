@@ -17,7 +17,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int Status { get; set; }
+        public string Status { get; set; }
 
         public int BusinessTransactionAccountId { get; set; }
 

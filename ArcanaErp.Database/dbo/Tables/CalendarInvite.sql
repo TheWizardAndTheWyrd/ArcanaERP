@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[CalendarInvite] (
     [Id]              INT           IDENTITY (1, 1) NOT NULL,
     [Title]           VARCHAR (255) NULL,
-    [Invitetext]      TEXT          NULL,
+    [InviteText]      TEXT          NULL,
     [CalendarEventId] INT           NULL,
     [InviterId]       INT           NULL,
     [InviteeId]       INT           NULL,

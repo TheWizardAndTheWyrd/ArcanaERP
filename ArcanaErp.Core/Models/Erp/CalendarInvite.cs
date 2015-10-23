@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CalendarInvite")]
-    public partial class CalendarInvite : Interfaces.IBaseErpModel
+    public partial class CalendarInvite : ICalendarInvite
     {
         public int Id { get; set; }
 
@@ -16,13 +18,13 @@ namespace ArcanaErp.Core.Models.Erp
         public string Title { get; set; }
 
         [Column(TypeName = "text")]
-        public string Invitetext { get; set; }
+        public string InviteText { get; set; }
 
-        public int? CalendarEventId { get; set; }
+        public int CalendarEventId { get; set; }
 
-        public int? InviterId { get; set; }
+        public int InviterId { get; set; }
 
-        public int? InviteeId { get; set; }
+        public int InviteeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
