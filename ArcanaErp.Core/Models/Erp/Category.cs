@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Category")]
-    public partial class Category : ICategory, Interfaces.IBaseErpModel
+    public partial class Category : ICategory
     {
         public int Id { get; set; }
 
@@ -20,23 +20,25 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
 
-        public DateTime? FromDate { get; set; }
+        public string ExternalIdSource { get; set; }
 
-        public DateTime? ToDate { get; set; }
+        public DateTime FromDate { get; set; }
+
+        public DateTime ThroughDate { get; set; }
 
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public int? CategoryRecordId { get; set; }
+        public int CategoryRecordId { get; set; }
 
         [StringLength(255)]
         public string CategoryRecordType { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

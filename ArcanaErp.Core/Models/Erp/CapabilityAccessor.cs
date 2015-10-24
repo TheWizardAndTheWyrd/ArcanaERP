@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,16 +10,16 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CapabilityAccessor")]
-    public partial class CapabilityAccessor : Interfaces.IBaseErpModel
+    public partial class CapabilityAccessor : ICapabilityAccessor
     {
         public int Id { get; set; }
 
-        public int? CapabilityAccessorRecordId { get; set; }
+        public int CapabilityAccessorRecordId { get; set; }
 
         [StringLength(255)]
         public string CapabilityAccessorRecordType { get; set; }
 
-        public int? CapabilityId { get; set; }
+        public int CapabilityId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

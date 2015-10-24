@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,21 +10,21 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Capability")]
-    public partial class Capability : Interfaces.IBaseErpModel
+    public partial class Capability : ICapability
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? CapabilityTypeId { get; set; }
+        public int CapabilityTypeId { get; set; }
 
-        public int? CapabilityResourceId { get; set; }
+        public int CapabilityResourceId { get; set; }
 
         [StringLength(255)]
         public string CapabilityResourceType { get; set; }
 
-        public int? ScopeTypeId { get; set; }
+        public int ScopeTypeId { get; set; }
 
         [Column(TypeName = "text")]
         public string ScopeQueryText { get; set; }

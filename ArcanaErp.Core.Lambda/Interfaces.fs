@@ -269,3 +269,51 @@ module Interfaces =
         abstract member InviteText : string with get, set
         abstract member InviterId : int with get, set
         abstract member InviteeId : int with get, set
+
+    type IBaseErpModelOrderLineItemId =
+        abstract member OrderLineItemId : int with get, set
+
+    type IBaseErpModelCapability =
+        abstract member CapabilityTypeId : int with get, set
+        abstract member CapabilityResourceId : int with get, set
+        abstract member CapabilityResourceType : string with get, set
+
+    type IBaseErpModelScope =
+        abstract member ScopeTypeId : int with get, set
+        abstract member ScopeQueryText : string with get, set
+
+    type IBaseErpModelCapabilityAccessor =
+        abstract member CapabilityAccessorRecordId : int with get, set
+        abstract member CapabilityAccessorRecordType : string with get, set
+        abstract member CapabilityId : int with get, set
+
+    type IBaseErpModelCapableModel =
+        abstract member CapableModelRecordId : int with get, set
+        abstract member CapableModelRecordType : string with get, set
+
+    type IBaseErpModelCategory =
+        abstract member CategoryRecordId : int with get, set
+        abstract member CategoryRecordType : string with get, set
+
+    type IBaseErpModelCategoryId =
+        abstract member CategoryId : int with get, set
+
+    type IBaseErpModelClassification =
+        abstract member ClassificationType : string with get, set
+        abstract member ClassificationId : int with get, set
+
+    type IBaseErpModelMoneyId =
+        abstract member MoneyId : int with get, set
+
+    type IBaseErpModelChargeLine =
+        abstract member StiType : string with get, set
+        abstract member ChargedItemId : int with get, set
+        abstract member ChargedItemType : string with get, set
+        abstract member ChargeTypeId : int with get, set
+
+    type IBaseErpModelSalesTax =
+        abstract member SalesTax : decimal with get, set
+        abstract member Taxed : bool with get, set
+
+    type IBaseErpModelTaxable =
+        abstract member Taxable : bool with get, set

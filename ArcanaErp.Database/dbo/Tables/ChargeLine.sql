@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[ChargeLines] (
+﻿CREATE TABLE [dbo].[ChargeLine] (
     [Id]                 INT            IDENTITY (1, 1) NOT NULL,
     [StiType]            VARCHAR (255)  NULL,
     [MoneyId]            INT            NULL,
@@ -18,5 +18,5 @@
 
 GO
 CREATE NONCLUSTERED INDEX [ChargedItemIndex]
-    ON [dbo].[ChargeLines]([ChargedItemId] ASC, [ChargedItemType] ASC);
+    ON [dbo].[ChargeLine]([ChargedItemId] ASC, [ChargedItemType] ASC);
 

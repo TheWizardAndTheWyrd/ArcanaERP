@@ -270,6 +270,7 @@
     <Compile Include="Interfaces\Models\Orders\Extensions\IProductType.cs" />
     <Compile Include="Interfaces\Models\Orders\IChargeLine.cs" />
     <Compile Include="Interfaces\Models\Orders\IChargeLinePaymentTransaction.cs" />
+    <Compile Include="Interfaces\Models\Orders\IChargeType.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItem.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItemPartyRole.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItemType.cs" />
@@ -297,6 +298,7 @@
     <Compile Include="Interfaces\Models\Search\Extensions\ITicket.cs" />
     <Compile Include="Interfaces\Models\Search\Extensions\IWebsiteInquiry.cs" />
     <Compile Include="Interfaces\Models\Search\IPartySearchFact.cs" />
+    <Compile Include="Interfaces\Models\TechServices\ICapableModel.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\Extensions\IMoney.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBaseTransactionContext.cs" />
@@ -359,6 +361,7 @@
     <Compile Include="Interfaces\Models\WorkEffort\ICalendarEvent.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\ICalendarEventPartyRole.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\ICalendarInvite.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\ICandidateSubmission.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverable.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverableType.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IGoodType.cs" />

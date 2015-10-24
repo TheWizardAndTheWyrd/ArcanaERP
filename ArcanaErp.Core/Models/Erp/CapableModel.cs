@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,11 +9,11 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class CapableModel : Interfaces.IBaseErpModel
+    public partial class CapableModel : ICapableModel
     {
         public int Id { get; set; }
 
-        public int? CapableModelRecordId { get; set; }
+        public int CapableModelRecordId { get; set; }
 
         [StringLength(255)]
         public string CapableModelRecordType { get; set; }

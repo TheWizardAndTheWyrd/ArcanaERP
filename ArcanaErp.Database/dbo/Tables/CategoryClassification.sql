@@ -4,7 +4,7 @@
     [ClassificationType] VARCHAR (255) NULL,
     [ClassificationId]   INT           NULL,
     [FromDate]           DATETIME      NULL,
-    [ToDate]             DATETIME      NULL,
+    [ThroughDate]        DATETIME      NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

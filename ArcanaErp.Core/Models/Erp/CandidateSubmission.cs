@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CandidateSubmission")]
-    public partial class CandidateSubmission : Interfaces.IBaseErpModel
+    public partial class CandidateSubmission : ICandidateSubmission
     {
         public int Id { get; set; }
 
-        public int? OrderLineItemId { get; set; }
+        public int OrderLineItemId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

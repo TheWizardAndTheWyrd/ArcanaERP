@@ -10,20 +10,20 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CategoryClassification")]
-    public partial class CategoryClassification : ICategoryClassification, Interfaces.IBaseErpModel
+    public partial class CategoryClassification : ICategoryClassification
     {
         public int Id { get; set; }
 
-        public int? CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
         [StringLength(255)]
         public string ClassificationType { get; set; }
 
-        public int? ClassificationId { get; set; }
+        public int ClassificationId { get; set; }
 
-        public DateTime? FromDate { get; set; }
+        public DateTime FromDate { get; set; }
 
-        public DateTime? ToDate { get; set; }
+        public DateTime ThroughDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,14 +9,14 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class ChargeLine : Interfaces.IBaseErpModel
+    public partial class ChargeLine : IChargeLine
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string StiType { get; set; }
 
-        public int? MoneyId { get; set; }
+        public int MoneyId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
@@ -25,7 +27,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ExternalIdSource { get; set; }
 
-        public int? ChargedItemId { get; set; }
+        public int ChargedItemId { get; set; }
 
         [StringLength(255)]
         public string ChargedItemType { get; set; }
@@ -34,10 +36,10 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime UpdatedAt { get; set; }
 
-        public int? ChargeTypeId { get; set; }
+        public int ChargeTypeId { get; set; }
 
-        public decimal? SalesTax { get; set; }
+        public decimal SalesTax { get; set; }
 
-        public bool? Taxed { get; set; }
+        public bool Taxed { get; set; }
     }
 }

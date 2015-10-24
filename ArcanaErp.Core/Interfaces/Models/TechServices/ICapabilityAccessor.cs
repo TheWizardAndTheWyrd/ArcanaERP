@@ -1,6 +1,7 @@
 ﻿namespace ArcanaErp.Core.Interfaces.Models.TechServices
 {
-    public interface ICapabilityAccessor
+    public interface ICapabilityAccessor : Lambda.Interfaces.IBaseErpModel,
+                                           Lambda.Interfaces.IBaseErpModelCapabilityAccessor
     {
          
     }

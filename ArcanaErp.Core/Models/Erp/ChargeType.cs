@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("ChargeType")]
-    public partial class ChargeType : Interfaces.IBaseErpModel
+    public partial class ChargeType : IChargeType
     {
         public int Id { get; set; }
 
@@ -22,6 +24,6 @@ namespace ArcanaErp.Core.Models.Erp
 
         public DateTime UpdatedAt { get; set; }
 
-        public bool? Taxable { get; set; }
+        public bool Taxable { get; set; }
     }
 }

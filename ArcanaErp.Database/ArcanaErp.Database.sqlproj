@@ -87,7 +87,7 @@
     <Build Include="dbo\Tables\ValidPricePlanComponent.sql" />
     <Build Include="dbo\Tables\ValidPreferenceType.sql" />
     <Build Include="dbo\Tables\PositionFulfillment.sql" />
-    <Build Include="dbo\Tables\ChargeLines.sql" />
+    <Build Include="dbo\Tables\ChargeLine.sql" />
     <Build Include="dbo\Tables\PricingPlanAssignment.sql" />
     <Build Include="dbo\Tables\UserPreference.sql" />
     <Build Include="dbo\Tables\TimesheetEntry.sql" />
@@ -301,7 +301,7 @@
     <Build Include="dbo\Tables\WorkEffortInventoryProduced.sql" />
     <Build Include="dbo\Tables\PaymentApplication.sql" />
     <Build Include="dbo\Tables\AgreementItemType.sql" />
-    <Build Include="dbo\Tables\CapableModels.sql" />
+    <Build Include="dbo\Tables\CapableModel.sql" />
     <Build Include="dbo\Tables\WorkEffortDeliverableProduced.sql" />
     <Build Include="dbo\Tables\InvoicePaymentTermSet.sql" />
     <Build Include="dbo\Tables\AgreementPartyRole.sql" />
