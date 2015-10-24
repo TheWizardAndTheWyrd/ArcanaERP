@@ -2,13 +2,10 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.Application
 {
-    public interface IConfigurationItemTypeConfigurationOption
+    public interface IConfigurationItemTypeConfigurationOption : Lambda.Interfaces.IBaseErpModel,
+                                                                 Lambda.Interfaces.IBaseErpModelConfigurationItem,
+                                                                 Lambda.Interfaces.IBaseErpModelIsDefault
     {
-        int Id { get; set; }
-        int? ConfigurationItemTypeId { get; set; }
-        int? ConfigurationOptionId { get; set; }
-        bool? IsDefault { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

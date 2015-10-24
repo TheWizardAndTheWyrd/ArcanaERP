@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Contact")]
-    public partial class Contact : IContact, Interfaces.IBaseErpModel
+    public partial class Contact : IContact
     {
         public int Id { get; set; }
 

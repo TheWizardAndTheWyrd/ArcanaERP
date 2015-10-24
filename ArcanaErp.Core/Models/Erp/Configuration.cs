@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Configuration")]
-    public partial class Configuration : IConfiguration, Interfaces.IBaseErpModel
+    public partial class Configuration : IConfiguration
     {
         public int Id { get; set; }
 
@@ -20,9 +20,9 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public bool? Active { get; set; }
+        public bool Active { get; set; }
 
-        public bool? IsTemplateText { get; set; }
+        public bool IsTemplateText { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

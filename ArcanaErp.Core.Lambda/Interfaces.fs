@@ -317,3 +317,60 @@ module Interfaces =
 
     type IBaseErpModelTaxable =
         abstract member Taxable : bool with get, set
+
+    type IBaseErpModelEmail =
+        abstract member Email : string with get, set
+
+    type IBaseErpModelComment =
+        abstract member CommentorName : string with get, set
+        abstract member Comment1 : string with get, set
+        abstract member CommentedRecordId : int with get, set
+        abstract member CommentedRecordType : string with get, set
+
+    type IBaseErpModelApproved =
+        abstract member Approved : bool with get, set
+        abstract member ApprovedAt : DateTime with get, set
+
+    type IBaseErpModelUserId =
+        abstract member UserId : int with get, set
+
+    type IBaseErpModelPartyTraffic =
+        abstract member PartyIdFrom : int with get, set
+        abstract member PartyIdTo : int with get, set
+
+    type IBaseErpModelContactMechanismTraffic =
+        abstract member FromContactMechanismId : int with get, set
+        abstract member FromContactMechanismType : string with get, set
+        abstract member ToContactMechanismId : int with get, set
+        abstract member ToContactMechanismType : string with get, set
+
+    type IBaseErpModelNotes =
+        abstract member Notes : string with get, set
+
+    type IBaseErpModelCaseId =
+        abstract member CaseId : int with get, set
+
+    type IBaseErpModelActive =
+        abstract member Active : bool with get, set
+
+    type IBaseErpModelIsTemplateText =
+        abstract member IsTemplateText : bool with get, set
+
+    type IBaseErpModelConfigurationItem =
+        abstract member ConfigurationItemTypeId : int with get, set
+        abstract member ConfigurationOptionId : int with get, set
+
+    type IBaseErpModelConfigurationId =
+        abstract member ConfigurationId : int with get, set
+
+    type IBaseErpModelConfigurationItemType =
+        abstract member Precedence : int with get, set
+        abstract member AllowUserDefinedOption : bool with get, set
+        abstract member IsMultiOptional : bool with get, set
+
+    type IBaseErpModelIsDefault =
+        abstract member IsDefault : bool with get, set
+
+    type IBaseErpModelConfigurationOption =
+        abstract member Value : string with get, set
+        abstract member UserDefined : bool with get, set

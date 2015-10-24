@@ -3,8 +3,8 @@
     [Description]        VARCHAR (255) NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
     [Value]              VARCHAR (255) NULL,
-    [Comment]            TEXT          NULL,
-    [UserDefined]       BIT           DEFAULT ('f') NULL,
+    [Comments]           TEXT          NULL,
+    [UserDefined]        BIT           DEFAULT ('f') NULL,
     [CreatedAt]          DATETIME      NOT NULL,
     [UpdatedAt]          DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

@@ -9,15 +9,15 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class ConfigurationItem : IConfigurationItem, Interfaces.IBaseErpModel
+    public partial class ConfigurationItem : IConfigurationItem
     {
         public int Id { get; set; }
 
-        public int? ConfigurationId { get; set; }
+        public int ConfigurationId { get; set; }
 
-        public int? ConfigurationItemTypeId { get; set; }
+        public int ConfigurationItemTypeId { get; set; }
 
-        public int? ConfigurationOptionId { get; set; }
+        public int ConfigurationOptionId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

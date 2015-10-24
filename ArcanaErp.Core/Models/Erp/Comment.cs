@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.ContentManagementSystem;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class Comment : Interfaces.IBaseErpModel
+    public partial class Comment : IComment
     {
         public int Id { get; set; }
 
@@ -20,13 +22,13 @@ namespace ArcanaErp.Core.Models.Erp
         [Column("Comment", TypeName = "text")]
         public string Comment1 { get; set; }
 
-        public int? Approved { get; set; }
+        public bool Approved { get; set; }
 
-        public DateTime? ApprovedAt { get; set; }
+        public DateTime ApprovedAt { get; set; }
 
-        public int? UserId { get; set; }
+        public int UserId { get; set; }
 
-        public int? CommentedRecordId { get; set; }
+        public int CommentedRecordId { get; set; }
 
         [StringLength(255)]
         public string CommentedRecordType { get; set; }

@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("ConfigurationOption")]
-    public partial class ConfigurationOption : IConfigurationOption, Interfaces.IBaseErpModel
+    public partial class ConfigurationOption : IConfigurationOption
     {
         public int Id { get; set; }
 
@@ -24,9 +24,9 @@ namespace ArcanaErp.Core.Models.Erp
         public string Value { get; set; }
 
         [Column(TypeName = "text")]
-        public string Comment { get; set; }
+        public string Comments { get; set; }
 
-        public bool? UserDefined { get; set; }
+        public bool UserDefined { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

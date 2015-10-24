@@ -10,15 +10,15 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("ConfigurationItemTypeConfigurationOption")]
-    public partial class ConfigurationItemTypeConfigurationOption : IConfigurationItemTypeConfigurationOption, Interfaces.IBaseErpModel
+    public partial class ConfigurationItemTypeConfigurationOption : IConfigurationItemTypeConfigurationOption
     {
         public int Id { get; set; }
 
-        public int? ConfigurationItemTypeId { get; set; }
+        public int ConfigurationItemTypeId { get; set; }
 
-        public int? ConfigurationOptionId { get; set; }
+        public int ConfigurationOptionId { get; set; }
 
-        public bool? IsDefault { get; set; }
+        public bool IsDefault { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

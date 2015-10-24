@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.CommunicationEvents;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,15 +9,15 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class CommunicationEventStatus : Interfaces.IBaseErpModel
+    public partial class CommunicationEventStatus : ICommunicationEventStatus
     {
         public int Id { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

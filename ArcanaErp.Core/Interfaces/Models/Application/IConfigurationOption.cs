@@ -2,15 +2,12 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.Application
 {
-    public interface IConfigurationOption
+    public interface IConfigurationOption : Lambda.Interfaces.IBaseErpModel,
+                                            Lambda.Interfaces.IBaseErpModelDescription,
+                                            Lambda.Interfaces.IBaseErpModelInternalId,
+                                            Lambda.Interfaces.IBaseErpModelComments,
+                                            Lambda.Interfaces.IBaseErpModelConfigurationOption
     {
-        int Id { get; set; }
-        string Description { get; set; }
-        string InternalIdentifier { get; set; }
-        string Value { get; set; }
-        string Comment { get; set; }
-        bool? UserDefined { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.CommunicationEvents;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,38 +10,38 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CommunicationEvent")]
-    public partial class CommunicationEvent : Interfaces.IBaseErpModel
+    public partial class CommunicationEvent : ICommunicationEvent
     {
         public int Id { get; set; }
 
-        public int? FromContactMechanismId { get; set; }
+        public int FromContactMechanismId { get; set; }
 
         [StringLength(255)]
         public string FromContactMechanismType { get; set; }
 
-        public int? ToContactMechanismId { get; set; }
+        public int ToContactMechanismId { get; set; }
 
         [StringLength(255)]
         public string ToContactMechanismType { get; set; }
 
-        public int? RoleTypeIdFrom { get; set; }
+        public int RoleTypeIdFrom { get; set; }
 
-        public int? RoleTypeIdTo { get; set; }
+        public int RoleTypeIdTo { get; set; }
 
-        public int? PartyIdFrom { get; set; }
+        public int PartyIdFrom { get; set; }
 
-        public int? PartyIdTo { get; set; }
+        public int PartyIdTo { get; set; }
 
         [StringLength(255)]
         public string ShortDescription { get; set; }
 
-        public int? StatusTypeId { get; set; }
+        public int StatusTypeId { get; set; }
 
-        public int? CaseId { get; set; }
+        public int CaseId { get; set; }
 
-        public DateTime? DateTimeStarted { get; set; }
+        public DateTime StartTime { get; set; }
 
-        public DateTime? DateTimeEnded { get; set; }
+        public DateTime EndTime { get; set; }
 
         [StringLength(255)]
         public string Notes { get; set; }
