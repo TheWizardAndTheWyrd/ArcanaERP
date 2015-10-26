@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Currency")]
-    public partial class Currency : ICurrency, Interfaces.IBaseErpModel
+    public partial class Currency : ICurrency
     {
         public int Id { get; set; }
 
@@ -38,9 +38,9 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string PostFixLabel { get; set; }
 
-        public DateTime? IntroductionDate { get; set; }
+        public DateTime IntroductionDate { get; set; }
 
-        public DateTime? ExpirationDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.ContentManagementSystem;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Content")]
-    public partial class Content : Interfaces.IBaseErpModel
+    public partial class Content : IContent
     {
         public int Id { get; set; }
 
@@ -27,16 +29,16 @@ namespace ArcanaErp.Core.Models.Erp
         [Column(TypeName = "text")]
         public string BodyHtml { get; set; }
 
-        public int? CreatedById { get; set; }
+        public int CreatedById { get; set; }
 
-        public int? UpdatedById { get; set; }
+        public int UpdatedById { get; set; }
 
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public bool? DisplayTitle { get; set; }
+        public bool DisplayTitle { get; set; }
 
-        public int? Version { get; set; }
+        public int Version { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

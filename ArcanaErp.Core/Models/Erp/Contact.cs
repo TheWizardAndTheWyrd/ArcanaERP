@@ -14,12 +14,12 @@ namespace ArcanaErp.Core.Models.Erp
     {
         public int Id { get; set; }
 
-        public int? ContactMechanismId { get; set; }
+        public int ContactMechanismId { get; set; }
 
         [StringLength(255)]
         public string ContactMechanismType { get; set; }
 
-        public bool? IsPrimary { get; set; }
+        public bool IsPrimary { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
@@ -34,6 +34,6 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ContactRecordType { get; set; }
 
-        public int? ContactRecordId { get; set; }
+        public int ContactRecordId { get; set; }
     }
 }

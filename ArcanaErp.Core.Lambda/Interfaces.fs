@@ -374,3 +374,48 @@ module Interfaces =
     type IBaseErpModelConfigurationOption =
         abstract member Value : string with get, set
         abstract member UserDefined : bool with get, set
+
+    type IBaseErpModelContact =
+        abstract member IsPrimary : bool with get, set
+        abstract member ContactRecordType : string with get, set
+        abstract member ContactRecordId : int with get, set
+
+    type IBaseErpModelCreatedById =
+        abstract member CreatedById : int with get, set
+
+    type IBaseErpModelUpdatedById =
+        abstract member UpdatedById : int with get, set
+
+    type IBaseErpModelContentBlock =
+        abstract member PermaLink : string with get, set
+        abstract member ExcerptHtml : string with get, set
+        abstract member BodyHtml : string with get, set
+        abstract member DisplayTitle : bool with get, set
+        abstract member Version : int with get, set
+
+    type IBaseErpModelContentId =
+        abstract member ContentId : int with get, set
+
+    type IBaseErpModelVersionedType =
+        abstract member VersionedType : string with get, set
+
+    type IBaseErpModelCreditCard =
+        abstract member CryptedPrivateCardNumber : string with get, set
+        abstract member CryptedPrivateCvc : string with get, set
+        abstract member ExpirationMonth : int with get, set
+        abstract member ExpirationYear : int with get, set
+        abstract member NameOnCard : string with get, set
+        abstract member CardType : string with get, set
+        abstract member CreditCardToken : string with get, set
+
+    type IBaseErpModelPostalAddressId =
+        abstract member PostalAddressId : int with get, set
+
+    type IBaseErpModelCreditCardAccountPuposeId =
+        abstract member CreditCardAccountPuposeId : int with get, set
+
+    type IBaseErpModelCreditCardAccountId =
+        abstract member CreditCardAccountId : int with get, set
+
+    type IBaseErpModelCreditCardId =
+        abstract member CreditCardId : int with get, set
