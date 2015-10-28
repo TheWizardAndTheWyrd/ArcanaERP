@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FileAssetHolder")]
-    public partial class FileAssetHolder : Interfaces.IBaseErpModel
+    public partial class FileAssetHolder : IFileAssetHolder
     {
         public int Id { get; set; }
 
-        public int? FileAssetId { get; set; }
+        public int FileAssetId { get; set; }
 
-        public int? FileAssetHolderId { get; set; }
+        public int FileAssetHolderId { get; set; }
 
         [StringLength(255)]
         public string FileAssetHolderType { get; set; }
