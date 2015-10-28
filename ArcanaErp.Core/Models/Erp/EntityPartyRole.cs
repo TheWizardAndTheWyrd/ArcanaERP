@@ -10,15 +10,15 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("EntityPartyRole")]
-    public partial class EntityPartyRole : IEntityPartyRole, Interfaces.IBaseErpModel
+    public partial class EntityPartyRole : IEntityPartyRole
     {
         public int Id { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? RoleTypeId { get; set; }
+        public int RoleTypeId { get; set; }
 
-        public int? EntityRecordId { get; set; }
+        public int EntityRecordId { get; set; }
 
         [StringLength(255)]
         public string EntityRecordType { get; set; }

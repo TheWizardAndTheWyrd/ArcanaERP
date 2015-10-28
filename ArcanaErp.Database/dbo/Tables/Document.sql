@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [dbo].[Document] (
     [Id]                 INT           IDENTITY (1, 1) NOT NULL,
     [ExternalIdentifier] VARCHAR (255) NULL,
+	[ExternalIdSource]   VARCHAR (255) NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
     [Description]        VARCHAR (255) NULL,
     [DocumentDate]       DATETIME      NULL,

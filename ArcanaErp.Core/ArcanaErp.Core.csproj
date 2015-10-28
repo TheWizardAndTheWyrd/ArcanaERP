@@ -119,6 +119,7 @@
     <Compile Include="Interfaces\Models\Application\IConfigurationItemType.cs" />
     <Compile Include="Interfaces\Models\Application\IConfigurationItemTypeConfigurationOption.cs" />
     <Compile Include="Interfaces\Models\Application\IConfigurationOption.cs" />
+    <Compile Include="Interfaces\Models\Application\IDelayedJob.cs" />
     <Compile Include="Interfaces\Models\Application\IDesktopApplication.cs" />
     <Compile Include="Interfaces\Models\Application\IJobTracker.cs" />
     <Compile Include="Interfaces\Models\Application\IPreference.cs" />
@@ -212,6 +213,7 @@
     <Compile Include="Interfaces\Models\ContentManagementSystem\IBlog.cs" />
     <Compile Include="Interfaces\Models\ContentManagementSystem\IComment.cs" />
     <Compile Include="Interfaces\Models\ContentManagementSystem\IContent.cs" />
+    <Compile Include="Interfaces\Models\ContentManagementSystem\IContentVersion.cs" />
     <Compile Include="Interfaces\Models\ContentManagementSystem\IDocument.cs" />
     <Compile Include="Interfaces\Models\ContentManagementSystem\IDocumentedContent.cs" />
     <Compile Include="Interfaces\Models\ContentManagementSystem\IDocumentedItem.cs" />
@@ -299,6 +301,7 @@
     <Compile Include="Interfaces\Models\Search\Extensions\IWebsiteInquiry.cs" />
     <Compile Include="Interfaces\Models\Search\IPartySearchFact.cs" />
     <Compile Include="Interfaces\Models\TechServices\ICapableModel.cs" />
+    <Compile Include="Interfaces\Models\TechServices\IFileAssetHolder.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\Extensions\IMoney.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\TransactionsAndAccounts\IBaseTransactionContext.cs" />
@@ -364,6 +367,7 @@
     <Compile Include="Interfaces\Models\WorkEffort\ICandidateSubmission.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverable.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IDeliverableType.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\IExperience.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IGoodType.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IPartyFixedAssetAssignment.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IPartyResourceAvailability.cs" />

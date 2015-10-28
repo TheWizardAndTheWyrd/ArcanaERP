@@ -10,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("DescriptiveAsset")]
-    public partial class DescriptiveAsset : IDescriptiveAsset, Interfaces.IBaseErpModel
+    public partial class DescriptiveAsset : IDescriptiveAsset
     {
         public int Id { get; set; }
 
-        public int? ViewTypeId { get; set; }
+        public int ViewTypeId { get; set; }
 
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
@@ -28,7 +28,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ExternalIdSource { get; set; }
 
-        public int? DescribedRecordId { get; set; }
+        public int DescribedRecordId { get; set; }
 
         [StringLength(255)]
         public string DescribedRecordType { get; set; }

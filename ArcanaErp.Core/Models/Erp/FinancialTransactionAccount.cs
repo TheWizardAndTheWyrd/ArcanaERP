@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,28 +10,28 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FinancialTransactionAccount")]
-    public partial class FinancialTransactionAccount : Interfaces.IBaseErpModel
+    public partial class FinancialTransactionAccount : IFinancialTransactionAccount
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string AccountNumber { get; set; }
 
-        public int? AgreementId { get; set; }
+        public int AgreementId { get; set; }
 
-        public int? BalanceId { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? BalanceDate { get; set; }
-
-        public bool? CalculateBalance { get; set; }
-
-        public int? PaymentDueId { get; set; }
+        public int BalanceId { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? DueDate { get; set; }
+        public DateTime BalanceDate { get; set; }
 
-        public int? FinancialAccountId { get; set; }
+        public bool CalculateBalance { get; set; }
+
+        public int PaymentDueId { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime DueDate { get; set; }
+
+        public int FinancialAccountId { get; set; }
 
         [StringLength(255)]
         public string FinancialAccountType { get; set; }

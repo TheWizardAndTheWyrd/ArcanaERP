@@ -2,16 +2,12 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IFacility
+    public interface IFacility : Lambda.Interfaces.IBaseErpModel,
+                                 Lambda.Interfaces.IBaseErpModelDescription,
+                                 Lambda.Interfaces.IBaseErpModelInternalId,
+                                 Lambda.Interfaces.IBaseErpModelPostalAddressId,
+                                 Lambda.Interfaces.IBaseErpModelFacility
     {
-        int Id { get; set; }
-        string Description { get; set; }
-        string InternalIdentifier { get; set; }
-        int? FacilityTypeId { get; set; }
-        int? PostalAddressId { get; set; }
-        int? FacilityRecordId { get; set; }
-        int? FacilityRecordType { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

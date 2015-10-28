@@ -70,7 +70,6 @@ module Interfaces =
         abstract member AgreementDate : DateTime with get, set
 
     type IBaseErpModelAgreementItem =
-        abstract member AgreementId : int with get, set
         abstract member AgreementItemTypeId : int with get, set
         abstract member AgreementItemValue : string with get, set
         abstract member AgreementItemRuleString : string with get, set
@@ -419,3 +418,109 @@ module Interfaces =
 
     type IBaseErpModelCreditCardId =
         abstract member CreditCardId : int with get, set
+
+    type IBaseErpModelCurrency =
+        abstract member Definition : string with get, set
+        abstract member NumericCode : string with get, set
+        abstract member MajorUnitSymbol : string with get, set
+        abstract member MinorUnitSymbol : string with get, set
+        abstract member RatioOfMinorUnitToMajorUnit : string with get, set
+        abstract member PostFixLabel : string with get, set
+
+    type IBaseErpModelIntroductionAndExpirationSpan =
+        abstract member IntroductionDate : DateTime with get, set
+        abstract member ExpirationDate : DateTime with get, set
+
+    type IBaseErpModelPriority =
+        abstract member Priority : int with get, set
+
+    type IBaseErpModelDelayedJob =
+        abstract member Attempts : int with get, set
+        abstract member Handler : string with get, set
+        abstract member LastError : string with get, set
+        abstract member RunAt : DateTime with get, set
+        abstract member LockedAt : DateTime with get, set
+        abstract member FailedAt : DateTime with get, set
+        abstract member LockedBy : string with get, set
+        abstract member Queue : string with get, set
+
+    type IBaseErpModelDeliverable =
+        abstract member DeliverableRecordType : string with get, set
+        abstract member DeliverableRecordId : int with get, set
+
+    type IBaseErpModelViewTypeId =
+        abstract member ViewTypeId : int with get, set
+
+    type IBaseErpModelDescribedRecord =
+        abstract member DescribedRecordId : int with get, set
+        abstract member DescribedRecordType : string with get, set
+
+    type IBaseErpModelDocument =
+        abstract member DocumentDate : DateTime with get, set
+        abstract member DocumentRecordId : int with get, set
+        abstract member DocumentRecordType : string with get, set
+        abstract member DocumentTypeId : int with get, set
+
+    type IBaseErpModelDocumentedItem =
+        abstract member DocumentedClass : string with get, set
+        abstract member DocumentedContentId : int with get, set
+        abstract member OnlineDocumentSectionId : int with get, set
+
+    type IBaseErpModelEmailAddress =
+        abstract member EmailAddressString : string with get, set
+
+    type IBaseErpModelEntityRecordId =
+        abstract member EntityRecordId : int with get, set
+
+    type IBaseErpModelEntityRecordType =
+        abstract member EntityRecordType : string with get, set
+
+    type IBaseErpModelFacility =
+        abstract member FacilityTypeId : int with get, set
+        abstract member FacilityRecordId : int with get, set
+        abstract member FacilityRecordType : string with get, set
+
+    type IBaseErpModelFee =
+        abstract member FeeRecordId : int with get, set
+        abstract member FeeRecordType : string with get, set
+        abstract member FeeTypeId : int with get, set
+
+    type IBaseErpModelFileAsset =
+        abstract member Directory : string with get, set
+        abstract member DataFileName : string with get, set
+        abstract member DataContentType : string with get, set
+        abstract member DataFileSize : int with get, set
+        abstract member DataUpdatedAt : DateTime with get, set
+
+    type IBaseErpModelDimensions =
+        abstract member Height : string with get, set
+        abstract member Width : string with get, set
+
+    type IBaseErpModelScopedBy =
+        abstract member ScopedBy : string with get, set
+
+    type IBaseErpModelFileAssetHolder =
+        abstract member FileAssetId : int with get, set
+        abstract member FileAssetHolderId : int with get, set
+        abstract member FileAssetHolderType : string with get, set
+
+    type IBaseErpModelApplyDate =
+        abstract member ApplyDate : DateTime with get, set
+
+    type IBaseErpModelFinancialTransactionAccount =
+        abstract member AccountNumber : string with get, set
+        abstract member BalanceDate : DateTime with get, set
+        abstract member CalculateBalance : bool with get, set
+        abstract member PaymentDueId : int with get, set
+        abstract member DueDate : DateTime with get, set
+
+    type IBaseErpModelBalanceId =
+        abstract member BalanceId : int with get, set
+
+    type IBaseErpModelFinancialAccountId =
+        abstract member FinancialAccountId : int with get, set
+
+    type IBaseErpModelFinancialAccountType =
+        abstract member FinancialAccountType : string with get, set
+
+

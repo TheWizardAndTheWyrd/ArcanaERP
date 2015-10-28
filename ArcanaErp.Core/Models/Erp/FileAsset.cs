@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FileAsset")]
-    public partial class FileAsset : Interfaces.IBaseErpModel
+    public partial class FileAsset : IFileAsset
     {
         public int Id { get; set; }
 
@@ -27,9 +29,9 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string DataContentType { get; set; }
 
-        public int? DataFileSize { get; set; }
+        public int DataFileSize { get; set; }
 
-        public DateTime? DataUpdatedAt { get; set; }
+        public DateTime DataUpdatedAt { get; set; }
 
         [StringLength(255)]
         public string Width { get; set; }

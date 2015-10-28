@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Facility")]
-    public partial class Facility : IFacility, Interfaces.IBaseErpModel
+    public partial class Facility : IFacility
     {
         public int Id { get; set; }
 
@@ -20,13 +20,13 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string InternalIdentifier { get; set; }
 
-        public int? FacilityTypeId { get; set; }
+        public int FacilityTypeId { get; set; }
 
-        public int? PostalAddressId { get; set; }
+        public int PostalAddressId { get; set; }
 
-        public int? FacilityRecordId { get; set; }
+        public int FacilityRecordId { get; set; }
 
-        public int? FacilityRecordType { get; set; }
+        public string FacilityRecordType { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

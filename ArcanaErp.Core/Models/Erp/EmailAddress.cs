@@ -10,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("EmailAddress")]
-    public partial class EmailAddress : IEmailAddress, Interfaces.IBaseErpModel
+    public partial class EmailAddress : IEmailAddress
     {
         public int Id { get; set; }
 
         [Column("EmailAddress")]
         [StringLength(255)]
-        public string EmailAddress1 { get; set; }
+        public string EmailAddressString { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

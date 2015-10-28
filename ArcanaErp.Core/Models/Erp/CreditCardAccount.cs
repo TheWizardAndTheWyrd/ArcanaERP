@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CreditCardAccount")]
-    public partial class CreditCardAccount : Interfaces.IBaseErpModel
+    public partial class CreditCardAccount : ICreditCardAccount
     {
         public int Id { get; set; }
 
-        public int? CreditCardAccountPuposeId { get; set; }
+        public int CreditCardAccountPuposeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

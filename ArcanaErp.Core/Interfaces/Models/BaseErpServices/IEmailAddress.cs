@@ -2,12 +2,10 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IEmailAddress
+    public interface IEmailAddress : Lambda.Interfaces.IBaseErpModel,
+                                     Lambda.Interfaces.IBaseErpModelDescription,
+                                     Lambda.Interfaces.IBaseErpModelEmailAddress
     {
-        int Id { get; set; }
-        string EmailAddress1 { get; set; }
-        string Description { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

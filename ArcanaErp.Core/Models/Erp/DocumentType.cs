@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.ContentManagementSystem;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,12 +10,14 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("DocumentType")]
-    public partial class DocumentType : Interfaces.IBaseErpModel
+    public partial class DocumentType : IDocumentType
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
+
+        public string ExternalIdSource { get; set; }
 
         [StringLength(255)]
         public string InternalIdentifier { get; set; }

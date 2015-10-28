@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("CreditCard")]
-    public partial class CreditCard : Interfaces.IBaseErpModel
+    public partial class CreditCard : ICreditCard
     {
         public int Id { get; set; }
 
@@ -18,9 +20,9 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string CryptedPrivateCvc { get; set; }
 
-        public int? ExpirationMonth { get; set; }
+        public int ExpirationMonth { get; set; }
 
-        public int? ExpirationYear { get; set; }
+        public int ExpirationYear { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
@@ -31,7 +33,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string CardType { get; set; }
 
-        public int? PostalAddressId { get; set; }
+        public int PostalAddressId { get; set; }
 
         [StringLength(255)]
         public string CreditCardToken { get; set; }

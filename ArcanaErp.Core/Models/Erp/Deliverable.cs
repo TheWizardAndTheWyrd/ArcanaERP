@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Deliverable")]
-    public partial class Deliverable : Interfaces.IBaseErpModel
+    public partial class Deliverable : IDeliverable
     {
         public int Id { get; set; }
 
@@ -30,7 +32,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string DeliverableRecordType { get; set; }
 
-        public int? DeliverableRecordId { get; set; }
+        public int DeliverableRecordId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Experience")]
-    public partial class Experience : Interfaces.IBaseErpModel
+    public partial class Experience : IExperience
     {
         public int Id { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FeeType")]
-    public partial class FeeType : Interfaces.IBaseErpModel
+    public partial class FeeType : IFeeType
     {
         public int Id { get; set; }
 
@@ -27,11 +29,11 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ExternalIdSource { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
