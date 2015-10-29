@@ -358,6 +358,7 @@
     <Compile Include="Interfaces\Models\TechServices\IUser.cs" />
     <Compile Include="Interfaces\Models\TechServices\IUserDefinedData.cs" />
     <Compile Include="Interfaces\Models\TechServices\IUserDefinedField.cs" />
+    <Compile Include="Interfaces\Models\TransactionsAndAccounts\IFinancialTransactionAssignment.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\Extensions\IParty.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IAssociatedTransportationRoute.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IAssociatedWorkEffort.cs" />

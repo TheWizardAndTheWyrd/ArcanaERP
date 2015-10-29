@@ -523,4 +523,9 @@ module Interfaces =
     type IBaseErpModelFinancialAccountType =
         abstract member FinancialAccountType : string with get, set
 
+    type IBaseErpModelFinancialTransactionId =
+        abstract member FinancialTransactionId : int with get, set
 
+    type IBaseErpModelFinancialTransactionAssignment =
+        abstract member FinancialTransactionRecordId : int with get, set
+        abstract member FinancialTransactionRecordType : string with get, set
