@@ -2,18 +2,15 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IFixedAsset
+    public interface IFixedAsset : Lambda.Interfaces.IBaseErpModel,
+                                   Lambda.Interfaces.IBaseErpModelDescription,
+                                   Lambda.Interfaces.IBaseErpModelComments,
+                                   Lambda.Interfaces.IBaseErpModelInternalId,
+                                   Lambda.Interfaces.IBaseErpModelExternalId,
+                                   Lambda.Interfaces.IBaseErpModelFixedAssetTypeId,
+                                   Lambda.Interfaces.IBaseErpModelFixedAsset
+                                
     {
-        int Id { get; set; }
-        int? FixedAssetTypeId { get; set; }
-        string Description { get; set; }
-        string Comments { get; set; }
-        string InternalIdentifier { get; set; }
-        string ExternalIdentifier { get; set; }
-        string ExternalIdSource { get; set; }
-        string FixedAssetRecordType { get; set; }
-        int? FixedAssetRecordId { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

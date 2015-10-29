@@ -10,15 +10,15 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FixedAssetPartyRole")]
-    public partial class FixedAssetPartyRole : IFixedAssetPartyRole, Interfaces.IBaseErpModel
+    public partial class FixedAssetPartyRole : IFixedAssetPartyRole
     {
         public int Id { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? FixedAssetId { get; set; }
+        public int FixedAssetId { get; set; }
 
-        public int? RoleTypeId { get; set; }
+        public int RoleTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

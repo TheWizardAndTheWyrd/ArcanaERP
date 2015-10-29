@@ -10,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FixedAsset")]
-    public partial class FixedAsset : IFixedAsset, Interfaces.IBaseErpModel
+    public partial class FixedAsset : IFixedAsset
     {
         public int Id { get; set; }
 
-        public int? FixedAssetTypeId { get; set; }
+        public int FixedAssetTypeId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
@@ -34,7 +34,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string FixedAssetRecordType { get; set; }
 
-        public int? FixedAssetRecordId { get; set; }
+        public int FixedAssetRecordId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

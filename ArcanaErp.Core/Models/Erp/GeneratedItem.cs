@@ -9,16 +9,16 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class GeneratedItem : IGeneratedItem, Interfaces.IBaseErpModel
+    public partial class GeneratedItem : IGeneratedItem
     {
         public int Id { get; set; }
 
-        public int? GeneratedById { get; set; }
+        public int GeneratedById { get; set; }
 
         [StringLength(255)]
         public string GeneratedByType { get; set; }
 
-        public int? GeneratedRecordId { get; set; }
+        public int GeneratedRecordId { get; set; }
 
         [StringLength(255)]
         public string GeneratedRecordType { get; set; }

@@ -529,3 +529,26 @@ module Interfaces =
     type IBaseErpModelFinancialTransactionAssignment =
         abstract member FinancialTransactionRecordId : int with get, set
         abstract member FinancialTransactionRecordType : string with get, set
+
+    type IBaseErpModelFixedAssetTypeId =
+        abstract member FixedAssetTypeId : int with get, set
+
+    type IBaseErpModelFixedAsset =
+        abstract member FixedAssetRecordType : string with get, set
+        abstract member FixedAssetRecordId : int with get, set
+
+    type IBaseErpModelFixedAssetId =
+        abstract member FixedAssetId : int with get, set
+
+    type IBaseErpModelGeneratedItem =
+        abstract member GeneratedById : int with get, set
+        abstract member GeneratedByType : string with get, set
+        abstract member GeneratedRecordId : int with get, set
+        abstract member GeneratedRecordType : string with get, set
+
+    type IBaseErpModelGeoCountry =
+        abstract member IsoCode2 : string with get, set
+        abstract member IsoCode3 : string with get, set
+    
+    type IBaseErpModelShouldDisplay =
+        abstract member Display : bool with get, set

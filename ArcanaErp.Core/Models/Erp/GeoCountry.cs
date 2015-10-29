@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("GeoCountry")]
-    public partial class GeoCountry : IGeoCountry, Interfaces.IBaseErpModel
+    public partial class GeoCountry : IGeoCountry
     {
         public int Id { get; set; }
 
@@ -23,12 +23,14 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string IsoCode3 { get; set; }
 
-        public bool? Display { get; set; }
-
-        public int? ExternalId { get; set; }
+        public bool Display { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
+
+        public string ExternalIdentifier { get; set; }
+
+        public string ExternalIdSource { get; set; }
     }
 }
