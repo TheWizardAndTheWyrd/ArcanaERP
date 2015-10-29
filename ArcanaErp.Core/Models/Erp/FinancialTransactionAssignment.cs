@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TransactionsAndAccounts;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("FinancialTransactionAssignment")]
-    public partial class FinancialTransactionAssignment : Interfaces.IBaseErpModel
+    public partial class FinancialTransactionAssignment : IFinancialTransactionAssignment
     {
         public int Id { get; set; }
 
-        public int? FinancialTransactionId { get; set; }
+        public int FinancialTransactionId { get; set; }
 
-        public int? FinancialTransactionRecordId { get; set; }
+        public int FinancialTransactionRecordId { get; set; }
 
         [StringLength(255)]
         public string FinancialTransactionRecordType { get; set; }
