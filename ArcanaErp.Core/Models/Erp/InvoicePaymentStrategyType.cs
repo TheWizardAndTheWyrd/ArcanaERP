@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InvoicePaymentStrategyType")]
-    public partial class InvoicePaymentStrategyType : Interfaces.IBaseErpModel
+    public partial class InvoicePaymentStrategyType : IInvoicePaymentStrategyType
     {
         public int Id { get; set; }
 

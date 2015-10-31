@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,14 +10,14 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InvoicePartyRole")]
-    public partial class InvoicePartyRole : Interfaces.IBaseErpModel
+    public partial class InvoicePartyRole : IInvoicePartyRole
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? RoleTypeId { get; set; }
+        public int RoleTypeId { get; set; }
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
@@ -23,9 +25,9 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ExternalIdSource { get; set; }
 
-        public int? InvoiceId { get; set; }
+        public int InvoiceId { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InvoicePaymentTermSet")]
-    public partial class InvoicePaymentTermSet : Interfaces.IBaseErpModel
+    public partial class InvoicePaymentTermSet : IInvoicePaymentTermSet
     {
         public int Id { get; set; }
 
-        public int? InvoiceId { get; set; }
+        public int InvoiceId { get; set; }
 
-        public int? InvoiceItemId { get; set; }
+        public int InvoiceItemId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
