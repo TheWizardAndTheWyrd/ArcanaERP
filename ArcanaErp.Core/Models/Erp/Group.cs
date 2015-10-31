@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -7,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class Group : Interfaces.IBaseErpModel
+    public partial class Group : IGroup
     {
         public int Id { get; set; }
 

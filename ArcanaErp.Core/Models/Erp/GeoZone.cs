@@ -10,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("GeoZone")]
-    public partial class GeoZone : IGeoZone, Interfaces.IBaseErpModel
+    public partial class GeoZone : IGeoZone
     {
         public int Id { get; set; }
 
-        public int? GeoCountryId { get; set; }
+        public int GeoCountryId { get; set; }
 
         [StringLength(255)]
         public string ZoneCode { get; set; }

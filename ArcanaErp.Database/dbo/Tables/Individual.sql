@@ -21,7 +21,7 @@
     [EncryptedSsn]              VARCHAR (255)  NULL,
     [TempSsn]                   VARCHAR (255)  NULL,
     [Salt]                      VARCHAR (255)  NULL,
-    [SsnLastfour]               VARCHAR (255)  NULL,
+    [SsnLastFour]               VARCHAR (255)  NULL,
     [CreatedAt]                 DATETIME       NOT NULL,
     [UpdatedAt]                 DATETIME       NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

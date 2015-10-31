@@ -2,12 +2,10 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IGeoZone
+    public interface IGeoZone : Lambda.Interfaces.IBaseErpModel,
+                                Lambda.Interfaces.IBaseErpModelGeoCountryId,
+                                Lambda.Interfaces.IBaseErpModelGeoZone
     {
-        int Id { get; set; }
-        int? GeoCountryId { get; set; }
-        string ZoneCode { get; set; }
-        string ZoneName { get; set; }
-        DateTime CreatedAt { get; set; }
+
     }
 }

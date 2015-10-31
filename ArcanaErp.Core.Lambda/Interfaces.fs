@@ -552,3 +552,75 @@ module Interfaces =
     
     type IBaseErpModelShouldDisplay =
         abstract member Display : bool with get, set
+
+    type IBaseErpModelGeoCountryId =
+        abstract member GeoCountryId : int with get, set
+
+    type IBaseErpModelGeoZone =
+        abstract member ZoneCode : string with get, set
+        abstract member ZoneName : string with get, set
+
+    type IBaseErpModelIndividual =
+        abstract member CurrentLastName : string with get, set
+        abstract member CurrentFirstName : string with get, set
+        abstract member CurrentMiddleName : string with get, set
+        abstract member CurrentPersonalTitle : string with get, set
+        abstract member CurrentSuffix : string with get, set
+        abstract member CurrentNickName : string with get, set
+        abstract member Gender : string with get, set
+        abstract member BirthDate : DateTime with get, set
+        abstract member Height : decimal with get, set
+        abstract member Weight : int with get, set
+        abstract member MothersMaidenName : string with get, set
+        abstract member MaritalStatus : string with get, set
+        abstract member SocialSecurityNumber : string with get, set
+        abstract member CurrentPassportNumber : int with get, set
+        abstract member CurrentPassportExpireDate : DateTime with get, set
+        abstract member TotalYearsWorkExperience : int with get, set
+
+    type IBaseErpModelSsn =
+        abstract member EncryptedSsn : string with get, set
+        abstract member TempSsn : string with get, set
+        abstract member SsnLastFour : string with get, set
+
+    type IBaseErpModelSalt =
+        abstract member Salt : string with get, set
+
+    type IBaseErpModelInventoryTransaction = 
+        abstract member Quantity : int with get, set
+
+    type IBaseErpModelInventoryEntryId =
+        abstract member InventoryEntryId : int with get, set
+
+    type IBaseErpModelUnitOfMeasurementId =
+        abstract member UnitOfMeasurementId : int with get, set
+
+    type IBaseErpModelInventoryEntryRecordId =
+        abstract member InventoryEntryRecordId : int with get, set
+
+    type IBaseErpModelInventoryEntry =
+        abstract member InventoryEntryRecordType : string with get, set
+        abstract member NumberAvailable : int with get, set
+        abstract member NumberSold : int with get, set
+        abstract member NumberInStock : int with get, set
+
+    type IBaseErpModelProductTypeId =
+        abstract member ProductTypeId : int with get, set
+
+    type IBaseErpModelSku =
+        abstract member Sku : string with get, set
+
+    type IBaseErpModelFacilityId =
+        abstract member FacilityId : int with get, set
+
+    type IBaseErpModelValidTimeSpan =
+        abstract member ValidFrom : DateTime with get, set
+        abstract member ValidThrough : DateTime with get, set
+
+    type IBaseErpModelInventoryEntryRelationshipTypeId =
+        abstract member InventoryEntryRelationshipTypeId : int with get, set
+
+    type IBaseErpModelInventoryEntryTraffic =
+        abstract member InventoryEntryIdFrom : int with get, set
+        abstract member InventoryEntryIdTo : int with get, set
+

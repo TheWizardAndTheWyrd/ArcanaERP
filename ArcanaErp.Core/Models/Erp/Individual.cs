@@ -10,11 +10,11 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Individual")]
-    public partial class Individual : IIndividual, Interfaces.IBaseErpModel
+    public partial class Individual : IIndividual
     {
         public int Id { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
         [StringLength(255)]
         public string CurrentLastName { get; set; }
@@ -38,11 +38,11 @@ namespace ArcanaErp.Core.Models.Erp
         public string Gender { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
-        public decimal? Height { get; set; }
+        public decimal Height { get; set; }
 
-        public int? Weight { get; set; }
+        public int Weight { get; set; }
 
         [StringLength(255)]
         public string MothersMaidenName { get; set; }
@@ -53,12 +53,12 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string SocialSecurityNumber { get; set; }
 
-        public int? CurrentPassportNumber { get; set; }
+        public int CurrentPassportNumber { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? CurrentPassportExpireDate { get; set; }
+        public DateTime CurrentPassportExpireDate { get; set; }
 
-        public int? TotalYearsWorkExperience { get; set; }
+        public int TotalYearsWorkExperience { get; set; }
 
         [StringLength(255)]
         public string Comments { get; set; }
@@ -73,7 +73,7 @@ namespace ArcanaErp.Core.Models.Erp
         public string Salt { get; set; }
 
         [StringLength(255)]
-        public string SsnLastfour { get; set; }
+        public string SsnLastFour { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
