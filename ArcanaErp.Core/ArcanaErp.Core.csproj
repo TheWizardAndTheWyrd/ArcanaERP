@@ -238,11 +238,13 @@
     <Compile Include="Interfaces\Models\Inventory\Extensions\IProductInstance.cs" />
     <Compile Include="Interfaces\Models\Inventory\Extensions\IProductType.cs" />
     <Compile Include="Interfaces\Models\Inventory\IFacility.cs" />
+    <Compile Include="Interfaces\Models\Inventory\IInventoryDropOffTransaction.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntry.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryLocation.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryRelationship.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryRelationshipType.cs" />
     <Compile Include="Interfaces\Models\Inventory\IInventoryEntryRoleType.cs" />
+    <Compile Include="Interfaces\Models\Inventory\IInventoryPickupTransaction.cs" />
     <Compile Include="Interfaces\Models\Inventory\IProductInstanceInventoryEntry.cs" />
     <Compile Include="Interfaces\Models\Invoicing\Extensions\IDocument.cs" />
     <Compile Include="Interfaces\Models\Invoicing\Extensions\IFinancialTransaction.cs" />
@@ -255,6 +257,7 @@
     <Compile Include="Interfaces\Models\Invoicing\IBillingContactMechanism.cs" />
     <Compile Include="Interfaces\Models\Invoicing\ICalculateBalanceStrategyType.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoice.cs" />
+    <Compile Include="Interfaces\Models\Invoicing\IInvoicedRecord.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoiceItem.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoiceItemType.cs" />
     <Compile Include="Interfaces\Models\Invoicing\IInvoicePartyRole.cs" />

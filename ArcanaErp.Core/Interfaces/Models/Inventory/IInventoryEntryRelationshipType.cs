@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ArcanaErp.Core.Interfaces.Models.Inventory
 {
-    public interface IInventoryEntryRelationshipType
+    public interface IInventoryEntryRelationshipType : Lambda.Interfaces.IBaseErpModel,
+                                                       Lambda.Interfaces.IBaseErpModelParentId,
+                                                       Lambda.Interfaces.IBaseErpModelLeftRightValues,
+                                                       Lambda.Interfaces.IBaseErpModelDescription,
+                                                       Lambda.Interfaces.IBaseErpModelComments,
+                                                       Lambda.Interfaces.IBaseErpModelInternalId,
+                                                       Lambda.Interfaces.IBaseErpModelExternalId
     {
     }
 }

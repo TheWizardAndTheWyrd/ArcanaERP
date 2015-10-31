@@ -4,7 +4,7 @@
     [Description]         VARCHAR (255) NULL,
     [Quantity]            INT           NULL,
     [UnitOfMeasurementId] INT           NULL,
-    [Comment]             TEXT          NULL,
+    [Comments]            TEXT          NULL,
     [InventoryEntryId]    INT           NULL,
     [CreatedAt]           DATETIME      NOT NULL,
     [UpdatedAt]           DATETIME      NOT NULL,

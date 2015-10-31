@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Inventory;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,30 +10,30 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InventoryEntryRelationship")]
-    public partial class InventoryEntryRelationship : Interfaces.IBaseErpModel
+    public partial class InventoryEntryRelationship : IInventoryEntryRelationship
     {
         public int Id { get; set; }
 
-        public int? InventoryEntryRelationshipTypeId { get; set; }
+        public int InventoryEntryRelationshipTypeId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? InventoryEntryIdFrom { get; set; }
+        public int InventoryEntryIdFrom { get; set; }
 
-        public int? InventoryEntryIdTo { get; set; }
+        public int InventoryEntryIdTo { get; set; }
 
-        public int? RoleTypeIdFrom { get; set; }
+        public int RoleTypeIdFrom { get; set; }
 
-        public int? RoleTypeIdTo { get; set; }
+        public int RoleTypeIdTo { get; set; }
 
-        public int? StatusTypeId { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? FromDate { get; set; }
+        public int StatusTypeId { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? ThroughDate { get; set; }
+        public DateTime FromDate { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime ThroughDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

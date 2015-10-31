@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Inventory;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,17 +10,17 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InventoryEntryLocation")]
-    public partial class InventoryEntryLocation : Interfaces.IBaseErpModel
+    public partial class InventoryEntryLocation : IInventoryEntryLocation
     {
         public int Id { get; set; }
 
-        public int? InventoryEntryId { get; set; }
+        public int InventoryEntryId { get; set; }
 
-        public int? FacilityId { get; set; }
+        public int FacilityId { get; set; }
 
-        public DateTime? ValidFrom { get; set; }
+        public DateTime ValidFrom { get; set; }
 
-        public DateTime? ValidThrough { get; set; }
+        public DateTime ValidThrough { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

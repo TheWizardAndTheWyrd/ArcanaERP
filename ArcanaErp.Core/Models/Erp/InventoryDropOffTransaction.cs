@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Inventory;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,23 +10,23 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InventoryDropOffTransaction")]
-    public partial class InventoryDropOffTransaction : Interfaces.IBaseErpModel
+    public partial class InventoryDropOffTransaction : IInventoryDropOffTransaction
     {
         public int Id { get; set; }
 
-        public int? FixedAssetId { get; set; }
+        public int FixedAssetId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
 
-        public int? UnitOfMeasurementId { get; set; }
+        public int UnitOfMeasurementId { get; set; }
 
         [Column(TypeName = "text")]
-        public string Comment { get; set; }
+        public string Comments { get; set; }
 
-        public int? InventoryEntryId { get; set; }
+        public int InventoryEntryId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

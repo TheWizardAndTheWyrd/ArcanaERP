@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Invoicing;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("InvoicedRecord")]
-    public partial class InvoicedRecord : Interfaces.IBaseErpModel
+    public partial class InvoicedRecord : IInvoicedRecord
     {
         public int Id { get; set; }
 
-        public int? InvoiceItemId { get; set; }
+        public int InvoiceItemId { get; set; }
 
-        public int? InvoiceableItemId { get; set; }
+        public int InvoiceableItemId { get; set; }
 
         [StringLength(255)]
         public string InvoiceableItemType { get; set; }

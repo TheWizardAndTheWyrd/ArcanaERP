@@ -16,6 +16,7 @@
     [CreatedAt]                      DATETIME       NOT NULL,
     [UpdatedAt]                      DATETIME       NOT NULL,
     [SalesTax]                       DECIMAL (8, 2) NULL,
+	[Taxed]							 BIT			NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

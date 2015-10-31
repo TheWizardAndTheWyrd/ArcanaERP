@@ -624,3 +624,57 @@ module Interfaces =
         abstract member InventoryEntryIdFrom : int with get, set
         abstract member InventoryEntryIdTo : int with get, set
 
+    type IBaseErpModelProductId =
+        abstract member ProductId : int with get, set
+
+    type IBaseErpModelInvoiceTypeId =
+        abstract member InvoiceTypeId : int with get, set
+
+    type IBaseErpModelBillingAccountId =
+        abstract member BillingAccountId : int with get, set
+
+    type IBaseErpModelInvoicePaymentStrategyTypeId =
+        abstract member InvoicePaymentStrategyTypeId : int with get, set
+
+    type IBaseErpModelInvoice =
+        abstract member InvoiceNumber : string with get, set
+        abstract member Message : string with get, set
+        abstract member InvoiceDate : DateTime with get, set
+        abstract member DueDate : DateTime with get, set
+
+    type IBaseErpModelInvoiceItemId =
+        abstract member InvoiceItemId : int with get, set
+
+    type IBaseErpModelInvoiceableItemId =
+        abstract member InvoiceableItemId : int with get, set
+
+    type IBaseErpModelInvoiceableItemType =
+        abstract member InvoiceableItemType : string with get, set
+
+    type IBaseErpModelInvoiceId =
+        abstract member InvoiceId : int with get, set
+
+    type IBaseErpModelInvoiceItemTypeId =
+        abstract member InvoiceItemTypeId : int with get, set
+
+    type IBaseErpModelItemSequenceId =
+        abstract member ItemSequenceId : int with get, set
+
+    type IBaseErpModelItemDescription =
+        abstract member ItemDescription : string with get, set
+
+    type IBaseErpModelInvoiceItem =
+        abstract member Quantity : decimal with get, set
+        abstract member UnitPrice : decimal with get, set
+
+    type IBaseErpModelAmount =
+        abstract member Amount : decimal with get, set        
+
+    type IBaseErpModelInvoicePaymentTermTypeId =
+        abstract member InvoicePaymentTermTypeId : int with get, set
+
+    type IBaseErpModelInvoicePaymentTermSetId =
+        abstract member InvoicePaymentTermSetId : int with get, set
+
+    type IBaseErpModelPayBy =
+        abstract member PayBy : DateTime with get, set
