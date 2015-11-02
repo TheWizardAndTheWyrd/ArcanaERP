@@ -380,6 +380,9 @@
     <Compile Include="Interfaces\Models\WorkEffort\IPartyResourceAvailability.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IPartyResourceAvailabilityType.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IPartySkill.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\IPosition.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\IPositionFulfillment.cs" />
+    <Compile Include="Interfaces\Models\WorkEffort\IPositionType.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IRequirement.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IRequirementPartyRole.cs" />
     <Compile Include="Interfaces\Models\WorkEffort\IRequirementType.cs" />

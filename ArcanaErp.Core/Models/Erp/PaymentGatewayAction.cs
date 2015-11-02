@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("PaymentGatewayAction")]
-    public partial class PaymentGatewayAction : Interfaces.IBaseErpModel
+    public partial class PaymentGatewayAction : IPaymentGatewayAction
     {
         public int Id { get; set; }
 

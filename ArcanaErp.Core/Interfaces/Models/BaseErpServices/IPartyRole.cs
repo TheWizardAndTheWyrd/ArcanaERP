@@ -2,13 +2,11 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IPartyRole
+    public interface IPartyRole : Lambda.Interfaces.IBaseErpModel,
+                                  Lambda.Interfaces.IBaseErpModelType,
+                                  Lambda.Interfaces.IBaseErpModelPartyId,
+                                  Lambda.Interfaces.IBaseErpModelRoleTypeId
     {
-        int Id { get; set; }
-        string Type { get; set; }
-        int? PartyId { get; set; }
-        int? RoleTypeId { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

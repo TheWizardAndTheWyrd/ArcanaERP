@@ -786,3 +786,100 @@ module Interfaces =
 
     type IBaseErpModelTaxIdNumber =
         abstract member TaxIdNumber : string with get, set
+
+    type IBaseErpModelBusinessPartyId =
+        abstract member BusinessPartyId : int with get, set
+
+    type IBaseErpModelBusinessPartyType =
+        abstract member BusinessPartyType : string with get, set
+
+    type IBaseErpModelListViewImageId =
+        abstract member ListViewImageId : int with get, set
+
+    type IBaseErpModelEnterpriseIdentifier =
+        abstract member EnterpriseIdentifier : string with get, set
+
+    type IBaseErpModelAssignedTimeSpan =
+        abstract member AssignedFrom : DateTime with get, set
+        abstract member AssignedThrough : DateTime with get, set
+
+    type IBaseErpModelAllocatedCostMoneyId =
+        abstract member AllocatedCostMoneyId : int with get, set
+
+    type IBaseErpModelPriorityTypeId =
+        abstract member PriorityTypeId : int with get, set
+
+    type IBaseErpModelRelationshipTypeId =
+        abstract member RelationshipTypeId : int with get, set
+
+    type IBaseErpModelPartyTypeId =
+        abstract member PartyTypeId : int with get, set
+
+    type IBaseErpModelSkillTypeId =
+        abstract member SkillTypeId : int with get, set
+
+    type IBaseErpModelPayment =
+        abstract member Success : bool with get, set
+        abstract member ReferenceNumber : string with get, set
+        abstract member AuthorizationCode : string with get, set
+
+    type IBaseErpModelPaymentAppliedToId =
+        abstract member PaymentAppliedToId : int with get, set
+
+    type IBaseErpModelPaymentAppliedToType =
+        abstract member PaymentAppliedToType : string with get, set
+
+    type IBaseErpModelAppliedMoneyAmountId =
+        abstract member AppliedMoneyAmountId : int with get, set
+
+    type IBaseErpModelPaymentGateway =
+        abstract member Parameters : string with get, set
+        abstract member Response : string with get, set
+
+    type IBaseErpModelPaymentGatewayActionId = 
+        abstract member PaymentGatewayActionId : int with get, set
+
+    type IBaseErpModelPaymentId =
+        abstract member PaymentId : int with get, set
+
+    type IBaseErpModelPhoneNumber1 =
+        abstract member PhoneNumber1 : string with get, set
+
+    type IBaseErpModelPositionTypeId =
+        abstract member PositionTypeId : int with get, set
+
+    type IBaseErpModelEstimatedTimeSpan =
+        abstract member EstimatedFromDate : DateTime with get, set
+        abstract member EstimatedThroughDate : DateTime with get, set
+
+    type IBaseErpModelActualTimeSpan =
+        abstract member ActualFromDate : DateTime with get, set
+        abstract member ActualThroughDate : DateTime with get, set
+
+    type IBaseErpModelPosition =
+        abstract member SalaryFlag : bool with get, set
+        abstract member ExemptFlag : bool with get, set
+        abstract member FullTimeFlag : bool with get, set
+        abstract member TemporaryFlag : bool with get, set
+
+    type IBaseErpModelHeldByPartyId =
+        abstract member HeldByPartyId : int with get, set
+
+    type IBaseErpModelPositionId =
+        abstract member PositionId : int with get, set
+
+    type IBaseErpModelBenefitPercent =
+        abstract member BenefitPercent : decimal with get, set
+
+    type IBaseErpModelGeoZoneId =
+        abstract member GeoZoneId : int with get, set
+
+    type IBaseErpModelPostalAddress =
+        abstract member AddressLine1 : string with get, set
+        abstract member AddressLine2 : string with get, set
+        abstract member City : string with get, set
+        abstract member State : string with get, set
+        abstract member Zip : string with get, set
+        abstract member Country : string with get, set
+        abstract member Latitude : decimal with get, set
+        abstract member Longitude : decimal with get, set

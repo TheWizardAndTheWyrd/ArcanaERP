@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Commerce;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,16 +10,16 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Payment")]
-    public partial class Payment : Interfaces.IBaseErpModel
+    public partial class Payment : IPayment
     {
         public int Id { get; set; }
 
-        public bool? Success { get; set; }
+        public bool Success { get; set; }
 
         [StringLength(255)]
         public string ReferenceNumber { get; set; }
 
-        public int? FinancialTransactionId { get; set; }
+        public int FinancialTransactionId { get; set; }
 
         [StringLength(255)]
         public string CurrentState { get; set; }
@@ -27,6 +29,8 @@ namespace ArcanaErp.Core.Models.Erp
 
         [StringLength(255)]
         public string ExternalIdentifier { get; set; }
+
+        public string ExternalIdSource { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

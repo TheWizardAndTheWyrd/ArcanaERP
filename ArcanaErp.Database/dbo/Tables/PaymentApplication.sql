@@ -4,7 +4,7 @@
     [PaymentAppliedToId]   INT           NULL,
     [PaymentAppliedToType] VARCHAR (255) NULL,
     [AppliedMoneyAmountId] INT           NULL,
-    [Comment]              VARCHAR (255) NULL,
+    [Comments]             VARCHAR (255) NULL,
     [CreatedAt]            DATETIME      NOT NULL,
     [UpdatedAt]            DATETIME      NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)

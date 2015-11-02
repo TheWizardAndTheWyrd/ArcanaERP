@@ -17,12 +17,12 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? BusinessPartyId { get; set; }
+        public int BusinessPartyId { get; set; }
 
         [StringLength(255)]
         public string BusinessPartyType { get; set; }
 
-        public int? ListViewImageId { get; set; }
+        public int ListViewImageId { get; set; }
 
         [StringLength(255)]
         public string EnterpriseIdentifier { get; set; }

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,22 +10,22 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("PositionFulfillment")]
-    public partial class PositionFulfillment : Interfaces.IBaseErpModel
+    public partial class PositionFulfillment : IPositionFulfillment
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? HeldByPartyId { get; set; }
+        public int HeldByPartyId { get; set; }
 
-        public int? PositionId { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? FromDate { get; set; }
+        public int PositionId { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? ThroughDate { get; set; }
+        public DateTime FromDate { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime ThroughDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

@@ -3,7 +3,7 @@
     [PartyId]              INT      NULL,
     [FixedAssetId]         INT      NULL,
     [AssignedFrom]         DATETIME NULL,
-    [Assignedthru]         DATETIME NULL,
+    [AssignedThrough]      DATETIME NULL,
     [AllocatedCostMoneyId] INT      NULL,
     [CreatedAt]            DATETIME NOT NULL,
     [UpdatedAt]            DATETIME NOT NULL,

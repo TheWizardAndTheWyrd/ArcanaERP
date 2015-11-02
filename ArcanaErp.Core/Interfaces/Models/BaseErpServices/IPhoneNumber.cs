@@ -2,12 +2,10 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IPhoneNumber
+    public interface IPhoneNumber : Lambda.Interfaces.IBaseErpModel,
+                                    Lambda.Interfaces.IBaseErpModelDescription,
+                                    Lambda.Interfaces.IBaseErpModelPhoneNumber1
     {
-        int Id { get; set; }
-        string PhoneNumber1 { get; set; }
-        string Description { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

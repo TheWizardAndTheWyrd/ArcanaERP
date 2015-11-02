@@ -12,7 +12,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Preference")]
-    public partial class Preference : IPreference, Interfaces.IBaseErpModel
+    public partial class Preference : IPreference
     {
         public int Id { get; set; }
 

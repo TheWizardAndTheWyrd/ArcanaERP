@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("PositionType")]
-    public partial class PositionType : Interfaces.IBaseErpModel
+    public partial class PositionType : IPositionType
     {
         public int Id { get; set; }
 
@@ -22,18 +24,18 @@ namespace ArcanaErp.Core.Models.Erp
         public string ExternalIdentifier { get; set; }
 
         [StringLength(255)]
-        public string ExternalIdentiferSource { get; set; }
+        public string ExternalIdSource { get; set; }
 
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
 
-        public int? LeftValue { get; set; }
+        public int LeftValue { get; set; }
 
-        public int? RightValue { get; set; }
+        public int RightValue { get; set; }
 
         [StringLength(255)]
         public string Title { get; set; }
 
-        public decimal? BenefitPercent { get; set; }
+        public decimal BenefitPercent { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

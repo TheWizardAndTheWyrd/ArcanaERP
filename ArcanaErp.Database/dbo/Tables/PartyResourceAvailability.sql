@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[PartyResourceAvailability] (
     [Id]          INT      IDENTITY (1, 1) NOT NULL,
     [FromDate]    DATETIME NULL,
-    [ToDate]      DATETIME NULL,
+    [ThroughDate] DATETIME NULL,
     [PartyId]     INT      NULL,
     [PartyTypeId] INT      NULL,
     [CreatedAt]   DATETIME NOT NULL,
@@ -17,7 +17,7 @@ CREATE NONCLUSTERED INDEX [IndexPartyResourceAvailabilityOnFromDate]
 
 GO
 CREATE NONCLUSTERED INDEX [IndexPartyResourceAvailabilityOnToDate]
-    ON [dbo].[PartyResourceAvailability]([ToDate] ASC);
+    ON [dbo].[PartyResourceAvailability]([ThroughDate] ASC);
 
 
 GO

@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,17 +10,17 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("PartyResourceAvailability")]
-    public partial class PartyResourceAvailability : Interfaces.IBaseErpModel
+    public partial class PartyResourceAvailability : IPartyResourceAvailability
     {
         public int Id { get; set; }
 
-        public DateTime? FromDate { get; set; }
+        public DateTime FromDate { get; set; }
 
-        public DateTime? ToDate { get; set; }
+        public DateTime ThroughDate { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? PartyTypeId { get; set; }
+        public int PartyTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

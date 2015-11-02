@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.WorkEffort;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,13 +10,13 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("PartySkill")]
-    public partial class PartySkill : Interfaces.IBaseErpModel
+    public partial class PartySkill : IPartySkill
     {
         public int Id { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
-        public int? SkillTypeId { get; set; }
+        public int SkillTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
