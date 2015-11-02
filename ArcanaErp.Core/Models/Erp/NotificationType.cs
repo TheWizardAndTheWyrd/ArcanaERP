@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.TechServices;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("NotificationType")]
-    public partial class NotificationType : Interfaces.IBaseErpModel
+    public partial class NotificationType : INotificationType
     {
         public int Id { get; set; }
 

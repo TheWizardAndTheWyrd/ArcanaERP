@@ -10,7 +10,7 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("LoyaltyProgramCode")]
-    public partial class LoyaltyProgramCode : ILoyaltyProgramCode, Interfaces.IBaseErpModel
+    public partial class LoyaltyProgramCode : ILoyaltyProgramCode
     {
         public int Id { get; set; }
 

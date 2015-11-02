@@ -7,19 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Core", "ArcanaErp
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database", "ArcanaErp.Database\ArcanaErp.Database.sqlproj", "{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ArcanaErp.Database.Reference", "ArcanaErp.Database.Reference\ArcanaErp.Database.Reference.sqlproj", "{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F587524F-59BB-4C0E-B2FF-3307D03C248B}"
 	ProjectSection(SolutionItems) = preProject
 		README.txt = README.txt
 		TODO.txt = TODO.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Web.JsonApi", "ArcanaErp.Web.JsonApi\ArcanaErp.Web.JsonApi.csproj", "{8221A1C6-F369-4ED0-9BDC-DEC107EF3E16}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcanaErp.Web.JsonApi.Tests", "ArcanaErp.Web.JsonApi.Tests\ArcanaErp.Web.JsonApi.Tests.csproj", "{F52F64C9-779F-40D4-B453-FB47B52702F5}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArcanaErp.Web.Lambda", "ArcanaErp.Web.Lambda\ArcanaErp.Web.Lambda.fsproj", "{818DF217-0160-4961-B6F7-D97948E8DBE2}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArcanaErp.Core.Lambda", "ArcanaErp.Core.Lambda\ArcanaErp.Core.Lambda.fsproj", "{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}"
 EndProject
@@ -39,24 +31,6 @@ Global
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7CA20C3-E456-4D3B-BDD8-F1C24A2BC79E}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3EAE86A0-B5DF-48D8-BC9F-F3D88FF03535}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{8221A1C6-F369-4ED0-9BDC-DEC107EF3E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8221A1C6-F369-4ED0-9BDC-DEC107EF3E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8221A1C6-F369-4ED0-9BDC-DEC107EF3E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8221A1C6-F369-4ED0-9BDC-DEC107EF3E16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F52F64C9-779F-40D4-B453-FB47B52702F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{818DF217-0160-4961-B6F7-D97948E8DBE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F39EA6D-6121-4A9B-AC7F-D49AC26CE56A}.Release|Any CPU.ActiveCfg = Release|Any CPU

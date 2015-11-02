@@ -2,7 +2,8 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.Application
 {
-    public interface IJobTracker
+    public interface IJobTracker : Lambda.Interfaces.IBaseErpModel,
+                                   Lambda.Interfaces.IBaseErpModelJobTracker
     {
 
     }

@@ -6,6 +6,7 @@
     [Description]        VARCHAR (255) NULL,
     [InternalIdentifier] VARCHAR (255) NULL,
     [ExternalIdentifier] VARCHAR (255) NULL,
+	[ExternalIdSource]	 VARCHAR (255) NULL,
     [NoteTypeRecordId]   INT           NULL,
     [NoteTypeRecordType] VARCHAR (255) NULL,
     [CreatedAt]          DATETIME      NOT NULL,

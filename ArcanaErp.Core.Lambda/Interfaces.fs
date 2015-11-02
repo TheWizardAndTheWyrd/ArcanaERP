@@ -47,6 +47,9 @@ module Interfaces =
     type IBaseErpModelInternalId =
         abstract member InternalIdentifier : string with get, set
 
+    type IBaseErpModelIdentifier =
+        abstract member Identifier : string with get, set
+
     type IBaseErpModelDescription =
         abstract member Description : string with get, set
     
@@ -379,6 +382,9 @@ module Interfaces =
         abstract member ContactRecordType : string with get, set
         abstract member ContactRecordId : int with get, set
 
+    type IBaseErpModelContent =
+        abstract member Content : string with get, set
+
     type IBaseErpModelCreatedById =
         abstract member CreatedById : int with get, set
 
@@ -678,3 +684,105 @@ module Interfaces =
 
     type IBaseErpModelPayBy =
         abstract member PayBy : DateTime with get, set
+
+    type IBaseErpModelJobTracker =
+        abstract member JobName : string with get, set
+        abstract member JobClass : string with get, set
+        abstract member RunTime : string with get, set
+        abstract member LastRunAt : DateTime with get, set
+        abstract member NextRunAt : DateTime with get, set
+
+    type IBaseErpModelCurrencyId =
+        abstract member CurrencyId : int with get, set
+
+     type IBaseErpModelNotedRecordId =
+        abstract member NotedRecordId : int with get, set
+
+    type IBaseErpModelNotedRecordType =
+        abstract member NotedRecordType : string with get, set
+
+    type IBaseErpModelNoteTypeId =
+        abstract member NoteTypeId : int with get, set
+
+    type IBaseErpModelNoteTypeRecordId =
+        abstract member NoteTypeRecordId : int with get, set
+
+    type IBaseErpModelNoteTypeRecordType =
+        abstract member NoteTypeRecordType : string with get, set
+
+    type IBaseErpModelMessage =
+        abstract member Message : string with get, set
+
+    type IBaseErpModelNotificationTypeId =
+        abstract member NotificationTypeId : int with get, set
+
+    type IBaseErpModelCurrentState =
+        abstract member CurrentState : string with get, set
+
+    type IBaseErpModelOrderTransactionId =
+        abstract member OrderTransactionId : int with get, set
+
+    type IBaseErpModelOrderLineItemTypeId =
+        abstract member OrderLineItemTypeId : int with get, set
+
+    type IBaseErpModelProductInstanceId =
+        abstract member ProductInstanceId : int with get, set
+
+    type IBaseErpModelProductOfferId =
+        abstract member ProductOfferId : int with get, set
+
+    type IBaseErpModelOrderLineItem =
+        abstract member ProductInstanceDescription : string with get, set
+        abstract member ProductTypeDescription : string with get, set
+        abstract member SoldPrice : decimal with get, set
+        abstract member SoldPriceUnitOfMeasurement : int with get, set
+        abstract member SoldAmount : int with get, set
+        abstract member SoldAmountUnitOfMeasurement : int with get, set
+        abstract member ProductOfferDescription : string with get, set
+
+    type IBaseErpModelOrderLineItemTraffic =
+        abstract member OrderLineItemIdFrom : int with get, set
+        abstract member OrderLineItemIdTo : int with get, set
+
+    type IBaseErpModelOrderLineItemRelationshipTypeId =
+        abstract member OrderLineItemRelationshipTypeId : int with get, set
+
+    type IBaseErpModelRequirementId =
+        abstract member RequirementId : int with get, set
+
+    type IBaseErpModelOrderTransactionTypeId =
+        abstract member OrderTransactionTypeId : int with get, set
+
+    type IBaseErpModelOrderTransactionRecordId =
+        abstract member OrderTransactionRecordId : int with get, set
+
+    type IBaseErpModelOrderTransaction =
+        abstract member OrderTransactionRecordType : string with get, set
+        abstract member PhoneNumber : string with get, set
+        abstract member ShipToFirstName : string with get, set
+        abstract member ShipToLastName : string with get, set
+        abstract member ShipToAddressLine1 : string with get, set
+        abstract member ShipToAddressLine2 : string with get, set
+        abstract member ShipToCity : string with get, set
+        abstract member ShipToState : string with get, set
+        abstract member ShipToPostalCode : string with get, set
+        abstract member ShipToCountryName : string with get, set
+        abstract member CustomerIp : string with get, set
+        abstract member OrderNumber : string with get, set
+        abstract member ErrorMessage : string with get, set
+        abstract member BillToFirstName : string with get, set
+        abstract member BillToLastName : string with get, set
+        abstract member BillToAddressLine1 : string with get, set
+        abstract member BillToAddressLine2 : string with get, set
+        abstract member BillToCity : string with get, set
+        abstract member BillToState : string with get, set
+        abstract member BillToPostalCode : string with get, set
+        abstract member BillToCountryName : string with get, set
+        abstract member BillToCountry : string with get, set
+        abstract member ShipToCountry : string with get, set
+
+    type IBaseErpModelPaymentGatewayTransactionId =
+        abstract member PaymentGatewayTransactionId : string with get, set
+
+    type IBaseErpModelTaxIdNumber =
+        abstract member TaxIdNumber : string with get, set

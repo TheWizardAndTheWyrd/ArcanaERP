@@ -10,21 +10,21 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Note")]
-    public partial class Note : INote, Interfaces.IBaseErpModel
+    public partial class Note : INote
     {
         public int Id { get; set; }
 
-        public int? CreatedById { get; set; }
+        public int CreatedById { get; set; }
 
         [Column(TypeName = "text")]
         public string Content { get; set; }
 
-        public int? NotedRecordId { get; set; }
+        public int NotedRecordId { get; set; }
 
         [StringLength(255)]
         public string NotedRecordType { get; set; }
 
-        public int? NoteTypeId { get; set; }
+        public int NoteTypeId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

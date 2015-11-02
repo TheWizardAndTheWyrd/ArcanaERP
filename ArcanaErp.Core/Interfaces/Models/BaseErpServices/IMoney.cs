@@ -2,13 +2,11 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IMoney
+    public interface IMoney : Lambda.Interfaces.IBaseErpModel,
+                              Lambda.Interfaces.IBaseErpModelDescription,
+                              Lambda.Interfaces.IBaseErpModelAmount,
+                              Lambda.Interfaces.IBaseErpModelCurrencyId
     {
-        int Id { get; set; }
-        string Description { get; set; }
-        decimal? Amount { get; set; }
-        int? CurrencyId { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

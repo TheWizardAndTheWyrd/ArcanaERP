@@ -10,7 +10,8 @@
                                 Lambda.Interfaces.IBaseErpModelBalanceId,
                                 Lambda.Interfaces.IBaseErpModelCalculateBalanceStrategyTypeId,
                                 Lambda.Interfaces.IBaseErpModelSalesTax,
-                                Lambda.Interfaces.IBaseErpModelInvoice
+                                Lambda.Interfaces.IBaseErpModelInvoice,
+                                Lambda.Interfaces.IBaseErpModelMessage
     {
          
     }

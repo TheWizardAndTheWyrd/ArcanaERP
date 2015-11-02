@@ -10,16 +10,16 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("Money")]
-    public partial class Money : IMoney, Interfaces.IBaseErpModel
+    public partial class Money : IMoney
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public decimal? Amount { get; set; }
+        public decimal Amount { get; set; }
 
-        public int? CurrencyId { get; set; }
+        public int CurrencyId { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

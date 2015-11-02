@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,26 +10,26 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("OrderLineItemRelationship")]
-    public partial class OrderLineItemRelationship : Interfaces.IBaseErpModel
+    public partial class OrderLineItemRelationship : IOrderLineItemRelationship
     {
         public int Id { get; set; }
 
-        public int? OrderLineItemRelationshipTypeId { get; set; }
+        public int OrderLineItemRelationshipTypeId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? OrderLineItemIdFrom { get; set; }
+        public int OrderLineItemIdFrom { get; set; }
 
-        public int? OrderLineItemIdTo { get; set; }
+        public int OrderLineItemIdTo { get; set; }
 
-        public int? StatusTypeId { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? FromDate { get; set; }
+        public int StatusTypeId { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? ThroughDate { get; set; }
+        public DateTime FromDate { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime ThroughDate { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

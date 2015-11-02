@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,17 +10,17 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("OrderLineItemPartyRole")]
-    public partial class OrderLineItemPartyRole : Interfaces.IBaseErpModel
+    public partial class OrderLineItemPartyRole : IOrderLineItemPartyRole
     {
         public int Id { get; set; }
 
-        public int? RoleTypeId { get; set; }
+        public int RoleTypeId { get; set; }
 
-        public int? BusinessTransactionAccountRootId { get; set; }
+        public int BusinessTransactionAccountRootId { get; set; }
 
-        public int? OrderLineItemId { get; set; }
+        public int OrderLineItemId { get; set; }
 
-        public int? PartyId { get; set; }
+        public int PartyId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }

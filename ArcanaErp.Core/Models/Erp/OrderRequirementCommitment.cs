@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,18 +10,18 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("OrderRequirementCommitment")]
-    public partial class OrderRequirementCommitment : Interfaces.IBaseErpModel
+    public partial class OrderRequirementCommitment : IOrderRequirementCommitment
     {
         public int Id { get; set; }
 
-        public int? OrderLineItemId { get; set; }
+        public int OrderLineItemId { get; set; }
 
-        public int? RequirementId { get; set; }
+        public int RequirementId { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? Quantity { get; set; }
+        public int Quantity { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

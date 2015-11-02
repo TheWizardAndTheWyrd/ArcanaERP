@@ -278,7 +278,10 @@
     <Compile Include="Interfaces\Models\Orders\IChargeType.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItem.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItemPartyRole.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderLineItemRelationship.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderLineItemRelationshipType.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderLineItemType.cs" />
+    <Compile Include="Interfaces\Models\Orders\IOrderRequirementCommitment.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderTransaction.cs" />
     <Compile Include="Interfaces\Models\Orders\IOrderTransactionType.cs" />
     <Compile Include="Interfaces\Models\Products\IProductAvailabilityStatusType.cs" />
@@ -489,7 +492,6 @@
     <Compile Include="Models\Erp\DocumentType.cs" />
     <Compile Include="Models\Erp\EmailAddress.cs" />
     <Compile Include="Models\Erp\EntityPartyRole.cs" />
-    <Compile Include="Models\Erp\ErpDataModel.cs" />
     <Compile Include="Models\Erp\Experience.cs" />
     <Compile Include="Models\Erp\Facility.cs" />
     <Compile Include="Models\Erp\FacilityType.cs" />
