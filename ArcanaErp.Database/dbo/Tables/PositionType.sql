@@ -3,7 +3,7 @@
     [Description]             VARCHAR (255)  NULL,
     [InternalIdentifier]      VARCHAR (255)  NULL,
     [ExternalIdentifier]      VARCHAR (255)  NULL,
-    [ExternalIdentiferSource] VARCHAR (255)  NULL,
+    [ExternalIdSource]		  VARCHAR (255)  NULL,
     [ParentId]                INT            NULL,
     [LeftValue]               INT            NULL,
     [RightValue]              INT            NULL,

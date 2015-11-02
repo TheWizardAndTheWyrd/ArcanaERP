@@ -9,7 +9,7 @@ namespace ArcanaErp.Core.Models.Erp
     using System.Data.Entity.Spatial;
     using Lambda;
 
-    public partial class PostalAddress : IPostalAddress, Interfaces.IBaseErpModel
+    public partial class PostalAddress : IPostalAddress
     {
         public int Id { get; set; }
 
@@ -34,13 +34,13 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? GeoCountryId { get; set; }
+        public int GeoCountryId { get; set; }
 
-        public int? GeoZoneId { get; set; }
+        public int GeoZoneId { get; set; }
 
-        public decimal? Latitude { get; set; }
+        public decimal Latitude { get; set; }
 
-        public decimal? Longitude { get; set; }
+        public decimal Longitude { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
