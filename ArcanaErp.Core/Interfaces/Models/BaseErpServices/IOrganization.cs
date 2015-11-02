@@ -2,12 +2,10 @@
 
 namespace ArcanaErp.Core.Interfaces.Models.BaseErpServices
 {
-    public interface IOrganization
+    public interface IOrganization : Lambda.Interfaces.IBaseErpModel,
+                                     Lambda.Interfaces.IBaseErpModelDescription,
+                                     Lambda.Interfaces.IBaseErpModelTaxIdNumber
     {
-        int Id { get; set; }
-        string Description { get; set; }
-        string TaxIdNumber { get; set; }
-        DateTime CreatedAt { get; set; }
-        DateTime UpdatedAt { get; set; }
+
     }
 }

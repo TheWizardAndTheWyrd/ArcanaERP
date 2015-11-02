@@ -32,6 +32,7 @@
     [BillToCountry]            VARCHAR (255)  NULL,
     [ShipToCountry]            VARCHAR (255)  NULL,
     [SalesTax]                 DECIMAL (8, 2) NULL,
+	[Taxed]					   BIT            NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 

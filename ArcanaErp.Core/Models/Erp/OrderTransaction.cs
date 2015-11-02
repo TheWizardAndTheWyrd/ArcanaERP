@@ -1,3 +1,5 @@
+using ArcanaErp.Core.Interfaces.Models.Orders;
+
 namespace ArcanaErp.Core.Models.Erp
 {
     using System;
@@ -8,16 +10,16 @@ namespace ArcanaErp.Core.Models.Erp
     using Lambda;
 
     [Table("OrderTransaction")]
-    public partial class OrderTransaction : Interfaces.IBaseErpModel
+    public partial class OrderTransaction : IOrderTransaction
     {
         public int Id { get; set; }
 
         [StringLength(255)]
         public string Description { get; set; }
 
-        public int? OrderTransactionTypeId { get; set; }
+        public int OrderTransactionTypeId { get; set; }
 
-        public int? OrderTransactionRecordId { get; set; }
+        public int OrderTransactionRecordId { get; set; }
 
         [StringLength(255)]
         public string OrderTransactionRecordType { get; set; }
@@ -68,7 +70,7 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string PaymentGatewayTransactionId { get; set; }
 
-        public int? CreditCardId { get; set; }
+        public int CreditCardId { get; set; }
 
         [StringLength(255)]
         public string BillToFirstName { get; set; }
@@ -100,6 +102,8 @@ namespace ArcanaErp.Core.Models.Erp
         [StringLength(255)]
         public string ShipToCountry { get; set; }
 
-        public decimal? SalesTax { get; set; }
+        public decimal SalesTax { get; set; }
+
+        public bool Taxed { get; set; }
     }
 }
