@@ -55,11 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modules\Agreements\AgreementsDbContext.cs" />
+    <Compile Include="Modules\Application\ApplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modules\Application\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
