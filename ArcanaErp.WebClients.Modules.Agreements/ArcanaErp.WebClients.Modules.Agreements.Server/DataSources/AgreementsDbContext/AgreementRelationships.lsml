@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="AgreementRelationship">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AgreementRelationshipTypeId"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AgreementIdFrom"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AgreementIdTo"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RoleTypeIdFrom"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RoleTypeIdTo"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusTypeId"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FromDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ThroughDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedAt"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UpdatedAt"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="AgreementsDbContext">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="AgreementRelationships"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="AgreementRelationship" />
+    <QueryOperation
+      Name="AgreementRelationships_Single"
+      ReturnType="AgreementRelationship">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="AgreementRelationships" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="AgreementRelationships_SingleOrDefault"
+      ReturnType="AgreementRelationship">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="AgreementRelationships" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="AgreementsDbContextDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="AgreementRelationships">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="AgreementRelationship" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="AgreementRelationship/Properties[Id]" />
+        <SsdlProperty
+          Name="AgreementRelationshipTypeId"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[AgreementRelationshipTypeId]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="AgreementRelationship/Properties[Description]" />
+        <SsdlProperty
+          Name="AgreementIdFrom"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[AgreementIdFrom]" />
+        <SsdlProperty
+          Name="AgreementIdTo"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[AgreementIdTo]" />
+        <SsdlProperty
+          Name="RoleTypeIdFrom"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[RoleTypeIdFrom]" />
+        <SsdlProperty
+          Name="RoleTypeIdTo"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[RoleTypeIdTo]" />
+        <SsdlProperty
+          Name="StatusTypeId"
+          Nullable="True"
+          Type="int"
+          Property="AgreementRelationship/Properties[StatusTypeId]" />
+        <SsdlProperty
+          Name="FromDate"
+          Nullable="True"
+          Type="date"
+          Property="AgreementRelationship/Properties[FromDate]" />
+        <SsdlProperty
+          Name="ThroughDate"
+          Nullable="True"
+          Type="date"
+          Property="AgreementRelationship/Properties[ThroughDate]" />
+        <SsdlProperty
+          Name="CreatedAt"
+          Nullable="False"
+          Type="datetime"
+          Property="AgreementRelationship/Properties[CreatedAt]" />
+        <SsdlProperty
+          Name="UpdatedAt"
+          Nullable="False"
+          Type="datetime"
+          Property="AgreementRelationship/Properties[UpdatedAt]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

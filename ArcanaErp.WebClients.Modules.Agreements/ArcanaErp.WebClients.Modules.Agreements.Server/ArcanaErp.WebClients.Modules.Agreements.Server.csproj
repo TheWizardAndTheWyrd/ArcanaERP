@@ -201,6 +201,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\Agreements.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementItems.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementItemTypes.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementPartyRoles.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementRelationships.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementRelationshipTypes.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementRoleTypes.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\AgreementTypes.lsml" />
+    <LightSwitchModel Include="DataSources\AgreementsDbContext\LoyaltyProgramCodes.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\AgreementsDbContext.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -217,9 +227,7 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

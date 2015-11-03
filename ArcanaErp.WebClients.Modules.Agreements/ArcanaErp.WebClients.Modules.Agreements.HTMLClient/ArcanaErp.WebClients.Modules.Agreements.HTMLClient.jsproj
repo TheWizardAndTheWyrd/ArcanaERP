@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|AnyCPU">
@@ -69,6 +69,33 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\AgreementItems\ViewAgreementItem.lsml.js">
+      <DependentUpon>ViewAgreementItem.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementItemTypes\ViewAgreementItemType.lsml.js">
+      <DependentUpon>ViewAgreementItemType.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementPartyRoles\ViewAgreementPartyRole.lsml.js">
+      <DependentUpon>ViewAgreementPartyRole.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementRelationships\ViewAgreementRelationship.lsml.js">
+      <DependentUpon>ViewAgreementRelationship.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementRelationshipTypes\ViewAgreementRelationshipType.lsml.js">
+      <DependentUpon>ViewAgreementRelationshipType.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementRoleTypes\ViewAgreementRoleType.lsml.js">
+      <DependentUpon>ViewAgreementRoleType.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementsSet\ViewAgreements.lsml.js">
+      <DependentUpon>ViewAgreements.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AgreementTypes\ViewAgreementType.lsml.js">
+      <DependentUpon>ViewAgreementType.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\LoyaltyProgramCodes\ViewLoyaltyProgramCode.lsml.js">
+      <DependentUpon>ViewLoyaltyProgramCode.lsml</DependentUpon>
+    </Content>
     <Content Include="Scripts\datajs-1.1.3.js" />
     <Content Include="Scripts\datajs-1.1.3.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -85,47 +112,78 @@
     <Content Include="Scripts\winjs-1.0.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Screens\" />
-  </ItemGroup>
-  <ItemGroup>
     <ServiceMetadataReference Include="..\ArcanaErp.WebClients.Modules.Agreements.Server\ArcanaErp.WebClients.Modules.Agreements.Server.csproj">
       <Visible>false</Visible>
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementItems.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementItemTypes.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementPartyRoles.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementRelationships.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementRelationshipTypes.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementRoleTypes.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\Agreements.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\AgreementTypes.lsml" />
+    <LightSwitchModel Include="Properties\AgreementsDbContext\LoyaltyProgramCodes.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItems\AddEditAgreementItem.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItems\BrowseAgreementItems.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItems\ViewAgreementItem.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItemTypes\AddEditAgreementItemType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItemTypes\BrowseAgreementItemTypes.lsml" />
+    <LightSwitchModel Include="Screens\AgreementItemTypes\ViewAgreementItemType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementPartyRoles\AddEditAgreementPartyRole.lsml" />
+    <LightSwitchModel Include="Screens\AgreementPartyRoles\BrowseAgreementPartyRoles.lsml" />
+    <LightSwitchModel Include="Screens\AgreementPartyRoles\ViewAgreementPartyRole.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationships\AddEditAgreementRelationship.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationships\BrowseAgreementRelationships.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationships\ViewAgreementRelationship.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationshipTypes\AddEditAgreementRelationshipType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationshipTypes\BrowseAgreementRelationshipTypes.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRelationshipTypes\ViewAgreementRelationshipType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRoleTypes\AddEditAgreementRoleType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRoleTypes\BrowseAgreementRoleTypes.lsml" />
+    <LightSwitchModel Include="Screens\AgreementRoleTypes\ViewAgreementRoleType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementsSet\AddEditAgreements.lsml" />
+    <LightSwitchModel Include="Screens\AgreementsSet\BrowseAgreementsSet.lsml" />
+    <LightSwitchModel Include="Screens\AgreementsSet\ViewAgreements.lsml" />
+    <LightSwitchModel Include="Screens\AgreementTypes\AddEditAgreementType.lsml" />
+    <LightSwitchModel Include="Screens\AgreementTypes\BrowseAgreementTypes.lsml" />
+    <LightSwitchModel Include="Screens\AgreementTypes\ViewAgreementType.lsml" />
+    <LightSwitchModel Include="Screens\LoyaltyProgramCodes\AddEditLoyaltyProgramCode.lsml" />
+    <LightSwitchModel Include="Screens\LoyaltyProgramCodes\BrowseLoyaltyProgramCodes.lsml" />
+    <LightSwitchModel Include="Screens\LoyaltyProgramCodes\ViewLoyaltyProgramCode.lsml" />
   </ItemGroup>
-  <ItemGroup>  
+  <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
-        <SubFolder>Content\Resources\Generated</SubFolder>
+      <SubFolder>Content\Resources\Generated</SubFolder>
     </_ClientBuildFile>
     <_ClientBuildFile Include="GeneratedArtifacts\data.js">
-        <SubFolder>Scripts\Generated</SubFolder>
+      <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
     <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
-        <SubFolder>Scripts\Generated</SubFolder>
+      <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
     <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
-        <SubFolder>Scripts\Generated</SubFolder>
+      <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
     <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets"/>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\LightSwitch\v5.0\Microsoft.LightSwitch.Build.Tasks.targets" />
-
-    <!-- Redefine the targets to be empty -->
-    <Target Name="GetXapOutputFile" />
-
-    <PropertyGroup>
-      <AppxPackage>false</AppxPackage>
-      <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
-    </PropertyGroup>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
